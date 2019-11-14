@@ -39,10 +39,10 @@ jobs:
           command: sudo ng build
       - run:
            name: UI build
-           command: docker build -t 055638961298.dkr.ecr.us-east-1.amazonaws.com/radnan-test/healthenet-ui:$CIRCLE_BUILD_NUM .
+           command: docker build -t 055638961298.dkr.ecr.us-east-1.amazonaws.com/ejaz/healthenet-ui:$CIRCLE_BUILD_NUM .
       - run:
            name: UI push
-           command: docker push 055638961298.dkr.ecr.us-east-1.amazonaws.com/radnan-test/healthenet-ui:$CIRCLE_BUILD_NUM 
+           command: docker push 055638961298.dkr.ecr.us-east-1.amazonaws.com/ejaz/healthenet-ui:$CIRCLE_BUILD_NUM 
       - run:
           name: Fix ssh Could not resolve hostname
           command: ssh-keyscan ubuntu@52.90.159.235 >> ~/.ssh/known_hosts
