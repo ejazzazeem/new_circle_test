@@ -1,0 +1,54 @@
+[
+  {
+    "batchId": "40c6087f-5567-4a33-b402-a5beab7c2efe",
+    "senderId": "AAPRO",
+    "submittingUser": "Zofishan Khalid",
+    "status": "NEW",
+    "timeReceived": "2013-11-02",
+    "lastUpdated": "2018-06-02",
+    "timeDeleted": null,
+    "messageCount": null,
+    "messageAttemptCount": 0,
+    "messageFailureCount": 0,
+    "messageCompletionCount": 0
+  },
+  {
+    "batchId": "00cbdc4e-c1fb-459b-af75-4e28c7c02f6b",
+    "senderId": "AAPRO",
+    "submittingUser": "Zofishan Khalid",
+    "status": "PENDING",
+    "timeReceived": "2012-03-01",
+    "lastUpdated": "2016-12-03",
+    "timeDeleted": null,
+    "messageCount": null,
+    "messageAttemptCount": 0,
+    "messageFailureCount": 0,
+    "messageCompletionCount": 0
+  },
+  {
+    "batchId": "00cbdc4e-c1fb-459b-af75-4e28c7c02f6b",
+    "senderId": "AAPRO",
+    "submittingUser": "Zofishan Khalid",
+    "status": "ASSEMBLED",
+    "timeReceived": "2013-03-05",
+    "lastUpdated": "2016-07-08",
+    "timeDeleted": null,
+    "messageCount": null,
+    "messageAttemptCount": 0,
+    "messageFailureCount": 0,
+    "messageCompletionCount": 0
+  },
+  {
+    "batchId": "00cbdc4e-c1fb-459b-af75-4e28c7c02f6b",
+    "senderId": "AAPRO",
+    "submittingUser": "Zofishan Khalid",
+    "status": "MARKED_FOR_DELETION",
+    "timeReceived": "2017-06-02",
+    "lastUpdated": "2018-04-01",
+    "timeDeleted": null,
+    "messageCount": null,
+    "messageAttemptCount": 0,
+    "messageFailureCount": 0,
+    "messageCompletionCount": 0
+  }
+]

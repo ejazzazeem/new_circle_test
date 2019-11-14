@@ -1,0 +1,160 @@
+@import "~assets/scss/mixins";
+
+md-slider {
+  width: 300px;
+} // comment
+
+
+/* Absolute Center Spinner */
+.loading {
+  position: fixed;
+  z-index: 1010;
+  height: 2em;
+  width: 2em;
+  overflow: visible;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+.loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.3);
+}
+
+
+#cssload-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 166px;
+  height: 166px;
+  margin: auto;
+  .cssload-dot {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 83.5px;
+    height: 100%;
+    margin: auto;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 83.5px;
+      height: 83.5px;
+      border-radius: 100%;
+      transform: scale(0);
+      -o-transform: scale(0);
+      -ms-transform: scale(0);
+      -webkit-transform: scale(0);
+      -moz-transform: scale(0);
+    }
+    &:nth-child(7n+1) {
+      @include transform(45deg);
+      &:before {
+        background: rgb(0, 98, 118);
+        @include before-transform(0.12s);
+      }
+    }
+    &:nth-child(7n+2) {
+      @include transform(90deg);
+      &:before {
+        background: rgb(0, 98, 118);
+        @include before-transform(0.23s);
+      }
+    }
+    &:nth-child(7n+3) {
+      @include transform(135deg);
+      &:before {
+        background: rgb(0, 98, 118);
+        @include before-transform(0.35s);
+      }
+    }
+    &:nth-child(7n+4) {
+      @include transform(180deg);
+      &:before {
+        background: rgb(0, 98, 118);
+        @include before-transform(0.46s);
+      }
+    }
+    &:nth-child(7n+5) {
+      @include transform(225deg);
+      &:before {
+        background: rgb(0, 88, 96);
+        @include before-transform(0.58s);
+      }
+    }
+    &:nth-child(7n+6) {
+      @include transform(270deg);
+      &:before {
+        background: rgb(0, 88, 96);
+        @include before-transform(0.69s);
+      }
+    }
+    &:nth-child(7n+7) {
+      @include transform(315deg);
+      &:before {
+        ackground: rgb(0, 88, 96);
+        @include before-transform(0.81s);
+      }
+    }
+    &:nth-child(7n+8) {
+      @include transform(360deg);
+      &:before {
+        background: rgb(0, 88, 96);
+        @include before-transform(0.92s);
+      }
+    }
+  }
+}
+
+@keyframes cssload-load {
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+@-o-keyframes cssload-load {
+  100% {
+    opacity: 0;
+    -o-transform: scale(1);
+  }
+}
+
+@-ms-keyframes cssload-load {
+  100% {
+    opacity: 0;
+    -ms-transform: scale(1);
+  }
+}
+
+@-webkit-keyframes cssload-load {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(1);
+  }
+}
+
+@-moz-keyframes cssload-load {
+  100% {
+    opacity: 0;
+    -moz-transform: scale(1);
+  }
+}

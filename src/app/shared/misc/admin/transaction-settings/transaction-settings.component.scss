@@ -1,0 +1,50 @@
+
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+
+.main-dialog-container{
+  min-width: 760px;
+  max-height: 650px;
+  @media only screen and ($tablet8){
+    min-width: 630px;
+  }
+  @media only screen and ($tablet-small){
+    min-width: 600px;
+  }
+  .dialog-body{
+    margin-bottom: 0 !important;
+    .setting-list{
+      .single-setting{
+        display: flex;
+        justify-content: space-between;
+        .toggle-two-labels{
+          .mat-slide-toggle{
+            .mat-slide-toggle-content{
+              min-width: 51px;
+              .pre-text{
+                margin-right: 0;
+              }
+            }
+          }
+        }
+        .select-container{
+          width: 120px;
+          margin-right: 19px;
+          padding: 0;
+        }
+      }
+      .stylesheet-container{
+        display: flex;
+        justify-content: space-between;
+        .error-text{
+          color:$red;
+          margin-top:0;
+          font-size: 12px;
+        }
+      }
+      .code-viewer{
+        margin-top: 10px;
+      }
+    }
+  }
+}

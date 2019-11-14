@@ -1,0 +1,163 @@
+<div class="main-right-section">
+  <!-- Filter Expandable Section -  Starts ----------------------------------------------- -->
+  <div class="main-filter-section" id="report_body">
+    <mat-expansion-panel class="filter-expansion" [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Filters
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="field-row row">
+        <div class="col-sm-5 col-md-2 field-col">
+          <div class="select-container">
+            <label class="label-text">Time period <span class="star">*</span></label>
+            <mat-form-field class="select-field" floatPlaceholder="never">
+              <mat-select placeholder="-- Select Time period --" name="timePeriod" [(ngModel)]="model.timePeriod">
+                <mat-option value="60">60 minutes</mat-option>
+                <mat-option value="2">2 Hours</mat-option>
+                <mat-option value="4">4 Hours</mat-option>
+                <mat-option value="6">6 Hours</mat-option>
+                <mat-option value="12">12 Hours</mat-option>
+                <mat-option value="24">24 Hours</mat-option>
+                <mat-option value="1">1 Week</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-7 col-md-5 field-col">
+          <div class="select-container">
+            <label class="label-text">Payer</label>
+            <mat-form-field class="select-field" floatPlaceholder="never">
+              <mat-select placeholder="-- Select Payer --" name="payerList" [(ngModel)]="model.payerName">
+                <mat-option [value]="''">-- Select Payer --</mat-option>
+                <mat-option *ngFor="let payer of payerList"
+                            [value]="payer.name">{{ payer.name }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-5 col-md-5 field-col">
+          <div class="select-container">
+            <label class="label-text">Transaction Type </label>
+            <mat-form-field class="select-field" floatPlaceholder="never">
+              <mat-select placeholder="-- Select Transaction Type --" name="transactionType" [(ngModel)]="model.transactionType">
+                <mat-option value="Eligibility Benefit Inquiry">Eligibility Benefit Inquiry</mat-option>
+                <mat-option value="Claim Status Inquiry">Claim Status Inquiry</mat-option>
+                <mat-option value="Referral Auth Inquiry">Referral Auth Inquiry</mat-option>
+                <mat-option value="Referral Request for Review">Referral Request for Review</mat-option>
+                <mat-option value="Provider Inquiry">Provider Inquiry</mat-option>
+                <mat-option value="Referral Inquiry">Referral Inquiry</mat-option>
+                <mat-option value="Auth Inquiry">Auth Inquiry</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+
+      </div>
+      <div class="btn-block">
+        <button mat-button class="blue-btn submit" type="button" (click)="applyFilter()">Apply Filter</button>
+        <button mat-button class="white-btn submit" type="button" (click)="clearFilter()">Clear Filter</button>
+      </div>
+    </mat-expansion-panel>
+  </div>
+  <!-- Filter Expandable Section - Ends ----------------------------------------------- -->
+
+  <!-- Report View Section - Starts ----------------------------------------------- -->
+  <div class="report-view-section" *ngIf="showHideTable" id="reportDiv">
+    <div class="heading-top">
+      <h2 class="sub-heading with-toggle">Recent Transaction Success</h2>
+      <div class="top-level-btns dont-print">
+        <div class="grand-totals" *ngIf="totalObj">
+          <b>Average Second Count:</b> {{formatN(totalObj.avgSeconds)}}
+          <b>Fail Count:</b> {{totalObj.failCount}}
+          <b>Success Count: </b>{{totalObj.successCount}}
+          <b>successPercentage:</b> {{formatN(totalObj.successPercentage)}}%
+          <b>Total:</b> {{totalObj.total}}
+        </div>
+        <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+          <mat-select placeholder="" >
+            <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+            <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      </div>
+    </div>
+
+
+
+
+    <!-- Custom Collapsible Table - Created by Sana - Starts ----------------------------- -->
+    <div class="custom-collapsible-table">
+      <div class="collapsible-head">
+        <div class="cp-th width25">Payer</div>
+        <div class="cp-th width25">Type</div>
+        <div class="cp-th width15">Success</div>
+        <div class="cp-th width10">Failure</div>
+        <div class="cp-th width10">Total</div>
+        <div class="cp-th width20">% Success</div>
+        <div class="cp-th width20">Avg Seconds</div>
+      </div>
+      <div class="collapsible-body" *ngIf="paginationObj.totalRecords > 0">
+        <div *ngFor="let row of results; let i=index;" class="cp-row"
+             [ngClass]="{'expandable': row.total > 0, 'open' : this.model.selectedIndex === i}">
+          <div class="cp-row-inner" (click)="setSelectedIndex(i, row)">
+            <div class="cp-td width25">{{row.payerName}}</div>
+            <div class="cp-td width25"></div>
+            <div class="cp-td width15">{{row.successCount}}</div>
+            <div class="cp-td width10">{{row.failCount}}</div>
+            <div class="cp-td width10">{{row.total}}</div>
+            <div class="cp-td width20">{{formatN(row.successPercentage)}}%</div>
+            <div class="cp-td width20">{{row.avgSeconds | number:'1.0-2'}}</div>
+          </div>
+          <!-- If a row has multiple inner rows -- Inner table body starts -->
+          <div class="cp-inner-table" *ngIf="innerResponse?.transactionsDetails.length > 0" >
+            <div class="cp-inner-row" *ngFor="let d of innerResponse?.transactionsDetails">
+              <div class="cp-inner-td width25"></div>
+              <div class="cp-inner-td width25">{{d.type}}</div>
+              <div class="cp-inner-td width15">{{d.successCount}}</div>
+              <div class="cp-inner-td width10">{{d.failCount}}</div>
+              <div class="cp-inner-td width10">{{d.totalCount}}</div>
+              <div class="cp-inner-td width20">{{formatN(d.successPercentage)}}%</div>
+              <div class="cp-inner-td width20">{{d.avgSeconds | number:'1.0-2'}}</div>
+            </div>
+          </div>
+          <!-- If a row has multiple inner rows -- Inner table body ends -->
+        </div>
+        <app-report-pagination   [currentOffset]="paginationObj.currentOffSet" [pageSize]="paginationObj.pageSize" [totalRecords]="paginationObj.totalRecords"
+                               (changeSize)="updatePageSize($event)" (changePage)="updatePage($event)"  ></app-report-pagination>
+      </div>
+
+      <div class="collapsible-body" *ngIf= "noRecordFound">
+        <div class="cp-row-inner">
+          <div class="cp-td empty-row">No Records Found</div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Custom Collapsible Table - Created by Sana - Ends ----------------------------- -->
+
+
+    <div class="btn-block dont-print">
+      <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+        <mat-select placeholder="" >
+          <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+          <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-button class="white-btn delete-report" type="button" (click)="deleteReport()" *ngIf="isMyReport" >
+        <svg fill="#3e3e3e" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+      <button mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      <button mat-button class="blue-btn" type="button" *ngIf="isMyReport" (click)="editDialog()">Subscription</button>
+
+    </div>
+  </div>
+  <!-- Report View Section - Ends ----------------------------------------------- -->
+</div>
+
+<!--<button  mat-button class="back-to-top dont-print " *ngIf="results.length >= 10" scrollTo scrollTargetSelector="#report_body" ></button>-->

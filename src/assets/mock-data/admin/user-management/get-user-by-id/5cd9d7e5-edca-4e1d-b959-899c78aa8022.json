@@ -1,0 +1,62 @@
+[
+  {
+    "userId": "5cd9d7e5-edca-4e1d-b959-899c78aa8022",
+    "role":  "PROVIDER_OFFICE_USER",
+    "firstName": "USER1",
+    "lastName": "lnUSER1",
+    "dateOfBirth": "2017-12-01",
+    "email": "user1@email.com",
+    "pinCode": "123456",
+    "externalId": "EX_ID_USER1",
+    "loginId": "LOGIN_USER1",
+    "password": "123456",
+    "lastEdited": "2017-12-06",
+    "userGroups": [
+       {
+          "groupId": "c12cc865-1fc6-4206-a0b8-74f61d666117",
+          "name": "GRP4",
+          "groupType": "PROVIDER"
+        }
+    ],
+    "permissionOverrides": [
+      {
+        "group": {
+          "groupId": "c12cc865-1fc6-4206-a0b8-74f61d666117",
+          "name": "GRP4",
+          "groupType": "PROVIDER"
+        },
+        "permission": {
+          "permissionId": "d7213e37-7d5a-484a-9870-89153ed8ddfb",
+          "name": "Group Admin"
+        },
+        "exclude": false
+      },
+      {
+        "group": {
+          "groupId": "c12cc865-1fc6-4206-a0b8-74f61d666117",
+          "name": "GRP4",
+          "groupType": "PROVIDER"
+        },
+        "permission": {
+          "permissionId": "20e9d0b5-c55c-4168-8a2e-c47f95a9b30a",
+          "name": "PERM2"
+        },
+        "exclude": false
+      }
+    ],
+    "regionOverrides": [
+      {
+        "group": {
+          "groupId": "c12cc865-1fc6-4206-a0b8-74f61d666117",
+          "name": "GRP4",
+          "groupType": "PROVIDER"
+        },
+        "region": {
+          "regionId": "62e32f75-85bd-49b5-9d7f-372862f5100a",
+          "name": "REG1"
+        },
+        "exclude": false
+      }
+    ]
+  }
+]

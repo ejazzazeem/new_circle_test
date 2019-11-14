@@ -1,0 +1,99 @@
+[
+  {
+    "totalCount": 10,
+    "returnCount": 0,
+    "pageOffset": 0,
+    "results": [
+      {
+        "userId": "5cd9d7e5-edca-4e1d-b959-899c78aa8022",
+        "firstName": "USER1",
+        "lastName": "lnUSER1",
+        "userGroups": [
+          {
+            "groupId": "c12cc865-1fc6-4206-a0b8-74f61d666117",
+            "name": "GRP4",
+            "groupType": "PROVIDER"
+          }
+        ]
+      },
+      {
+        "userId": "f6c16011-debe-4b48-bab8-397135ace56a",
+        "firstName": "USER2",
+        "lastName": "lnUSER2",
+        "userGroups": [
+          {
+            "groupId": "c12cc865-1fc6-4206-a0b8-74f61d666117",
+            "name": "GRP4",
+            "groupType": "PROVIDER"
+          }
+        ]
+      },
+      {
+        "userId": "429294d1-1620-4602-9219-e7305a00c458",
+        "firstName": "USER3",
+        "lastName": "lnUSER3",
+        "userGroups": [ ]
+      },
+      {
+        "userId": "345d462f-9eda-4f92-bca4-7a9f254575ff",
+        "firstName": "USER4",
+        "lastName": "lnUSER4",
+        "userGroups": [
+          {
+            "groupId": "6b8ab2ed-be56-436c-8ec9-2ad2588c3b16",
+            "name": "GRP2",
+            "groupType": "PAYER"
+          }
+        ]
+      },
+      {
+        "userId": "b34fd452-8a4a-434a-8b7e-7cbefda75568",
+        "firstName": "USER5",
+        "lastName": "lnUSER5",
+        "userGroups": [
+          {
+            "groupId": "6b8ab2ed-be56-436c-8ec9-2ad2588c3b16",
+            "name": "GRP2",
+            "groupType": "PAYER"
+          }
+        ]
+      },
+      {
+        "userId": "e9a258ce-5fe7-4293-b7f4-3d2e437eb1a8",
+        "firstName": "USER6",
+        "lastName": "lnUSER6",
+        "userGroups": []
+      },
+      {
+        "userId": "099f807c-ae8f-4216-9771-1e7f728e5bec",
+        "firstName": "USER7",
+        "lastName": "lnUSER7",
+        "userGroups": [
+          {
+            "groupId": "64861a2a-4f66-40af-9050-2317d611421b",
+            "name": "GRP1",
+            "groupType": "NETEXCHANGE"
+          }
+        ]
+      },
+      {
+        "userId": "39b21cd0-ec8c-441b-937a-496b657e68f1",
+        "firstName": "USER8",
+        "lastName": "lnUSER8",
+        "userGroups": []
+      },
+      {
+        "userId": "31ad2b4f-4c39-44ef-8377-264706350d34",
+        "firstName": "USER9",
+        "lastName": "lnUSER9",
+        "userGroups": []
+      },
+      {
+        "userId": "35d58a8d-0cf5-4d0b-9c60-84f833999931",
+        "firstName": "USER10",
+        "lastName": "lnUSER10",
+        "userGroups": []
+      }
+    ]
+  }
+]

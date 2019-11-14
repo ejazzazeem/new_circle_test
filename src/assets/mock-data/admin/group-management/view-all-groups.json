@@ -1,0 +1,28 @@
+[
+  {
+    "providerGroupId": "c12cc865-1fc6-4206-a0b8-74f61d666117",
+    "name": "GRP4",
+    "taxIds": [
+      "cp12-254-389"
+    ],
+    "numberOfUsers": 2,
+    "admins": [
+      {
+        "userId": "345d462f-9eda-4f92-bca4-7a9f254575ff",
+        "firstName": "USER4",
+        "lastName": "lnUSER4",
+        "email": "user4@email.com"
+      }
+    ]
+  },
+  {
+    "providerGroupId": "aa00c718-6dda-43b8-a5e8-e9857215a680",
+    "name": "GRP5",
+    "taxIds": [
+      "xt65-876-231"
+    ],
+    "numberOfUsers": 0,
+    "admins": []
+  }
+]
+

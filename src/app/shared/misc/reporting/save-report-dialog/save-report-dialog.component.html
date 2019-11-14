@@ -1,0 +1,65 @@
+<div class="main-dialog-container">
+  <h2 mat-dialog-title class="sub-heading">Save to My Reports</h2>
+  <div mat-dialog-content class="dialog-body">
+    <div class="row field-row">
+      <div class="col-md-12 report-col">
+        <div class="input-container">
+          <label class="label-text">Report Name</label>
+          <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+            <input [disabled]="isEdit" matInput placeholder="Enter Report Name" name="reportName" [(ngModel)]="model.reportName" #reportName="ngModel">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <h2 class="light-heading">Subscription Options</h2>
+    <div class="row field-row">
+      <div class="col-md-12 field-col">
+        <div class="input-container">
+          <label class="label-text">Email</label>
+
+          <tag-input class="input-tag-chips" [(ngModel)]='model.emails' placeholder='Email' secondaryPlaceholder='Add Email'
+                     [editable]='true'  [validators]='emailValidators'></tag-input>
+          <span>Please press enter to add new email address(es)</span>
+        </div>
+      </div>
+    </div>
+    <div class="row field-row">
+      <div class="col-md-6 field-col">
+        <div class="select-container">
+          <label class="label-text">Frequency</label>
+          <mat-form-field class="select-field" floatPlaceholder="never">
+            <mat-select placeholder="-- Select Frequency --"  name="frequency" [(ngModel)]="model.frequency">
+              <mat-option [value]="0">-- Select Frequency --</mat-option>
+              <mat-option [value]="1">Once a Day</mat-option>
+              <mat-option [value]="2">Once a Week</mat-option>
+              <mat-option [value]="3">Once Every Other Week</mat-option>
+              <mat-option [value]="4">Once a Month</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="col-md-6 field-col">
+        <!-- If 'Once a Week' option is selected, only then this section will be visible -->
+        <div class="select-container" *ngIf=" model.frequency === 2 || model.frequency === 3 ">
+          <label class="label-text">Select Day</label>
+          <mat-button-toggle-group class="select-one-toggle"  [value]="model.day" name="daysToggle"  aria-label="Days Toggle" name="day" [(ngModel)]="model.day">
+            <mat-button-toggle value="MONDAY">M</mat-button-toggle>
+            <mat-button-toggle value="TUESDAY">T</mat-button-toggle>
+            <mat-button-toggle value="WEDNESDAY">W</mat-button-toggle>
+            <mat-button-toggle value="THURSDAY">T</mat-button-toggle>
+            <mat-button-toggle value="FRIDAY">F</mat-button-toggle>
+            <mat-button-toggle value="SATURDAY">S</mat-button-toggle>
+            <mat-button-toggle value="SUNDAY">S</mat-button-toggle>
+          </mat-button-toggle-group>
+        </div>
+      </div>
+    </div>
+    <div class="save-report-text">
+      <p><b>Note:</b> When Specifying Frequency, email(s) is required.If frequency is weekly or  once every other week, day is required</p>
+    </div>
+  </div>
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-button class="blue-btn" (click)="onYesClick()" mat-dialog-close="data" [disabled]="reportName.value === '' || validateForm()">Save</button>
+    <button mat-button class="white-btn" (click)="onCancelClick()">Cancel</button>
+  </div>
+</div>

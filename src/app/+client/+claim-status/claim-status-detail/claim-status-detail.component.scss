@@ -1,0 +1,81 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+@import "~assets/scss/circle";
+
+.main-content-area{
+  .top-row{
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    .date{
+      color: $light-text;
+      font-size: 11px;
+    }
+    .print-box{
+      //display: flex;
+      //justify-content: space-between;
+      float: right;
+      .select-container{
+        flex-direction: row;
+        justify-content: space-between;
+        .label-text{
+          margin-right: 10px;
+          padding-top: 10px;
+          margin-bottom: 0;
+        }
+        .select-field{
+          width: 240px;
+        }
+      }
+      .blue-btn{
+        background: url("/assets/images/print-icon.svg") no-repeat 15px 10px $primary ;
+        background-size: 17px;
+      }
+    }
+  }
+  .main-right-section{
+    .main-container{
+      .fields-container{
+        padding-bottom: 0 !important;
+        position: relative;
+        .sub-heading{
+          margin: 0 -20px 15px !important;
+          padding: 0 20px 15px !important;
+        }
+        .start-inquiry{
+          position: absolute;
+          top: 10px;
+          right: 10px;
+        }
+      }
+    }
+    .textarea-container{
+      .text-label{
+        color: $light-text;
+        font-size: 12.5px;
+        font-weight: 400;
+      }
+      .label-value{
+        color: $dark-text;
+        font-size: 15px;
+        line-height: normal;
+        border-bottom: 2px solid $field-border;
+        padding-bottom: 5px;
+        margin-bottom: 0;
+        font-weight: normal;
+      }
+    }
+  }
+}
+
+.dataTables_scroll{
+  .dataTables_scrollHead{
+    padding-right: 0;
+    .dataTables_scrollHeadInner{
+      padding-right: 0 !important;
+      width: 100% !important;
+    }
+  }
+  .dataTables_scrollBody{
+    border-bottom: 1px solid $field-border !important;
+  }
+}

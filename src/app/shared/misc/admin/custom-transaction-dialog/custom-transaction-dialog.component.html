@@ -1,0 +1,19 @@
+<div class="main-dialog-container custom">
+  <h2 mat-dialog-title class="sub-heading">Add Custom Transaction</h2>
+  <div mat-dialog-content class="dialog-body">
+    <div class="input-container">
+      <label class="label-text">Enter a new custom transaction name</label>
+      <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+        <input [(ngModel)]="model.customTransactionName" name="customTransactionName" #customTransactionName="ngModel" matInput placeholder="Enter Transaction Name" >
+
+        </mat-form-field>
+
+    </div>
+    <span class="error-text" *ngIf="showError" >Transaction Name is required</span>
+  </div>
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-button (click)="onSaveClick()" [disabled]="customTransactionName.value === '' || customTransactionName.value === undefined" class="blue-btn" mat-dialog-close="model.customTransactionName">Save</button>
+    <button mat-button (click)="onCancelClick()" class="white-btn">Cancel</button>
+  </div>
+</div>
+

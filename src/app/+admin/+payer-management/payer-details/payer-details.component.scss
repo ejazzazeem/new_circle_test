@@ -1,0 +1,241 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+
+.top-row{
+  border-bottom: none !important;
+  padding-bottom: 0 !important;
+  .toggle-container{
+    float: right;
+    padding-bottom: 0;
+    .pre-text{
+      margin-bottom: 0;
+    }
+  }
+}
+.main-right-section{
+  padding-top: 10px !important;
+  .mat-tab-body{
+    padding-top: 10px;
+    .title-row{
+      .sub-heading{
+        margin: 0 0 5px !important;
+      }
+    }
+  }
+  .fields-container{
+    position: relative;
+    .region-list{
+      display: flex;
+      flex-wrap: wrap;
+      .single-region{
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border: 1px solid $field-border;
+        border-radius: $toggle-tabs-radius;
+        padding: 0px 15px;
+        .check-input{
+          .mat-checkbox-layout{
+            height: 37px;
+            margin: 0;
+            .mat-checkbox-label{
+              line-height: 37px;
+            }
+          }
+        }
+        .check-text{
+          font-weight: normal;
+          font-family: 'futura_ltbook';
+          line-height: 42px;
+          font-size: 12px;
+          cursor: pointer;
+        }
+      }
+    }
+    .certificate{
+      @media only screen and ($tablet8){
+        display: block;
+      }
+      .certificate-name{
+        margin: 0;
+        line-height: 41px;
+        font-size: 15px;
+        font-style: italic;
+        img {
+          margin-right: 5px;
+        }
+      }
+    }
+    .blue-btn{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      .edit-icon{
+        display: inline-flex;
+        margin-top: -6px;
+        margin-right: 1px;
+        svg{
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+  }
+  .transaction-tab{
+    .sub-heading{
+      margin-bottom: 0 !important;
+    }
+    .c-transaction{
+      .sub-heading{
+        padding-bottom: 16px !important;
+        .blue-btn{
+          position: relative;
+          right: auto;
+          top: -2px;
+          height: 32px;
+          margin-left: 5px;
+        }
+      }
+    }
+    .transaction-box{
+      .single-transaction{
+        background: #fff;
+        border-bottom: 1px solid $field-border;
+        margin: 0;
+        height: 45px;
+        .trans-title{
+          width: 74%;
+          padding-left: 0;
+          p{
+            margin: 0;
+            line-height: 43px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+          }
+        }
+        .trans-setting{
+          width: 13%;
+          padding-right: 0;
+          .setting-btn{
+            margin-top: 2px;
+            .setting-icon{
+              display: inline-block;
+              height: 27px;
+              svg{
+                width: 20px;
+                height: 20px;
+              }
+            }
+            .mat-button-focus-overlay{
+              display: none;
+            }
+          }
+          .white-btn{
+            min-width: 80px !important;
+            line-height: 29px;
+            float: right;
+            margin-top: 7px;
+            margin-left: 20px;
+          }
+        }
+        .trans-toggle{
+          width: 13%;
+          padding-right: 0;
+          .toggle-two-labels{
+            float: right;
+          }
+        }
+        @media only screen and ($tablet8){
+          .trans-title {
+            width: 45%;
+          }
+          .trans-setting, .trans-toggle {
+            width: auto;
+            padding: 0;
+          }
+        }
+        &.custom:last-child{
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+  .provider-tab{
+    .add-box{
+      float: right;
+    }
+    .upload-container{
+      background: #fff;
+      margin-top: 60px;
+      border: 1px solid $field-border;
+      border-radius: $field-box-radius;
+      padding: 20px;
+      position: relative;
+      .file-row{
+        .file-col{
+          padding-right: 0;
+          width: 6%;
+          @media only screen and ($tablet){
+            width: auto;
+          }
+        }
+      }
+      .upload-content{
+        .single-line{
+          font-family: 'futura_ltbook';
+          font-size: 12px;
+          display: flex;
+          flex-wrap: wrap;
+          margin-bottom: 10px;
+          .head{
+            font-weight: 700;
+            letter-spacing: 0.1px;
+            flex-basis: 30%;
+          }
+          .value{
+            flex-basis: 70%;
+            display: flex;
+            .edit-icon{
+              float: left;
+              height: 20px;
+              margin-top: 2px;
+              margin-right: 2px;
+              margin-left: -20px;
+              cursor: pointer;
+              svg{
+                width: 16px;
+                height: 20px;
+              }
+            }
+            .path-value{
+              min-width: 400px;
+              border: none;
+              padding: 3px 2px;
+              &[disabled]{
+                background: transparent;
+              }
+              &.edit{
+                border: 1px solid $grey-icon;
+              }
+            }
+            .tick{
+              background: url("/assets/images/tick.png") no-repeat;
+              width: 16px;
+              height: 17px;
+              background-size: 100%;
+              margin-left: 10px;
+              margin-top: 4px;
+              cursor: pointer;
+            }
+            .error{
+              color: $red;
+            }
+          }
+        }
+      }
+      .blue-btn{
+        float: right;
+      }
+    }
+  }
+}

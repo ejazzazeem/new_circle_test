@@ -1,0 +1,65 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+
+.main-right-section{
+  .title-row{
+    .no-padding{
+      padding: 0;
+    }
+    .sub-heading{
+      .star{
+        color: $red;
+      }
+    }
+    .select-field{
+      width: 100%;
+      margin: 6px 0;
+    }
+    .search-box{
+      .input-field{
+        z-index: 100;
+      }
+    }
+  }
+  .fields-container{
+    position: relative;
+    .dis-text{
+      margin-bottom: 20px;
+    }
+    .submit {
+      position: relative;
+    }
+    .input-container.charges{
+      .mat-form-field-infix{
+        input{
+          padding-left: 25px;
+        }
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+          -webkit-appearance: none;
+          margin: 0;
+        }
+        .mat-form-field-placeholder{
+          padding-left: 15px;
+        }
+      }
+      .dollar-icon{
+        position: absolute;
+        margin-top: 6px;
+        margin-left: 10px;
+        color: $light-text;
+      }
+    }
+  }
+}
+
+.common-datatable tbody tr td {
+  height: 45px;
+}
+.dataTables_empty{
+  padding: 8px !important;
+  background: #fff;
+}
+.dataTables_filter {
+  top: -50px;
+}

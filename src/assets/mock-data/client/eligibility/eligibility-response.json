@@ -1,0 +1,5132 @@
+[
+  {
+    "transactionInfo": {
+      "transactionDate": "20190401",
+      "transactionTime": "1454100"
+    },
+    "payerAndRequestingProvider": {
+      "payer": "BLUECROSS BLUESHIELD OF WESTERN NEW YORK",
+      "requestingProviderName": {
+        "family": "CUNNINGHAM",
+        "given": "DAVID"
+      },
+      "providerID": "1659353027",
+      "coverageBasis": "THE REQUESTING PROVIDER IS PARTICIPATING WITH THE MEMBER'S HEALTH INSURANCE MEDICAL PLAN. PLEASE REFER TO THE IN NETWORK BENEFITS LISTED.",
+      "referenceID": "207Q00000X",
+      "otherProviderIDs": [
+        {
+          "label": "Provider Plan Network Identification Number",
+          "value": "000496674001"
+        },
+        {
+          "label": "Federal Taxpayer’s Identification Number",
+          "value": "141794253"
+        }
+      ]
+    },
+    "plan": [
+      {
+        "member": {
+          "memberNumber": "ABC123",
+          "groupID": [
+            {
+              "label": "Submitted Member #",
+              "value": "991955130"
+            },
+            {
+              "label": "Group Number",
+              "value": "00401930"
+            },
+            {
+              "label": "Plan Network Identification Number",
+              "value": "27AKN244"
+            },
+            {
+              "label": "Plan Number",
+              "value": "A6G1Y0S0"
+            }
+          ],
+          "memberName": {
+            "family": "AAAA",
+            "given": "JJJJ",
+            "middle": ""
+          },
+          "memberDoB": "19670213",
+          "memberGender": "F",
+          "address": {
+            "addressLine1": "257 WEST STREET",
+            "addressLine2": "",
+            "city": "BUFFALO",
+            "state": "NY",
+            "zip": "15262",
+            "country": ""
+          }
+        },
+        "primaryCareProvider": [
+          {
+            "providerType": "Primary Care Provider",
+            "providerName": {
+              "family": "MORELLI",
+              "given": "DANIEL J."
+            },
+            "contactInfo": [
+              {
+                "label": "Telephone",
+                "value": "7166889641"
+              }
+            ],
+            "address": {
+              "addressLine1": "850 HOPKINS RD",
+              "addressLine2": "",
+              "city": "WILLIAMSVILLE",
+              "state": "NY",
+              "zip": "142211729"
+            }
+          }
+        ],
+        "benefitPlanCoverage": {
+          "planName": "A6G1Y0S0-27AKN244",
+          "coverage": [
+            {
+              "coverageDescription": "TRADITIONAL BLUE ALIGN POS AH98",
+              "coverageStatus": "1",
+              "coverageStatusCategory": "positive",
+              "coverageStatusLabel": "Active Coverage",
+              "coverageLevel": "IND"
+            }
+          ],
+          "inNetwork": {
+            "deductible": [
+              {
+                "timeRange": "Calendar Year",
+                "remaining": "3300",
+                "total": "3300",
+                "used": "0",
+                "coverageLevel": "IND",
+                "dates": [
+                  {
+                    "qualifier": "Plan Begin",
+                    "date": "20190101"
+                  }
+                ],
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [
+              {
+                "timeRange": "Calendar Year",
+                "remaining": "5000",
+                "total": "5000",
+                "used": "0",
+                "coverageLevel": "IND",
+                "additionalInformation": ""
+              },
+              {
+                "timeRange": "Calendar Year",
+                "remaining": "10000",
+                "total": "10000",
+                "used": "0",
+                "coverageLevel": "FAM",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          "outOfNetwork": {
+            "deductible": [
+              {
+                "timeRange": "Calendar Year",
+                "remaining": "3300",
+                "total": "3300",
+                "used": "0",
+                "coverageLevel": "IND",
+                "dates": [
+                  {
+                    "qualifier": "Plan Begin",
+                    "date": "20190101"
+                  }
+                ],
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [
+              {
+                "timeRange": "Calendar Year",
+                "remaining": "11250",
+                "total": "11250",
+                "used": "0",
+                "coverageLevel": "IND",
+                "additionalInformation": "EXCLUDES COPAY"
+              },
+              {
+                "timeRange": "Calendar Year",
+                "remaining": "22500",
+                "total": "22500",
+                "used": "0",
+                "coverageLevel": "FAM",
+                "additionalInformation": "EXCLUDES COPAY"
+              }
+            ]
+          }
+        },
+        "planDetails": {
+          "payerName": "BLUECROSS BLUESHIELD OF WESTERN NEW YORK",
+          "planName": "A6G1Y0S0-27AKN244",
+          "dates": [
+            {
+              "qualifier": "Plan Date",
+              "date": "20170101-99991231"
+            }
+          ],
+          "planDescription": "TRADITIONAL BLUE ALIGN POS AH98 SELF FUNDED ASO/NSO",
+          "additionalInformation": {
+            "limitationMessage": [
+              "THIS PRODUCT DOES NOT REQUIRE A REFERRAL TO IN NETWORK/IN AREA SPECIALISTS.",
+              "KALEIDA HEALTH LAB, ENH LAB, OR QUEST REQUIRED.",
+              "WELLNESS BENEFIT APPLIES.",
+              "HIGH DEDUCTIBLE PLAN.",
+              "HEALTH CARE REFORM PREVENTATIVE AND WOMEN'S PREVENTATIVE SERVICES APPLY. FOR BENEFIT DETAILS, VISIT WWW.WNYHEALTHENET.ORG AND CHOOSE 'LINKS' FROM THE NAVIGATION BAR.",
+              "GROUP RENEWAL DATE 0101. LARGE GROUP"
+            ],
+            "benefitDisclaimerMessage": [
+              "UNLESS OTHERWISE REQUIRED BY STATE LAW, THIS NOTICE IS NOT A GUARANTEE OF PAYMENT. BENEFITS ARE SUBJECT TO ALL CONTRACT LIMITS AND THE MEMBER'S STATUS ON THE DATE OF SERVICE. ACCUMULATED AMOUNTS SUCH AS DEDUCTIBLE MAY CHANGE AS ADDITIONAL CLAIMS ARE PROCESSED."
+            ]
+          }
+        },
+        "benefits": [
+          {
+            "benefitName": "General Benefits",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Surgical",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Diagnostic Medical",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Diagnostic X-Ray",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Radiation Therapy",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Ambulatory Service Center Facility",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Chiropractic",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Hospital - Ambulatory Surgical",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "MRI/CAT Scan",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Prosthetic Device",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".5",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "coverage": [
+                  {
+                    "insuranceTypeCode": "Point of Service (POS)",
+                    "coverageStatus": "I",
+                    "coverageStatusCategory": "rejected",
+                    "coverageStatusLabel": "Non-Covered"
+                  }
+                ],
+                "qualifier": "",
+                "codedQualifier": ""
+              }
+            ]
+          },
+          {
+            "benefitName": "Dialysis",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Chemotherapy",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Psychiatric",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Psychotherapy",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Occupational Therapy",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT. PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION.",
+                "codedQualifier": "",
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "Visits",
+                    "remaining": "20",
+                    "total": "20",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT. PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION.",
+                "codedQualifier": "",
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "Visits",
+                    "remaining": "20",
+                    "total": "20",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Physical Medicine",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT. PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION.",
+                "codedQualifier": "",
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "Visits",
+                    "remaining": "20",
+                    "total": "20",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT. PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION.",
+                "codedQualifier": "",
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "Visits",
+                    "remaining": "20",
+                    "total": "20",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Speech Therapy",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT. PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION.",
+                "codedQualifier": "",
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "Visits",
+                    "remaining": "20",
+                    "total": "20",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT. PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION.",
+                "codedQualifier": "",
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "Visits",
+                    "remaining": "20",
+                    "total": "20",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Obstetrical/Gynecological",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Gynecological",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "20",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Obstetrical",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "20",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Mental Health",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Mental Health Provider - Outpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Mammogram, High Risk Patient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Diabetic Supplies",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "20",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Physical Therapy",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT. PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION.",
+                "codedQualifier": "",
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "Visits",
+                    "remaining": "20",
+                    "total": "20",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT. PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION.",
+                "codedQualifier": "",
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "Visits",
+                    "remaining": "20",
+                    "total": "20",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Screening X-ray",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Screening laboratory",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Flu Vaccination",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "deductible": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "remaining": "",
+                    "total": "0",
+                    "used": "",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Durable Medical Equipment",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Medical Care",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Hospital - Inpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Psychiatric - Inpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Mental Health Facility - Inpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Mental Health Provider - Inpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Mental Health Facility - Outpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Psychiatric - Outpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Anesthesia",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Surgical Assistance",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Diagnostic Lab",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Durable Medical Equipment Purchase",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".2",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".5",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Durable Medical Equipment Rental",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".2",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".5",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Professional (Physician) Visit - Home ",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Professional (Physician) Visit - Inpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Professional (Physician) Visit - Outpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Hospice",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Skilled Nursing Care",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Hospital - Outpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Podiatry",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Cardiac Rehabilitation",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Substance Abuse Facility - Outpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Substance Abuse Facility - Inpatient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Licensed Ambulance",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "100",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "100",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ],
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "",
+                    "remaining": "5000",
+                    "total": "5000",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Generic Prescription Drug",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "5",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Brand Name Prescription Drug",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "50",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Vision (Optometry)",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "PLEASE CALL 1-800-521-3605 FOR COVERAGE INFORMATION."
+                ]
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Well Baby Care",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "deductible": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "remaining": "",
+                    "total": "0",
+                    "used": "",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Consultation",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "SPECIALIST"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "SPECIALIST",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "SPECIALIST",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Professional (Physician) Visit - Office",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "SPECIALIST"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "SPECIALIST",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "SPECIALIST",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Physician Visit - Office: Sick",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "SPECIALIST"
+                ]
+              },
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "PCP"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "SPECIALIST",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "PCP",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "10",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "SPECIALIST",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "PCP",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Newborn Care",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Other Medical",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "TELEMEDICINE; HIGH DEDUCTIBLE PLAN."
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "TELEMEDICINE; HIGH DEDUCTIBLE PLAN.",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "20",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "coverage": [
+                  {
+                    "insuranceTypeCode": "Point of Service (POS)",
+                    "coverageStatus": "I",
+                    "coverageStatusCategory": "rejected",
+                    "coverageStatusLabel": "Non-Covered",
+                    "additionalInformation": [
+                      "TELEMEDICINE; HIGH DEDUCTIBLE PLAN."
+                    ]
+                  }
+                ],
+                "qualifier": "TELEMEDICINE; HIGH DEDUCTIBLE PLAN.",
+                "codedQualifier": ""
+              }
+            ]
+          },
+          {
+            "benefitName": "Home Health Care",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "HOME HEALTH AID"
+                ]
+              },
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "SOCIAL WORKER"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "HOME HEALTH AID",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "SOCIAL WORKER",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "HOME HEALTH AID",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "SOCIAL WORKER",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Acupuncture",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "I",
+                "coverageStatusCategory": "rejected",
+                "coverageStatusLabel": "Non-Covered"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Massage Therapy",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "I",
+                "coverageStatusCategory": "rejected",
+                "coverageStatusLabel": "Non-Covered"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Major Medical",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "I",
+                "coverageStatusCategory": "rejected",
+                "coverageStatusLabel": "Non-Covered"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "In-vitro Fertilization",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "I",
+                "coverageStatusCategory": "rejected",
+                "coverageStatusLabel": "Non-Covered"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Urgent Care",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Routine Physical",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "HEALTH CARE REFORM PREVENTATIVE AND WOMEN'S PREVENTATIVE SERVICES APPLY. FOR BENEFIT DETAILS, VISIT WWW.WNYHEALTHENET.ORG AND CHOOSE 'LINKS' FROM THE NAVIGATION BAR."
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "HEALTH CARE REFORM PREVENTATIVE AND WOMEN'S PREVENTATIVE SERVICES APPLY. FOR BENEFIT DETAILS, VISIT WWW.WNYHEALTHENET.ORG AND CHOOSE 'LINKS' FROM THE NAVIGATION BAR.",
+                "codedQualifier": "",
+                "deductible": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "remaining": "",
+                    "total": "0",
+                    "used": "",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ],
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "Visits",
+                    "remaining": "1",
+                    "total": "1",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "coverage": [
+                  {
+                    "insuranceTypeCode": "Point of Service (POS)",
+                    "coverageStatus": "I",
+                    "coverageStatusCategory": "rejected",
+                    "coverageStatusLabel": "Non-Covered"
+                  }
+                ],
+                "qualifier": "",
+                "codedQualifier": ""
+              }
+            ]
+          },
+          {
+            "benefitName": "Physician Visit - Office: Well",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "HEALTH CARE REFORM PREVENTATIVE AND WOMEN'S PREVENTATIVE SERVICES APPLY. FOR BENEFIT DETAILS, VISIT WWW.WNYHEALTHENET.ORG AND CHOOSE 'LINKS' FROM THE NAVIGATION BAR.; PCP"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "HEALTH CARE REFORM PREVENTATIVE AND WOMEN'S PREVENTATIVE SERVICES APPLY. FOR BENEFIT DETAILS, VISIT WWW.WNYHEALTHENET.ORG AND CHOOSE 'LINKS' FROM THE NAVIGATION BAR.; PCP",
+                "codedQualifier": "",
+                "deductible": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "remaining": "",
+                    "total": "0",
+                    "used": "",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ],
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "Visits",
+                    "remaining": "1",
+                    "total": "1",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "HEALTH CARE REFORM PREVENTATIVE AND WOMEN'S PREVENTATIVE SERVICES APPLY. FOR BENEFIT DETAILS, VISIT WWW.WNYHEALTHENET.ORG AND CHOOSE 'LINKS' FROM THE NAVIGATION BAR.; PCP",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ],
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "Visits",
+                    "remaining": "1",
+                    "total": "1",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Hospital - Emergency Medical",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "160",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "160",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ],
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "",
+                    "remaining": "5000",
+                    "total": "5000",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Hospital - Emergency Accident",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "160",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "160",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ],
+                "limits": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "quantityQualifier": "",
+                    "remaining": "5000",
+                    "total": "5000",
+                    "used": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Emergency Services",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "URGENT CARE"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "URGENT CARE",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "URGENT CARE",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Hospital",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "INPATIENT"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "INPATIENT",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "INPATIENT",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Maternity",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "Inpatient Hospital"
+                ]
+              },
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "MATERNITY INITIAL VISIT"
+                ]
+              },
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "MATERNITY SUBSEQUENT VISIT"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "Inpatient Hospital",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "MATERNITY INITIAL VISIT",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "20",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "MATERNITY SUBSEQUENT VISIT",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "Inpatient Hospital",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "MATERNITY INITIAL VISIT",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "MATERNITY SUBSEQUENT VISIT",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Mammogram, Low Risk Patient",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "MAMMOGRAM SCREENING UNDER 40"
+                ]
+              },
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "MAMMOGRAM SCREENING OVER 39"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "MAMMOGRAM SCREENING UNDER 40",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "MAMMOGRAM SCREENING OVER 39",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "MAMMOGRAM SCREENING UNDER 40",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "MAMMOGRAM SCREENING OVER 39",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Pediatric",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "WELL CHILD"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "WELL CHILD",
+                "codedQualifier": "",
+                "deductible": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "remaining": "",
+                    "total": "0",
+                    "used": "",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "WELL CHILD",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Immunizations",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "IMMUNIZATIONS NOT RELATED TO WELL CHILD"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "IMMUNIZATIONS NOT RELATED TO WELL CHILD",
+                "codedQualifier": "",
+                "deductible": [
+                  {
+                    "timeRange": "Calendar Year",
+                    "remaining": "",
+                    "total": "0",
+                    "used": "",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "IMMUNIZATIONS NOT RELATED TO WELL CHILD",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Infertility",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "INFERTILITY TESTING"
+                ]
+              },
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "INFERTILITY TREATMENT"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "INFERTILITY TESTING",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "INFERTILITY TREATMENT",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "INFERTILITY TESTING",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "INFERTILITY TREATMENT",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Family Planning",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "ARTIFICIAL INSEMINATION"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "ARTIFICIAL INSEMINATION",
+                "codedQualifier": "Inpatient Hospital",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "ARTIFICIAL INSEMINATION",
+                "codedQualifier": "On Campus - Outpatient Hospital",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "ARTIFICIAL INSEMINATION",
+                "codedQualifier": "Office",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "ARTIFICIAL INSEMINATION",
+                "codedQualifier": "Inpatient Hospital",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "ARTIFICIAL INSEMINATION",
+                "codedQualifier": "On Campus - Outpatient Hospital",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "ARTIFICIAL INSEMINATION",
+                "codedQualifier": "Office",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Abortion",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "THIS REPRESENTS THE PHYSICIAN BILLING ONLY. FOR FACILITY BILLING PLEASE REFERENCE THE AMBULATORY SURGERY BENEFIT."
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "THIS REPRESENTS THE PHYSICIAN BILLING ONLY. FOR FACILITY BILLING PLEASE REFERENCE THE AMBULATORY SURGERY BENEFIT.",
+                "codedQualifier": "Office",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "THIS REPRESENTS THE PHYSICIAN BILLING ONLY. FOR FACILITY BILLING PLEASE REFERENCE THE AMBULATORY SURGERY BENEFIT.",
+                "codedQualifier": "On Campus - Outpatient Hospital",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "THIS REPRESENTS THE PHYSICIAN BILLING ONLY. FOR FACILITY BILLING PLEASE REFERENCE THE AMBULATORY SURGERY BENEFIT.",
+                "codedQualifier": "Office",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              },
+              {
+                "qualifier": "THIS REPRESENTS THE PHYSICIAN BILLING ONLY. FOR FACILITY BILLING PLEASE REFERENCE THE AMBULATORY SURGERY BENEFIT.",
+                "codedQualifier": "On Campus - Outpatient Hospital",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Substance Abuse",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "ALCOHOL AND SUBSTANCE ABUSE DETOX"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "ALCOHOL AND SUBSTANCE ABUSE DETOX",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "ALCOHOL AND SUBSTANCE ABUSE DETOX",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "Pharmacy",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage",
+                "additionalInformation": [
+                  "REPRESENTS THIRD TIER BENEFITS"
+                ]
+              }
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "REPRESENTS THIRD TIER BENEFITS",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "100",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "Dental Care",
+            "coverage": [
+              {
+                "coverageStatus": "I",
+                "coverageStatusCategory": "rejected",
+                "coverageStatusLabel": "Non-Covered"
+              }
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "BONE DENSITY",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "additionalInformation": [
+              ""
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "DIABETIC EDUCATION",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "additionalInformation": [
+              ""
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "MEDICARE DIABETES PREVENTION PROGRAM (MDPP)",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "I",
+                "coverageStatusCategory": "rejected",
+                "coverageStatusLabel": "Non-Covered"
+              }
+            ],
+            "additionalInformation": [
+              ""
+            ],
+            "inNetwork": [
+
+            ],
+            "outOfNetwork": [
+
+            ]
+          },
+          {
+            "benefitName": "DIAGNOSTIC MAMMOGRAMS",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "additionalInformation": [
+              ""
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "80",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".3",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "benefitName": "ORTHOTICS",
+            "coverage": [
+              {
+                "insuranceTypeCode": "Point of Service (POS)",
+                "coverageStatus": "1",
+                "coverageStatusCategory": "positive",
+                "coverageStatusLabel": "Active Coverage"
+              }
+            ],
+            "additionalInformation": [
+              ""
+            ],
+            "inNetwork": [
+              {
+                "qualifier": "",
+                "codedQualifier": "",
+                "copay": [
+                  {
+                    "timeRange": "Visit",
+                    "amount": "0",
+                    "coverageLevel": "",
+                    "additionalInformation": ""
+                  }
+                ],
+                "coinsurance": [
+                  {
+                    "amount": ".5",
+                    "coverageLevel": "",
+                    "timeRange": "Visit",
+                    "additionalInformation": ""
+                  }
+                ]
+              }
+            ],
+            "outOfNetwork": [
+              {
+                "coverage": [
+                  {
+                    "insuranceTypeCode": "Point of Service (POS)",
+                    "coverageStatus": "I",
+                    "coverageStatusCategory": "rejected",
+                    "coverageStatusLabel": "Non-Covered",
+                    "additionalInformation": [
+                      "ORTHOTICS"
+                    ]
+                  }
+                ],
+                "qualifier": "",
+                "codedQualifier": ""
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

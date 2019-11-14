@@ -1,0 +1,47 @@
+<div class="top-row">
+  <h1 class="main-heading">Provider Inquiry Summary</h1>
+</div>
+<div class="main-right-section">
+
+  <!-- Inquiry Responses - Starts ----------------------------------------------- -->
+  <div class="table-container positive-response">
+    <h2 class="sub-heading">Payer: {{ payerData.name }}</h2>
+    <table datatable [dtOptions]="dtOptions"
+           class="common-datatable grid-table table-striped">
+      <thead>
+      <tr>
+        <th>Inquiry ID</th>
+        <th>User ID</th>
+        <th>Date Sent</th>
+        <th>Status</th>
+        <th>Inquiry Type</th>
+        <th>Provider ID</th>
+        <th>Claim ID</th>
+        <th>Plan Member ID</th>
+        <th>Member Name</th>
+        <th>Provider's Patient Account ID</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr style="cursor:pointer" *ngFor="let provider of providerData; let i = index" (click)="navigateToDetailsPage(provider)">
+        <td>{{provider.inquiryId ? provider.inquiryId : '. . . . . .'}}</td>
+        <td>{{provider.userId ? provider.userId : '. . . . . .'}}</td>
+        <td>{{provider.dateSent | convertStringToDate}}</td>
+        <td><span class="red">{{provider.inquiryStatus ? provider.inquiryStatus : '. . . . . .'}}</span></td>
+        <td>{{provider.inquiryType ? provider.inquiryType : '. . . . . .'}}</td>
+        <td>{{provider.payerProvider.id ? provider.payerProvider.id : '. . . . . .'}}</td>
+        <td>{{provider.claimId ? provider.claimId : '. . . . . .'}}</td>
+        <td>{{provider.patientId ? provider.patientId : '. . . . . .'}}</td>
+        <td>{{provider.patientFirstName ? provider.patientFirstName + ' ' + provider.patientLastName : '. . . . . .'}}</td>
+        <td>{{provider.patientAccount ? provider.patientAccount : '. . . . . .'}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Inquiry Responses - End ----------------------------------------------- -->
+
+  <!-- All Payers Contact information - Starts ----------------------- -->
+  <app-all-payer-info></app-all-payer-info>
+  <!-- All Payers Contact information - Ends ------------------------- -->
+
+</div>

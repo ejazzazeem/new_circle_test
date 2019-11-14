@@ -1,0 +1,134 @@
+<div class="provider-tab">
+  <div >
+    <div class="title-row row">
+      <div class="col-md-6">
+        <h2 class="sub-heading">{{titleName === 'group' ? 'Group Providers' : 'Payer Tax ID Association'}}</h2>
+      </div>
+      <div class="col-md-6">
+        <div class="add-box">
+          <button mat-button class="blue-btn" (click)="addTaxId()">Add Tax ID</button>
+        </div>
+      </div>
+    </div>
+    <table id="tblTaxId" datatable [dtOptions]="dtOptions_groupTaxID" [dtTrigger]="dtTriggerTaxIds"
+           class="common-datatable grid-table table-striped">
+      <thead>
+      <tr>
+        <th >Tax ID   </th>
+        <th >Providers  </th>
+        <th class="smallest-col">Options</th>
+      </tr>
+      </thead>
+      <tbody *ngIf="filterProviders">
+      <tr *ngFor="let result of filterProviders" (click)="selectTaxIDs(result)"
+          [ngClass]="{'highlighted': result.taxId === selectedTaxID}"  style="cursor:pointer">
+        <td>{{result.taxId}}</td>
+        <td>{{result.providerPersonCount}}</td>
+        <td><span class="delete-img" (click)="deleteTaxId(result.taxId)" >
+                    <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                      <path d="M0 0h24v24H0z" fill="none"/>
+                    </svg>
+                  </span>
+        </td>
+      </tr>
+      <tr *ngIf="filterProviders.length === 0">
+        <td colspan="3" style="text-align: center">No Tax ID associated</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="new-custom-pagination" *ngIf="filterProviders && filterProviders.length > 0">
+      <div class="pagination-info" >
+        <label>Items per page
+          <mat-form-field class="page-dropdown" floatPlaceholder="never">
+            <mat-select placeholder="{{taxID_pageSize}}" (change)="taxIDupdatePageSize($event)" [(ngModel)]="taxID_pageSize">
+              <mat-option value="10">10</mat-option>
+              <mat-option value="25">25</mat-option>
+              <mat-option value="50">50</mat-option>
+              <mat-option value="100">100</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </label>
+        <label>
+          Showing  <span class="per-page">{{taxID_currentOffset + 1}}</span>  of  <span class="total">{{taxID_totalPages === 0 ? 1 : taxID_totalPages}}</span>
+        </label>
+      </div>
+      <div class="numbers">
+        <button (click)="taxIDprevPage(taxID_preClass)" [ngClass]="taxID_preClass"><svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg></button>
+        <button (click)="taxIDnextPage(taxID_nextClass)" [ngClass]="taxID_nextClass"><svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg></button>
+      </div>
+    </div>
+
+  </div>
+  <br/>
+  <div [hidden]="!showRecords || hideTable">
+    <div class="sub-table-info">Associated Providers for <b> {{selectedTaxID}}</b></div>
+    <table datatable [dtOptions]="dtOptions_taxIDPerson" [dtTrigger]="dtTriggerPersons"
+           class="common-datatable grid-table table-striped">
+      <thead>
+      <tr>
+        <th class="large-col">Name</th>
+        <th class="smallest-col">Status</th>
+        <th>Tax ID</th>
+        <th>Speciality</th>
+        <th>NPI</th>
+        <th>Payer</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let result of selectedPersons">
+        <td class="large-col">{{result.firstName + ' ' + result.lastName}}</td>
+        <td>{{result.status}}</td>
+        <td>{{result.taxId}}</td>
+        <td>{{result.speciality}}</td>
+        <td>{{result.npi}}</td>
+        <td>{{result?.payerSource?.name}}</td>
+      </tr>
+      <tr *ngIf="selectedPersons.length=== 0">
+        <td colspan="5" style="text-align: center">No Associated Providers Found</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="new-custom-pagination" *ngIf="totalPages >= 2" >
+      <div class="pagination-info">
+        <label>Items per page
+          <mat-form-field class="page-dropdown" floatPlaceholder="never">
+            <mat-select placeholder="{{pageSize}}" (change)="updatePageSize($event)"
+                        [(ngModel)]="pageSize">
+              <mat-option value="100">100</mat-option>
+              <mat-option value="250">250</mat-option>
+              <mat-option value="500">500</mat-option>
+              <mat-option value="750">750</mat-option>
+              <mat-option value="1000">1000</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </label>
+        <label>
+          Showing <span class="per-page">{{currentOffset + 1}}</span>  of  <span class="total">{{totalPages === 0 ? 1 : totalPages}}</span>
+        </label>
+      </div>
+      <div class="numbers">
+        <button (click)="prevPage(preClass)" [ngClass]="preClass">
+          <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+        <button (click)="nextPage(nextClass)" [ngClass]="nextClass">
+          <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+
+  </div>
+</div>

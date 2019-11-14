@@ -1,0 +1,165 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+
+.top-row{
+  .toggle-container{
+    float: right;
+    padding-bottom: 0;
+    .pre-text{
+      margin-bottom: 0;
+    }
+  }
+}
+.main-right-section{
+  .info-row{
+    margin-bottom: 20px;
+    .info-box{
+      .blue-btn{
+        margin-top: 6px;
+        .edit-icon{
+          display: inline-flex;
+          margin-top: -5px;
+          margin-right: 4px;
+          svg{
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+  }
+  .fields-container {
+    .emptyGroup {
+      color: $light-text;
+      margin-top: 25px;
+      font-style: italic;
+    }
+    .sub-heading.groups {
+      margin-bottom: 0 !important;
+    }
+    .group-permission {
+      display: flex;
+      .group-wrapper {
+        border-right: 1px solid $field-border;
+        padding: 0;
+        flex: 1 0 auto;
+        .group-container {
+          padding: 15px;
+          .search-field {
+            width: 100%;
+            margin-left: -2px;
+            .mat-form-field-wrapper .mat-form-field-flex .mat-form-field-infix {
+              min-width: 150px;
+            }
+          }
+          perfect-scrollbar{
+            max-height: 350px;
+          }
+          .single-group {
+            cursor: pointer;
+            padding: 0 10px;
+            margin: 3px 0;
+          //  margin: 0 -15px 0 -20px;
+            .check-input {
+              //display: block;
+              cursor: pointer;
+            }
+            .check-text{
+              font-weight: normal;
+              font-family: 'futura_ltbook';
+              line-height: 42px;
+              font-size: 12px;
+              cursor: pointer;
+            }
+            &.highlighted {
+              border: 1px solid $active-field-border;
+              box-shadow: $active-input-shadow;
+            }
+          }
+        }
+      }
+      .permission-region-wrapper {
+        flex: 1 0 auto;
+        .emptyGroup {
+          color: $light-text;
+          margin-top: 25px;
+          font-style: italic;
+        }
+        .permission-region-container {
+          padding: 20px 0;
+          .region-row {
+            padding-bottom: 10px;
+            border-bottom: 1px solid $field-border;
+            margin-bottom: 20px;
+            .sub-heading {
+              border: none;
+              margin: 0 0 20px 15px;
+              padding: 0;
+            }
+            .user-region {
+              padding-left: 15px;
+              .region-list {
+                display: flex;
+                flex-wrap: wrap;
+                .single-region {
+                  margin-right: 10px;
+                  margin-bottom: 10px;
+                  border: 1px solid $field-border;
+                  border-radius: $toggle-tabs-radius;
+                  padding: 0px 15px;
+                  .check-input {
+                    cursor: pointer;
+                    .mat-checkbox-layout {
+                      height: 37px;
+                      margin: 0;
+                      .mat-checkbox-label {
+                        line-height: 37px;
+                      }
+                    }
+                  }
+                  .check-text{
+                    font-weight: normal;
+                    font-family: 'futura_ltbook';
+                    line-height: 42px;
+                    font-size: 12px;
+                    cursor: pointer;
+                  }
+                  &.highlighted {
+                    border: 1px solid $active-field-border;
+                    box-shadow: $active-input-shadow;
+                  }
+                }
+              }
+            }
+          }
+          .permission-row {
+            .sub-heading {
+              border: none;
+              margin: 0 0 20px 15px;
+              padding: 0;
+            }
+            .emptyRegion {
+              color: $light-text;
+              margin-left: 15px;
+              font-style: italic;
+            }
+            .permission-list {
+              display: flex;
+              flex-wrap: wrap;
+              padding: 0 15px;
+              .single-permission {
+                min-width: 33%;
+              }
+            }
+          }
+        }
+      }
+    }
+    &.no-bottom-padding {
+      padding-bottom: 0 !important;
+    }
+    &.groups {
+      padding-bottom: 0 !important;
+    }
+  }
+}

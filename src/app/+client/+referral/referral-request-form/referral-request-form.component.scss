@@ -1,0 +1,95 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+
+.main-right-section{
+  .title-row{
+    .no-padding{
+      padding: 0;
+    }
+    .sub-heading{
+      .star{
+        color: $red;
+      }
+    }
+    .select-field{
+      width: 100%;
+      margin: 6px 0;
+    }
+    .search-box{
+      .input-field{
+        z-index: 100;
+      }
+    }
+  }
+  .requesting-provider.referral-request{
+    margin-bottom: 20px !important;
+    .title-row{
+      .sub-heading{
+        margin: 0 !important;
+      }
+    }
+  }
+  .error-msg{
+    color: $red;
+    font-size: 14px;
+  }
+  .fields-container{
+    position: relative;
+    .dis-text{
+      margin-bottom: 20px;
+    }
+    .submit {
+      position: relative;
+    }
+    .information{
+      position: absolute;
+      right: 16px;
+      top: 16px;
+      .info-icon{
+        float: right;
+        cursor: pointer;
+        img{
+          width: 22px;
+        }
+      }
+      .info-parah{
+        float: left;
+        line-height: 24px;
+        margin-right: 10px;
+        font-size: 13px;
+        font-style: italic;
+        display: none;
+        background: #000;
+        color: #fff;
+        padding: 3px 8px;
+        border-radius: 3px;
+        margin-top: -3px;
+        &::before{
+          width: 0;
+          height: 0;
+          border-left: 7px solid transparent;
+          border-right: 7px solid transparent;
+          border-bottom: 7px solid black;
+          content: "";
+          float: right;
+          transform: rotate(90deg);
+          margin-right: -17px;
+          margin-top: 8px;
+        }
+        &.show{
+          display: block;
+        }
+      }
+    }
+  }
+}
+.common-datatable tbody tr td {
+  height: 45px;
+}
+.dataTables_empty{
+  padding: 8px !important;
+  background: #fff;
+}
+.dataTables_filter {
+  top: -50px;
+}

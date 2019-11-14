@@ -1,0 +1,53 @@
+[
+  {
+    "providerGroupId": "4",
+    "status": "ACTIVE",
+    "groupName": "Group 4",
+    "description": "The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using ‘Content here, content here’, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for ‘lorem ipsum’ will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).",
+    "address": {
+      "line1": "Mapple street",
+      "line2": "George Town",
+      "city": "Islamabad",
+      "state": "US",
+      "zipCode": "44000"
+    },
+    "defaultRegions": [
+      {
+        "regionId": "1",
+        "name": "Region One"
+      },
+      {
+        "regionId": "2",
+        "name": "Region Two"
+      },
+      {
+        "regionId": "5",
+        "name": "Region Five"
+      },
+      {
+        "regionId": "4",
+        "name": "Region Four"
+      }
+    ],
+    "defaultPermissions": [
+      {
+        "permissionId": "4",
+        "name": "Eligibility Criteria",
+        "custom": false,
+        "adxTransaction": true
+      },
+      {
+        "permissionId": "1",
+        "name": "Referral / Auth Inquiry",
+        "custom": false,
+        "adxTransaction": true
+      },
+      {
+        "permissionId": "2",
+        "name": "Eligibility Criteria Admin",
+        "custom": false,
+        "adxTransaction": true
+      }
+    ]
+  }
+]

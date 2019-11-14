@@ -1,0 +1,69 @@
+<div class="top-row">
+    <h1 class="main-heading">Reporting</h1>
+</div>
+<div class="main-right-section">
+    <div class="report-list-tabs">
+        <mat-tab-group class="toggle-tabs" (selectedTabChange)="loadContents($event.index)" [selectedIndex]="selectedTabIndex">
+            <mat-tab label="All">
+                <div class="field-col col-md-6 report-dropdown">
+                    <h2 class="light-heading">Report List</h2>
+                    <div class="select-container" *ngIf="baseReports.length > 0">
+                        <mat-form-field class="select-field" floatPlaceholder="never">
+                            <mat-select placeholder="-- Select a Report --" name="reportList" (change)="selectReport($event)"
+                                        [(ngModel)]="model.report">
+                                <mat-option [value]="''">-- Select Report --</mat-option>
+                                <mat-option *ngFor="let report of baseReports | sortBy : 'baseReportName', let i= index"
+                                            [value]="report">{{ report.baseReportName }}</mat-option>
+
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+
+
+            </mat-tab>
+            <mat-tab label="My Reports">
+                <div class="field-col col-md-6 report-dropdown">
+                    <h2 class="light-heading">Report List</h2>
+                    <div class="select-container">
+                        <mat-form-field class="select-field" floatPlaceholder="never">
+                            <mat-select placeholder="-- Select a Report --"  [(ngModel)]="model.myReport" name="myReport" (change)="selectMyReport($event)">
+                                <mat-option [value]="''">-- Select Report --</mat-option>
+                                <mat-option *ngFor="let report of myReports | sortBy : 'userReportName', let i= index"
+                                            [value]="report">{{ report.userReportName }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <!--<button mat-button class="blue-btn" type="button" (click)="openSubscription()">Subscription</button>-->
+
+            </mat-tab>
+        </mat-tab-group>
+
+        <div *ngIf="selectedReport !== null" >
+            <div [ngSwitch]="selectedReport.baseReportName">
+                <div class="no-report-msg" *ngSwitchDefault>No Report Selected</div>
+                <app-active-providers *ngSwitchCase="'Associated Providers'"></app-active-providers>
+                <app-active-users *ngSwitchCase="'Active Users By Date Range'" ></app-active-users>
+                <app-authorized-contacts *ngSwitchCase="'Authorized Contacts'"></app-authorized-contacts>
+                <app-high-volume-users *ngSwitchCase="'High Volume Users'"></app-high-volume-users>
+                <app-login-logout-details *ngSwitchCase="'Login-Logout Details'"></app-login-logout-details>
+                <app-net-exchange-usage *ngSwitchCase="'NetExchange Usage'"></app-net-exchange-usage>
+                <app-no-activity-users *ngSwitchCase="'No Activity Users'"></app-no-activity-users>
+                <app-participating-providers *ngSwitchCase="'Participating Providers by Payer'"></app-participating-providers>
+                <app-practice-facility-list *ngSwitchCase="'Practice Facility List by Name'"></app-practice-facility-list>
+                <app-top-100-transaction *ngSwitchCase="'Top 100 Transaction Hour Peaks'" ></app-top-100-transaction>
+                <app-transaction-hour-averages *ngSwitchCase="'Transaction Hour Averages'" ></app-transaction-hour-averages>
+                <app-transaction-totals *ngSwitchCase="'Transaction Totals'" ></app-transaction-totals>
+                <app-user-list-by-organization *ngSwitchCase="'User List by Organization'" ></app-user-list-by-organization>
+                <app-transaction-success *ngSwitchCase="'Recent Transactions'"></app-transaction-success>
+                <app-concurrent-login-users *ngSwitchCase="'Concurrent Logged in Users'"></app-concurrent-login-users>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,157 @@
+{
+	"transactionInfo": {
+		"transactionDate": "20180314",
+		"transactionTime": "1538072"
+	},
+	"payer": {
+		"name": "BLUECROSS BLUESHIELD OF WESTERN NEW YORK"
+	},
+	"requestingProvider": {
+		"name": {
+			"family": "LAST",
+			"given": "FIRST"
+		},
+		"providerID": "1111111111",
+		"taxonomyCode": ""
+	},
+	"subscriber": {
+		"name": {
+			"family": "LAST",
+			"given": "FIRST",
+			"middle": ""
+		},
+		"memberID": "88888888888",
+		"dob": "19010101",
+		"memberGender": ""
+	},
+	"referralAuth": [
+		{
+			"categoryCode": "Health Services Review",
+			"certificationTypeCode": "",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "Not Certified",
+			"identifier": "222222222",
+			"decisionReasonCode": "Requires Medical Review",
+			"previousCert": "",
+			"eventDate": "",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "20170110-20170709",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "International Classification of Diseases Clinical Modification (ICD-10-CM) Diagnosis",
+			"diagnosisCode": "Radiculopathy, cervical region",
+			"unitTypeCode": "Units",
+			"providerQuantity": "0",
+			"message": "",
+			"referringProvider": {
+				"name": {
+					"family": "LAST",
+					"given": "FIRST"
+				},
+				"npi": "1111111111",
+				"address": {
+					"addressLine1": "1901 MAIN",
+					"addressLine2": "",
+					"city": "BUFFALO",
+					"state": "NY",
+					"zip": "14208"
+				},
+				"contactInfo": [
+					{
+						"label": "TE",
+						"value": "7165555555"
+					}
+				],
+				"taxonomyID": ""
+			},
+			"servicingProvider": {
+				"name": {
+					"family": "LAST",
+					"given": "FIRST"
+				},
+				"npi": "1111111111",
+				"address": {
+					"addressLine1": "1901 MAIN",
+					"addressLine2": "",
+					"city": "BUFFALO",
+					"state": "NY",
+					"zip": "14208"
+				},
+				"contactInfo": [
+					{
+						"label": "TE",
+						"value": "7165555555"
+					}
+				],
+				"taxonomyID": ""
+			}
+		},
+		{
+			"categoryCode": "Health Services Review",
+			"certificationTypeCode": "",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "Not Certified",
+			"identifier": "222222232",
+			"decisionReasonCode": "Requires Medical Review",
+			"previousCert": "",
+			"eventDate": "",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "20170110-20170709",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "International Classification of Diseases Clinical Modification (ICD-10-CM) Diagnosis",
+			"diagnosisCode": "Radiculopathy, cervical region",
+			"unitTypeCode": "Units",
+			"providerQuantity": "0",
+			"message": "",
+			"referringProvider": {
+				"name": {
+					"family": "LAST",
+					"given": "FIRST"
+				},
+				"npi": "1111111111",
+				"address": {
+					"addressLine1": "1901 MAIN",
+					"addressLine2": "",
+					"city": "BUFFALO",
+					"state": "NY",
+					"zip": "14208"
+				},
+				"contactInfo": [
+					{
+						"label": "TE",
+						"value": "7165555555"
+					}
+				],
+				"taxonomyID": ""
+			},
+			"servicingProvider": {
+				"name": {
+					"family": "LAST",
+					"given": "FIRST"
+				},
+				"npi": "1111111111",
+				"address": {
+					"addressLine1": "1901 MAIN",
+					"addressLine2": "",
+					"city": "BUFFALO",
+					"state": "NY",
+					"zip": "14208"
+				},
+				"contactInfo": [
+					{
+						"label": "TE",
+						"value": "7165555555"
+					}
+				],
+				"taxonomyID": ""
+			}
+		}
+	]
+}

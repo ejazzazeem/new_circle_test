@@ -1,0 +1,52 @@
+// All SCSS mixins of This Project
+
+@mixin common-font($size){
+  font-family: 'futura_ltbook';
+  font-size: $size;
+  color: $dark-text;
+}
+
+@mixin transition($args) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin animation-delay($time) {
+  animation-delay: $time;
+  -o-animation-delay: $time;
+  -ms-animation-delay: $time;
+  -webkit-animation-delay: $time;
+  -moz-animation-delay: $time;
+}
+@mixin rotate($deg){
+  transform: rotate($deg);
+  -o-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+}
+@mixin orbit($orbit){
+  animation: $orbit;
+  -o-animation: $orbit;
+  -ms-animation: $orbit;
+  -webkit-animation: $orbit;
+  -moz-animation: $orbit;
+}
+
+// css spinner mixins
+@mixin transform($deg){
+  transform: rotate($deg);
+  -o-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+}
+@mixin before-transform($sec){
+  animation: cssload-load 0.92s linear $sec infinite;
+  -o-animation: cssload-load 0.92s linear $sec infinite;
+  -ms-animation: cssload-load 0.92s linear $sec infinite;
+  -webkit-animation: cssload-load 0.92s linear $sec infinite;
+  -moz-animation: cssload-load 0.92s linear $sec infinite;
+}

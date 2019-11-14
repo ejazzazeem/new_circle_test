@@ -1,0 +1,10 @@
+.main-dialog-container.custom {
+  min-width: 400px !important;
+  .dialog-body {
+    margin-bottom: 0 !important;
+    .error-text{
+      color:red;
+      margin-top:10px
+    }
+  }
+}

@@ -1,0 +1,132 @@
+<div class="top-row">
+  <h1 class="main-heading">{{title}}</h1>
+</div>
+<!-- Group Information - Starts -------------------------------------------------- -->
+
+<div class="main-right-section">
+  <form name="groupForm" #f="ngForm" novalidate>
+    <div class="fields-container">
+      <h2 class="sub-heading">Group Information</h2>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">Group Name<span class="star">*</span></label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter Group Name" maxlength="75" required name="name"
+                     pattern="[a-zA-Z0-9 _-]*" id="gName"
+                     [(ngModel)]="model.name" #name="ngModel">
+              <mat-error *ngIf="name.errors?.required && name.touched">Group Name is required</mat-error>
+              <mat-error *ngIf="name.errors?.pattern && name.touched">Only alphanumeric, space, hyphen and underscore are allowed.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-3 field-col col-md-offset-5 col-sm-offset-2">
+          <div class="toggle-container">
+            <label class="label-text">Group Status</label>
+            <div class="toggle-two-labels">
+              <label class="pre-text">Inactive</label>
+              <mat-slide-toggle [(ngModel)]="model.status" name="status" class="toggle-btn">Active</mat-slide-toggle>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field-row row">
+        <div class="col-md-12 field-col">
+          <div class="textarea-container">
+            <label class="label-text">Group Description</label>
+            <mat-form-field class="textarea-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <textarea matInput maxlength="3000" #description="ngModel" [(ngModel)]="model.description" name="description" placeholder="Enter Group Description"></textarea>
+              <mat-error *ngIf="description.errors?.pattern && description.touched">Only alphanumeric, space, hyphen , underscore  and some special chartacters are allowed.</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fields-container" ngModelGroup="model.ddress" #address="ngModelGroup" >
+      <h2 class="sub-heading" >Group Address</h2>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container" >
+            <label class="label-text">Address Line1</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput  placeholder="Enter Address Line1"
+                     name="line1" maxlength="100"
+                     [(ngModel)]="model.line1" #line1="ngModel">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">Address Line2</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter Address Line2" name="line2" maxlength="100"
+                     [(ngModel)]="model.line2" #line2="ngModel" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">City</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter City" name="city" maxlength="100"
+                     [(ngModel)]="model.city" #city="ngModel">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">State</label>
+            <mat-form-field class="select-field" floatPlaceholder="never">
+              <mat-select placeholder="-- Select State --"
+                          [(ngModel)]="model.state" name="state" #state="ngModel">
+                <mat-option [value]="">-- Select State --</mat-option>
+                <mat-option *ngFor="let state of states; let i = index" [value]="state.value">
+                  {{state.description}}
+                </mat-option>
+              </mat-select>
+
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">Zip Code</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input id="zipC" matInput placeholder="Enter Zip Code" minlength="5" maxlength="10" pattern="[a-zA-Z0-9\-]*" [(ngModel)]="model.zipCode"
+                     name="zipCode" #zipCode="ngModel"  (keydown)="handleZip($event)">
+              <mat-error *ngIf="zipCode.errors?.pattern && zipCode.touched">Only alphanumeric values are allowed.</mat-error>
+              <span class="custom-invalid" *ngIf="zipError && !zipCode.errors?.pattern">Only valid US Zip Code is allowed</span>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">County</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input  matInput placeholder="Enter County"  maxlength="250"  [(ngModel)]="model.county"
+                     name="county" #county="ngModel" >
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">Region</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input  matInput placeholder="Enter Region" maxlength="250"  [(ngModel)]="model.region"
+                      name="region" #region="ngModel" >
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Group Information - Ends -------------------------------------------------- -->
+    <!-- Action Buttons - Starts -------------------------------------------------- -->
+    <div class="button-container">
+      <button mat-button class="blue-btn" [disabled]="validateForm() || !f.valid" type="button" (click)="saveGroup()">Save Group</button>
+      <button mat-button class="white-btn" type="button" (click)="openDialog()">Cancel</button>
+    </div>
+    <!-- Action Buttons - Ends -------------------------------------------------- -->
+  </form>
+</div>

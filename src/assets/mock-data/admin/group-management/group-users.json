@@ -1,0 +1,58 @@
+[
+  {
+    "group": {
+      "groupId": "1",
+      "name": "group 1",
+      "groupType": "group 1"
+    },
+    "user": {
+      "userId": "1",
+      "firstName": "Syed",
+      "lastName": "Ahmed",
+      "email": "sahmed@stellatechnology.com"
+    },
+    "admin": true
+  },
+  {
+    "group": {
+      "groupId": "1",
+      "name": "group 1",
+      "groupType": "group 1"
+    },
+    "user": {
+      "userId": "2",
+      "firstName": "Zofishan",
+      "lastName": "khalid",
+      "email": "zkhalid@stellatechnology.com"
+    },
+    "admin": false
+  },
+  {
+    "group": {
+      "groupId": "1",
+      "name": "group 1",
+      "groupType": "group 1"
+    },
+    "user": {
+      "userId": "3",
+      "firstName": "Zeeshan",
+      "lastName": "Mirza",
+      "email": "zmirza@stellatechnology.com"
+    },
+    "admin": false
+  },
+  {
+  "group": {
+    "groupId": "1",
+    "name": "group 1",
+    "groupType": "group 1"
+  },
+  "user": {
+    "userId": "4",
+    "firstName": "Sana",
+    "lastName": "faraz",
+    "email": "sfaraz@stellatechnology.com"
+  },
+  "admin": true
+}
+]

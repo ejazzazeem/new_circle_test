@@ -1,0 +1,21 @@
+@import "~assets/scss/colors";
+
+.report-dropdown{
+  float: none;
+  // margin-bottom: -26px;
+  // height: 43px;
+  .select-container{
+    padding-bottom: 0;
+    .mat-form-field-wrapper{
+      padding-bottom: 0;
+    }
+  }
+}
+.no-report-msg{
+  margin-top: 20px;
+  margin-left: 15px;
+  background: #fff;
+  padding: 20px;
+  height: 70vh;
+  color: $light-text;
+}

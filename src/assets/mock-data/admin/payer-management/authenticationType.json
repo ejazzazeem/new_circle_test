@@ -1,0 +1,10 @@
+[
+  {
+    "id": "CERTIFICATE",
+    "name": "Certificate"
+  },
+  {
+    "id": "USERNAME_PASSWORD",
+    "name": "Username & Password"
+  }
+]

@@ -1,0 +1,70 @@
+<div class="main-right-section">
+  <!-- No Pre-Filter Section ----------------------------------------------- -->
+
+  <!-- Report View Section - Starts ----------------------------------------------- -->
+  <div class="report-view-section" id="report_body">
+    <div class="heading-top">
+      <h2 class="sub-heading with-toggle">Participating Providers by Payer</h2>
+      <div class="top-level-btns dont-print">
+          <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+              <mat-select placeholder="" >
+                  <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+                  <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+              </mat-select>
+          </mat-form-field>
+        <button mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      </div>
+    </div>
+
+
+    <div class="custom-collapsible-table" >
+      <div class="collapsible-head">
+        <div class="cp-th width25">Payer</div>
+        <div class="cp-th width25">Total # of Providers</div>
+        <div class="cp-th width25"># of Participating Providers</div>
+        <div class="cp-th width25">% Participating</div>
+      </div>
+      <div class="collapsible-body" >
+        <div *ngFor="let details of response; let i=index;" class="cp-row">
+          <div class="cp-row-inner">
+            <div class="cp-td width25">{{details.payer}}</div>
+            <div class="cp-td width25">{{details.totalProviders}}</div>
+            <div class="cp-td width25">{{details.participatingProviders}}</div>
+            <div class="cp-td width25">{{details.participatingPercentage}}%</div>
+          </div>
+        </div>
+          <div *ngIf="paginationObj.totalRecords > 0">
+              <app-report-pagination   [currentOffset]="paginationObj.currentOffSet" [pageSize]="paginationObj.pageSize" [totalRecords]="paginationObj.totalRecords"
+                                      (changeSize)="updatePageSize($event)" (changePage)="updatePage($event)"  ></app-report-pagination>
+          </div>
+
+      </div>
+      <div class="collapsible-body" *ngIf= "response && response.length === 0">
+        <div class="cp-row-inner">
+          <div class="cp-td empty-row">No Records Found</div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="btn-block dont-print">
+        <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+            <mat-select placeholder="" >
+                <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+                <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+            </mat-select>
+        </mat-form-field>
+      <button mat-button class="white-btn delete-report" type="button" (click)="deleteReport()" *ngIf="isMyReport" >
+        <svg fill="#3e3e3e" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+      <button mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      <button mat-button class="blue-btn" type="button" *ngIf="isMyReport" (click)="editDialog()">Subscription</button>
+      &nbsp;&nbsp;
+    </div>
+  </div>
+  <!-- Report View Section - Ends ----------------------------------------------- -->
+</div>
+<button mat-button class="back-to-top dont-print" *ngIf="response && response.length > 15" scrollTo scrollTargetSelector="#report_body" ></button>

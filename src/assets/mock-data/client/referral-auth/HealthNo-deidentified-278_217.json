@@ -1,0 +1,93 @@
+{
+	"transactionInfo": {
+		"transactionDate": "20170728",
+		"transactionTime": "0747175"
+	},
+	"payer": {
+		"name": "BLUECROSS BLUESHIELD OF WESTERN NEW YORK"
+	},
+	"requestingProvider": {
+		"name": {
+			"family": "LAST",
+			"given": "FIRST"
+		},
+		"providerID": "1111111111",
+		"taxonomyCode": ""
+	},
+	"subscriber": {
+		"name": {
+			"family": "LAST",
+			"given": "FIRST",
+			"middle": "Middle"
+		},
+		"memberID": "YJX999999999",
+		"dob": "19010101",
+		"memberGender": "F"
+	},
+	"referralAuth": [
+		{
+			"categoryCode": "SC",
+			"certificationTypeCode": "I",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "A1",
+			"identifier": "444444444",
+			"decisionReasonCode": "",
+			"previousCert": "",
+			"eventDate": "20170701-20180101",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "ABF",
+			"diagnosisCode": "M79672",
+			"unitTypeCode": "VS",
+			"providerQuantity": "4",
+			"message": "",
+			"referringProvider": {
+				"name": {
+					"family": "",
+					"given": ""
+				},
+				"npi": "",
+				"address": {
+					"addressLine1": "",
+					"addressLine2": "",
+					"city": "",
+					"state": "",
+					"zip": ""
+				},
+				"contactInfo": [
+					{
+						"label": "",
+						"value": ""
+					}
+				],
+				"taxonomyID": ""
+			},
+			"servicingProvider": {
+				"name": {
+					"family": "LAST",
+					"given": "FIRST"
+				},
+				"npi": "1111111111",
+				"address": {
+					"addressLine1": "100 MAIN",
+					"addressLine2": "",
+					"city": "BUFFALO",
+					"state": "NY",
+					"zip": "14208"
+				},
+				"contactInfo": [
+					{
+						"label": "TE",
+						"value": "7165555555"
+					}
+				],
+				"taxonomyID": ""
+			}
+		}
+	]
+}

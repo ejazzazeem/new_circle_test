@@ -1,0 +1,31 @@
+<div class="main-dialog-container custom">
+  <h2 mat-dialog-title class="sub-heading">Disclaimer Notice</h2>
+  <perfect-scrollbar mat-dialog-content class="dialog-body">
+    <div>
+      <div class="no-group" *ngIf="!notEmpty">
+        {{ 'You Don\'t Have Any ' + model.payerOrGroup + '. Please, Contact your admin' }}
+      </div>
+      <div class="outer" *ngIf="notEmpty">
+        <div *ngIf="!(oneGroup || model.payerOrGroup === 'Payer')">
+          <label class="label-text">Please Select a Group</label>
+          <div class="select-container">
+            <mat-form-field class="select-field">
+              <mat-select [(ngModel)]="model.selectedGroup" name="selectedGroup">
+                <mat-option *ngFor="let group of groupList,let i = index"
+                            [value]="group.groupId">{{group.groupName}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="disclaimer-text" [innerHTML]="disclaimerText.value">
+      </div>
+    </div>
+  </perfect-scrollbar>
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-button class="blue-btn" [disabled]="!model.selectedGroup"
+            (click)="savedGroup(model.selectedGroup)">I Agree</button>
+    <button mat-button class="white-btn" (click)="logout()">Cancel</button>
+  </div>
+</div>
+

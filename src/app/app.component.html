@@ -1,0 +1,19 @@
+<!-- main app container -->
+<div class="main-app-screen">
+  <div class="app-inner">
+    <app-alert></app-alert>
+    <router-outlet>  <div *ngIf="showLoader" class="loading">
+      <div id="cssload-loader">
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+        <div class="cssload-dot"></div>
+      </div>
+    </div></router-outlet>
+  </div>
+</div>
+

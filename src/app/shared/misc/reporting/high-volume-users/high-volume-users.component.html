@@ -1,0 +1,175 @@
+<div class="main-right-section">
+  <!-- Filter Expandable Section - Starts ----------------------------------------------- -->
+  <div class="main-filter-section" id="report_body">
+    <mat-expansion-panel class="filter-expansion" [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Filters
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="calendar-container">
+            <label class="label-text">From</label>
+            <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+              <input matInput [matDatepicker]="fromPicker" [(ngModel)]="fromDate" #startDate="ngModel" placeholder="MM/DD/YYYY"
+                     name="fromDate" (blur)="validateStartDate($event)" maxlength="10"
+                     (keydown)="handledate($event)" (dateChange)="fromPicker.close(); sDateErr = false;">
+              <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+              <mat-datepicker #fromPicker></mat-datepicker>
+              <span class="custom-invalid" style="color:red" *ngIf="sDateErr">{{sdateMsg}}</span>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="calendar-container">
+            <label class="label-text">To</label>
+            <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+              <input matInput [matDatepicker]="toPicker" placeholder="MM/DD/YYYY" maxlength="10"
+                     name="toDate" [(ngModel)]="toDate" #endDate="ngModel" (blur)="validateEndtDate($event)"
+                     (keydown)="handledate($event)" (dateChange)="toPicker.close(); eDateErr = false;">
+              <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+              <mat-datepicker #toPicker ></mat-datepicker>
+              <span class="custom-invalid" style="color:red" *ngIf="eDateErr">{{edateMsg}}</span>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-7 col-md-3 field-col">
+          <div class="select-container">
+            <label class="label-text">Volume</label>
+            <mat-form-field class="select-field" floatPlaceholder="never">
+              <mat-select placeholder="-- Select Volume --" name="reportList" [(ngModel)]="model.volume" #volume="ngModel">
+                <mat-option value="500">500+</mat-option>
+                <mat-option value="1000">1000+</mat-option>
+                <mat-option value="1500">1500+</mat-option>
+                <mat-option value="2000">2000+</mat-option>
+                <mat-option value="3000">3000+</mat-option>
+                <mat-option value="5000">5000+</mat-option>
+                <mat-option value="7500">7500+</mat-option>
+                <mat-option value="10000">10000+</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="btn-block">
+        <button mat-button [disabled]="sDateErr || eDateErr" class="blue-btn submit" type="button" (click)="requestHighVolumeUsers()">Apply Filter</button>
+        <button mat-button class="white-btn submit" type="button" (click)="clearFilter()">Clear Filter</button>
+      </div>
+    </mat-expansion-panel>
+  </div>
+  <!-- Filter Expandable Section - Ends ----------------------------------------------- -->
+
+  <!-- Report View Section - Starts ----------------------------------------------- -->
+  <div class="report-view-section" *ngIf="showHideTable" id="reportDiv">
+    <div class="heading-top">
+      <h2 class="sub-heading with-toggle">High Volume Users</h2>
+      <div class="top-level-btns dont-print">
+
+        <div class="grand-totals" *ngIf="totalsObj">
+         <b> Total Transactions:</b>  {{totalsObj.transactionCount}}
+        </div>
+        <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+          <mat-select placeholder="" >
+            <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+            <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button  mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      </div>
+
+  </div>
+
+    <!-- Custom Collapsible Table - Created by Sana - Starts ----------------------------- -->
+    <div class="custom-collapsible-table">
+      <div class="collapsible-head">
+        <div class="cp-th width20">Date</div>
+        <div class="cp-th width15">Count of Users</div>
+        <div class="cp-th width20"></div>
+        <div class="cp-th width20"></div>
+        <div class="cp-th width15"></div>
+        <div class="cp-th width10">Date Total Count</div>
+      </div>
+      <div class="collapsible-body"  *ngIf = "this.paginationObj.totalRecords> 0">
+        <div class="cp-3rd-level-row no-plus-icon sub-header-row">
+          <div class="cp-td width20"></div>
+          <div class="cp-td width15">User ID</div>
+          <div class="cp-td width20">Name</div>
+          <div class="cp-td width20">Organization</div>
+          <div class="cp-td width15">Phone Number</div>
+          <div class="cp-td width10">Count</div>
+        </div>
+        <div *ngFor="let item of response; let i=index;"  class="cp-row"
+             [ngClass]="{'expandable': item.userCount > 0, 'open' : this.model.selectedIndex === i}">
+          <div class="cp-row-inner" (click)="setSelectedIndex(i, item)">
+            <div class="cp-td width20">{{item.date}}</div>
+            <div class="cp-td width15">{{item.userCount}}</div>
+            <div class="cp-td width20"></div>
+            <div class="cp-td width20"></div>
+            <div class="cp-td width15"></div>
+            <div class="cp-td width10">{{item.transactionCount}}</div>
+          </div>
+          <!-- If a row has multiple inner rows -- Inner table body starts -->
+          <div class="cp-inner-table" >
+            <div class="cp-inner-row" *ngFor="let innerDetails of innerResponse; let s=index">
+              <div class="cp-inner-td width20"></div>
+              <div class="cp-inner-td width15">{{innerDetails.userId}}</div>
+              <div class="cp-inner-td width20">{{innerDetails?.userName }}</div>
+              <div class="cp-inner-td width20">{{innerDetails.organization}}</div>
+              <div class="cp-inner-td width15">{{innerDetails.phoneNumber}}</div>
+              <div class="cp-inner-td width10">{{innerDetails.transactionCount}}</div>
+            </div>
+
+
+            <div class="cp-inner-row inner-paginator" *ngIf="showInnerPager">
+
+              <div class="cp-inner-td width100">
+                <app-child-pager [reportName]="response[i].date" [currentOffset]="paginationChildObj.currentOffSet" [pageSize]="paginationChildObj.pageSize" [totalRecords]="paginationChildObj.totalRecords"
+                                 (changeSize)="updateChildPageSize($event)" (prevPager)="updateChildPage($event)" (nextPager)="updateChildPage($event)"  ></app-child-pager>
+              </div>
+          </div>
+          </div>
+          <!-- If a row has multiple inner rows -- Inner table body ends -->
+        </div>
+        <app-report-pagination    [currentOffset]="paginationObj.currentOffSet" [pageSize]="paginationObj.pageSize" [totalRecords]="paginationObj.totalRecords"
+                               (changeSize)="updatePageSize($event)" (changePage)="updatePage($event)"  ></app-report-pagination>
+      </div>
+      <div class="collapsible-body" *ngIf="noRecordFound">
+        <div class="cp-row-inner">
+          <div class="cp-td empty-row">No Records Found</div>
+        </div>
+      </div>
+
+
+    </div>
+
+    <!-- Custom Collapsible Table - Created by Sana - Ends ----------------------------- -->
+
+    <div class="btn-block dont-print" >
+      <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+        <mat-select placeholder="" >
+          <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+          <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-button class="white-btn delete-report" type="button" (click)="deleteReport()" *ngIf="isMyReport" >
+        <svg fill="#3e3e3e" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+      <button  mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      <button data-html2canvas-ignore="true" mat-button class="blue-btn" type="button" *ngIf="isMyReport" (click)="editDialog()">Subscription</button>
+      &nbsp;&nbsp;
+    </div>
+  </div>
+  <!-- Report View Section - Ends ----------------------------------------------- -->
+</div>
+
+<button mat-button  class="back-to-top dont-print" *ngIf="highVolumeUsers.length >= 3" scrollTo scrollTargetSelector="#report_body" ></button>
+
+
+
+
+
+

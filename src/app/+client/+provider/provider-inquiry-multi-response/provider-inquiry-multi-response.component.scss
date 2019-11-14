@@ -1,0 +1,40 @@
+@import "~assets/scss/colors";
+
+.table-container{
+  margin-bottom: 30px;
+  .sub-heading{
+    margin-top: 0;
+  }
+  .common-datatable{
+    tbody{
+      tr{
+        td{
+          height: 45px;
+          &.dataTables_empty{
+            padding: 10px 0;
+          }
+          .red{
+            color: $red;
+          }
+          .green{
+            color: $green;
+          }
+        }
+      }
+    }
+  }
+  &.positive-response{
+    tbody{
+      tr{
+        cursor: pointer;
+        &:hover{
+          background: $table-hover;
+        }
+        &.highlighted{
+          background: $table-hover;
+          color: $dark-text;
+        }
+      }
+    }
+  }
+}

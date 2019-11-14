@@ -1,0 +1,76 @@
+[
+  {
+    "userId": "10243",
+    "role":  {
+      "role": "PAYER_USER"
+    },
+    "firstName": "John",
+    "lastName": "Doe",
+    "dateOfBirth": "1992-01-01",
+    "email": "pdoe@gmail.com",
+    "pinCode": "7360",
+    "externalId": "000014556781575",
+    "loginId": "pdoe",
+    "password": "123123",
+    "lastEdited": "1994-11-12",
+    "userGroups": [
+      {
+          "groupId": "1",
+          "name": "group 2",
+          "groupType": "USER"
+      }
+    ],
+    "permissionOverrides": [
+    {
+      "group": {
+        "groupId": "1",
+        "name": "group 1",
+        "groupType": "USER"
+      },
+      "permission": {
+        "permissionId": "1",
+        "name": "Eligibility Criteria"
+      },
+      "exclude": false
+    },
+    {
+      "group": {
+        "groupId": "2",
+        "name": "group 2",
+        "groupType": "USER"
+      },
+      "permission": {
+        "permissionId": "1",
+        "name": "Eligibility"
+      },
+      "exclude": false
+    },
+    {
+      "group": {
+        "groupId": "3",
+        "name": "group 3",
+        "groupType": "USER"
+      },
+      "permission": {
+        "permissionId": "1",
+        "name": "Criteria"
+      },
+      "exclude": false
+    }
+  ],
+    "regionOverrides": [
+      {
+        "group": {
+          "groupId": "3",
+          "name": "ggroup 3",
+          "groupType": "USER"
+        },
+        "region": {
+          "regionId": "1",
+          "name": "Region One"
+        },
+        "exclude": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,2321 @@
+[
+  {
+    "payerAndRequestingProvider": {
+      "payer": "INDEPENDENT HEALTH",
+      "requestingProviderName": {
+        "family": "LASTNAME",
+        "given": "FIRSTNAME"
+      },
+      "providerID": "jfox10"
+    },
+    "member": {
+      "memberNumber": "91348732000",
+      "groupID": "13312-01",
+      "memberName": {
+        "family": "NORTH",
+        "given": "CLAIR",
+        "middle": ""
+      },
+      "memberDoB": "19710225",
+      "memberGender": "F",
+      "address": {
+        "addressLine1": "1394 Graff Rd",
+        "addressLine2": "",
+        "city": "Attica",
+        "state": "NY",
+        "zip": "14011"
+      }
+    },
+    "primaryCareProvider": {
+      "providerName": {
+        "family": "PCP REQUIRED",
+        "given": ""
+      },
+      "providerPhone": "7166313001",
+      "providerFax": "",
+      "address": {
+        "addressLine1": "511 FARBER LAKES DRIVE",
+        "addressLine2": "",
+        "city": "BUFFALO",
+        "state": "NY",
+        "zip": "14221"
+      }
+    },
+    "otherInsuranceInformation": {
+      "memberName": {
+        "family": "",
+        "given": "",
+        "middle": ""
+      },
+      "memberID": "",
+      "payers": [
+        {
+          "payerTypeCode": "",
+          "payerName": "",
+          "additionalInformation": ""
+        }
+      ]
+    },
+    "benefitPlanCoverage": {
+      "planName": "Child Health Plus",
+      "insuranceTypeCode": "",
+      "coverageStatus": "1",
+      "inNetwork": {
+        "deductible": [
+          {
+            "timeRange": "22",
+            "remaining": "",
+            "total": "0",
+            "used": "",
+            "coverageLevel": "IND",
+            "additionalInformation": ""
+          },
+          {
+            "timeRange": "22",
+            "remaining": "",
+            "total": "0",
+            "used": "",
+            "coverageLevel": "FAM",
+            "additionalInformation": ""
+          }
+        ],
+        "copay": [
+          {
+            "timeRange": "",
+            "amount": "",
+            "coverageLevel": "",
+            "additionalInformation": ""
+          }
+        ],
+        "coinsurance": [
+          {
+            "amount": "",
+            "coverageLevel": "",
+            "additionalInformation": ""
+          }
+        ],
+        "stopLoss": [
+          {
+            "timeRange": "22",
+            "remaining": "",
+            "total": "0",
+            "used": "",
+            "coverageLevel": "IND",
+            "additionalInformation": ""
+          },
+          {
+            "timeRange": "22",
+            "remaining": "",
+            "total": "0",
+            "used": "",
+            "coverageLevel": "FAM",
+            "additionalInformation": ""
+          }
+        ],
+        "limits": [
+          {
+            "timeRange": "",
+            "remaining": "",
+            "total": "",
+            "used": "",
+            "coverageLevel": "",
+            "additionalInformation": ""
+          }
+        ]
+      },
+      "outOfNetwork": {
+        "deductible": [
+          {
+            "timeRange": "",
+            "remaining": "",
+            "total": "",
+            "used": "",
+            "coverageLevel": "",
+            "additionalInformation": ""
+          }
+        ],
+        "copay": [
+          {
+            "timeRange": "",
+            "amount": "",
+            "coverageLevel": "",
+            "additionalInformation": ""
+          }
+        ],
+        "coinsurance": [
+          {
+            "amount": "",
+            "coverageLevel": "",
+            "additionalInformation": ""
+          }
+        ],
+        "stopLoss": [
+          {
+            "timeRange": "",
+            "remaining": "",
+            "total": "",
+            "used": "",
+            "coverageLevel": "",
+            "additionalInformation": ""
+          }
+        ],
+        "limits": [
+          {
+            "timeRange": "",
+            "remaining": "",
+            "total": "",
+            "used": "",
+            "coverageLevel": "",
+            "additionalInformation": ""
+          }
+        ]
+      }
+    },
+    "planDetails": {
+      "payerName": "INDEPENDENT HEALTH",
+      "planName": "Child Health Plus",
+      "dates": {
+        "planDate": "",
+        "eligibilityDate": "",
+        "planBeginDate": "20170101",
+        "eligibilityBeginDate": "20171101",
+        "planEndDate": "",
+        "eligibilityEndDate": "",
+        "policyEffectiveDate": "",
+        "policyExpirationDate": "",
+        "premiumPayToEndDate": "",
+        "otherDates": [
+          {
+            "qualifier": "",
+            "date": ""
+          }
+        ]
+      },
+      "planDescription": "Erie County Child Health Plus",
+      "additionalInformation": {
+        "limitationMessage": [
+          "Roswell's Inhale Life Smoking Cessation Program does not apply.",
+          "Benefits are based on calendar year.",
+          "For behavioral health benefit information and authorization administration contact Beacon Health Options at https://provider.beaconhs.com/ , or 1-855-481-7038."
+        ],
+        "benefitDisclaimerMessage": [
+          ""
+        ]
+      }
+    },
+    "benefits": [
+      {
+        "benefitName": "78",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": " ",
+                "amount": "0 0",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "75",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "42",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": [
+              {
+                "timeRange": "",
+                "remaining": "",
+                "total": "",
+                "used": "",
+                "coverageLevel": "",
+                "additionalInformation": "'Home Care and Home Infusion visit limits are combined'"
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "76",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "12",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "18",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "AD",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": " ",
+                "amount": "0 0",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": [
+              {
+                "timeRange": "",
+                "remaining": "",
+                "total": "",
+                "used": "",
+                "coverageLevel": "",
+                "additionalInformation": "'Physical, Speech and Occupational Therapies visit limits are combined'"
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "BG",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": " ",
+                "amount": "0 0",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "PT",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": " ",
+                "amount": "0 0",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": [
+              {
+                "timeRange": "",
+                "remaining": "",
+                "total": "",
+                "used": "",
+                "coverageLevel": "",
+                "additionalInformation": "'Physical, Speech and Occupational Therapies visit limits are combined'"
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "AE",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": " ",
+                "amount": "0 0",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": [
+              {
+                "timeRange": "",
+                "remaining": "",
+                "total": "",
+                "used": "",
+                "coverageLevel": "",
+                "additionalInformation": "'Physical, Speech and Occupational Therapies visit limits are combined'"
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "AF",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": " ",
+                "amount": "0 0",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": [
+              {
+                "timeRange": "",
+                "remaining": "",
+                "total": "",
+                "used": "",
+                "coverageLevel": "",
+                "additionalInformation": "'Physical, Speech and Occupational Therapies visit limits are combined'"
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "33",
+        "coverageStatus": "I",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "88",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "51",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "52",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "86",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "3",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "TELEMEDICINE BENEFIT.",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "TELEMEDICINE BENEFIT.",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "59",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "UC",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "AL",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "81",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "80",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "4",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": " ",
+                "amount": "0 0",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "6",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": " ",
+                "amount": "0 0",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "73",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": " ",
+                "amount": "0 0",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "5",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "  ",
+                "amount": "0 0 0",
+                "coverageLevel": "CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00 .00",
+                "coverageLevel": "CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "62",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": " ",
+                "amount": "0 0",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00",
+                "coverageLevel": "CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "69",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "99",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "2",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "   ",
+                "amount": "0 0 0 0",
+                "coverageLevel": "CHD CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00 .00 .00",
+                "coverageLevel": "CHD CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "8",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "   ",
+                "amount": "0 0 0 0",
+                "coverageLevel": "CHD CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00 .00 .00",
+                "coverageLevel": "CHD CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "40",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "   ",
+                "amount": "0 0 0 0",
+                "coverageLevel": "CHD CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00 .00 .00",
+                "coverageLevel": "CHD CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "A3",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "93",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "  ",
+                "amount": "0 0 0",
+                "coverageLevel": "CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00 .00",
+                "coverageLevel": "CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "20",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "A0",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "98",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "82",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "AJ",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "AK",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "AI",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "A8",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "A7",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "AB",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "A6",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "AG",
+        "coverageStatus": "I",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "68",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "BH",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "45",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "13",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "53",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "48",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "50",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "65",
+        "coverageStatus": "I",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "7",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "  ",
+                "amount": "0 0 0",
+                "coverageLevel": "CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00 .00 .00",
+                "coverageLevel": "CHD CHD CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      },
+      {
+        "benefitName": "1",
+        "coverageStatus": "1",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "35",
+        "coverageStatus": "I",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "47",
+        "coverageStatus": "V",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "MH",
+        "coverageStatus": "V",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "CF",
+        "coverageStatus": "I",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "DG",
+        "coverageStatus": "I",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Compression Stockings",
+        "coverageStatus": "I",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".00",
+                "coverageLevel": "CHD",
+                "additionalInformation": ""
+              }
+            ],
+            "stopLoss": [],
+            "limits": []
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "deductible": [],
+            "copay": [],
+            "coinsurance": [],
+            "stopLoss": [],
+            "limits": []
+          }
+        ]
+      }
+    ]
+  }
+]

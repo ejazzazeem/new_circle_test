@@ -1,0 +1,36 @@
+@import "variables";
+// All responsive media queries will go here
+
+// Large devices (desktops, less than 1280px)
+@media only screen and ($desktop){
+
+}
+
+// Large devices (desktops, less than 1024px)
+@media only screen and ($desktop-small){
+  .main-right-section{
+    .title-row{
+      .col-md-2{
+        width: auto !important;
+      }
+    }
+  }
+}
+
+// Medium devices (tablets, less than 992px)
+@media only screen and ($tablet) {
+  .permission-row .permission-list{
+    .single-permission{
+      width: 50%;
+    }
+  }
+}
+
+// Medium small devices (smaller tablets, less than 768px)
+@media only screen and ($tablet-small) {
+  .permission-row .permission-list{
+    .single-permission{
+      width: 100%;
+    }
+  }
+}

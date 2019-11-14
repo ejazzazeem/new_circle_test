@@ -1,0 +1,392 @@
+@import "~assets/scss/colors";
+
+app-side-menu-client{
+  border-right: 1px solid $field-border;
+  // IE11 css hacks
+  // this style will implement on IE only
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    height:100vh;
+  }
+}
+.left-sidenav-container{
+  .logo-img {
+    width: 135px;
+    position: absolute;
+    left: 50px;
+    top: 25px;
+    &.smaller-view {
+      display: none;
+    }
+    &.smaller-view-without-animation{
+      display: none;
+    }
+  }
+  .combine{
+    background-color: #fff;
+    overflow: hidden;
+    .menu-wrapper{
+      width: 225px;
+      .logo-box{
+        padding: 23px 15px;
+        border-bottom: 1px solid $field-border;
+        cursor: pointer;
+        .menu-bars{
+          width: 18px;
+          margin-left: 2px;
+          margin-top: 2px;
+          transform: rotate(180deg);
+        }
+        .logo-img{
+          width: 135px;
+          margin-left: 11px;
+        }
+      }
+      .profile-box{
+        padding: 13px 9px 13px 9px;
+        display: flex;
+        flex-direction: row;
+        .pro-icon{
+          width: 31px;
+          height: 31px;
+        }
+      }
+      .practice-msg{
+        font-size: 12px;
+        padding: 10px 20px 10px;
+        background: $box-bg;
+        display: block;
+      }
+      .side-menu-list{
+        .menu-scroll{
+          max-height: 405px;
+        }
+        mat-list{
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          mat-list-item{
+            color: $dark-text;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-family: 'futura_ltbook';
+            padding: 0;
+            line-height: 13px;
+            height: 45px;
+            .menu-img{
+              margin-right: 18px;
+              margin-left: 1px;
+              width: 15px;
+              height: 22px;
+              background: url(/assets/images/custom-permission.svg) no-repeat 0 0;
+              background-size: 100%;
+              &.Eligibility.Inquiry{
+                background: url(/assets/images/Icon-Eligibility-Benefits.svg) no-repeat 0 0;
+                background-size: 100%;
+              }
+              &.Claims.Status{
+                background: url(/assets/images/Icon-Claim-Status-Inquiry.svg) no-repeat 0 0;
+                background-size: 100%;
+              }
+              &.Provider.Inquiry{
+                background: url(/assets/images/Icon-Provider-Inquiry.svg) no-repeat 0 0;
+                background-size: 100%;
+                width: 19px;
+              }
+              &.Provider.Inquiry.Summary{
+                background: url(/assets/images/Icon-Provider-Inquiry-Summary.svg) no-repeat 0 0;
+                background-size: 100%;
+              }
+              &.Referral.Inquiry{
+                background: url(/assets/images/Icon-Referral.svg) no-repeat 0 0;
+                background-size: 100%;
+                width: 20px;
+              }
+              &.Referral.Request{
+                background: url(/assets/images/Icon-Referral-Request.svg) no-repeat 0 0;
+                background-size: 100%;
+                width: 20px;
+              }
+              &.Patient.Consent{
+                background: url(/assets/images/Icon-Patient-Consent.svg) no-repeat 0 0;
+                background-size: 100%;
+              }
+              &.Batch{
+                background: url(/assets/images/batch.svg) no-repeat 0 0;
+                background-size: 100%;
+              }
+              &.Reporting{
+                background: url(/assets/images/reporting.svg) no-repeat 0 0;
+                background-size: 100%;
+              }
+            }
+            &.active{
+              background-color: $primary;
+              color: #fff;
+              .menu-img{
+                //this will turn the icon images in white
+                // -webkit-filter: brightness(200%); /* Safari 6.0 - 9.0 */
+                // filter: brightness(200%);
+                &.Eligibility.Inquiry{
+                  background: url(/assets/images/Icon-Eligibility-Benefits-White.svg) no-repeat 0 0;
+                  background-size: 100%;
+                }
+                &.Claims.Status{
+                  background: url(/assets/images/Icon-Claim-Status-Inquiry-White.svg) no-repeat 0 0;
+                  background-size: 100%;
+                }
+                &.Provider.Inquiry{
+                  background: url(/assets/images/Icon-Provider-Inquiry-White.svg) no-repeat 0 0;
+                  background-size: 100%;
+                  width: 19px;
+                }
+                &.Provider.Inquiry.Summary{
+                  background: url(/assets/images/Icon-Provider-Inquiry-Summary-White.svg) no-repeat 0 0;
+                  background-size: 100%;
+                }
+                &.Referral.Inquiry{
+                  background: url(/assets/images/Icon-Referral-White.svg) no-repeat 0 0;
+                  background-size: 100%;
+                  width: 20px;
+                }
+                &.Referral.Request{
+                  background: url(/assets/images/Icon-Referral-Request-White.svg) no-repeat 0 0;
+                  background-size: 100%;
+                  width: 20px;
+                }
+                &.Patient.Consent{
+                  background: url(/assets/images/Icon-Patient-Consent-White.svg) no-repeat 0 0;
+                  background-size: 100%;
+                }
+                &.Batch{
+                  background: url(/assets/images/batch-white.svg) no-repeat 0 0;
+                  background-size: 100%;
+                }
+                &.Reporting{
+                  background: url(/assets/images/reporting-white.svg) no-repeat 0 0;
+                  background-size: 100%;
+                }
+              }
+            }
+            &[hidden]{
+              display: none !important;
+            }
+          }
+        }
+      }
+      .web-link {
+        font-size: 12px;
+        text-align: center;
+        .line {
+          height: 1px;
+          background: $light-text;
+          display: block;
+          width: 130px;
+          margin: 10px auto 20px;
+        }
+      }
+    }
+    &.smaller-view{
+      width: 50px;
+      animation-name: close;
+      animation-duration: .2s;
+      .menu-wrapper{
+        .logo-box{
+          .menu-bars{
+            -webkit-animation: rotate-back .4s linear; /* Safari 4.0 - 8.0 */
+            animation: rotate-back .4s linear;
+            transform: rotate(0deg);
+          }
+        }
+        .profile-box{
+          .side-menu{
+            margin-left: -30px;
+            //height: 30px;
+            width: 30px;
+            .mat-select-value, .mat-select-arrow{
+              color: transparent;
+            }
+            .mat-form-field-wrapper{
+              padding: 0;
+              .mat-form-field-infix{
+                min-width: 30px;
+                background: transparent;
+              }
+              .mat-form-field-flex .mat-form-field-infix .mat-form-field-placeholder{
+                color: transparent;
+                transition: none;
+              }
+              .mat-form-field-underline{
+                display: none;
+              }
+            }
+          }
+        }
+        .practice-msg{
+          display: none;
+        }
+      }
+      app-footer .footer-notes{
+        overflow: hidden;
+        padding: 0;
+        animation-name: hide;
+        animation-duration: .1s;
+        color: #fff;
+        .release{
+          color: #fff;
+        }
+      }
+      .web-link {
+        display: none;
+      }
+    }
+    &.smaller-view-without-animation{
+      width: 50px;
+      .menu-wrapper{
+        .logo-box{
+          .menu-bars{
+            transform: rotate(0deg);
+          }
+        }
+        .profile-box{
+          .side-menu{
+            margin-left: -30px;
+            //height: 30px;
+            width: 30px;
+            .mat-select-value, .mat-select-arrow{
+              color: transparent;
+            }
+            .mat-form-field-wrapper{
+              padding: 0;
+              .mat-form-field-infix{
+                min-width: 30px;
+                background: transparent;
+                .mat-form-field-placeholder{
+                  color: transparent;
+                }
+              }
+              .mat-form-field-underline{
+                display: none;
+              }
+            }
+          }
+        }
+        .practice-msg{
+          display: none;
+        }
+      }
+      app-footer .footer-notes{
+        color: #fff;
+        .release{
+          color: #fff;
+        }
+      }
+      .web-link {
+        display: none;
+      }
+    }
+    &.larger-view{
+      width: 225px;
+      animation-name: open;
+      animation-duration: .4s;
+      .menu-wrapper{
+        .logo-box{
+          .menu-bars{
+            transform: rotate(180deg);
+            -webkit-animation: rotate .4s linear; /* Safari 4.0 - 8.0 */
+            animation: rotate .4s linear;
+          }
+        }
+      }
+      app-footer .footer-notes{
+        animation-name: show;
+        animation-duration: .2s;
+      }
+    }
+    &.larger-view-without-animation{
+      width: 225px;
+      .menu-wrapper{
+        .logo-box{
+          .menu-bars{
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes close {
+  0%{
+    width: 225px;
+  }
+  100%{
+    width: 50px;
+  }
+
+}
+@keyframes open {
+  0%{
+    width: 50px;
+  }
+  100%{
+    width: 225px;
+  }
+}
+
+@keyframes hide {
+  0%{
+    //width: 225px;
+  }
+  100%{
+    //visibility: hidden;
+    //width: 0;
+  }
+}
+
+@keyframes show {
+  0%{
+    color: #fff;
+  }
+  100%{
+  //  width: 225px;
+  }
+}
+
+
+// Rotate animation for menu arrow icon
+@keyframes rotate-back {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@-webkit-keyframes rotate-back {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}

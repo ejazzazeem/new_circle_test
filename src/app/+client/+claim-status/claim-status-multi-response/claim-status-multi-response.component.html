@@ -1,0 +1,44 @@
+<div class="top-row">
+  <h1 class="main-heading">Claim Status</h1>
+</div>
+<div class="main-right-section">
+
+  <!-- Positive Responses - Starts ----------------------------------------------- -->
+  <div class="table-container positive-response">
+    <h2 class="sub-heading">Payer</h2>
+    <h2 class="sub-heading">{{model.payer?.name}}</h2>
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+           class="common-datatable grid-table table-striped">
+      <thead>
+      <tr>
+        <th>Claim #</th>
+        <th>Status Category</th>
+        <th class="small-col">Status Code</th>
+        <th class="small-col">Billed Amount</th>
+        <th class="small-col">Paid Amount</th>
+        <th>Member ID#</th>
+        <th>Member Name</th>
+        <th>Service Date</th>
+      </tr>
+      </thead>
+      <tbody *ngIf = claimStatusResponse>
+      <tr *ngFor="let response of claimStatusResponse; let i = index " style="cursor:pointer" (click)="navigateToDetailsPage(i)">
+        <td>{{response.claimNumber ? response.claimNumber : '. . . . . . .' }}</td>
+        <td>{{response.categoryCode ? response.categoryCode : '. . . . . . .'}}</td>
+        <td>{{response.statusCode ? response.statusCode : '. . . . . . .'}}</td>
+        <td>{{response.totalBill ? (response.totalBill | currency:type:symbol:displayOption) : '. . . . . . .'}}</td>
+        <td>{{response.totalPaid ? (response.totalPaid | currency:type:symbol:displayOption) : '. . . . . . .'}}</td>
+        <td>{{model.subscriber.memberNumber ? model.subscriber.memberNumber : '. . . . . . .'}}</td>
+        <td>{{populateMemberName(model.dependent ? model.dependent.name : model.subscriber.name)}}</td>
+        <td>{{response.startDate | convertStringToDate}} {{response.endDate!==''?' - ':''}} {{response.endDate | convertStringToDate}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Positive Responses - End ----------------------------------------------- -->
+
+  <!-- All Payers Contact information - Starts ----------------------- -->
+  <app-all-payer-info></app-all-payer-info>
+  <!-- All Payers Contact information - Ends ------------------------- -->
+
+</div>

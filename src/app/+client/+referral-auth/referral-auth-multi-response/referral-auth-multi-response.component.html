@@ -1,0 +1,51 @@
+
+<div class="top-row">
+  <h1 class="main-heading">{{ categoryStatus }} Status</h1>
+</div>
+<div class="main-right-section">
+
+  <!-- Positive Responses - Starts ----------------------------------------------- -->
+  <div class="table-container positive-response">
+    <h2 class="sub-heading">Payer</h2>
+    <h2 class="sub-heading">{{model.payer?.name}}</h2>
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+           class="common-datatable grid-table table-striped">
+      <thead>
+      <tr>
+        <th>{{ categoryCode }} #</th>
+        <th class="large-col">Service Dates</th>
+        <th>Member ID #</th>
+        <th>Member Name</th>
+        <th>Referring Providers</th>
+        <th>Servicing Providers</th>
+        <th class="small-col">Reason Code</th>
+        <th class="small-col">Action Code</th>
+        <th>Inquiry Response Status</th>
+      </tr>
+      </thead>
+      <tbody *ngIf = model.referralAuth>
+      <tr *ngFor="let response of model.referralAuth; let i = index" [ngStyle]="{'cursor':(rejectionDetails ? 'default' : 'pointer')}"
+          (click)="navigateToDetailsPage(i)">
+        <td>{{response.identifier ? response.identifier : '. . . . . . .' }}</td>
+        <td>{{response.startDate | convertStringToDateMulti}} - {{response.endDate | convertStringToDateMulti}}</td>
+        <td>{{response.dependent ? response.dependent.memberID : response.subscriber.memberID}}</td>
+
+        <td>{{populateMemberName(response.dependent ? response.dependent.name : response.subscriber.name)}}</td>
+        <td>{{populateReferringServicingProviderName(response.referringProvider ? response.referringProvider?.name : '')}}</td>
+        <td>{{populateServicingProviderName(response.servicingProvider ? response.servicingProvider?.name : response.serviceLevelDetails, response.servicingProvider ? false : true)}}</td>
+       <!--<td>{{populateReferringServicingProviderName(response.servicingProvider ? response.servicingProvider?.name : '')}}</td>-->
+
+        <td>{{response.decisionReasonCode ? response.decisionReasonCode : '. . . . . . .'}}</td>
+        <td>{{response.actionCode ? response.actionCode : '. . . . . . .'}}</td>
+        <td>{{ rejectionDetails ? rejectionDetails : '. . . . . . .' }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Positive Responses - End ----------------------------------------------- -->
+  
+  <!-- All Payers Contact information - Starts ----------------------- -->
+  <app-all-payer-info></app-all-payer-info>
+  <!-- All Payers Contact information - Ends ------------------------- -->
+
+</div>

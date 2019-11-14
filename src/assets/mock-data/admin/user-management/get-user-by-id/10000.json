@@ -1,0 +1,20 @@
+[
+  {
+    "userId": "10000",
+    "role":  {
+      "role": "HEALTHENET_ADMIN"
+    },
+    "firstName": "Dave",
+    "lastName": "Lee",
+    "dateOfBirth": "1984-02-01",
+    "email": "dlee@gmail.com",
+    "pinCode": "7360",
+    "externalId": "000014556781575",
+    "loginId": "dlee",
+    "password": "123123",
+    "lastEdited": "2016-11-06",
+    "userGroups": [],
+    "permissionOverrides": [],
+    "regionOverrides": []
+  }
+]

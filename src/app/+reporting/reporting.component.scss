@@ -1,0 +1,14 @@
+.menu-additional-wrapper{
+  margin-top: -20px;
+  // Firefox hack
+  // This code will only run for Firefox browser
+  @-moz-document url-prefix() {
+    margin-top: 0 !important;
+  }
+  // IE hack
+  // This code will only run for IE browser
+  @media all and (-ms-high-contrast:none)
+  {
+    margin-top: 0 !important;
+  }
+}

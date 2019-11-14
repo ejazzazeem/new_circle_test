@@ -1,0 +1,46 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+
+.main-right-section{
+  .title-row{
+    .no-padding{
+      padding: 0;
+    }
+    .sub-heading{
+      .star{
+        color: $red;
+      }
+    }
+    .select-field{
+      width: 100%;
+      margin: 6px 0;
+    }
+    .search-box{
+      .input-field{
+        z-index: 100;
+      }
+    }
+  }
+  .fields-container{
+    position: relative;
+    .dis-text{
+      margin-bottom: 20px;
+    }
+    .submit {
+      position: relative;
+    }
+  }
+  .custom-invalid.file-error{
+    margin-top: 10px;
+  }
+}
+.common-datatable tbody tr td {
+  height: 45px;
+}
+.dataTables_empty{
+  padding: 8px !important;
+  background: #fff;
+}
+.dataTables_filter {
+  top: -50px;
+}

@@ -1,0 +1,78 @@
+[
+  {
+    "transactionInfo": {
+      "transactionDate": "20180604",
+      "transactionTime": "11485050"
+    },
+    "payer": {
+      "name": "Univera"
+    },
+    "requestingProvider": {
+      "name": {
+        "family": "Carreras Suchanick",
+        "given": "Helen"
+      },
+      "providerID": "1013986256",
+      "taxonomyCode": "207Q00000X",
+      "requestingProviderRejections": {
+        "rejectReasonCode": "MA",
+        "followupActionCode": "Y"
+      }
+    },
+    "subscriber": {
+      "name": {
+        "family": "Addams",
+        "given": "Morticia",
+        "middle": ""
+      },
+      "memberID": "202690766",
+      "dob": "19510708",
+      "memberGender": "F",
+      "accountNumber": ""
+    },
+    "referralAuth": [
+      {
+        "categoryCode": "Specialty Care Review",
+        "certificationTypeCode": "Initial",
+        "serviceTypeCode": "Medical Care",
+        "serviceLocation": "11",
+        "actionCode": "",
+        "identifier": "",
+        "decisionReasonCode": "",
+        "previousCert": "",
+        "eventDate": "",
+        "diagnosisCodeType": "International Classification of Diseases Clinical Modification (ICD-10-CM) Diagnosis",
+        "diagnosisCode": "Essential (primary) hypertension (I10)",
+        "diagnosisDate": "",
+        "unitTypeCode": "",
+        "providerQuantity": "",
+        "message": "",
+        "servicingProvider": {
+          "name": {
+            "family": "McCrea III",
+            "given": "Harry"
+          },
+          "npi": "1689786477",
+          "address": {
+            "addressLine1": "462 Grider St",
+            "addressLine2": "",
+            "city": "Buffalo",
+            "state": "NY",
+            "zip": "142153021"
+          },
+          "contactInfo": [
+            {
+              "label": "",
+              "value": ""
+            }
+          ],
+          "taxonomyID": "",
+          "servicingProviderRejections": {
+            "rejectReasonCode": "35",
+            "followupActionCode": "C"
+          }
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,55 @@
+{
+  "providerGroup": {
+    "providerGroupId": "100003b1-a7f8-4616-8116-c99a4c410000",
+    "name": "One"
+  },
+  "taxIds": [{
+    "taxId": "1234-5678-11",
+    "providerPersonCount": 2,
+    "providerPersons": [
+    {
+      "providerPersonId": "1",
+      "firstName": "syed",
+      "lastName": "ahmed",
+      "specialty": "developer",
+      "npi": "12345678",
+      "payerSource": {
+        "payerId": "1",
+        "name": "payer 1"
+      },
+      "status": "active"
+    },
+    {
+      "providerPersonId": "2",
+      "firstName": "saad",
+      "lastName": "zia",
+      "specialty": "tester",
+      "npi": "33456788",
+      "payerSource": {
+        "payerId": "1",
+        "name": "payer 1"
+      },
+      "status": "active"
+    }
+  ]
+  },
+    {
+     "taxId": "11-5677-5789-09",
+    "providerPersonCount": 1,
+    "providerPersons": [
+    {
+    "providerPersonId": "1",
+    "firstName": "Zeeshan",
+    "lastName": "Mirza",
+    "specialty": "developer",
+    "npi": "5678990",
+    "payerSource": {
+    "payerId": "3",
+    "name": "payer 3"
+    },
+    "status": "active"
+    }
+    ]
+  }
+  ]
+}

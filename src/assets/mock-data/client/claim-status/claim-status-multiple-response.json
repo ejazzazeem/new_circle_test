@@ -1,0 +1,308 @@
+{
+  "dependent": {
+    "claims": [
+      {
+        "billType": "",
+        "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+        "checkNumber": "2018041010300015",
+        "claimNumber": "180990011400",
+        "entity": "Patient",
+        "paidDate": "20180410",
+        "patientAccountNumber": "",
+        "serviceDates": "20180303-20180307",
+        "serviceLines": [
+          {
+            "billedAmount": "689",
+            "modifier1": "",
+            "modifier2": "",
+            "modifier3": "",
+            "modifier4": "",
+            "paidAmount": "522.5",
+            "procedureCode": "99291",
+            "revCode": "",
+            "serviceDates": "20180303",
+            "serviceType": "Health Care Financing Administration Common Procedural Coding System (HCPCS) Codes",
+            "status": [
+              {
+                "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+                "entity": "",
+                "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)"
+              }
+            ],
+            "units": "1"
+          },
+          {
+            "billedAmount": "689",
+            "modifier1": "",
+            "modifier2": "",
+            "modifier3": "",
+            "modifier4": "",
+            "paidAmount": "522.5",
+            "procedureCode": "99291",
+            "revCode": "",
+            "serviceDates": "20180304",
+            "serviceType": "Health Care Financing Administration Common Procedural Coding System (HCPCS) Codes",
+            "status": [
+              {
+                "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+                "entity": "",
+                "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)"
+              }
+            ],
+            "units": "1"
+          },
+          {
+            "billedAmount": "689",
+            "modifier1": "",
+            "modifier2": "",
+            "modifier3": "",
+            "modifier4": "",
+            "paidAmount": "522.5",
+            "procedureCode": "99291",
+            "revCode": "",
+            "serviceDates": "20180305",
+            "serviceType": "Health Care Financing Administration Common Procedural Coding System (HCPCS) Codes",
+            "status": [
+              {
+                "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+                "entity": "",
+                "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)"
+              }
+            ],
+            "units": "1"
+          },
+          {
+            "billedAmount": "689",
+            "modifier1": "",
+            "modifier2": "",
+            "modifier3": "",
+            "modifier4": "",
+            "paidAmount": "522.5",
+            "procedureCode": "99291",
+            "revCode": "",
+            "serviceDates": "20180306",
+            "serviceType": "Health Care Financing Administration Common Procedural Coding System (HCPCS) Codes",
+            "status": [
+              {
+                "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+                "entity": "",
+                "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)"
+              }
+            ],
+            "units": "1"
+          },
+          {
+            "billedAmount": "689",
+            "modifier1": "",
+            "modifier2": "",
+            "modifier3": "",
+            "modifier4": "",
+            "paidAmount": "522.5",
+            "procedureCode": "99291",
+            "revCode": "",
+            "serviceDates": "20180307",
+            "serviceType": "Health Care Financing Administration Common Procedural Coding System (HCPCS) Codes",
+            "status": [
+              {
+                "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+                "entity": "",
+                "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)"
+              }
+            ],
+            "units": "1"
+          }
+        ],
+        "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)",
+        "statusDate": "20180410",
+        "totalBill": "3445",
+        "totalPaid": "2612.5",
+        "voucherID": ""
+      },
+      {
+        "billType": "",
+        "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+        "checkNumber": "2018041010300015",
+        "claimNumber": "180686811400",
+        "entity": "Patient",
+        "paidDate": "20180410",
+        "patientAccountNumber": "",
+        "serviceDates": "20180303-20180307",
+        "serviceLines": [
+          {
+            "billedAmount": "689",
+            "modifier1": "",
+            "modifier2": "",
+            "modifier3": "",
+            "modifier4": "",
+            "paidAmount": "522.5",
+            "procedureCode": "99291",
+            "revCode": "",
+            "serviceDates": "20180303",
+            "serviceType": "Health Care Financing Administration Common Procedural Coding System (HCPCS) Codes",
+            "status": [
+              {
+                "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+                "entity": "",
+                "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)"
+              }
+            ],
+            "units": "1"
+          },
+          {
+            "billedAmount": "689",
+            "modifier1": "",
+            "modifier2": "",
+            "modifier3": "",
+            "modifier4": "",
+            "paidAmount": "522.5",
+            "procedureCode": "99291",
+            "revCode": "",
+            "serviceDates": "20180304",
+            "serviceType": "Health Care Financing Administration Common Procedural Coding System (HCPCS) Codes",
+            "status": [
+              {
+                "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+                "entity": "",
+                "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)"
+              }
+            ],
+            "units": "1"
+          },
+          {
+            "billedAmount": "689",
+            "modifier1": "",
+            "modifier2": "",
+            "modifier3": "",
+            "modifier4": "",
+            "paidAmount": "522.5",
+            "procedureCode": "99291",
+            "revCode": "",
+            "serviceDates": "20180305",
+            "serviceType": "Health Care Financing Administration Common Procedural Coding System (HCPCS) Codes",
+            "status": [
+              {
+                "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+                "entity": "",
+                "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)"
+              }
+            ],
+            "units": "1"
+          },
+          {
+            "billedAmount": "689",
+            "modifier1": "",
+            "modifier2": "",
+            "modifier3": "",
+            "modifier4": "",
+            "paidAmount": "522.5",
+            "procedureCode": "99291",
+            "revCode": "",
+            "serviceDates": "20180306",
+            "serviceType": "Health Care Financing Administration Common Procedural Coding System (HCPCS) Codes",
+            "status": [
+              {
+                "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+                "entity": "",
+                "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)"
+              }
+            ],
+            "units": "1"
+          },
+          {
+            "billedAmount": "689",
+            "modifier1": "",
+            "modifier2": "",
+            "modifier3": "",
+            "modifier4": "",
+            "paidAmount": "522.5",
+            "procedureCode": "99291",
+            "revCode": "",
+            "serviceDates": "20180307",
+            "serviceType": "Health Care Financing Administration Common Procedural Coding System (HCPCS) Codes",
+            "status": [
+              {
+                "categoryCode": "Finalized - The claim/encounter has completed the adjudication cycle and no more action will be taken.",
+                "entity": "",
+                "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)"
+              }
+            ],
+            "units": "1"
+          }
+        ],
+        "statusCode": "Processed according to contract provisions (Contract refers to provisions that exist between the Health Plan and a Provider of Health Care Services)",
+        "statusDate": "20180410",
+        "totalBill": "3445",
+        "totalPaid": "2612.5",
+        "voucherID": ""
+      }
+    ],
+    "name": {
+      "family": "Watson",
+      "given": "Mary Jane",
+      "middle": "J"
+    }
+  },
+  "payer": {
+    "id": "UNINW",
+    "name": "Univera"
+  },
+  "provider": {
+    "name": {
+      "family": "Abdelmalik",
+      "given": "Peter"
+    },
+    "providerID": "1922381250"
+  },
+  "providerNpi": "1922381250",
+  "providerTaxID": "161533232",
+  "providerTaxonomy": "2084N0400X",
+  "subscriber": {
+    "claims": [
+      {
+        "billType": "",
+        "categoryCode": "",
+        "checkNumber": "",
+        "claimNumber": "",
+        "entity": "",
+        "paidDate": "",
+        "patientAccountNumber": "",
+        "serviceDates": "",
+        "serviceLines": [
+          {
+            "billedAmount": "",
+            "modifier1": "",
+            "modifier2": "",
+            "modifier3": "",
+            "modifier4": "",
+            "paidAmount": "",
+            "procedureCode": "",
+            "revCode": "",
+            "serviceDates": "",
+            "serviceType": "",
+            "status": [
+              {
+                "categoryCode": "",
+                "entity": "",
+                "statusCode": ""
+              }
+            ],
+            "units": ""
+          }
+        ],
+        "statusCode": "",
+        "statusDate": "",
+        "voucherID": ""
+      }
+    ],
+    "memberNumber": "202690840",
+    "name": {
+      "family": "Parker",
+      "given": "Peter",
+      "middle": "J"
+    }
+  },
+  "transactionInfo": {
+    "transactionDate": "20180523",
+    "transactionTime": "014638"
+  }
+}

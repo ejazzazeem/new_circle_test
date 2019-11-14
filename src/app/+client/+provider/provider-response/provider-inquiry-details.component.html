@@ -1,0 +1,224 @@
+<div class="top-row row">
+  <div class="col-md-12" id="referral-body">
+    <h1 class="main-heading">Provider Inquiry Detail</h1>
+    <h2 class="sub-heading">Payer : {{payerInformation.name}}</h2>
+  </div>
+</div>
+<div class="main-right-section">
+
+  <!-- Provider Inquiry Response - Starts ----------------------------------------------- -->
+  <div class="provider-inquiry-detail" id="provider_body">
+    <div class="tabs-main-container">
+      <div class="custom-tabs-header">
+        <div class="head-list">
+          <button mat-button (click)="showHideBackToTopButton('false', 1)" class="blue-btn checked" [ngClass]="{'checked': (1 === selectedTab)}" *ngIf="model.inquiryInformation">Inquiry Information</button>
+          <button mat-button (click)="showHideBackToTopButton('false', 2) "class="blue-btn" [ngClass]="{'checked': (2 === selectedTab)}" scrollTo scrollTargetSelector="#providerInformation" *ngIf="providerData">Provider Information</button>
+          <button mat-button (click)="showHideBackToTopButton('false', 3)" class="blue-btn" [ngClass]="{'checked': (3 === selectedTab)}" scrollTo scrollTargetSelector="#patientInformation" *ngIf="patientInformation">Patient Information</button>
+          <button mat-button (click)="showHideBackToTopButton('false', 4)" class="blue-btn" [ngClass]="{'checked': (4 === selectedTab)}" scrollTo scrollTargetSelector="#claimInformation" *ngIf="claimInformation">Claim Information</button>
+          <button mat-button (click)="showHideBackToTopButton('false', 5)" class="blue-btn" [ngClass]="{'checked': (5 === selectedTab)}" scrollTo scrollTargetSelector="#attachments" *ngIf="attachments">Attachments</button>
+        </div>
+      </div>
+      <div class="custom-tabs-body">
+
+        <div class="main-container">
+          <!-- Inquiry Information - Starts ----------------------------------------------- -->
+          <div class="inquiry-info-section" id="inquiryInformation" *ngIf="model.inquiryInformation">
+            <div class="fields-container">
+              <h2 class="sub-heading">
+                Inquiry Information
+              </h2>
+              <div class="field-row row">
+                <div class="col-md-3 field-col" *ngIf="model.inquiryInformation.inquiryId">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Inquiry Id"
+                             value="{{model.inquiryInformation.inquiryId}}"
+                             readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-3 field-col" *ngIf="model.inquiryInformation.inquiryType">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Type"
+                             value="{{model.inquiryInformation.inquiryType.description}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-3 field-col" *ngIf="model.inquiryInformation.dateSent">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Date Sent"
+                             value="{{model.inquiryInformation.dateSent | convertStringToDate}}"
+                             readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-3 field-col" *ngIf="model.inquiryInformation.inquiryStatus">
+                  <div class="input-container">
+                    <mat-form-field class="view-input status-input red">
+                      <input matInput placeholder="Status"
+                             value="{{model.inquiryInformation.inquiryStatus}}"
+                             readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <div class="field-row row">
+                <div class="col-md-12 field-col" *ngIf="providerRequestMessage">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <textarea matInput placeholder="Provider Messages" matTextareaAutosize matAutosizeMinRows="1" value="{{providerRequestMessage}}"
+                                readonly></textarea>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-12 field-col" *ngIf="payerResponseMessage">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <textarea matInput placeholder="Payer Messages" matTextareaAutosize matAutosizeMinRows="1" value="{{payerResponseMessage}}"
+                                readonly></textarea>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Inquiry Information - Ends ----------------------------------------------- -->
+
+          <!-- Provider Information - Starts ----------------------------------------------- -->
+          <div class="provider-section"  id="providerInformation" *ngIf="providerData">
+            <div class="fields-container">
+              <h2 class="sub-heading">
+                Provider Information
+              </h2>
+              <div class="field-row row">
+                <div class="col-md-3 field-col" *ngIf="providerData?.firstName">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Provider" value="{{providerData?.firstName | titleCase}}{{(providerData?.firstName !=='' && providerData?.lastName !=='')?' ':''}}{{providerData?.lastName | titleCase}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-3 field-col" *ngIf="providerData?.npi">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Provider NPI"
+                             value="{{providerData?.npi}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div *ngFor="let address of providerData?.addresses">
+                <div class="col-md-4 field-col" *ngIf="address?.address1 || address?.address2">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Address" value="{{address?.address1 | titleCase}} {{address?.address2 | titleCase}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-2 field-col"  *ngIf="address?.city || address?.state">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="City/State"
+                             value="{{address?.city | titleCase}}{{(address?.city !=='' && address?.state !=='')?', ':''}}{{address?.state.toUpperCase()}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Provider Information - Ends ----------------------------------------------- -->
+
+          <!-- Patient Information - Starts ----------------------------------------------- -->
+          <div class="patient-section"  id="patientInformation" *ngIf="patientInformation">
+            <div class="fields-container">
+              <h2 class="sub-heading">
+                Patient Information
+              </h2>
+              <div class="field-row row">
+                <div class="col-md-3 field-col" *ngIf="patientInformation.firstName">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Name"
+                             value="{{patientInformation?.firstName | titleCase}}{{(patientInformation?.firstName !=='' && patientInformation?.lastName !=='')?' ':''}}{{patientInformation?.lastName | titleCase}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-3 field-col" *ngIf="patientInformation.patientId">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Member ID" value="{{patientInformation?.patientId}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Patient Information - Ends ----------------------------------------------- -->
+
+          <!-- Claim Information - Starts ----------------------------------------------- -->
+          <div class="claim-section"  id="claimInformation" *ngIf="claimInformation">
+            <div class="fields-container">
+              <h2 class="sub-heading">
+                Claim Information
+              </h2>
+              <div class="field-row row">
+                <div class="col-md-3 field-col" *ngIf="claimInformation.claimId">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Payer Claim #"
+                             value="{{claimInformation.claimId}}"
+                             readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-4 field-col" *ngIf="claimInformation.startDate">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Service Dates"
+                             value="{{claimInformation.startDate | convertStringToDate}}{{claimInformation.endDate!==''?' - ':''}}{{claimInformation.endDate | convertStringToDate}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Claim Information - Ends ----------------------------------------------- -->
+
+          <!-- Attachments - Starts ----------------------------------------------- -->
+          <div class="claim-section"  id="attachments" *ngIf="attachments">
+            <div class="fields-container">
+              <h2 class="sub-heading">
+                Attachments
+              </h2>
+              <div class="field-row row">
+                <div class="col-md-6 field-col">
+                  <div class="file-upload-container">
+                    <div class="file-viewer" *ngFor="let attachment of attachments">
+                      <mat-form-field class="view-input" hideRequiredMarker="true" >
+                        <input matInput placeholder="File name" required value="{{attachment.fileName}}">
+                      </mat-form-field>
+                      <button mat-button class="blue-btn file-btn small" (click)="viewAttachment(attachment.attachmentId)">View</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Attachments - Ends ----------------------------------------------- -->
+
+          <!-- All Payers Contact information - Starts ----------------------- -->
+          <app-all-payer-info></app-all-payer-info>
+          <!-- All Payers Contact information - Ends ------------------------- -->
+
+          <button mat-button (click)="showHideBackToTopButton('true', 1)" scrollTo scrollTargetSelector="#provider_body" *ngIf="goOnTop" mat-button class="back-to-top"></button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- Provider Inquiry Response Selection - End ----------------------------------------------- -->
+
+</div>

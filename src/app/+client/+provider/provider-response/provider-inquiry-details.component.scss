@@ -1,0 +1,39 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+@import "~assets/scss/circle";
+
+.main-content-area{
+  .top-row{
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    .date{
+      color: $light-text;
+      font-size: 11px;
+    }
+  }
+  .main-right-section{
+    .main-container{
+      .fields-container{
+        padding-bottom: 0 !important;
+        .sub-heading{
+          margin: 0 -20px 15px !important;
+          padding: 0 20px 15px !important;
+        }
+        .view-input{
+          &.status-input{
+            &.red{
+              .mat-input-element{
+                color: $red;
+              }
+            }
+            &.green{
+              .mat-input-element{
+                color: $green;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

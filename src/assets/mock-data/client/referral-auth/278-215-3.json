@@ -1,0 +1,51 @@
+{
+	"transactionInfo": {
+		"transactionDate": "20180312",
+		"transactionTime": "0814055"
+	},
+	"payer": {
+		"name": "BLUECROSS BLUESHIELD OF WESTERN NEW YORK"
+	},
+	"requestingProvider": {
+		"name": {
+			"family": "ORGANIZATION",
+			"given": ""
+		},
+		"providerID": "1111111111",
+		"taxonomyCode": ""
+	},
+	"subscriber": {
+		"name": {
+			"family": "LAST",
+			"given": "FIRST",
+			"middle": ""
+		},
+		"memberID": "88888888888",
+		"dob": "19010101",
+		"memberGender": ""
+	},
+	"referralAuth": [
+		{
+			"categoryCode": "Health Services Review",
+			"certificationTypeCode": "",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "Pended",
+			"identifier": "222222222",
+			"decisionReasonCode": "Requires Medical Review",
+			"previousCert": "",
+			"eventDate": "",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "20180310-20180310",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "International Classification of Diseases Clinical Modification (ICD-10-CM) Diagnosis",
+			"diagnosisCode": "Left lower quadrant pain",
+			"unitTypeCode": "",
+			"providerQuantity": "",
+			"message": "REHAB - OTHER"
+		}
+	]
+}

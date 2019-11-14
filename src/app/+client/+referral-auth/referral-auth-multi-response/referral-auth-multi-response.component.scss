@@ -1,0 +1,35 @@
+@import "~assets/scss/colors";
+
+.table-container{
+  margin-bottom: 30px;
+  .sub-heading{
+    margin-top: 0;
+  }
+  .common-datatable{
+    // border: 1px solid #e5e9ec !important;
+    tbody{
+      tr{
+        td{
+          height: 45px;
+          &.dataTables_empty{
+            padding: 10px 0;
+          }
+        }
+      }
+    }
+  }
+  &.positive-response{
+    tbody{
+      tr{
+        cursor: pointer;
+        &:hover{
+          background: $table-hover;
+        }
+        &.highlighted{
+          background: $table-hover;
+          color: $dark-text;
+        }
+      }
+    }
+  }
+}

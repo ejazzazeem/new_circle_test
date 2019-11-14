@@ -1,0 +1,54 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/healthenet-ui
+    docker:
+      - image: circleci/node:6
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: install-dependencies
+          command: sudo npm install
+      - run:
+          name: Check current version of node
+          command: node -v
+      - run:
+           name: Installing the AWS Command Line Interface
+           command: |
+             curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
+             unzip awscli-bundle.zip
+             sudo ./awscli-bundle/install -i /usr/local/aws -b /usr/local/bin/aws
+      - run:
+           name: Configure CLI
+           command: |
+             aws configure set aws_access_key_id $aws_access_key_id
+             aws configure set aws_secret_access_key $aws_secret_access_key
+             aws configure set default.region us-east-1
+      - run:
+           name: Logging into ECR
+           command: eval $(aws ecr get-login --no-include-email --region us-east-1)
+      - run:
+          name: install-angular
+          command: sudo npm install -g @angular/cli@1.0.0-beta.33.1
+      - run:
+          name: install sshpass
+          command: sudo apt-get install sshpass
+      - run:
+          name: angular-build
+          command: sudo ng build
+      - run:
+           name: UI build
+           command: docker build -t 055638961298.dkr.ecr.us-east-1.amazonaws.com/radnan-test/healthenet-ui:$CIRCLE_BUILD_NUM .
+      - run:
+           name: UI push
+           command: docker push 055638961298.dkr.ecr.us-east-1.amazonaws.com/radnan-test/healthenet-ui:$CIRCLE_BUILD_NUM 
+      - run:
+          name: Fix ssh Could not resolve hostname
+          command: ssh-keyscan ubuntu@52.90.159.235 >> ~/.ssh/known_hosts
+      - add_ssh_keys:
+         fingerprints:
+           - "40:d0:87:52:07:32:e4:81:af:bb:9a:21:a8:1f:a5:de"
+      - run:
+          name: SSH to instance
+          command: sshpass -p "dad12167" ssh -o StrictHostKeyChecking=no root@45.11.211.7 

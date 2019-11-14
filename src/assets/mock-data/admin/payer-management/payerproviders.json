@@ -1,0 +1,23 @@
+[
+{
+"providerID": "123-45-7869",
+"providerName": "John",
+"providerStatus": "Participating",
+"specialty": "Provider",
+"taxID": "123-45-7869"
+},
+  {
+    "providerID": "111-43-3069",
+    "providerName": "Nisa",
+    "providerStatus": "Participating",
+    "specialty": "Doctor",
+    "taxID": "111-222-3333"
+  },
+  {
+    "providerID": "345-44-4444",
+    "providerName": "Raj",
+    "providerStatus": "Participating",
+    "specialty": "Test",
+    "taxID": "100-456-3332"
+  }
+]

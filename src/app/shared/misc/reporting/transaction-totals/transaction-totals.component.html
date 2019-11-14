@@ -1,0 +1,388 @@
+<div class="main-right-section">
+  <!-- Filter Expandable Section -  Starts ----------------------------------------------- -->
+  <div class="main-filter-section" id="report_body">
+    <mat-expansion-panel class="filter-expansion" [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Filters
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="field-row row">
+        <div class="col-sm-5 col-md-3 field-col">
+          <div class="select-container">
+            <label class="label-text">Group by <span class="star">*</span></label>
+            <mat-form-field class="select-field" floatPlaceholder="never">
+              <mat-select placeholder="-- Select Group by --" name="groupBy" (change)="updateIndices()" [(ngModel)]="model.groupBy">
+                <mat-option value="type">By Type</mat-option>
+                <mat-option value="date">By Date</mat-option>
+                <mat-option value="year">By Year</mat-option>
+                <mat-option value="month">By Month</mat-option>
+                <mat-option value="week">By Week</mat-option>
+                <mat-option value="hour">By Hour</mat-option>
+                <mat-option value="payer">By Payer</mat-option>
+                <mat-option value="facility">By Practice/Facility</mat-option>
+                <mat-option value="provider">By Provider</mat-option>
+                <mat-option value="monthpayer">By Month then By Payer</mat-option>
+                <mat-option value="userprovider">By User then By Provider</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-7 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">User ID</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter User ID" name="userID" [(ngModel)]="model.userId">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-7 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">User Last Name</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter User Last Name" name="lastName" [(ngModel)]="model.lastName">
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="col-sm-7 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">Practice/Facility Name</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter Practice/Facility Name" [matAutocomplete]="auto" (ngModelChange)="onFieldChange($event)"
+                     name="facilityName" [(ngModel)]="txtQuery" #facilityName="ngModel">
+              <mat-autocomplete #auto="matAutocomplete" (optionSelected)="updateName($event)"  >
+                <mat-option *ngFor="let item of searchResult" [value]="item.name" >
+                  {{ item.name  }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+        </div>
+
+        <div class="col-sm-7 col-md-6 field-col">
+          <div class="select-container">
+            <label class="label-text">Payer</label>
+            <mat-form-field class="select-field" floatPlaceholder="never">
+              <mat-select placeholder="-- Select Payer --" name="payerList" [(ngModel)]="model.payerName">
+                <mat-option [value]="''">-- Select Payer --</mat-option>
+                <mat-option *ngFor="let payer of payerList"
+                            [value]="payer.name">{{ payer.name }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="calendar-container">
+            <label class="label-text">Start Date</label>
+            <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+              <input matInput [matDatepicker]="startDatePicker" placeholder="MM/DD/YYYY"
+                     name="startDate" maxlength="10" [(ngModel)]="model.startDate" (blur)="validateStartDate($event)"
+                     (keydown)="handledate($event)" (dateChange)="startDatePicker.close(); sDateErr = false;">
+              <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+              <mat-datepicker #startDatePicker ></mat-datepicker>
+              <span class="custom-invalid" style="color:red" *ngIf="sDateErr">{{sdateMsg}}</span>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="calendar-container">
+            <label class="label-text">End Date</label>
+            <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+              <input matInput [matDatepicker]="endDatePicker" placeholder="MM/DD/YYYY"
+                     name="endDate" maxlength="10" [(ngModel)]="model.endDate" (blur)="validateEndtDate($event)"
+                      (keydown)="handledate($event)" (dateChange)="endDatePicker.close(); eDateErr = false;">
+              <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+              <mat-datepicker #endDatePicker ></mat-datepicker>
+              <span class="custom-invalid" style="color:red" *ngIf="eDateErr">{{edateMsg}}</span>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="btn-block">
+        <button mat-button [disabled]="sDateErr || eDateErr" class="blue-btn submit" type="button" (click)="applyFilter()">Apply Filter</button>
+        <button mat-button class="white-btn submit" type="button" (click)="clearFilter()">Clear Filter</button>
+      </div>
+    </mat-expansion-panel>
+  </div>
+  <!-- Filter Expandable Section - Ends ----------------------------------------------- -->
+
+  <!-- Report View Section - Starts ----------------------------------------------- -->
+  <div class="report-view-section" *ngIf="showHideTable" id="reportDiv">
+    <div class="heading-top">
+      <h2 class="sub-heading with-toggle">Transaction Totals</h2>
+      <div class="top-level-btns dont-print">
+        <div class="grand-totals" *ngIf="showTotalObj">
+         <b>Average Seconds:</b>  {{formatN(totalObj.avgSeconds)}}
+          <b>success Percentage:</b>  {{formatN(totalObj.successPercentage)}}%
+          <b>Success Count:</b> {{totalObj.successCount}}
+          <b>Fail Count:</b> {{totalObj.failCount}}
+          <b>Total Count:</b> {{totalObj.total}}
+        </div>
+        <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+          <mat-select placeholder="" >
+            <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+            <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      </div>
+      <!--<div class="toggle-container" *ngIf="appliedFilter !== 'type'">-->
+        <!--<div class="toggle-two-labels dont-print" >-->
+          <!--<label class="pre-text">Collapse All</label>-->
+          <!--<mat-slide-toggle class="toggle-btn" [(ngModel)]="expandOrCollapse" name="expandOrCollapse" [disabled]="transactionTotals.length === 0"-->
+                            <!--(click)="model.selectedIndex = -1" >Expand All</mat-slide-toggle>-->
+        <!--</div>-->
+      <!--</div>-->
+
+    </div>
+
+    <!-- Custom Collapsible Table - Created by Sana - Starts ----------------------------- -->
+    <div class="custom-collapsible-table" *ngIf="appliedFilter === 'type'">
+      <div class="collapsible-head">
+        <div class="cp-th width20">Type</div>
+        <div class="cp-th width15">Medium</div>
+        <div class="cp-th width15">Success</div>
+        <div class="cp-th width25">Fail</div>
+        <div class="cp-th width25">Total</div>
+        <div class="cp-th width20">% Success</div>
+        <div class="cp-th width20">Avg Seconds</div>
+      </div>
+      <div class="collapsible-body" *ngIf="paginationObj.totalRecords > 0">
+        <div *ngFor="let transactionTotal of transactionTotals.transactionDetails" class="cp-row">
+          <div class="cp-row-inner">
+            <div class="cp-td width20">{{transactionTotal.transactionType}}</div>
+            <div class="cp-td width15">{{transactionTotal.transactionMedium}}</div>
+            <div class="cp-td width15">{{transactionTotal.success}}</div>
+            <div class="cp-td width25">{{transactionTotal.fail}}</div>
+            <div class="cp-td width25">{{transactionTotal.total}}</div>
+            <div class="cp-td width20">{{formatN(transactionTotal.successPercentage) }}%</div>
+            <div class="cp-td width20">{{transactionTotal.avgSeconds | number:'1.0-2'}}</div>
+          </div>
+          <!-- If a row has multiple inner rows -- Inner table body ends -->
+        </div>
+      </div>
+
+      <div class="collapsible-body" *ngIf= "noRecordFound">
+        <div class="cp-row-inner">
+          <div class="cp-td empty-row">No Records Found</div>
+        </div>
+      </div>
+    </div>
+    <!-- Custom Collapsible Table - Created by Sana - Ends ----------------------------- -->
+
+    <!-- Collapsible Table - One group Hierarchy - Start ----------------------------------------------- -->
+      <!-- Custom Collapsible Table - Created by Sana - Starts ----------------------------- -->
+      <div class="custom-collapsible-table" *ngIf="appliedFilter !== 'type' && appliedFilter !== 'monthpayer' && appliedFilter !== 'userprovider'">
+        <div class="collapsible-head">
+          <div class="cp-th width25">{{displayGroupByName(1)}}</div>
+          <div class="cp-th width25">Type</div>
+          <div class="cp-th width25">Medium</div>
+          <div class="cp-th width15">Success</div>
+          <div class="cp-th width10">Fail</div>
+          <div class="cp-th width10">Total</div>
+          <div class="cp-th width20">% Success</div>
+          <div class="cp-th width20">Avg Seconds</div>
+        </div>
+        <div class="collapsible-body" *ngIf="paginationObj.totalRecords > 0">
+          <div *ngFor="let row of transactionTotals; let i=index;" class="cp-row"
+               [ngClass]="{'expandable': row.transactionDetails.length > 1, 'open' : this.model.selectedIndex === i, 'shut': row.transactionDetails.length === 1}">
+            <div class="cp-row-inner" (click)="setSelectedIndex(i)">
+              <div class="cp-td width25">{{displayAppliedFilterColumnValue(row.breakDownDetails)}}</div>
+              <div class="cp-td width25">{{row.transactionDetails.length === 1 ? row.transactionDetails[0]?.transactionType : ''}}</div>
+              <div class="cp-td width25">{{row.transactionDetails.length === 1 ? row.transactionDetails[0]?.transactionMedium : ''}}</div>
+              <div class="cp-td width15">{{row.breakDownDetails.success}}</div>
+              <div class="cp-td width10">{{row.breakDownDetails.fail}}</div>
+              <div class="cp-td width10">{{row.breakDownDetails.total}}</div>
+              <div class="cp-td width20">{{formatN(row.breakDownDetails.successPercentage)}}%</div>
+              <div class="cp-td width20">{{row.breakDownDetails.avgSeconds | number:'1.0-2'}}</div>
+            </div>
+            <!-- If a row has multiple inner rows -- Inner table body starts -->
+            <div class="cp-inner-table">
+              <div class="cp-inner-row" *ngFor="let detail of row.transactionDetails">
+                <div class="cp-inner-td width25"></div>
+                <div class="cp-inner-td width25">{{detail.transactionType}}</div>
+                <div class="cp-inner-td width25">{{detail.transactionMedium}}</div>
+                <div class="cp-inner-td width15">{{detail.success}}</div>
+                <div class="cp-inner-td width10">{{detail.fail}}</div>
+                <div class="cp-inner-td width10">{{detail.total}}</div>
+                <div class="cp-inner-td width20">{{formatN(detail.successPercentage) }}%</div>
+                <div class="cp-inner-td width20">{{detail.avgSeconds | number:'1.0-2'}}</div>
+              </div>
+            </div>
+            <!-- If a row has multiple inner rows -- Inner table body ends -->
+          </div>
+          <app-report-pagination    [currentOffset]="paginationObj.currentOffSet" [pageSize]="paginationObj.pageSize" [totalRecords]="paginationObj.totalRecords"
+                                 (changeSize)="updatePageSize($event)" (changePage)="updatePage($event)"  ></app-report-pagination>
+        </div>
+
+        <div class="collapsible-body" *ngIf= "noRecordFound">
+          <div class="cp-row-inner">
+            <div class="cp-td empty-row">No Records Found</div>
+          </div>
+        </div>
+      </div>
+      <!-- Custom Collapsible Table - Created by Sana - Ends ----------------------------- -->
+      <div *ngIf="appliedFilter === 'monthpayer'" >
+        <div class="custom-collapsible-table">
+          <div class="collapsible-head">
+            <div class="cp-th width10">{{displayGroupByName(1)}}</div>
+            <div class="cp-th width10">{{displayGroupByName(2)}}</div>
+            <div class="cp-th width25">Type</div>
+            <div class="cp-th width25">Medium</div>
+            <div class="cp-th width10">Success</div>
+            <div class="cp-th width10">Fail</div>
+            <div class="cp-th width10">Total</div>
+            <div class="cp-th width20">% Success</div>
+            <div class="cp-th width20">Avg Seconds</div>
+          </div>
+          <div class="fullReport" *ngFor="let row of superLevelData; let j =index">
+            <div class="cp-3rd-level-row" style="cursor: pointer"
+                 [ngClass]="{'open': superActiveIndex === j, 'cp-3rd-level-row' : true}" (click)="getInnerData(row,j)">
+              <div class="cp-td width20">{{displayAppliedFilterColumnValue(row.breakDownDetails)}}</div>
+              <div class="cp-td width15"></div>
+              <div class="cp-td width15"></div>
+              <div class="cp-td width20"></div>
+              <div class="cp-td width10">{{row.breakDownDetails.success}}</div>
+              <div class="cp-td width10">{{row.breakDownDetails.fail}}</div>
+              <div class="cp-td width10">{{row.breakDownDetails.total}}</div>
+              <div class="cp-td width20">{{formatN(row.breakDownDetails.successPercentage) }}%</div>
+              <div class="cp-td width20">{{row.breakDownDetails.avgSeconds | number:'1.0-2'}}</div>
+            </div>
+            <div class="collapsible-body" *ngIf="this.paginationObj.totalRecords > 0 && j === this.superActiveIndex">
+              <div *ngFor="let detail of transactionTotals; let i=index;" class="cp-row"
+                   [ngClass]="{'expandable': detail.transactionDetails.length > 1, 'open' : this.model.selectedIndex === i, 'shut': detail.transactionDetails.length === 1}">
+                <div class="cp-row-inner"  (click)="setSelectedIndex(i)">
+                  <div class="cp-td width10"></div>
+                  <div class="cp-td width10">{{displayAppliedFilterColumnValue2(detail.breakDownDetails)}}</div>
+                  <div class="cp-td width25">{{detail.transactionDetails.length === 1 ? detail.transactionDetails[0]?.transactionType : ''}}</div>
+                  <div class="cp-td width25">{{detail.transactionDetails.length === 1 ? detail.transactionDetails[0]?.transactionMedium : ''}}</div>
+                  <div class="cp-td width10">{{detail.breakDownDetails.success}}</div>
+                  <div class="cp-td width10">{{detail.breakDownDetails.fail}}</div>
+                  <div class="cp-td width10">{{detail.breakDownDetails.total}}</div>
+                  <div class="cp-td width20">{{formatN(detail.breakDownDetails.successPercentage) }}%</div>
+                  <div class="cp-td width20">{{detail.breakDownDetails.avgSeconds | number:'1.0-2'}}</div>
+                </div>
+                <!-- If a row has multiple inner rows -- Inner table body starts -->
+                <div class="cp-inner-table" >
+                  <div class="cp-inner-row" *ngFor="let innerDetails of detail.transactionDetails">
+                    <div class="cp-inner-td width10"></div>
+                    <div class="cp-inner-td width10"></div>
+                    <div class="cp-inner-td width25">{{innerDetails.transactionType}}</div>
+                    <div class="cp-inner-td width25">{{innerDetails.transactionMedium}}</div>
+                    <div class="cp-inner-td width10">{{innerDetails.success}}</div>
+                    <div class="cp-inner-td width10">{{innerDetails.fail}}</div>
+                    <div class="cp-inner-td width10">{{innerDetails.total}}</div>
+                    <div class="cp-inner-td width20">{{formatN(innerDetails.successPercentage) }}%</div>
+                    <div class="cp-inner-td width20">{{innerDetails.avgSeconds | number:'1.0-2'}}</div>
+                  </div>
+                </div>
+                <!-- If a row has multiple inner rows -- Inner table body ends -->
+              </div>
+              <app-report-pagination *ngIf="paginationObj.totalRecords > paginationObj.pageSize"   [currentOffset]="paginationObj.currentOffSet" [pageSize]="paginationObj.pageSize" [totalRecords]="paginationObj.totalRecords"
+                                     (changeSize)="updateInnerPageSize($event, row)" (changePage)="updateInnerPage($event, row)"  ></app-report-pagination>
+            </div>
+          </div>
+          <div class="empty-row" *ngIf="noRecordFound" >
+            No Records Found
+          </div>
+        </div>
+      </div>
+
+    <div *ngIf="appliedFilter === 'userprovider'">
+      <div class="custom-collapsible-table">
+        <div class="collapsible-head">
+          <div class="cp-th width10">{{displayGroupByName(1)}}</div>
+          <div class="cp-th width10">{{displayGroupByName(2)}}</div>
+          <div class="cp-th width25">Type</div>
+          <div class="cp-th width25">Medium</div>
+          <div class="cp-th width10">Success</div>
+          <div class="cp-th width10">Fail</div>
+          <div class="cp-th width10">Total</div>
+          <div class="cp-th width20">% Success</div>
+          <div class="cp-th width20">Avg Seconds</div>
+        </div>
+        <div class="fullReport" *ngFor="let row of superLevelData; let j=index">
+          <div class="cp-3rd-level-row" style="cursor: pointer" (click)="getInnerData(row,j)"
+               [ngClass]="{'open': superActiveIndex === j, 'cp-3rd-level-row' : true}">
+            <div class="cp-td width20">{{displayAppliedFilterColumnValue(row.breakDownDetails)}}</div>
+            <div class="cp-td width15"></div>
+            <div class="cp-td width15"></div>
+            <div class="cp-td width20"></div>
+            <div class="cp-td width10">{{row.breakDownDetails.success}}</div>
+            <div class="cp-td width10">{{row.breakDownDetails.fail}}</div>
+            <div class="cp-td width10">{{row.breakDownDetails.total}}</div>
+            <div class="cp-td width20">{{formatN(row.breakDownDetails.successPercentage) }}%</div>
+            <div class="cp-td width20">{{row.breakDownDetails.avgSeconds | number:'1.0-2'}}</div>
+          </div>
+          <div class="collapsible-body" *ngIf="this.paginationObj.totalRecords > 0 && j === currentIndex">
+            <div *ngFor="let detail of transactionTotals; let i=index;" class="cp-row"
+                 [ngClass]="{'expandable': detail.transactionDetails.length > 1, 'open' : this.model.selectedIndex === i, 'shut': detail.transactionDetails.length === 1}">
+              <div class="cp-row-inner"  (click)="setSelectedIndex(i)">
+                <div class="cp-td width10"></div>
+                <div class="cp-td width10">{{displayAppliedFilterColumnValue2(detail.breakDownDetails)}}</div>
+                <div class="cp-td width25">{{detail.transactionDetails.length === 1 ? detail.transactionDetails[0]?.transactionType : ''}}</div>
+                <div class="cp-td width25">{{detail.transactionDetails.length === 1 ? detail.transactionDetails[0]?.transactionMedium : ''}}</div>
+                <div class="cp-td width10">{{detail.breakDownDetails.success}}</div>
+                <div class="cp-td width10">{{detail.breakDownDetails.fail}}</div>
+                <div class="cp-td width10">{{detail.breakDownDetails.total}}</div>
+                <div class="cp-td width20">{{formatN(detail.breakDownDetails.successPercentage) }}%</div>
+                <div class="cp-td width20">{{detail.breakDownDetails.avgSeconds | number:'1.0-2'}}</div>
+              </div>
+              <!-- If a row has multiple inner rows -- Inner table body starts -->
+              <div class="cp-inner-table" >
+                <div class="cp-inner-row" *ngFor="let innerDetails of detail.transactionDetails">
+                  <div class="cp-inner-td width10"></div>
+                  <div class="cp-inner-td width10"></div>
+                  <div class="cp-inner-td width25">{{innerDetails.transactionType}}</div>
+                  <div class="cp-inner-td width25">{{innerDetails.transactionMedium}}</div>
+                  <div class="cp-inner-td width10">{{innerDetails.success}}</div>
+                  <div class="cp-inner-td width10">{{innerDetails.fail}}</div>
+                  <div class="cp-inner-td width10">{{innerDetails.total}}</div>
+                  <div class="cp-inner-td width20">{{formatN(innerDetails.successPercentage) }}%</div>
+                  <div class="cp-inner-td width20">{{innerDetails.avgSeconds | number:'1.0-2'}}</div>
+                </div>
+              </div>
+              <div class="cp-row-inner"  *ngIf="i === pagerIndex && (this.paginationObj.totalRecords > 0) ">
+                <div class="cp-inner-td width20"></div>
+                <div class="cp-inner-td width50">
+                  <app-child-pager    [reportName]="superLevelData[j].breakDownDetails.user"    [currentOffset]="paginationObj.currentOffSet" [pageSize]="paginationObj.pageSize" [totalRecords]="paginationObj.totalRecords"
+                                      (changeSize)="updateInnerPageSize($event, detail)" (nextPager)="updateInnerPage($event, detail)" (prevPager)="updateInnerPage($event, detail)"  ></app-child-pager>
+                </div>
+              </div>
+              <!-- If a row has multiple inner rows -- Inner table body ends -->
+            </div>
+
+
+          </div>
+        </div>
+        <app-report-pagination *ngIf="this.paginationSuperObj.totalRecords > 0"    [currentOffset]="paginationSuperObj.currentOffSet" [pageSize]="paginationSuperObj.pageSize" [totalRecords]="paginationSuperObj.totalRecords"
+                               (changeSize)="updateSuperPageSize($event)" (changePage)="updateSuperPage($event)"  ></app-report-pagination>
+        <div class="empty-row" *ngIf="noRecordFound" >
+          No Records Found
+        </div>
+      </div>
+    </div>
+
+    <div class="btn-block dont-print">
+      <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+        <mat-select placeholder="" >
+          <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+          <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-button class="white-btn delete-report" type="button" (click)="deleteReport()" *ngIf="isMyReport" >
+        <svg fill="#3e3e3e" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+      <button mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      <button mat-button class="blue-btn" type="button" *ngIf="isMyReport" (click)="editDialog()">Subscription</button>
+
+    </div>
+  </div>
+      <!-- Report View Section - Ends ----------------------------------------------- -->
+  </div>
+
+  <button  mat-button class="back-to-top dont-print" *ngIf="transactionTotals && transactionTotals.length >= 3" scrollTo scrollTargetSelector="#report_body" ></button>

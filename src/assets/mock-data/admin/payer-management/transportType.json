@@ -1,0 +1,14 @@
+[
+  {
+    "id": "X12_SOCKET",
+    "name": "X12 Socket"
+  },
+  {
+    "id": "HTTPS_MIME",
+    "name": "HTTPs & MIME"
+  },
+  {
+    "id": "SOAP_WSDL",
+    "name": "SOAP & WSDL"
+  }
+]

@@ -1,0 +1,494 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@import "assets/scss/colors";
+@import "assets/scss/mixins";
+@import "assets/scss/variables";
+@import "assets/scss/formElements";
+
+// Fonts
+@font-face {
+  font-family: 'futura_ltbook';
+  src: url('assets/fonts/futuralt-book-webfont.woff2') format('woff2'),
+  url('assets/fonts/futuralt-book-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'futura_bdcn_btbold';
+  src: url('assets/fonts/futura_bold_font-webfont.woff2') format('woff2'),
+  url('assets/fonts/futura_bold_font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'futura_hv_btheavy';
+  src: url('assets/fonts/futura_heavy_font-webfont.woff2') format('woff2'),
+  url('assets/fonts/futura_heavy_font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'futuralight';
+  src: url('assets/fonts/futura_light_font-webfont.woff2') format('woff2'),
+  url('assets/fonts/futura_light_font-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'futuramedium';
+  src: url('assets/fonts/futura_medium_bt-webfont.woff2') format('woff2'),
+  url('assets/fonts/futura_medium_bt-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+mat-icon{
+  font-family: 'Material Icons' !important;
+}
+
+body{
+  font-family: 'futura_ltbook';
+  color: $dark-text;
+  text-rendering: optimizeLegibility;
+  font-weight: 300;
+  // Chrome css hack
+  // for font rendering
+  @media screen and (-webkit-min-device-pixel-ratio:0) {
+    font-variant: normal;
+    font-weight: 500;
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $chrome-text;
+    -webkit-text-stroke-width: 0.05px;
+    -webkit-text-stroke-color: initial;
+  }
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'futura_ltbook';
+  color: $dark-text;
+}
+
+// Button styling overriding the font
+.mat-button{
+  font-family: 'futura_ltbook';
+  font-size: 13px;
+  height: 41px;
+  min-width: 140px !important;
+  border-radius: $input-field-radius !important;
+  &.small{
+    height: 33px;
+    line-height: 33px;
+  }
+  &.smallest{
+    height: 29px;
+    line-height: 29px;
+  }
+}
+.mat-form-field{
+  font-family: 'futura_ltbook';
+}
+
+// default theme update
+// select field colors
+.mat-form-field{
+  .mat-form-field-ripple{
+    background-color: $primary;
+  }
+  &.mat-focused.mat-primary .mat-select-arrow{
+    color: $primary;
+  }
+}
+.mat-select-panel{
+  .mat-option.mat-selected:not(.mat-option-multiple){
+    background-color: $primary;
+    color: #fff !important;
+  }
+  &:not([class*=mat-elevation-z]){
+    box-shadow: $active-input-shadow !important;
+    border: solid 1px $active-field-border;
+    border-radius: $input-field-radius;
+  }
+}
+
+// Search suggestions
+.mat-option{
+  font-family: 'futura_ltbook';
+  font-size: 12px;
+}
+
+// Heading and Text styles
+.main-heading{
+  @include common-font(24px);
+}
+.sub-heading{
+  @include common-font(18px);
+}
+.light-heading{
+  @include common-font(16px);
+}
+.parah-text{
+  @include common-font(12px);
+}
+
+// overriding the ripple color
+.mat-ripple-element{
+  background-color: $ripple-color !important;
+}
+
+// overriding the error color
+.mat-error{
+  color: $red;
+  font-size: 12px;
+}
+
+// custom error and success messages
+.custom-invalid{
+  //position: absolute;
+  //bottom: -20px;
+  color: $red;
+  font-size: 12px;
+  margin-top: 18px;
+  float: left;
+  &.duplicate{
+    position: absolute;
+    left: 0;
+    background: #fff;
+  }
+}
+.custom-valid{
+  //position: absolute;
+  //bottom: -20px;
+  color: $green;
+  font-size: 12px;
+  margin-top: 18px;
+  float: left;
+}
+
+// Custom blue hint styling
+.blue-hint{
+  font-size: 12px;
+  color: $hint-text;
+}
+
+// Overriding the calendar display colors
+.mat-calendar-body-selected{
+  background-color: $primary;
+}
+
+// Overriding the multiselect dropdown check styling
+.mat-primary {
+  .mat-pseudo-checkbox-checked {
+    background: $primary;
+  }
+  .mat-option.mat-selected:not(.mat-option-disabled){
+    color: $dark-text;
+  }
+}
+.mat-pseudo-checkbox-checked::after{
+  left: 4px !important;
+  height: 6px !important;
+}
+
+// Firefox css hack
+// This will work on only firefox browser
+@-moz-document url-prefix() {
+  * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+// Overriding the Progress Spinner base color
+.mat-progress-spinner circle, .mat-spinner circle{
+  stroke: $primary;
+}
+
+// Overriding scroll bar color
+.ps__thumb-y{
+  background-color: $primary !important;
+}
+
+.input-container, .textarea-container, .select-container,.calendar-container, .radio-container, .check-container, .toggle-container, .slider-container, .file-upload-container{
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10px;
+  .label-text{
+    font-size: 12px;
+    font-weight: normal;
+    .star{
+      color: $red;
+    }
+  }
+}
+
+.radio-container{
+  position: relative;
+  .refresh-icon{
+    background: url("assets/images/refresh.png") no-repeat;
+    width: 20px;
+    height: 20px;
+    background-size: 100%;
+    position: absolute;
+    left: 170px;
+    top: 30px;
+    cursor: pointer;
+  }
+}
+
+// Main Admin view structure
+.main-body-container{
+  position: relative;
+  .top-bar{
+    background-color: $primary;
+    height: 8px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  .main-body-inner{
+    display: flex;
+    flex-direction: row;
+    min-height:100vh;
+    .main-content-area{
+      background-color: $main-bg;
+      width: 100%;
+      padding: 22px;
+      height: 100vh;
+      overflow: auto;
+      @media only screen and ($tablet-small){
+        padding: 20px 10px;
+      }
+      .top-row{
+        border-bottom: 1px solid $field-border;
+        padding-bottom: 12px;
+        .main-heading{
+          display: inline-block;
+          margin: 0;
+          line-height: 41px;
+          .back-arrow{
+            margin-right: 10px;
+            float: left;
+            height: 22px;
+            width: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            svg{
+              width: 18px;
+              height: 20px;
+              float: left;
+            }
+          }
+        }
+        .blue-btn{
+          float: right;
+        }
+      }
+      .main-right-section{
+        padding-top: 20px;
+        position: relative;
+        // IE hack
+        // This code will only run for IE browser
+        @media all and (-ms-high-contrast:none)
+        {
+          // padding-top: 22px;
+          // padding-bottom: 22px;
+        }
+        // Firefox hack
+        // This code will only run for Firefox browser
+        @-moz-document url-prefix() {
+          margin-bottom: 20px;
+        }
+        .title-row{
+          margin: 0;
+          .sub-heading{
+            margin: 6px 0 0;
+            height: 41px;
+            line-height: 41px;
+          }
+          .search-box{
+            padding: 0;
+            .input-container{
+              float: right;
+              .mat-form-field-wrapper{
+                padding: 0;
+                .mat-form-field-flex{
+                  .mat-form-field-infix{
+                    min-width: 203px;
+                    background: #fff;
+                  }
+                }
+              }
+            }
+            .search-btn{
+              float: right;
+              min-width: 75px !important;
+              margin-left: 10px;
+              z-index: 100;
+            }
+          }
+        }
+        .fields-container{
+          background-color: #fff;
+          border: 1px solid $field-border;
+          padding: 20px;
+          margin-bottom: 20px;
+          border-radius: $field-box-radius;
+          .sub-heading{
+            margin: 0 -20px 20px;
+            border-bottom: 1px solid $field-border;
+            padding: 0 20px 20px;
+            .star{
+              color: $red;
+              font-size: 14px;
+            }
+          }
+          .emptyGroupListMessage{
+            color: $light-text;
+            font-style: italic;
+            text-align: center;
+            padding: 30px 0;
+          }
+          .emptyRegionPermissionListMessage{
+            color: $light-text;
+            font-style: italic;
+            text-align: center;
+            padding: 10px 0;
+          }
+          .view-input{
+            .eye-close{
+              background: url("/assets/images/eye-close.png");
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              background-size: 100%;
+              cursor: pointer;
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+            .eye-open{
+              background: url("/assets/images/eye-open.png");
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              background-size: 100%;
+              cursor: pointer;
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+          }
+        }
+        .button-container{
+          // IE hack
+          @media all and (-ms-high-contrast:none) {
+            padding-bottom: 20px;
+          }
+          // Firefox hack
+          @-moz-document url-prefix() {
+            padding-bottom: 20px;
+          }
+          .mat-button{
+            margin-right: 7px;
+          }
+        }
+
+        // Inquiry detail page custom tabs styling
+        .custom-tabs-header{
+          border-bottom: 1px solid $field-border;
+          margin-bottom: 10px;
+          padding-bottom: 10px;
+          .head-list{
+            .blue-btn{
+              background: transparent;
+              .mat-button-wrapper{
+                color: $dark-text;
+              }
+              &.checked{
+                background: $primary;
+                .mat-button-wrapper{
+                  color: #fff;
+                }
+              }
+            }
+          }
+        }
+      }
+      // Inquiry detail page, back to top button styling
+      .back-to-top{
+        position: fixed;
+        bottom: 10px;
+        right: 40px;
+        background: url("/assets/images/up-arrow.png") no-repeat;
+        width: 50px;
+        min-width: 50px !important;
+        padding: 0 !important;
+        background-size: 75%;
+        z-index: 1000;
+        .mat-button-focus-overlay, .mat-button-ripple{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// Main dialog structure
+.mat-dialog-container{
+  border-radius: $field-box-radius !important;
+  min-width: 500px;
+  padding: 0 !important;
+  .main-dialog-container{
+    .sub-heading{
+      margin-top: 0;
+      margin-bottom: 15px;
+      padding: 20px;
+      border-bottom: 1px solid $field-border;
+    }
+    .dialog-body{
+      margin-bottom: 15px;
+      padding: 0 20px;
+    }
+    .dialog-actions{
+      display: flex;
+      justify-content: flex-end;
+      padding: 20px;
+      .mat-button{
+        min-width: 100px !important;
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+// Client side Main structure
+.home-welcome{
+  background-color: #fff;
+  border: 1px solid $field-border;
+  padding: 20px;
+  border-radius: $input-field-radius;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  margin-top: 46px;
+  .heading{
+    .blue{
+      color: $logo-blue;
+      .grey{
+        color: $logo-grey;
+      }
+    }
+  }
+  p{
+    color: $light-text;
+  }
+}
+
+
+// Media queries code
+@import "~assets/scss/mediaQueries";

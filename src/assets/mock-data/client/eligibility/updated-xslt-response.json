@@ -1,0 +1,3899 @@
+[
+  {
+    "transactionInfo": {
+      "transactionDate": "20180226",
+      "transactionTime": "1722200"
+    },
+    "payerAndRequestingProvider": {
+      "payer": "BLUECROSS BLUESHIELD OF WESTERN NEW"
+    },
+    "member": {
+      "memberNumber": "YJP88042318605",
+      "groupID": [
+        {
+          "label": "Group Number",
+          "value": "00301362"
+        },
+        {
+          "label": "Plan Network Identification Number",
+          "value": "03G03Z41"
+        },
+        {
+          "label": "Plan Number",
+          "value": "CPO1Y000"
+        }
+      ],
+      "memberName": {
+        "family": "ALBENASI",
+        "given": "YVONNE",
+        "middle": ""
+      },
+      "memberDoB": "19700717",
+      "memberGender": "F",
+      "address": {
+        "addressLine1": "103 SCHOELLES ROAD",
+        "addressLine2": "GGGDFGDFGDFG SCHOELLES ROAD",
+        "city": "AMHERST",
+        "state": "NY",
+        "zip": "14228",
+        "country": ""
+      }
+    },
+    "primaryCareProvider": [
+      {
+        "providerName": {
+          "family": "SCHENK",
+          "given": "GREGORY P."
+        },
+        "contactInfo": [
+          {
+            "label": "Telephone",
+            "value": "7166889641"
+          }
+        ],
+        "address": {
+          "addressLine1": "850 HOPKINS RD",
+          "addressLine2": "",
+          "city": "WILLIAMSVILLE",
+          "state": "NY",
+          "zip": "142211729"
+        }
+      }
+    ],
+    "otherInsuranceInformation": {
+      "memberName": {
+        "family": "me",
+        "given": "no",
+        "middle": "yes"
+      },
+      "memberID": "2",
+      "type": "",
+      "payers": [
+        {
+          "payerTypeCode": "",
+          "payerName": "ffdfddf",
+          "additionalInformation": "ghhghghg"
+        }
+      ]
+    },
+    "benefitPlanCoverage": {
+      "planName": "CPO1Y000-03G03Z41",
+      "insuranceTypeCode": "PS",
+      "coverageStatus": "1",
+      "coverageStatusCategory": "positive",
+      "coverageStatusLabel": "Active Coverage",
+      "coverageLevel": "FAM",
+      "dates": [
+        {
+          "qualifier": "346",
+          "date": "20180101"
+        }
+      ],
+      "inNetwork": {
+        "deductible": [
+          {
+            "timeRange": "23",
+            "remaining": "",
+            "total": "0",
+            "used": "",
+            "coverageLevel": "IND",
+            "additionalInformation": ""
+          },
+          {
+            "timeRange": "23",
+            "remaining": "",
+            "total": "0",
+            "used": "",
+            "coverageLevel": "FAM",
+            "additionalInformation": ""
+          }
+        ],
+        "stopLoss": [
+          {
+            "timeRange": "23",
+            "remaining": "6350",
+            "total": "6350",
+            "used": "0",
+            "coverageLevel": "IND",
+            "additionalInformation": ""
+          },
+          {
+            "timeRange": "23",
+            "remaining": "12700",
+            "total": "12700",
+            "used": "0",
+            "coverageLevel": "FAM",
+            "additionalInformation": ""
+          }
+        ]
+      },
+      "outOfNetwork": {
+        "deductible": [
+          {
+            "timeRange": "23",
+            "remaining": "250",
+            "total": "250",
+            "used": "0",
+            "coverageLevel": "IND",
+            "additionalInformation": ""
+          },
+          {
+            "timeRange": "23",
+            "remaining": "500",
+            "total": "500",
+            "used": "0",
+            "coverageLevel": "FAM",
+            "additionalInformation": ""
+          }
+        ],
+        "stopLoss": [
+          {
+            "timeRange": "23",
+            "remaining": "2000",
+            "total": "2000",
+            "used": "0",
+            "coverageLevel": "IND",
+            "additionalInformation": "EXCLUDES COPAY"
+          },
+          {
+            "timeRange": "23",
+            "remaining": "4000",
+            "total": "4000",
+            "used": "0",
+            "coverageLevel": "FAM",
+            "additionalInformation": "EXCLUDES COPAY"
+          }
+        ]
+      }
+    },
+    "planDetails": {
+      "payerName": "BLUECROSS BLUESHIELD OF WESTERN NEW",
+      "planName": "CPO1Y000-03G03Z41",
+      "dates": [
+        {
+          "qualifier": "291",
+          "date": "20160601-99991231"
+        }
+      ],
+      "planDescription": "TRADITIONAL BLUE POS 203 $10/ $10 COPAY",
+      "additionalInformation": {
+        "limitationMessage": [
+          "THIS PRODUCT DOES NOT REQUIRE A REFERRAL TO IN NETWORK/IN AREA SPECIALISTS.",
+          "QUEST LAB REQUIRED. EXEMPTIONS MAY EXIST AND CAN BE VIEWED ON SECURE PAYER PROVIDER PORTAL UNDER PAYMENT & OPERATIONS\\CODE RESOURCES.",
+          "WELLNESS BENEFIT APPLIES.",
+          "HEALTH CARE REFORM PREVENTIVE SERVICES DOES NOT APPLY.",
+          "GROUP RENEWAL DATE 0601. LARGE GROUP"
+        ],
+        "benefitDisclaimerMessage": [
+          "UNLESS OTHERWISE REQUIRED BY STATE LAW, THIS NOTICE IS NOT A GUARANTEE OF PAYMENT. BENEFITS ARE SUBJECT TO ALL CONTRACT LIMITS AND THE MEMBER'S STATUS ON THE DATE OF SERVICE. ACCUMULATED AMOUNTS SUCH AS DEDUCTIBLE MAY CHANGE AS ADDITIONAL CLAIMS ARE PROCESSED."
+        ]
+      }
+    },
+    "benefits": [
+      {
+        "benefitName": "General Benefits",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Vision (Optometry)",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Surgical",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "deductible": [
+            {
+              "additionalInformation": "",
+              "coverageLevel": "IND",
+              "remaining": "200",
+              "timeRange": "",
+              "total": "500",
+              "used": ""
+            },
+              {
+                "additionalInformation": "",
+                "coverageLevel": "FAM",
+                "remaining": "",
+                "timeRange": "",
+                "total": "",
+                "used": ""
+              }
+          ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "deductible": [
+              {
+                "additionalInformation": "",
+                "coverageLevel": "IND",
+                "remaining": "200",
+                "timeRange": "",
+                "total": "500",
+                "used": ""
+              },
+              {
+                "additionalInformation": "",
+                "coverageLevel": "FAM",
+                "remaining": "",
+                "timeRange": "",
+                "total": "1000",
+                "used": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Diagnostic Medical",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Diagnostic X-Ray",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Radiation Therapy",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Ambulatory Service Center Facility",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Chiropractic",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Hospital - Ambulatory Surgical",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "MRI/CAT Scan",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "22",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "",
+            "codedQualifier": "11",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "22",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "",
+            "codedQualifier": "11",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Prosthetic Device",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Dialysis",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Chemotherapy",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Psychotherapy",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Occupational Therapy",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "30",
+                "total": "30",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT.  PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION."
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Physical Medicine",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "30",
+                "total": "30",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT.  PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION."
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Speech Therapy",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "30",
+                "total": "30",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT.  PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION."
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Obstetrical/Gynecological",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Gynecological",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Obstetrical",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Mental Health",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Mental Health Provider - Outpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "999",
+                "total": "999",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Mammogram, High Risk Patient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Diabetic Supplies",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Physical Therapy",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "30",
+                "total": "30",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": "PHYSICAL OCCUPATIONAL AND SPEECH THERAPY MAY BE A SHARED LIMIT.  PLEASE CALL CUSTOMER SERVICE FOR MORE INFORMATION."
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Screening X-ray",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Screening laboratory",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Flu Vaccination",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Durable Medical Equipment",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Medical Care",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Hospital - Inpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Psychiatric - Inpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Mental Health Facility - Inpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "999",
+                "total": "999",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Mental Health Provider - Inpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Mental Health Facility - Outpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "999",
+                "total": "999",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Psychiatric - Outpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Anesthesia",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Surgical Assistance",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Diagnostic Lab",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Durable Medical Equipment Purchase",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".5",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Durable Medical Equipment Rental",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".5",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Professional (Physician) Visit - Home ",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Professional (Physician) Visit - Inpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Professional (Physician) Visit - Outpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Hospice",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "210",
+                "total": "210",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Skilled Nursing Care",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "999",
+                "total": "999",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Hospital - Outpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Podiatry",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Cardiac Rehabilitation",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "24",
+                "total": "24",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Substance Abuse Facility - Outpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "999",
+                "total": "999",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Substance Abuse Facility - Inpatient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "999",
+                "total": "999",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Licensed Ambulance",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Generic Prescription Drug",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "1",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Brand Name Prescription Drug",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Routine Physical",
+        "coverageStatus": "I",
+        "coverageStatusCategory": "rejected",
+        "coverageStatusLabel": "Non-Covered",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "1",
+                "total": "1",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Urgent Care",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Newborn Care",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Well Baby Care",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Consultation",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "SPECIALIST",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "SPECIALIST",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Professional (Physician) Visit - Office",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "SPECIALIST",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "SPECIALIST",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Physician Visit - Office: Sick",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "SPECIALIST",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "PCP",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "SPECIALIST",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "PCP",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Other Medical",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "TELEMEDICINE",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Home Health Care",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": "HOME HEALTH AID"
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": "HOME HEALTH AID"
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "999",
+                "total": "999",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": "HOME HEALTH AID"
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": "HOME HEALTH AID"
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": "HOME HEALTH AID"
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "365",
+                "total": "365",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": "HOME HEALTH AID"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Acupuncture",
+        "coverageStatus": "I",
+        "coverageStatusCategory": "rejected",
+        "coverageStatusLabel": "Non-Covered",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Massage Therapy",
+        "coverageStatus": "I",
+        "coverageStatusCategory": "rejected",
+        "coverageStatusLabel": "Non-Covered",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Major Medical",
+        "coverageStatus": "I",
+        "coverageStatusCategory": "rejected",
+        "coverageStatusLabel": "Non-Covered",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "In-vitro Fertilization",
+        "coverageStatus": "I",
+        "coverageStatusCategory": "rejected",
+        "coverageStatusLabel": "Non-Covered",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Hospital - Emergency Medical",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "35",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Hospital - Emergency Accident",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "35",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Physician Visit - Office: Well",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": "PCP"
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": "PCP"
+              }
+            ],
+            "limits": [
+              {
+                "timeRange": "23",
+                "quantityQualifier": "VS",
+                "remaining": "1",
+                "total": "1",
+                "used": "0",
+                "coverageLevel": "",
+                "additionalInformation": "PCP"
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "PCP",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Emergency Services",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "URGENT CARE",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "URGENT CARE",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Hospital",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "INPATIENT",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "INPATIENT",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Maternity",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "21",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "MATERNITY INITIAL VISIT",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "MATERNITY SUBSEQUENT VISIT",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "21",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "MATERNITY INITIAL VISIT",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "MATERNITY SUBSEQUENT VISIT",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Mammogram, Low Risk Patient",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "MAMMOGRAM SCREENING UNDER 40",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "MAMMOGRAM SCREENING UNDER 40",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Pediatric",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "WELL CHILD",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "WELL CHILD",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Immunizations",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "IMMUNIZATIONS NOT RELATED TO WELL CHILD",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "IMMUNIZATIONS NOT RELATED TO WELL CHILD",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Infertility",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "INFERTILITY TESTING",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "INFERTILITY TREATMENT",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "INFERTILITY TESTING",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "INFERTILITY TREATMENT",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Abortion",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "THIS REPRESENTS THE PHYSICIAN BILLING ONLY. FOR FACILITY BILLING PLEASE REFERENCE THE AMBULATORY SURGERY BENEFIT.",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "THIS REPRESENTS THE PHYSICIAN BILLING ONLY. FOR FACILITY BILLING PLEASE REFERENCE THE AMBULATORY SURGERY BENEFIT.",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Substance Abuse",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "ALCOHOL AND SUBSTANCE ABUSE DETOX",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "ALCOHOL AND SUBSTANCE ABUSE DETOX",
+            "codedQualifier": "",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Family Planning",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "ARTIFICIAL INSEMINATION",
+            "codedQualifier": "21",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "ARTIFICIAL INSEMINATION",
+            "codedQualifier": "22",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "ARTIFICIAL INSEMINATION",
+            "codedQualifier": "11",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "ARTIFICIAL INSEMINATION",
+            "codedQualifier": "21",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "ARTIFICIAL INSEMINATION",
+            "codedQualifier": "22",
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          },
+          {
+            "qualifier": "ARTIFICIAL INSEMINATION",
+            "codedQualifier": "11",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "Pharmacy",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "REPRESENTS THIRD TIER BENEFITS",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "20",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "Dental Care",
+        "coverageStatus": "I",
+        "coverageStatusCategory": "rejected",
+        "coverageStatusLabel": "Non-Covered",
+        "additionalInformation": "",
+        "inNetwork": [],
+        "outOfNetwork": []
+      },
+      {
+        "benefitName": "BONE DENSITY",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "DIABETIC EDUCATION",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27 27",
+                "amount": "10 10",
+                "coverageLevel": " ",
+                "additionalInformation": "11 22"
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0 0",
+                "coverageLevel": " ",
+                "additionalInformation": "11 22"
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27 27",
+                "amount": "0 0",
+                "coverageLevel": " ",
+                "additionalInformation": "11 22"
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2 .2",
+                "coverageLevel": " ",
+                "additionalInformation": "11 22"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "DIAGNOSTIC MAMMOGRAMS",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "10",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "benefitName": "ORTHOTICS",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "additionalInformation": "",
+        "inNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": "",
+            "copay": [
+              {
+                "timeRange": "27",
+                "amount": "0",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ],
+            "coinsurance": [
+              {
+                "amount": ".2",
+                "coverageLevel": "",
+                "additionalInformation": ""
+              }
+            ]
+          }
+        ],
+        "outOfNetwork": [
+          {
+            "qualifier": "",
+            "codedQualifier": ""
+          }
+        ]
+      }
+    ]
+  }
+]

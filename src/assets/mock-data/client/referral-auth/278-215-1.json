@@ -1,0 +1,73 @@
+{
+	"transactionInfo": {
+		"transactionDate": "20180312",
+		"transactionTime": "0731411"
+	},
+	"payer": {
+		"name": "BLUECROSS BLUESHIELD OF WESTERN NEW YORK"
+	},
+	"requestingProvider": {
+		"name": {
+			"family": "LAST",
+			"given": "FIRST"
+		},
+		"providerID": "1111111111",
+		"taxonomyCode": ""
+	},
+	"subscriber": {
+		"name": {
+			"family": "LAST",
+			"given": "NAME",
+			"middle": ""
+		},
+		"memberID": "88888888888",
+		"dob": "19010101",
+		"memberGender": ""
+	},
+	"referralAuth": [
+		{
+			"categoryCode": "Specialty Care Review",
+			"certificationTypeCode": "",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "Certified in total",
+			"identifier": "222222221",
+			"decisionReasonCode": "",
+			"previousCert": "",
+			"eventDate": "",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "20170404-20171006",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "International Classification of Diseases Clinical Modification (ICD-10-CM) Diagnosis",
+			"diagnosisCode": "Gastro-esophageal reflux disease without esophagitis",
+			"unitTypeCode": "Units",
+			"providerQuantity": "99",
+			"message": " CONSULTATION SG01"
+		},
+		{
+			"categoryCode": "Specialty Care Review",
+			"certificationTypeCode": "",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "Certified in total",
+			"identifier": "222222222",
+			"decisionReasonCode": "",
+			"previousCert": "",
+			"eventDate": "",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "20180306-20190306",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "International Classification of Diseases Clinical Modification (ICD-10-CM) Diagnosis",
+			"diagnosisCode": "Nausea",
+			"unitTypeCode": "Units",
+			"providerQuantity": "10",
+			"message": " CONSULTATION SG01"
+		}
+	]
+}

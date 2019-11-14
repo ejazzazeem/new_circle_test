@@ -1,0 +1,687 @@
+@import "base";
+@import "colors";
+@import "variables";
+
+// All form elements common styling
+// input field styling
+.input-field{
+  .mat-form-field-wrapper{
+    .mat-form-field-flex{
+      .mat-form-field-infix{
+        border: solid 1px $field-border;
+        border-radius: $input-field-radius;
+        height: 41px;
+        //min-width: 300px;
+        input{
+          margin-top: 6px;
+          padding-left: 10px;
+          font-size: 13px;
+        }
+        .mat-form-field-placeholder{
+          color: $label-text;
+          font-size: 13px;
+          margin-left: 10px;
+          top: 25px;
+        }
+      }
+    }
+    .mat-form-field-underline{
+      display: none;
+    }
+  }
+  // active input field styling
+  &.mat-focused{
+    .mat-form-field-wrapper{
+      .mat-form-field-flex{
+        .mat-form-field-infix{
+          border: solid 1px $active-field-border;
+          box-shadow: $active-input-shadow;
+          .mat-form-field-placeholder{
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  // Invalid input field styling
+  &.mat-form-field-invalid{
+    .mat-form-field-wrapper{
+      .mat-form-field-flex{
+        .mat-form-field-infix{
+          border: solid 1px $red;
+          .mat-form-field-placeholder{
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Textarea field styling
+.textarea-field{
+  .mat-form-field-wrapper{
+    .mat-form-field-flex{
+      .mat-form-field-infix{
+        border: solid 1px $field-border;
+        border-radius: $input-field-radius;
+        //min-width: 300px;
+        textarea{
+          margin-top: 6px;
+          padding-left: 10px;
+          font-size: 13px;
+          height: 60px;
+          resize: none;
+        }
+        .mat-form-field-placeholder{
+          color: $label-text;
+          font-size: 13px;
+          margin-left: 10px;
+          top: 25px;
+        }
+      }
+    }
+    .mat-form-field-underline{
+      display: none;
+    }
+  }
+  // active textarea field styling
+  &.mat-focused{
+    .mat-form-field-wrapper{
+      .mat-form-field-flex{
+        .mat-form-field-infix{
+          border: solid 1px $active-field-border;
+          box-shadow: $active-input-shadow;
+          .mat-form-field-placeholder{
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  // Invalid textarea field styling
+  &.mat-form-field-invalid{
+    .mat-form-field-wrapper{
+      .mat-form-field-flex{
+        .mat-form-field-infix{
+          border: solid 1px $red;
+          .mat-form-field-placeholder{
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+// View Input fields
+.view-input{
+  .mat-form-field-underline{
+    background-color: $field-border !important;
+    background-image: none;
+    height: 2px;
+    .mat-form-field-ripple{
+      background-color: $field-border;
+    }
+  }
+  .mat-form-field-placeholder{
+    color: $light-text;
+    font-size: 16px;
+    -webkit-transform: translateY(-1.28125em) scale(.75) perspective(100px) translateZ(.001px);
+    transform: translateY(-1.28125em) scale(.75) perspective(100px) translateZ(.001px);
+  }
+  .mat-input-element{
+    color: $dark-text;
+    font-size: 15px;
+    line-height: normal;
+    @media only screen and ($desktop-small){
+      font-size: 13px;
+    }
+  }
+  &.lower-case{
+    .mat-input-element{
+      text-transform: lowercase;
+    }
+  }
+}
+
+// View Textarea field
+.view-textarea{
+  .mat-form-field-infix{
+    border: none;
+    .mat-input-element{
+      color: $dark-text;
+      font-size: 15px;
+      resize: none;
+      line-height: normal;
+      @media only screen and ($desktop-small){
+        font-size: 13px;
+      }
+    }
+    .mat-form-field-placeholder{
+      color: $light-text;
+      font-size: 16px;
+    }
+  }
+  .mat-form-field-underline{
+    background-color: $field-border !important;
+    height: 2px;
+    background-image: none;
+    .mat-form-field-ripple{
+      background-color: $field-border;
+    }
+  }
+}
+
+// View calendar styling
+.view-calendar{
+  .mat-form-field-underline{
+    background-color: $field-border;
+    height: 2px;
+    .mat-form-field-ripple{
+      background-color: $field-border;
+    }
+  }
+  .mat-form-field-placeholder{
+    color: $light-text;
+    font-size: 16px;
+  }
+  .mat-input-element{
+    color: $dark-text;
+    font-size: 15px;
+  }
+}
+
+// select field styling
+.select-field{
+  .mat-form-field-wrapper{
+    .mat-form-field-flex{
+      .mat-form-field-infix{
+        border: solid 1px $field-border;
+        border-radius: $input-field-radius;
+        height: 41px;
+        //min-width: 300px;
+        background: #fff;
+        mat-select{
+          margin-top: 6px;
+          padding-left: 10px;
+          font-size: 13px;
+          font-family: 'futura_ltbook';
+          .mat-select-arrow{
+            margin: 0 10px;
+          }
+        }
+        .mat-form-field-placeholder{
+          color: $label-text;
+          font-size: 13px;
+          margin-left: 10px;
+          top: 25px;
+        }
+      }
+    }
+    .mat-form-field-underline{
+      display: none;
+    }
+  }
+  // active select field styling
+  &.mat-focused{
+    .mat-form-field-wrapper{
+      .mat-form-field-flex{
+        .mat-form-field-infix{
+          border: solid 1px $active-field-border;
+          box-shadow: $active-input-shadow;
+          .mat-select-value{
+            color: $primary;
+          }
+          .mat-select-arrow{
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  // Invalid select field styling
+  &.mat-form-field-invalid{
+    .mat-form-field-wrapper{
+      .mat-form-field-flex{
+        .mat-form-field-infix{
+          border: solid 1px $red;
+          .mat-form-field-placeholder{
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Select field left side menu
+.select-field.side-menu{
+  width: 175px;
+  .mat-form-field-wrapper{
+    padding: 0;
+    .mat-form-field-flex{
+      .mat-form-field-infix{
+        border: none;
+        min-width: 150px;
+        height: 31px;
+        background: transparent;
+        mat-select {
+          margin-top: 2px;
+          .mat-select-value{
+            color: $dark-text;
+          }
+          .mat-select-arrow{
+            color: $primary;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-top: 6px solid;
+            margin: 0;
+            border-radius: 4px;
+          }
+        }
+        .mat-form-field-placeholder{
+          color: $dark-text;
+          top: 20px;
+        }
+      }
+    }
+  }
+  &.mat-focused{
+    .mat-form-field-wrapper{
+      .mat-form-field-flex{
+        .mat-form-field-infix{
+          border: none;
+          box-shadow: none;
+          .mat-select-value{
+            color: $dark-text;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Calendar field styling
+.calendar-field{
+  .mat-form-field-wrapper{
+    .mat-form-field-flex{
+      border: solid 1px $field-border;
+      border-radius: $input-field-radius;
+      height: 41px;
+      cursor: pointer;
+      //min-width: 300px;
+      .mat-form-field-infix{
+        border: none;
+        input{
+          margin-top: 6px;
+          padding-left: 10px;
+          font-size: 13px;
+          cursor: pointer;
+        }
+        .mat-form-field-placeholder{
+          color: $label-text;
+          font-size: 13px;
+          margin-left: 10px;
+          top: 25px;
+          cursor: pointer;
+        }
+      }
+    }
+    .mat-datepicker-toggle-active{
+      color: $primary;
+    }
+    .mat-icon-button{
+      margin-right: 10px;
+    }
+    .mat-form-field-underline{
+      background-color: transparent;
+      .mat-form-field-ripple{
+        background-color: transparent;
+      }
+    }
+  }
+  // active calendar field styling
+  &.mat-focused{
+    .mat-form-field-wrapper{
+      .mat-form-field-flex{
+        border: solid 1px $active-field-border;
+        box-shadow: $active-input-shadow;
+        .mat-form-field-infix{
+          .mat-form-field-placeholder{
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+  // Invalid calendar field styling
+  &.mat-form-field-invalid{
+    .mat-form-field-wrapper{
+      .mat-form-field-flex{
+        border: solid 1px $red;
+        .mat-form-field-infix{
+          .mat-form-field-placeholder{
+            color: $red;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Radio buttons styling
+.radio-btns{
+  height: 41px;
+  .mat-radio-button{
+    font-family: 'futura_ltbook';
+    margin-right: 30px;
+    margin-top: 10px;
+    .mat-radio-label{
+      .mat-radio-outer-circle{
+        border: solid 2px $field-border;
+      }
+    }
+    .mat-radio-label-content{
+      font-weight: normal;
+      padding-left: 5px;
+      font-size: 12px;
+    }
+    // Selected radio button style
+    &.mat-radio-checked{
+      .mat-radio-label{
+        .mat-radio-outer-circle{
+          border: solid 2px $primary;
+        }
+        .mat-radio-inner-circle{
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+// Checkbox styling
+.check-input{
+  .mat-checkbox-layout{
+    height: 41px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    .mat-checkbox-inner-container{
+      margin-right: 5px;
+      .mat-checkbox-frame{
+        border: solid 2px $field-border;
+      }
+    }
+    .mat-checkbox-label{
+      font-weight: normal;
+      font-family: 'futura_ltbook';
+      line-height: 42px;
+      font-size: 12px;
+    }
+  }
+
+  // Checked style
+  &.mat-checkbox-checked{
+    .mat-checkbox-layout {
+      .mat-checkbox-inner-container {
+        .mat-checkbox-frame {
+          border: solid 2px $field-border;
+        }
+        .mat-checkbox-background{
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
+// Toggle button style
+.toggle-btn{
+  height: 41px !important;
+  .mat-slide-toggle-label{
+    height: 41px;
+    .mat-slide-toggle-content{
+      font-weight: normal;
+      font-family: 'futura_ltbook';
+      font-size: 12px;
+      margin-left: 7px;
+    }
+  }
+  // checked toggle
+  &.mat-checked{
+    .mat-slide-toggle-label{
+      .mat-slide-toggle-bar{
+        background-color: $toggle-bar;
+        .mat-slide-toggle-thumb-container{
+          .mat-slide-toggle-thumb{
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Toggle with two labels
+.toggle-two-labels{
+  .pre-text{
+    font-size: 12px;
+    font-weight: normal;
+    margin-right: 15px;
+    float: left;
+    line-height: 41px;
+  }
+}
+
+// Chips tags with input field
+.input-tag-chips{
+  .ng2-tag-input{
+    padding: 0;
+    margin-top: -3px;
+    &.ng2-tag-input--focused{
+      border-bottom: 1px solid $field-border !important;
+    }
+    tag{
+      line-height: 30px;
+      padding-left: 10px;
+      color: $dark-text !important;
+      background: $field-border !important;
+      box-shadow: none !important;
+    }
+    .ng2-tag-input__text-input{
+      height: 34px !important;
+      width: 300px !important;
+    }
+    delete-icon{
+      background: url("/assets/images/cross-icon.png") no-repeat;
+      background-size: 100%;
+      margin: 6px 5px 0;
+      width: 16px;
+      height: 21px;
+      transform: none !important;
+      svg{
+        display: none;
+      }
+    }
+  }
+}
+
+// Bar slider styling
+.slider-input{
+  .mat-slider-focus-ring{
+    background-color: $ripple-color;
+  }
+  .mat-slider-thumb, .mat-slider-track-fill, .mat-slider-thumb-label{
+    background-color: $primary;
+  }
+}
+
+// Select one toggle styling
+.select-one-toggle{
+  box-shadow: none !important;
+  border: 1px solid $field-border;
+  border-radius: 50px !important;
+  padding: 0 5px;
+  .mat-button-toggle{
+    border-radius: 30px;
+    margin: 3px 1px;
+    &.mat-button-toggle-checked{
+      background-color: $primary;
+      color: #fff;
+    }
+    .mat-button-toggle-label{
+      margin: 0;
+      font-weight: normal;
+      font-family: 'futura_ltbook';
+      .mat-button-toggle-label-content{
+        line-height: 30px !important;
+        padding: 0 !important;
+        width: 30px;
+        height: 30px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+// All primary Buttons styles
+.blue-btn{
+  background: $primary;
+  .mat-button-wrapper{
+    color: #fff;
+  }
+  &[disabled]{
+    opacity: 0.4;
+    background: $primary !important;
+    color: #fff !important;
+  }
+}
+.orange-btn{
+  background: $orange;
+  .mat-button-wrapper{
+    color: #fff;
+  }
+  &[disabled]{
+    opacity: 0.4;
+    background: $orange !important;
+    color: #fff !important;
+  }
+}
+.white-btn{
+  border: solid 1px $field-border !important;
+  background: #fff;
+  .mat-button-wrapper{
+    color: $dark-text;
+  }
+  &[disabled]{
+    opacity: 0.4;
+    color: $white-disabled !important;
+    background-color: #fff !important;
+  }
+}
+
+// custom file uploader styling
+.file-uploader{
+  position: relative;
+  min-width: 300px;
+  .text-input{
+    border: solid 1px $field-border;
+    border-radius: $input-field-radius;
+    height: 41px;
+    width: 100%;
+    font-size: 12px;
+    padding-left: 10px;
+  }
+  .file-input{
+    position: absolute;
+    top: 0;
+    height: 41px;
+    opacity: 0;
+    z-index: 1;
+    right: 0;
+    width: 103px;
+    cursor: pointer !important;
+  }
+  input[type="file"] {
+    cursor: pointer !important;
+    font-size: 0;
+  }
+  .file-btn{
+    min-width: 100px !important;
+    height: 35px;
+    position: absolute !important;
+    top: 3px !important;
+    right: 3px !important;
+    cursor: pointer !important;
+  }
+  .hint-text{
+    font-size: 12px;
+    color: $light-text;
+    font-weight: normal;
+    margin-bottom: 0;
+  }
+}
+
+// custom file viewer styling
+.file-viewer{
+  position: relative;
+  margin-top: 24px;
+  min-width: 280px;
+  .view-input{
+    width: 100%;
+  }
+  .file-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 85px !important;
+  }
+}
+
+// Download Drop-down
+// Select field left side menu
+.select-field.dropdown-menu{
+  width: 45px;
+  border: solid 1px #e5e9ec !important;
+  background: #fff;
+  box-shadow: none;
+  min-width: 40px;
+  margin-top: 0;
+  height: 41px;
+  margin-right: 15px;
+  .mat-form-field-wrapper{
+    background: url("/assets/images/report-download.svg") center no-repeat;
+    background-size: 30%;
+    padding: 0;
+    .mat-form-field-flex{
+      .mat-form-field-infix{
+        border: none;
+        min-width: 45px;
+        height: 31px;
+        background: transparent;
+        mat-select {
+          margin-top: 2px;
+          .mat-select-arrow{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  &:hover{
+    background: #eee;
+  }
+  &.mat-focused{
+    .mat-form-field-wrapper{
+      .mat-form-field-flex{
+        .mat-form-field-infix{
+          border: none;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+}
+

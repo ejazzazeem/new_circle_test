@@ -1,0 +1,1107 @@
+[
+  {
+    "transactionInfo": {
+      "transactionDate": "20170830",
+      "transactionTime": "1927525"
+    },
+    "payerAndRequestingProvider": {
+      "payer": "Univera",
+      "requestingProviderName": {
+        "family": "Rehab",
+        "given": "Yuliya"
+      },
+      "providerID": "1043415326"
+    },
+    "member": {
+      "memberNumber": "VYW202418110",
+      "groupID": [
+        {
+          "label": "Group Number",
+          "value": "00062724"
+        },
+        {
+          "label": "Identity Card Number",
+          "value": "00"
+        }
+      ],
+      "memberName": {
+        "family": "FLINTSTONE",
+        "given": "WILMA",
+        "middle": ""
+      },
+      "memberDoB": "",
+      "memberGender": "",
+      "address": {
+        "addressLine1": "",
+        "addressLine2": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "country": ""
+      }
+    },
+    "benefitPlanCoverage": {
+      "planName": "",
+      "insuranceTypeCode": "",
+      "coverageStatus": "",
+      "coverageStatusCategory": "",
+      "coverageStatusLabel": "",
+      "inNetwork": {
+
+      },
+      "outOfNetwork": {
+
+      }
+    },
+    "planDetails": {
+      "payerName": "Univera",
+      "planName": "",
+      "dates": [
+        {
+          "qualifier": "",
+          "date": ""
+        }
+      ],
+      "planDescription": "ITHACA CITY SCHOOLS",
+      "additionalInformation": {
+        "limitationMessage": [
+          ""
+        ],
+        "benefitDisclaimerMessage": [
+          ""
+        ]
+      }
+    },
+    "benefits": [
+      {
+        "benefitName": "",
+        "coverageStatus": "",
+        "coverageStatusCategory": "",
+        "coverageStatusLabel": "",
+        "additionalInformation": "",
+        "inNetwork": [
+
+        ],
+        "outOfNetwork": [
+
+        ]
+      },
+      {
+        "benefitName": "",
+        "coverageStatus": "",
+        "coverageStatusCategory": "",
+        "coverageStatusLabel": "",
+        "additionalInformation": "",
+        "inNetwork": [
+
+        ],
+        "outOfNetwork": [
+
+        ]
+      }
+    ],
+    "dependent": {
+      "groupID": [
+        {
+          "label": "Group Number",
+          "value": "00062724"
+        },
+        {
+          "label": "Identity Card Number",
+          "value": "01"
+        }
+      ],
+      "dependentName": {
+        "family": "FLINTSTONE",
+        "given": "FRED",
+        "middle": ""
+      },
+      "dependentDoB": "19870820",
+      "dependentGender": "M",
+      "address": {
+        "addressLine1": "301 COBBLESTONE WAY",
+        "addressLine2": "",
+        "city": "ITHACA",
+        "state": "NY",
+        "zip": "14850",
+        "country": ""
+      },
+      "primaryCareProvider": [
+        {
+          "providerName": {
+            "family": "",
+            "given": ""
+          },
+          "contactInfo": [
+            {
+              "label": "",
+              "value": ""
+            }
+          ],
+          "address": {
+            "addressLine1": "",
+            "addressLine2": "",
+            "city": "",
+            "state": "",
+            "zip": ""
+          }
+        }
+      ],
+      "otherInsuranceInformation": {
+        "dependentName": {
+          "family": "",
+          "given": "",
+          "middle": ""
+        },
+        "dependentID": "",
+        "type": "",
+        "payers": [
+          {
+            "payerTypeCode": "",
+            "payerName": "",
+            "additionalInformation": ""
+          }
+        ]
+      },
+      "benefitPlanCoverage": {
+        "planName": "",
+        "insuranceTypeCode": "IN",
+        "coverageStatus": "1",
+        "coverageStatusCategory": "positive",
+        "coverageStatusLabel": "Active Coverage",
+        "coverageLevel": "FAM",
+        "inNetwork": {
+          "deductible": [
+            {
+              "timeRange": "25",
+              "remaining": "150",
+              "total": "150",
+              "used": "0",
+              "coverageLevel": "IND",
+              "additionalInformation": ""
+            },
+            {
+              "timeRange": "25",
+              "remaining": "450",
+              "total": "450",
+              "used": "0",
+              "coverageLevel": "FAM",
+              "additionalInformation": ""
+            }
+          ],
+          "stopLoss": [
+            {
+              "timeRange": "25",
+              "remaining": "600",
+              "total": "600",
+              "used": "0",
+              "coverageLevel": "IND",
+              "additionalInformation": "EXCLUDES COPAYS"
+            },
+            {
+              "timeRange": "25",
+              "remaining": "1800",
+              "total": "1800",
+              "used": "0",
+              "coverageLevel": "FAM",
+              "additionalInformation": "EXCLUDES COPAYS"
+            }
+          ]
+        },
+        "outOfNetwork": {
+          "deductible": [
+            {
+              "timeRange": "25",
+              "remaining": "150",
+              "total": "150",
+              "used": "0",
+              "coverageLevel": "IND",
+              "additionalInformation": ""
+            },
+            {
+              "timeRange": "25",
+              "remaining": "450",
+              "total": "450",
+              "used": "0",
+              "coverageLevel": "FAM",
+              "additionalInformation": ""
+            }
+          ],
+          "stopLoss": [
+            {
+              "timeRange": "25",
+              "remaining": "600",
+              "total": "600",
+              "used": "0",
+              "coverageLevel": "IND",
+              "additionalInformation": "EXCLUDES COPAYS"
+            },
+            {
+              "timeRange": "25",
+              "remaining": "1800",
+              "total": "1800",
+              "used": "0",
+              "coverageLevel": "FAM",
+              "additionalInformation": "EXCLUDES COPAYS"
+            }
+          ]
+        }
+      },
+      "planDetails": {
+        "payerName": "",
+        "planName": "PLAN NAME",
+        "dates": [
+          {
+            "qualifier": "291",
+            "date": "20160801-99991231"
+          }
+        ],
+        "planDescription": "ITHACA CITY SCHOOLS",
+        "additionalInformation": {
+          "limitationMessage": [
+            ""
+          ],
+          "benefitDisclaimerMessage": [
+            "UNLESS OTHERWISE REQUIRED BY STATE LAW,THIS NOTICE IS NOT A GUARANTEE OF PAYMENT.BENEFITS ARE SUBJECT TO ALL CONTRACT LIMITS AND THE MEMBERS STATUS ON THE DATE OF SERVICE.ACCUMULATED AMOUNTS SUCH AS DEDUCTIBLE MAY CHANGE AS ADDITIONAL CLAIMS ARE PROCESSED"
+          ]
+        }
+      },
+      "benefits": [
+        {
+          "benefitName": "Pharmacy",
+          "coverageStatus": "1",
+          "coverageStatusCategory": "positive",
+          "coverageStatusLabel": "Active Coverage",
+          "coverageLevel": "FAM",
+          "additionalInformation": "",
+          "inNetwork": [
+
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Medical Care",
+          "coverageStatus": "1",
+          "coverageStatusCategory": "positive",
+          "coverageStatusLabel": "Active Coverage",
+          "coverageLevel": "IND",
+          "additionalInformation": "",
+          "inNetwork": [
+
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Vision (Optometry)",
+          "coverageStatus": "1",
+          "coverageStatusCategory": "positive",
+          "coverageStatusLabel": "Active Coverage",
+          "coverageLevel": "IND",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "DIAGNOSTIC EYE EXAMS OFFICE",
+              "codedQualifier": "",
+              "coinsurance": [
+                {
+                  "amount": ".2",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "EYEWEAR CATARACT AFTERCARE OFFICE",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "GLAUCOMA SCREENING - OV",
+              "codedQualifier": "",
+              "coinsurance": [
+                {
+                  "amount": ".2",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Mental Health",
+          "coverageStatus": "1",
+          "coverageStatusCategory": "positive",
+          "coverageStatusLabel": "Active Coverage",
+          "coverageLevel": "IND",
+          "additionalInformation": "",
+          "inNetwork": [
+
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Chiropractic",
+          "coverageStatus": "",
+          "coverageStatusCategory": "",
+          "coverageStatusLabel": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "CHIROPRACTIC CARE",
+              "codedQualifier": "",
+              "coinsurance": [
+                {
+                  "amount": ".2",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Hospital",
+          "coverageStatus": "",
+          "coverageStatusCategory": "",
+          "coverageStatusLabel": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "INPATIENT - MEDICAL/SURGICAL - IP FACILITY",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Hospital - Inpatient",
+          "coverageStatus": "",
+          "coverageStatusCategory": "",
+          "coverageStatusLabel": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "INPATIENT - MEDICAL/SURGICAL - IP FACILITY",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Hospital - Outpatient",
+          "coverageStatus": "",
+          "coverageStatusCategory": "",
+          "coverageStatusLabel": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "OBSERVATION STAY (MOVED FROM HOSP. INPATIENT)",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "OP SURGERY, PHYSICIAN",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Hospital - Emergency Accident",
+          "coverageStatus": "",
+          "coverageStatusCategory": "",
+          "coverageStatusLabel": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "EMERGENCY ROOM - PHYSICIAN",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "EMERGENCY ROOM VISIT - OP FACILITY",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Hospital - Emergency Medical",
+          "coverageStatus": "",
+          "coverageStatusCategory": "",
+          "coverageStatusLabel": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "EMERGENCY ROOM - PHYSICIAN",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "EMERGENCY ROOM VISIT - OP FACILITY",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Emergency Services",
+          "coverageStatus": "",
+          "coverageStatusCategory": "",
+          "coverageStatusLabel": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "EMERGENCY ROOM - PHYSICIAN OFFICE",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Professional (Physician) Visit - Office",
+          "coverageStatus": "",
+          "coverageStatusCategory": "",
+          "coverageStatusLabel": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "DIAGNOSTIC/PHYSICIAN - NON FACE TO FACE - IP",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "DIAGNOSTIC/PHYSICIAN - NON FACE TO FACE - OFFICE",
+              "codedQualifier": "",
+              "coinsurance": [
+                {
+                  "amount": ".2",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "OFFICE VISITS",
+              "codedQualifier": "",
+              "coinsurance": [
+                {
+                  "amount": ".2",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "DIABETIC EDUCATION - OFFICE",
+              "codedQualifier": "",
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "10",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Physician Visit - Office: Well",
+          "coverageStatus": "",
+          "coverageStatusCategory": "",
+          "coverageStatusLabel": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "ADULT ROUTINE PHYSICAL OFFICE",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "limits": [
+                {
+                  "timeRange": "25",
+                  "quantityQualifier": "VS",
+                  "remaining": "1",
+                  "total": "1",
+                  "used": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "WELL CHILD VISITS AGES 7-19",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "limits": [
+                {
+                  "timeRange": "25",
+                  "quantityQualifier": "VS",
+                  "remaining": "1",
+                  "total": "1",
+                  "used": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "Urgent Care",
+          "coverageStatus": "",
+          "coverageStatusCategory": "",
+          "coverageStatusLabel": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "URGENT CARE VISIT",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "URGENT CARE PROFESSIONAL - SPECIALIST",
+              "codedQualifier": "",
+              "coinsurance": [
+                {
+                  "amount": ".2",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "",
+          "coverageStatus": "",
+          "coverageStatusCategory": "",
+          "coverageStatusLabel": "",
+          "additionalInformation": "",
+          "inNetwork": [
+
+          ],
+          "outOfNetwork": [
+
+          ]
+        }
+      ]
+    }
+  }
+]

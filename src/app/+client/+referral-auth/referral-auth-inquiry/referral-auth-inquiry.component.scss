@@ -1,0 +1,57 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+
+.main-right-section{
+  .title-row{
+    .no-padding{
+      padding: 0;
+    }
+    .sub-heading{
+      .star{
+        color: $red;
+      }
+    }
+    .select-field{
+      width: 100%;
+      margin: 6px 0;
+    }
+    .search-box{
+      .input-field{
+        z-index: 100;
+      }
+    }
+  }
+  .fields-container{
+    position: relative;
+    .dis-text{
+      margin-bottom: 20px;
+    }
+    .submit {
+      position: relative !important;
+    }
+    .custom-row{
+       margin-bottom: 10px;
+      .custom-field-col{
+        padding-left: 15px;
+        display: inline-block;
+        .select-container{
+          min-width: 250px;
+          .mat-form-field-wrapper{
+            padding-bottom: 0;
+          }
+        }
+      }
+    }
+
+  }
+}
+.common-datatable tbody tr td {
+  height: 45px;
+}
+.dataTables_empty{
+  padding: 8px !important;
+  background: #fff;
+}
+.dataTables_filter {
+  top: -50px;
+}

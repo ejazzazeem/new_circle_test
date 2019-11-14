@@ -1,0 +1,124 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+
+.login-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  background: url("/assets/images/login-bg.png") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  @media only screen and ($desktop-small){
+    background-size: auto;
+    background-position-x: -100px;
+  }
+  @media only screen and ($tablet) {
+    background-position-x: -120px;
+  }
+  @media only screen and ($tablet88) {
+    background-position-x: -160px;
+    background-position-y: -70px;
+  }
+  @media only screen and ($tablet-small) {
+    background-position-y: 0;
+    background-size: cover;
+  }
+  @media only screen and ($height8) {
+    background-repeat: repeat;
+  }
+  .top-bar{
+    background-color: $primary;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+  }
+  .login-inner{
+    width: 370px;
+    background-color: #fff;
+    border-top: 8px solid $primary;
+    box-shadow: $login-box-shadow;
+    padding: 28px 20px 20px;
+    box-sizing: border-box;
+    margin-top: -7%;
+    margin-right: 12vw;
+    @media only screen and ($tablet) {
+      margin-top: -20%;
+      margin-right: 8vw;
+    }
+    @media only screen and ($tablet88) {
+      margin-top: -22%;
+      margin-right: 6vw;
+    }
+    @media only screen and ($tablet-small) {
+      margin-right: 3vw;
+    }
+    .login-heading{
+      font-family: 'futura_ltbook';
+      font-size: 24px;
+      color: $primary;
+      text-transform: uppercase;
+      border-bottom: 4px solid $primary;
+      display: inline-block;
+      padding-bottom: 5px;
+      margin: 0 0 20px;
+    }
+    .login-parah{
+      font-size: 12px;
+      letter-spacing: 0.1px;
+    }
+    .login-box{
+      //border-bottom: 1px solid $field-border;
+      //margin-bottom: 20px;
+      padding: 10px 0;
+      .input-container{
+        padding-bottom: 0;
+        .mat-form-field-infix{
+          input{
+            padding-left: 32px;
+          }
+          .mat-form-field-placeholder{
+            padding-left: 22px;
+          }
+        }
+        .user-icon{
+          position: absolute;
+          margin-top: 5px;
+          margin-left: 10px;
+          svg{
+            width: 15px;
+            height: 15px;
+            fill: $grey-icon;
+            float: left;
+          }
+        }
+      }
+      .btn-box{
+        text-align: right;
+      }
+    }
+    .login-hint{
+      font-size: 12px;
+      color: $label-text;
+      text-align: center;
+      margin: 0;
+    }
+  }
+  .footer-box{
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    box-shadow: inset 0px 4px 0 0 $primary;
+    width: 100%;
+    left: 0;
+    .footer-text{
+      text-align: center;
+      font-size: 14px;
+      margin: 15px 0;
+    }
+  }
+}
+

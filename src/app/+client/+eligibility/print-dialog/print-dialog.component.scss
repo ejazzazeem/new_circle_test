@@ -1,0 +1,29 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+
+.dialog-body{
+  perfect-scrollbar{
+    max-height: 350px;
+  }
+  .main-check-list{
+    .single-check{
+      display: block;
+    }
+    .sub-check-list{
+      padding-left: 20px;
+      .single-check{
+        height: 35px;
+      }
+    }
+  }
+}
+button{
+  &.white-btn{
+    padding: 0 40px;
+  }
+  &.print-btn{
+    background: url("/assets/images/print-icon.svg") no-repeat 34px 10px $primary ;
+    background-size: 17px;
+    padding: 0 40px 0 55px;
+  }
+}

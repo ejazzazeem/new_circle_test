@@ -1,0 +1,33 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+
+.main-right-section{
+  .fields-container{
+    .region-list{
+      display: flex;
+      flex-wrap: wrap;
+      .single-region{
+        margin-right: 10px;
+        margin-bottom: 10px;
+        border: 1px solid $field-border;
+        border-radius: $toggle-tabs-radius;
+        padding: 0px 15px;
+        .check-input{
+          .mat-checkbox-layout{
+            height: 37px;
+            margin: 0;
+            .mat-checkbox-label{
+              line-height: 37px;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media only screen and ($tablet8){
+    .certificate, .password{
+      float: left;
+      width: 100%;
+    }
+  }
+}

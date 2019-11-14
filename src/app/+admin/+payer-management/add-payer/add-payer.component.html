@@ -1,0 +1,228 @@
+<div class="top-row">
+  <h1 class="main-heading">{{title}}</h1>
+</div>
+<!-- Payer Information - Starts -------------------------------------------------- -->
+<div class="main-right-section">
+
+  <form name="payerForm" #f="ngForm" novalidate>
+    <!-- Payer Details Section Starts -->
+    <div class="fields-container">
+      <h2 class="sub-heading">Payer Details</h2>
+      <div class="field-row row">
+        <div class="col-sm-7 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">Payer Name<span class="star">*</span></label>
+            <mat-form-field class="input-field" hideRequiredMarker="true"
+                            floatPlaceholder="never">
+              <input (blur)="checkPayerNameAvailability(model.name)"  maxlength="75" name="name" [(ngModel)]="model.name" #payerName="ngModel" matInput
+                     pattern="[a-zA-Z0-9 _-]*"   placeholder="Enter Payer Name" required>
+              <mat-error *ngIf="payerName.errors?.required && payerName.touched">
+                Payer Name is required
+              </mat-error>
+              <mat-error *ngIf="payerName.errors?.pattern && payerName.touched">Only alphanumeric, space, hyphen and underscore are allowed.</mat-error>
+              <span class="custom-invalid" *ngIf="uniquePayerName === false && payerName.value !== '' && !payerName.errors?.pattern">
+                                            {{uniquePayerMessage}}
+                                        </span>
+              <span class="custom-valid" *ngIf="uniquePayerName === true && payerName.value !== '' && !payerName.errors?.pattern">
+                                            {{uniquePayerMessage}}
+                                        </span>
+
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-4 col-md-3 field-col col-md-offset-5 col-sm-offset-1">
+          <div class="toggle-container">
+            <label class="label-text">Payer Status</label>
+            <div class="toggle-two-labels">
+              <label class="pre-text">Inactive</label>
+              <mat-slide-toggle name="status" [(ngModel)]="model.status" #status="ngModel"
+                                class="toggle-btn">Active
+              </mat-slide-toggle>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field-row row">
+        <div class="col-md-12 field-col">
+          <div class="textarea-container">
+            <label class="label-text">Payer Description</label>
+            <mat-form-field class="textarea-field" hideRequiredMarker="true"
+                            floatPlaceholder="never">
+                                        <textarea [(ngModel)]="model.description" #description="ngModel"
+                                                  name="description" matInput
+                                                  placeholder="Enter Group Description" maxlength="200"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Payer Details Section Ends -->
+    <!-- Payer Connectivity Section Starts -->
+    <div class="fields-container">
+      <h2 class="sub-heading">Payer Connectivity</h2>
+      <div ngModelGroup="connectivity">
+        <div class="field-row row">
+          <div class="col-sm-6 col-md-4 field-col">
+            <div class="select-container">
+              <label class="label-text">Transport Type<span class="star">*</span></label>
+              <mat-form-field class="select-field" floatPlaceholder="never">
+                <mat-select [(ngModel)]="model.transportType" name="transportType"
+                            #transportType="ngModel" placeholder="Select" required>
+                  <mat-option [value]="">-- Select Transport Type --</mat-option>
+                  <mat-option *ngFor="let payerTransport of payerTransportType"
+                              [value]="payerTransport.id">{{payerTransport.name}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="transportType.errors?.required && transportType.touched">
+                  Transport Type is required
+                </mat-error>
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="password" *ngIf="model.transportType === 'SOAP_WSDL'">
+            <div class="col-sm-6 col-md-4 field-col">
+              <div class="input-container">
+                <label class="label-text">User Name<span class="star">*</span></label>
+                <mat-form-field class="input-field" hideRequiredMarker="true"
+                                floatPlaceholder="never">
+                  <input [(ngModel)]="model.username" #userName="ngModel" name="username"
+                         matInput placeholder="Enter User Name" [required]="username_validation" required>
+                  <mat-error *ngIf="userName.errors?.required && userName.touched">
+                    User Name is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-4 field-col">
+              <div class="input-container">
+                <label class="label-text">Password<span class="star">*</span></label>
+                <mat-form-field class="input-field" hideRequiredMarker="true"
+                                floatPlaceholder="never">
+                  <input type="password" [(ngModel)]="model.password" #password="ngModel"
+                         name="password" matInput placeholder="Enter Password" [required]="password_validation" required>
+                  <mat-error *ngIf="password.errors?.required && password.touched">
+                    Password is required
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field-row row">
+          <div class="col-sm-6 col-md-4 field-col">
+            <div class="input-container">
+              <label class="label-text">Endpoint<span class="star">*</span></label>
+              <mat-form-field class="input-field" hideRequiredMarker="true"
+                              floatPlaceholder="never">
+                <input (blur)="checkEndpointValidation($event.target.value)"
+                       [(ngModel)]="model.endPoint" #endPoint="ngModel" name="endPoint" matInput
+                       placeholder="Enter Endpoint" required>
+                <mat-error *ngIf="endPoint.errors?.required && endPoint.touched">
+                  Endpoint is required
+                </mat-error>
+
+                <span class="custom-invalid" *ngIf="!validPattern && !endPoint.errors?.required">
+                    Endpoint is not Valid
+                  </span>
+
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">Receiver Code<span class="star">*</span></label>
+            <mat-form-field class="input-field" hideRequiredMarker="true"
+                            floatPlaceholder="never">
+              <input [(ngModel)]="model.receiverCode" #receiverCode="ngModel" maxlength="15" name="receiverCode" matInput
+                     pattern="[a-zA-Z0-9 ]*"     placeholder="Enter Receiver Code" required>
+              <mat-error *ngIf="receiverCode.errors?.required && receiverCode.touched">
+                Receiver Code is required
+              </mat-error>
+
+              <mat-error *ngIf="receiverCode.errors?.pattern && receiverCode.touched">
+               Only Alphanumeric characters are allowed.
+              </mat-error>
+
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col" *ngIf="model.transportType === 'SOAP_WSDL'">
+          <div class="input-container">
+            <label class="label-text">Core Sender ID Code<span class="star" >*</span></label>
+            <mat-form-field class="input-field" hideRequiredMarker="true"
+                            floatPlaceholder="never">
+              <input [(ngModel)]="model.coreSenderId" #coreSenderId="ngModel" maxlength="15" name="coreSenderId" matInput
+                     pattern="[a-zA-Z0-9]*"       placeholder="Enter Core Sender ID" required>
+              <mat-error *ngIf="coreSenderId.errors?.required && coreSenderId.touched">
+                Core Sender ID is required
+              </mat-error>
+              <mat-error *ngIf="coreSenderId.errors?.pattern && coreSenderId.touched">
+                Only Alphanumeric Characters are allowed.
+              </mat-error>
+
+
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col" *ngIf="model.transportType !== 'SOAP_WSDL'">
+          <div class="input-container">
+            <label class="label-text">Core Sender ID Code</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true"
+                            floatPlaceholder="never">
+              <input [(ngModel)]="model.coreSenderId" #coreSenderId="ngModel" maxlength="15" name="coreSenderId" matInput
+                     pattern="[a-zA-Z0-9]*"       placeholder="Enter Core Sender ID" >
+              <mat-error *ngIf="coreSenderId.errors?.pattern && coreSenderId.touched">
+                Only Alphanumeric Characters are allowed.
+              </mat-error>
+
+
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">Payer Identification Code<span class="star">*</span></label>
+            <mat-form-field class="input-field" hideRequiredMarker="true"
+                            floatPlaceholder="never">
+              <input [(ngModel)]="model.payerIdCode" #payerIdCode="ngModel" maxlength="15" name="payerIdCode" matInput
+                     pattern="[a-zA-Z0-9]*"     placeholder="Enter Payer Identification Code" required>
+              <mat-error *ngIf="payerIdCode.errors?.required && payerIdCode.touched">
+                Payer Identification Code is required
+              </mat-error>
+              <mat-error *ngIf="payerIdCode.errors?.pattern && payerIdCode.touched">
+                Only Alphanumeric characters are allowed.
+              </mat-error>
+
+
+
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Payer Connectivity Section Ends -->
+    <!-- Payer Regions Section Starts -->
+    <div class="fields-container" ngModelGroup="regions">
+      <h2 class="sub-heading">Region<span class="star">*</span></h2>
+      <div class="region-list">
+        <div *ngFor="let region of regionType" class="single-region">
+          <mat-checkbox name="{{'checkbox' + region.regionId}}"  [(ngModel)]="region.checked" (change)="getValues(region)"
+                        class="check-input">{{region.name}}
+          </mat-checkbox>
+        </div>
+      </div>
+    </div>
+    <!-- Payer Regions Section Ends -->
+    <!-- Payer Information - Ends -------------------------------------------------- -->
+    <!-- Action Buttons - Starts -------------------------------------------------- -->
+
+    <div class="button-container">
+      <button mat-button type="button" (click)="savePayer(f.value)" [disabled]="validatePayerForm() || f.invalid || validPattern===false || fileUploaded === false || checkboxRequired === true || uniquePayerName === false" class="blue-btn">{{btnText}}</button>
+      <button mat-button type="button" class="white-btn" (click)="cancelForm()">Cancel</button>
+    </div>
+    <!-- Action Buttons - Ends -------------------------------------------------- -->
+  </form>
+</div>

@@ -1,0 +1,269 @@
+//colors
+$color_pot_pourri_approx: #11cfe0;
+$white: white;
+$color_cutty_sark_approx: #006276;
+
+.progress-circle {
+  font-size: 20px;
+  position: relative;
+  padding: 0;
+  width: 110px;
+  height: 110px;
+  background-color: $color_pot_pourri_approx;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+  line-height: 110px;
+  &:after {
+    border: none;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    text-align: center;
+    display: block;
+    //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+    border-radius: 50%;
+    width: 88px;
+    height: 88px;
+    background-color: $white;
+    content: " ";
+  }
+  &.over50 {
+    .left-half-clipper {
+      clip: rect(auto,auto,auto,auto);
+    }
+    .first50-bar {
+      position: absolute;
+      clip: rect(0, 110px, 110px, 55px);
+      background-color: $color_cutty_sark_approx;
+      //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+      border-radius: 50%;
+      width: 110px;
+      height: 110px;
+    }
+  }
+  &:not(.over50) .first50-bar {
+    display: none;
+  }
+  &.p0 .value-bar {
+    display: none;
+  }
+  &.p1 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(4deg);
+  }
+  &.p2 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(7deg);
+  }
+  &.p3 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(11deg);
+  }
+  &.p4 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(14deg);
+  }
+  &.p5 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(18deg);
+  }
+  &.p6 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(22deg);
+  }
+  &.p7 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(25deg);
+  }
+  &.p8 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(29deg);
+  }
+  &.p9 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(32deg);
+  }
+  &.p10 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(36deg);
+  }
+  &.p11 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(40deg);
+  }
+  &.p12 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(43deg);
+  }
+  &.p13 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(47deg);
+  }
+  &.p14 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(50deg);
+  }
+  &.p15 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(54deg);
+  }
+  &.p16 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(58deg);
+  }
+  &.p17 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(61deg);
+  }
+  &.p18 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(65deg);
+  }
+  &.p19 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(68deg);
+  }
+  &.p20 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(72deg);
+  }
+  &.p21 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(76deg);
+  }
+  &.p22 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(79deg);
+  }
+  &.p23 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(83deg);
+  }
+  &.p24 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(86deg);
+  }
+  &.p25 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(90deg);
+  }
+  &.p26 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(94deg);
+  }
+  &.p27 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(97deg);
+  }
+  &.p28 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(101deg);
+  }
+  &.p29 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(104deg);
+  }
+  &.p30 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(108deg);
+  }
+  &.p31 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(112deg);
+  }
+  &.p32 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(115deg);
+  }
+  &.p33 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(119deg);
+  }
+  &.p34 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(122deg);
+  }
+  &.p35 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(126deg);
+  }
+  &.p36 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(130deg);
+  }
+  &.p37 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(133deg);
+  }
+  &.p38 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(137deg);
+  }
+  &.p39 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(140deg);
+  }
+  &.p40 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(144deg);
+  }
+  &.p41 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(148deg);
+  }
+  &.p42 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(151deg);
+  }
+  &.p43 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(155deg);
+  }
+  &.p44 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(158deg);
+  }
+  &.p45 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(162deg);
+  }
+  &.p46 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(166deg);
+  }
+  &.p47 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(169deg);
+  }
+  &.p48 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(173deg);
+  }
+  &.p49 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(176deg);
+  }
+  &.p50 .value-bar {
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: rotate(180deg);
+  }
+}
+.left-half-clipper {
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+  width: 110px;
+  height: 110px;
+  position: absolute;
+  clip: rect(0, 110px, 110px, 55px);
+}
+.value-bar {
+  position: absolute;
+  clip: rect(0, 55px, 110px, 0);
+  width: 110px;
+  height: 110px;
+  //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+  border-radius: 50%;
+  border: 25px solid $color_cutty_sark_approx;
+  //Instead of the line below you could use @include box-sizing($bs)
+  box-sizing: border-box;
+}

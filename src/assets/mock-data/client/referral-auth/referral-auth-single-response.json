@@ -1,0 +1,138 @@
+[{
+  "transactionInfo": {
+    "transactionDate": "20181219",
+    "transactionTime": "1511"
+  },
+  "payer": {
+    "name": "INDEPENDENT HEALTH"
+  },
+  "requestingProvider": {
+    "name": {
+      "family": "Byram Healthcare Centers Inc",
+      "given": ""
+    },
+    "providerID": "1710932173",
+    "taxonomyCode": "332B00000X"
+  },
+  "referralAuth": [
+    {
+      "subscriber": {
+        "name": {
+          "family": "ZZZ",
+          "given": "ZZZ",
+          "middle": "F"
+        },
+        "memberID": "91444900",
+        "dob": "19421114",
+        "memberGender": ""
+      },
+      "categoryCode": "Admission Review",
+      "certificationTypeCode": "Initial",
+      "serviceTypeCode": "",
+      "serviceLocation": "",
+      "actionCode": "Certified in total",
+      "identifier": "20170526-000262",
+      "decisionReasonCode": "",
+      "previousCert": "",
+      "eventDate": "",
+      "admissionDate": "",
+      "dischargeDate": "",
+      "certificationIssueDate": "",
+      "certificationExpirationDate": "",
+      "certificationEffectiveDate": "20170526-20170624",
+      "servicesReviewRequestDate": "",
+      "diagnosisCodeType": "International Classification of Diseases Clinical Modification (ICD-10-CM) Diagnosis",
+      "diagnosisCode": "Non-pressure chronic ulcer of right ankle with fat layer exposed (L97312)",
+      "unitTypeCode": "",
+      "providerQuantity": "",
+      "message": "Medical resource management health care services determinations are made orally and in writing to the member and provider.",
+      "referringProvider": {
+        "name": {
+          "family": "Fadel",
+          "given": "Mary"
+        },
+        "npi": "1295729416",
+        "address": {
+          "addressLine1": "5300 Military Rd",
+          "addressLine2": "",
+          "city": "Lewiston",
+          "state": "NY",
+          "zip": "14092"
+        },
+        "contactInfo": [
+          {
+            "label": "Telephone",
+            "value": "7162982614"
+          }
+        ],
+        "taxonomyID": ""
+      },
+      "serviceLevelDetails": [
+        {
+          "serviceProvider": "Byram Healthcare Centers Inc",
+          "npi": "1710932173",
+          "address": {
+            "addressLine1": "120 Bloomingdale Rd Ste 301",
+            "addressLine2": "",
+            "city": "White Plains",
+            "state": "NY",
+            "zip": "10605"
+          },
+          "hcpcsCode": "A6248",
+          "serviceDates": "20170526-20170624",
+          "actionCode": "Certified in total",
+          "identifier": "1435337",
+          "message": ""
+        },
+        {
+          "serviceProvider": "Byram Healthcare Centers Inc",
+          "npi": "1710932173",
+          "address": {
+            "addressLine1": "120 Bloomingdale Rd Ste 301",
+            "addressLine2": "",
+            "city": "White Plains",
+            "state": "NY",
+            "zip": "10605"
+          },
+          "hcpcsCode": "A4450",
+          "serviceDates": "20170526-20170624",
+          "actionCode": "Certified in total",
+          "identifier": "1435338",
+          "message": ""
+        },
+        {
+          "serviceProvider": "Byram Healthcare Centers Inc",
+          "npi": "1710932173",
+          "address": {
+            "addressLine1": "120 Bloomingdale Rd Ste 301",
+            "addressLine2": "",
+            "city": "White Plains",
+            "state": "NY",
+            "zip": "10605"
+          },
+          "hcpcsCode": "A6446",
+          "serviceDates": "20170526-20170624",
+          "actionCode": "Certified in total",
+          "identifier": "1435339",
+          "message": ""
+        },
+        {
+          "serviceProvider": "Byram Healthcare Centers Inc",
+          "npi": "1710932173",
+          "address": {
+            "addressLine1": "120 Bloomingdale Rd Ste 301",
+            "addressLine2": "",
+            "city": "White Plains",
+            "state": "NY",
+            "zip": "10605"
+          },
+          "hcpcsCode": "A6402",
+          "serviceDates": "20170526-20170624",
+          "actionCode": "Certified in total",
+          "identifier": "1435340",
+          "message": ""
+        }
+      ]
+    }
+  ]
+}]

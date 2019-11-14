@@ -1,0 +1,55 @@
+{
+	"transactionInfo": {
+		"transactionDate": "20180312",
+		"transactionTime": "1044030"
+	},
+	"payer": {
+		"name": "BLUECROSS BLUESHIELD OF WESTERN NEW YORK"
+	},
+	"requestingProvider": {
+		"name": {
+			"family": "ORGANIZATION",
+			"given": ""
+		},
+		"providerID": "1111111111",
+		"taxonomyCode": ""
+	},
+	"subscriber": {
+		"name": {
+			"family": "LAST",
+			"given": "FIRST",
+			"middle": ""
+		},
+		"memberID": "88888888888",
+		"dob": "19010101",
+		"memberGender": "U"
+	},
+	"referralAuth": [
+		{
+			"referralRejections": {
+				"rejectReasonCode": "62",
+				"followupActionCode": "C"
+			},
+			"categoryCode": "",
+			"certificationTypeCode": "",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "",
+			"identifier": "",
+			"decisionReasonCode": "",
+			"previousCert": "",
+			"eventDate": "",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "",
+			"diagnosisCode": "",
+			"unitTypeCode": "",
+			"providerQuantity": "",
+			"message": ""
+		}
+	]
+}

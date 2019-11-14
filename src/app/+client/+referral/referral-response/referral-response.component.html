@@ -1,0 +1,289 @@
+
+<div class="top-row row">
+    <div class="col-md-12" id="referral-body">
+        <h1 class="main-heading">Referral Response</h1>
+        <p class="date" *ngIf="transactionData">Date : {{transactionData?.transactionDate | convertStringToDate}} {{transactionData?.transactionTime | time}}</p>
+    </div>
+</div>
+<div class="main-right-section">
+
+    <!-- Referral Response - Starts ----------------------------------------------- -->
+    <div class="referral-detail" id="referral_body">
+        <div class="tabs-main-container">
+            <div class="custom-tabs-header">
+                <div class="head-list">
+                    <button mat-button (click)="showHideBackToTopButton('false', 1)" class="blue-btn" [ngClass]="{'checked': (1 === selectedTab)}" *ngIf="referringProvider">Requesting Provider</button>
+                    <button mat-button (click)="showHideBackToTopButton('false', 2)"class="blue-btn" [ngClass]="{'checked': (2 === selectedTab)}" scrollTo scrollTargetSelector="#serviceProvider" *ngIf="servicingProvider">Servicing Provider</button>
+                    <button mat-button (click)="showHideBackToTopButton('false', 3)" class="blue-btn" [ngClass]="{'checked': (3 === selectedTab)}" scrollTo scrollTargetSelector="#member" *ngIf="subscriberMember">Member</button>
+                    <button mat-button (click)="showHideBackToTopButton('false', 4)" class="blue-btn" [ngClass]="{'checked': (4 === selectedTab)}" scrollTo scrollTargetSelector="#referralDetail" *ngIf="referralInfo">Referral Detail</button>
+                </div>
+            </div>
+            <div class="custom-tabs-body">
+                <div class="main-container">
+                    <!-- Information Box - Starts ----------------------------------------------- -->
+                    <div class="info-box-container" *ngIf="payerInformation">
+                        <div class="info-row">
+                            <div class="left-box fields-container">
+                                <div class="input-container">
+                                    <mat-form-field class="view-input">
+                                        <input matInput placeholder="Payer Name"
+                                               value="{{payerInformation.name}}" readonly>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="right-box fields-container">
+                                            <span *ngFor="let referralDetail of referralInfo">
+                                            <div class="line" *ngIf="referralDetail.identifier">
+                                                <label class="light-label">Referral #</label>
+                                                <label class="right-value">{{referralDetail.identifier}}</label>
+                                            </div>
+                                            <div class="line" *ngIf="referralDetail.actionCode">
+                                                <label class="light-label">Action Code</label>
+                                                <label class="right-value">{{referralDetail.actionCode}}</label>
+                                            </div>
+                                            <div class="line" *ngIf="referralDetail.decisionReasonCode">
+                                                <label class="light-label">Decision Reason Code</label>
+                                                <label class="right-value">{{referralDetail.decisionReasonCode}}</label>
+                                            </div>
+                                            </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Information Box - Ends ----------------------------------------------- -->
+
+                    <!-- AAA Section - Starts ----------------------------------------------- -->
+                    <div class="fields-container rejection-box" *ngIf="rejectionDetails">
+                        <h3 class="light-heading">
+                            Rejections
+                        </h3>
+                        {{rejectionDetails}}
+                    </div>
+                    <!-- AAA Section - Ends ----------------------------------------------- --
+
+                    <!-- Referring Provider - Starts ----------------------------------------------- -->
+                    <div class="requesting-provider-section" id="referringProvider" *ngIf="referringProvider">
+                        <div class="fields-container">
+                            <h2 class="sub-heading">
+                                Requesting Provider
+                            </h2>
+                            <div class="field-row row">
+                                <div class="col-md-4 field-col" *ngIf="referringProvider?.name?.family || referringProvider?.name?.given">
+                                    <div class="input-container">
+                                        <mat-form-field class="view-input">
+                                            <input matInput placeholder="Name" id="referring-provider-name"
+                                                   value="{{referringProvider?.name?.family }}{{(referringProvider?.name?.given !=='' && referringProvider?.name?.family !=='')?', ':''}}{{referringProvider?.name?.given }}"
+                                                   readonly>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 field-col" *ngIf="referringProvider.npi">
+                                    <div class="input-container">
+                                        <mat-form-field class="view-input">
+                                            <input matInput placeholder="NPI" id="referring-provider-npi"
+                                                   value="{{referringProvider.npi}}" readonly>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 field-col"
+                                     *ngIf="referringProvider?.taxonomyCode">
+                                    <div class="input-container">
+                                        <mat-form-field class="view-input">
+                                            <input matInput placeholder="Taxonomy" id="referring-provider-taxonomy-code"
+                                                   value="{{referringProvider?.taxonomyCode}}"
+                                                   readonly>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Referring Provider - Ends ----------------------------------------------- -->
+
+                    <!-- Servicing Provider - Starts ----------------------------------------- -->
+                    <div class="servicing-provider-section" id="serviceProvider" *ngIf="servicingProvider">
+                        <div class="fields-container">
+                            <h2 class="sub-heading">
+                                Servicing Provider
+                            </h2>
+                            <div class="field-row row">
+                                <div class="col-md-4 field-col" *ngIf="servicingProvider?.name?.family">
+                                    <div class="input-container">
+                                        <mat-form-field class="view-input">
+                                            <input matInput placeholder="Name" id="servicing-provider-name"
+                                                   value="{{servicingProvider?.name?.family }}{{(servicingProvider?.name?.given !=='' && servicingProvider?.name?.family !=='')?',':' '}}{{servicingProvider?.name?.given }}"
+                                                   readonly>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 field-col" *ngIf="servicingProvider?.address?.addressLine1 || servicingProvider?.address?.addressLine2 || servicingProvider?.address?.state || servicingProvider?.address?.city || servicingProvider?.address?.zip">
+                                    <div class="input-container">
+                                        <mat-form-field class="view-input">
+                                            <input matInput placeholder="Servicing Provider Address" id="servicing-provider-address"
+                                                   value="{{servicingProvider?.address?.addressLine1 || servicingProvider?.address?.addressLine2 ?  (servicingProvider?.address?.addressLine1 ) +' '+ (servicingProvider?.address?.addressLine2 ) +',': '' }} {{servicingProvider?.address?.city || servicingProvider?.address?.state ? (servicingProvider?.address?.city ) +' '+
+                                                                (servicingProvider?.address?.state) +', ': ''}}{{servicingProvider?.address?.zip | zipCodeMask}}"
+                                                   readonly>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div *ngIf="servicingProvider.contactInfo">
+                                    <div class="col-md-4 field-col" *ngFor="let contact of servicingProvider.contactInfo">
+                                        <div class="input-container" *ngIf="contact.label">
+                                            <mat-form-field class="view-input">
+                                                <input matInput placeholder="{{contact.label}}"
+                                                       id="servicing-provider-contact"
+                                                       value="{{contact?.value | phoneMask}}" readonly>
+                                            </mat-form-field>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 field-col" *ngIf="servicingProvider.npi">
+                                    <div class="input-container">
+                                        <mat-form-field class="view-input">
+                                            <input matInput placeholder="NPI" id="servicing-provider-npi"
+                                                   value="{{servicingProvider.npi}}" readonly>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Servicing Provider - Ends ----------------------------------------------- -->
+
+                    <!-- Member - Starts ----------------------------------------- -->
+                    <div class="member-section" id="member" *ngIf="subscriberMember">
+                        <div class="fields-container">
+                            <h2 class="sub-heading">
+                                Member
+                            </h2>
+                            <div class="field-row row">
+                                <div class="col-md-4 field-col" *ngIf="subscriberMember?.name?.family || subscriberMember?.name?.given || subscriberMember?.name?.middle">
+                                    <div class="input-container">
+                                        <mat-form-field class="view-input">
+                                            <input matInput placeholder="Name" id="subscriber-name"
+                                                   value="{{subscriberMember?.name?.family }}{{(subscriberMember?.name?.family!=='' && subscriberMember?.name?.given!=='')?',':''}} {{subscriberMember?.name?.given }} {{subscriberMember?.name?.middle }}" readonly>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 field-col" *ngIf="subscriberMember?.accountNumber">
+                                    <div class="input-container">
+                                        <mat-form-field class="view-input">
+                                            <input matInput placeholder="Patient Acct #"
+                                                   id="subscriber-account-number"
+                                                   value="{{subscriberMember?.accountNumber}}" readonly>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 field-col" *ngIf="subscriberMember?.memberID">
+                                    <div class="input-container">
+                                        <mat-form-field class="view-input">
+                                            <input matInput placeholder="Subscriber Member ID"
+                                                   id="subscriber-member-id"
+                                                   value="{{subscriberMember?.memberID}}" readonly>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 field-col" *ngIf="subscriberMember?.dob">
+                                    <div class="input-container">
+                                        <mat-form-field class="view-input">
+                                            <input matInput placeholder="Date of Birth" id="subscriber-date-of-birth"
+                                                   value="{{subscriberMember?.dob | convertStringToDate}}"
+                                                   readonly>
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Member - Ends ----------------------------------------- -->
+
+                    <!-- Referral Detail - Starts ----------------------------------------- -->
+                    <div class="member-section" id="referralDetail" *ngIf="referralInfo">
+                        <div class="fields-container">
+                            <h2 class="sub-heading">
+                                Referral Detail
+                            </h2>
+                            <span *ngFor="let referralDetail of referralInfo">
+                                        <div class="field-row row" *ngIf="referralDetail">
+                                            <div class="col-md-3 field-col" *ngIf="referralDetail?.serviceTypeCode">
+                                                <div class="input-container">
+                                                    <mat-form-field class="view-input">
+                                                        <input matInput placeholder="Referral Type" id="referral-type"
+                                                               value="{{referralDetail?.serviceTypeCode}}"
+                                                               readonly>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 field-col" *ngIf="referralDetail?.diagnosisDate">
+                                                <div class="input-container">
+                                                    <mat-form-field class="view-input">
+                                                        <input matInput placeholder="Diagnosis Date" id="diagnosis-date"
+                                                               value="{{referralDetail?.diagnosisDate | convertStringToDate}}"
+                                                               readonly>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 field-col" *ngIf="referralDetail?.previousCert">
+                                                <div class="input-container">
+                                                    <mat-form-field class="view-input">
+                                                        <input matInput placeholder="Previous Cert #" id="previous-cert"
+                                                               value="{{referralDetail?.previousCert}}"
+                                                               readonly>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 field-col" *ngIf="referralDetail?.unitTypeCode || referralDetail?.providerQuantity">
+                                                <div class="input-container">
+                                                    <mat-form-field class="view-input">
+                                                        <input matInput placeholder="Visits" id="visits"
+                                                               value="{{referralDetail?.providerQuantity + ' ' + referralDetail?.unitTypeCode}}"
+                                                               readonly>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 field-col" *ngIf="eventStartDate">
+                                                <div class="input-container">
+                                                    <mat-form-field class="view-input">
+                                                        <input matInput placeholder="Event Date" id="event-date"
+                                                               value="{{eventStartDate | convertStringToDate}}{{eventEndDate!==''?' - ':''}}{{eventEndDate | convertStringToDate}}" readonly>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 field-col" *ngIf="referralDetail?.diagnosisCode">
+                                                <div class="input-container">
+                                                    <mat-form-field class="view-input">
+                                                        <textarea  matInput placeholder="ICD-10 Diagnosis" matTextareaAutosize
+                                                                   id="diagnosis" value="{{processDiagnosisCode(referralDetail?.diagnosisCode)}}"
+                                                                   readonly></textarea>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 field-col" *ngIf="referralDetail?.message">
+                                                <div class="input-container">
+                                                    <mat-form-field class="view-input">
+                                                        <textarea matInput placeholder="Message" id="message"
+                                                                  matTextareaAutosize matAutosizeMinRows="1" value="{{referralDetail?.message}}"
+                                                                  readonly></textarea>
+                                                    </mat-form-field>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </span>
+                        </div>
+                    </div>
+                    <!-- Referral Detail - Ends ----------------------------------------- -->
+
+                    <!-- All Payers Contact information - Starts ----------------------- -->
+                    <app-all-payer-info></app-all-payer-info>
+                    <!-- All Payers Contact information - Ends ------------------------- -->
+
+
+                    <button mat-button class="back-to-top" (click)="showHideBackToTopButton('true', 1)" scrollTo scrollTargetSelector="#referral_body"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Referral Response Selection - End ----------------------------------------------- -->
+
+</div>

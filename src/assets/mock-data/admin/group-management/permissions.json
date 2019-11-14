@@ -1,0 +1,48 @@
+[
+  {
+    "regionId" : 1,
+    "permissions" : [
+      {
+        "permissionId": "1",
+        "name": "Eligibility Inquiry",
+        "custom": false,
+        "adxTransaction": true
+      },
+      {
+        "permissionId": "2",
+        "name": "Claim Status",
+        "custom": false,
+        "adxTransaction": true
+      }
+    ]
+  },
+  {
+    "regionId" : 2,
+    "permissions" : [
+      {
+        "permissionId": "3",
+        "name": "Refferal Inquiry",
+        "custom": true,
+        "adxTransaction": false
+      }
+
+    ]
+  },
+  {
+    "regionId" : 3,
+    "permissions" : [
+      {
+        "permissionId": "4",
+        "name": "Claim Status",
+        "custom": true,
+        "adxTransaction": true
+      },
+      {
+        "permissionId": "5",
+        "name": "Fund Transfer",
+        "custom": true,
+        "adxTransaction": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,83 @@
+[
+  {
+    "groupId": "64861a2a-4f66-40af-9050-2317d611421b",
+    "name": "GRP1",
+    "groupType": "NETEXCHANGE",
+    "defaultRegions": [
+      {
+        "regionId": "4a993a36-0e12-4c35-bb8e-55e3c2492b7a",
+        "name": "REG1"
+      }
+    ],
+    "defaultPermissions": [
+      {
+        "permissionId": "b3018004-796e-4575-9d41-ba571e5ad2be",
+        "name": "PERM1"
+      }
+    ]
+  },
+  {
+    "groupId": "6b8ab2ed-be56-436c-8ec9-2ad2588c3b16",
+    "name": "GRP2",
+    "groupType": "PAYER",
+    "defaultRegions": [
+      {
+        "regionId": "925d540d-2edc-42ac-91f7-cd391e7b2d5d",
+        "name": "REG4"
+      },
+      {
+        "regionId": "4c00b80d-35cb-482a-82e1-850ce95118f9",
+        "name": "REG5"
+      }
+    ],
+    "defaultPermissions": [
+      {
+        "permissionId": "ba94ebf2-3279-4e89-a4d9-e5dcf70e37cb",
+        "name": "PERM4"
+      },
+      {
+        "permissionId": "6c8a75e8-c653-4bfb-8254-d9cd03d056e3",
+        "name": "PERM5"
+      }
+    ]
+  },
+  {
+    "groupId": "c14e78cf-bf28-4c04-9a89-7e04d9c08596",
+    "name": "GRP3",
+    "groupType": "PAYER",
+    "defaultRegions": [],
+    "defaultPermissions": []
+  },
+  {
+    "groupId": "c12cc865-1fc6-4206-a0b8-74f61d666117",
+    "name": "GRP4",
+    "groupType": "PROVIDER",
+    "defaultRegions": [
+      {
+        "regionId": "62e32f75-85bd-49b5-9d7f-372862f5100a",
+        "name": "REG2"
+      },
+      {
+        "regionId": "59e34556-1813-45ae-80b3-3894ad0ba936",
+        "name": "REG3"
+      }
+    ],
+    "defaultPermissions": [
+      {
+        "permissionId": "20e9d0b5-c55c-4168-8a2e-c47f95a9b30a",
+        "name": "PERM2"
+      },
+      {
+        "permissionId": "d3358e61-4695-445c-97f3-e119be452a72",
+        "name": "PERM3"
+      }
+    ]
+  },
+  {
+    "groupId": "aa00c718-6dda-43b8-a5e8-e9857215a680",
+    "name": "GRP5",
+    "groupType": "PROVIDER",
+    "defaultRegions": [],
+    "defaultPermissions": []
+  }
+]

@@ -1,0 +1,111 @@
+ <div class="main-dialog-container tax-id">
+   <h2 mat-dialog-title class="sub-heading">Add Tax ID</h2>
+   <div class="row search-row">
+     <div class="col-sm-7 col-md-6 search-field">
+         <div class="input-container">
+         <label class="label-text">Search Provider</label>
+         <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+           <input maxlength="9" matInput placeholder="Enter Tax ID" [(ngModel)]="taxID" (keyup)="validate($event)"  name="taxID" #taxIDFeild="ngModel">
+         </mat-form-field>
+         <span style="color:red; margin-top: -15px" *ngIf="showMessage" > Please enter a valid Tax ID to search</span>
+       </div>
+     </div>
+     <div class="col-sm-4 col-md-3 search-btn">
+       <button mat-button class="blue-btn" [disabled]="taxIDFeild.value === ''" (click)="lookUpByTaxId()">Search</button>
+     </div>
+   </div>
+   <div class="dialog-body" *ngIf="searched && filterProviders ">
+     <span class="user-count">{{totalRecords}} Provider(s)  found for {{taxID}}</span>
+   </div>
+
+   <div [hidden]="!searched || (filterProviders=== null)" class="tables-wrapper" >
+     <table datatable [dtOptions]="dtOptions_Summary" [dtTrigger]="dtTriggerSummary"  class="common-datatable grid-table table-striped">
+       <thead>
+       <tr>
+         <th >Tax ID  </th>
+         <th>Providers </th>
+       </tr>
+       </thead>
+       <tbody *ngIf="filterProviders">
+       <tr >
+         <td>{{filterProviders.taxId}}</td>
+         <td>{{filterProviders.providerPersonCount}}</td>
+
+       </tr>
+       </tbody>
+     </table>
+
+     <table datatable [dtOptions]="dtOptions_Person" [dtTrigger]="dtTriggerPerson" class="common-datatable grid-table table-striped">
+       <thead>
+       <tr>
+         <!--<th class="large-col">ID</th>-->
+         <th class="large-col">Name</th>
+         <th class="smallest-col">Status</th>
+         <th>Tax ID</th>
+         <th>Speciality</th>
+         <th>NPI</th>
+         <th>Payer Name</th>
+       </tr>
+       </thead>
+       <tbody >
+       <tr *ngFor="let result of selectedPersons"  >
+         <!--<td>{{result.providerPersonId}}</td>-->
+         <td class="large-col">{{result.firstName + ' ' + result.lastName}}</td>
+         <td>{{result.status}}</td>
+         <td>{{result.taxId}}</td>
+         <td>{{result.speciality}}</td>
+         <td>{{result.npi}}</td>
+         <td>{{result?.payerSource?.name}}</td>
+       </tr>
+       </tbody>
+     </table>
+     <div class="new-custom-pagination" *ngIf="totalPages >= 2" >
+       <div class="pagination-info">
+         <label>Items per page
+           <mat-form-field class="page-dropdown" floatPlaceholder="never">
+             <mat-select placeholder="{{pageSize}}" (change)="updatePageSize($event)"
+                         [(ngModel)]="pageSize">
+               <mat-option value="100">100</mat-option>
+               <mat-option value="250">250</mat-option>
+               <mat-option value="500">500</mat-option>
+               <mat-option value="750">750</mat-option>
+               <mat-option value="1000">1000</mat-option>
+             </mat-select>
+           </mat-form-field>
+         </label>
+         <label>
+           Showing <span class="per-page">{{currentOffset + 1}}</span>  of  <span class="total">{{totalPages === 0 ? 1 : totalPages}}</span>
+         </label>
+       </div>
+       <div class="numbers">
+         <button (click)="prevPage(preClass)" [ngClass]="preClass">
+           <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+             <path d="M0 0h24v24H0z" fill="none"/>
+           </svg>
+         </button>
+         <button (click)="nextPage(nextClass)" [ngClass]="nextClass">
+           <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+             <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+             <path d="M0 0h24v24H0z" fill="none"/>
+           </svg>
+         </button>
+       </div>
+     </div>
+   </div>
+
+
+
+<div >
+
+</div>
+
+
+
+
+   <div class="dialog-actions">
+     <button mat-button  *ngIf="filterProviders" class="blue-btn" (click)="onYesClick()">Associate Tax ID</button>
+     <button mat-button class="white-btn" (click)="onNoClick()">Cancel</button>
+   </div>
+
+</div>

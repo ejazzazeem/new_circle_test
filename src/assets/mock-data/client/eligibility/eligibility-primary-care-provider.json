@@ -1,0 +1,610 @@
+[
+  {
+    "transactionInfo": {
+      "transactionDate": "20171214",
+      "transactionTime": "0722"
+    },
+    "payerAndRequestingProvider": {
+      "payer": "Univera"
+    },
+    "member": {
+      "memberNumber": "296799138",
+      "groupID": [
+        {
+          "label": "18",
+          "value": "PR"
+        },
+        {
+          "label": "6P",
+          "value": "00077077"
+        },
+        {
+          "label": "HJ",
+          "value": "00"
+        }
+      ],
+      "memberName": {
+        "family": "WEASLEY",
+        "given": "ARTHUR",
+        "middle": ""
+      },
+      "memberDoB": "",
+      "memberGender": "",
+      "address": {
+        "addressLine1": "",
+        "addressLine2": "",
+        "city": "",
+        "state": "",
+        "zip": "",
+        "country": ""
+      }
+    },
+    "primaryCareProvider": [
+      {
+        "providerName": {
+          "family": "",
+          "given": ""
+        },
+        "contactInfo": [
+          {
+            "label": "",
+            "value": ""
+          }
+        ],
+        "address": {
+          "addressLine1": "",
+          "addressLine2": "",
+          "city": "",
+          "state": "",
+          "zip": ""
+        }
+      },
+      {
+        "providerName": {
+          "family": "",
+          "given": ""
+        },
+        "contactInfo": [
+          {
+            "label": "",
+            "value": ""
+          }
+        ],
+        "address": {
+          "addressLine1": "",
+          "addressLine2": "",
+          "city": "",
+          "state": "",
+          "zip": ""
+        }
+      }
+    ],
+    "otherInsuranceInformation": {
+      "memberName": {
+        "family": "",
+        "given": "",
+        "middle": ""
+      },
+      "memberID": "",
+      "type": "",
+      "payers": [
+        {
+          "payerTypeCode": "",
+          "payerName": "",
+          "additionalInformation": ""
+        }
+      ]
+    },
+    "benefitPlanCoverage": {
+      "planName": "PR",
+      "insuranceTypeCode": "",
+      "coverageStatus": "",
+      "inNetwork": {
+
+      },
+      "outOfNetwork": {
+
+      }
+    },
+    "planDetails": {
+      "payerName": "Univera",
+      "planName": "PR",
+      "dates": [
+        {
+          "qualifier": "",
+          "date": ""
+        }
+      ],
+      "planDescription": "Univera Access PPO Copay Ministry of Magic",
+      "additionalInformation": {
+        "limitationMessage": [
+          ""
+        ],
+        "benefitDisclaimerMessage": [
+          ""
+        ]
+      }
+    },
+    "benefits": [
+      {
+        "benefitName": "",
+        "coverageStatus": "",
+        "additionalInformation": "",
+        "inNetwork": [
+
+        ],
+        "outOfNetwork": [
+
+        ]
+      },
+      {
+        "benefitName": "",
+        "coverageStatus": "",
+        "additionalInformation": "",
+        "inNetwork": [
+
+        ],
+        "outOfNetwork": [
+
+        ]
+      }
+    ],
+    "dependent": {
+      "groupID": [
+        {
+          "label": "6P",
+          "value": "00077077"
+        },
+        {
+          "label": "HJ",
+          "value": "01"
+        }
+      ],
+      "dependentName": {
+        "family": "WEASLEY",
+        "given": "GINERVA",
+        "middle": "M"
+      },
+      "dependentDoB": "20030811",
+      "dependentGender": "F",
+      "address": {
+        "addressLine1": "97 BURROWS DRIVE",
+        "addressLine2": "",
+        "city": "NIAGARA FALLS",
+        "state": "NY",
+        "zip": "14304",
+        "country": ""
+      },
+      "primaryCareProvider": [
+        {
+          "providerName": {
+            "family": "Granger",
+            "given": "Hermione"
+          },
+          "contactInfo": [
+            {
+              "label": "TE",
+              "value": "7165557777"
+            },
+            {
+              "label": "FX",
+              "value": "7165557775"
+            },
+            {
+              "label": "EM",
+              "value": "dittany@yahoos.com"
+            }
+          ],
+          "address": {
+            "addressLine1": "21 N MAIN ST",
+            "addressLine2": "",
+            "city": "MIDDLEPORT",
+            "state": "NY",
+            "zip": "141051027"
+          }
+        },
+        {
+          "providerName": {
+            "family": "Pomfrey",
+            "given": "Poppy"
+          },
+          "contactInfo": [
+            {
+              "label": "TE",
+              "value": "7165552468"
+            },
+            {
+              "label": "FX",
+              "value": "7165552467"
+            },
+            {
+              "label": "EM",
+              "value": "wizobgyn@hp.com"
+            }
+          ],
+          "address": {
+            "addressLine1": "1 HOGWARTS ST",
+            "addressLine2": "",
+            "city": "LOCKPORT",
+            "state": "NY",
+            "zip": "140943775"
+          }
+        }
+      ],
+      "otherInsuranceInformation": {
+        "dependentName": {
+          "family": "",
+          "given": "",
+          "middle": ""
+        },
+        "dependentID": "",
+        "type": "",
+        "payers": [
+          {
+            "payerTypeCode": "",
+            "payerName": "",
+            "additionalInformation": ""
+          }
+        ]
+      },
+      "benefitPlanCoverage": {
+        "planName": "",
+        "insuranceTypeCode": "PR",
+        "coverageStatus": "1",
+        "coverageLevel": "FAM",
+        "dates": [
+          {
+            "qualifier": "291",
+            "date": "20171214"
+          }
+        ],
+        "inNetwork": {
+          "stopLoss": [
+            {
+              "timeRange": "25",
+              "remaining": "5476.6",
+              "total": "5500",
+              "used": "23.4",
+              "coverageLevel": "IND",
+              "additionalInformation": ""
+            },
+            {
+              "timeRange": "25",
+              "remaining": "10762.79",
+              "total": "11000",
+              "used": "237.21",
+              "coverageLevel": "FAM",
+              "additionalInformation": ""
+            }
+          ]
+        },
+        "outOfNetwork": {
+
+        }
+      },
+      "planDetails": {
+        "payerName": "",
+        "planName": "Univera Access PPO Copay",
+        "dates": [
+          {
+            "qualifier": "291",
+            "date": "20171214"
+          },
+          {
+            "qualifier": "356",
+            "date": "20170701"
+          },
+          {
+            "qualifier": "357",
+            "date": "20991231"
+          }
+        ],
+        "planDescription": "Ministry of Magic",
+        "additionalInformation": {
+          "limitationMessage": [
+            "No referral is required for this product."
+          ],
+          "benefitDisclaimerMessage": [
+            "UNLESS OTHERWISE REQUIRED BY STATE LAW,THIS NOTICE IS NOT A GUARANTEE OF PAYMENT.BENEFITS ARE SUBJECT TO ALL CONTRACT LIMITS AND THE MEMBERS STATUS ON THE DATE OF SERVICE.ACCUMULATED AMOUNTS SUCH AS DEDUCTIBLE MAY CHANGE AS ADDITIONAL CLAIMS ARE PROCESSED"
+          ]
+        }
+      },
+      "benefits": [
+        {
+          "benefitName": "2",
+          "coverageStatus": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "Surgical Ambulatory Facility",
+              "codedQualifier": "",
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "150",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "Inpatient Surgery, Physician - IP",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "Office Surgery Office",
+              "codedQualifier": "",
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "30",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "OP Surgery - Physician",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "OP Surgery OV",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            },
+            {
+              "qualifier": "Office Surgery Office - PCP",
+              "codedQualifier": "",
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "5",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "20",
+          "coverageStatus": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "Additional Surgical Opinion",
+              "codedQualifier": "",
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "30",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "7",
+          "coverageStatus": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "8",
+          "coverageStatus": "",
+          "additionalInformation": "",
+          "inNetwork": [
+            {
+              "qualifier": "Assistant Surgeon",
+              "codedQualifier": "",
+              "deductible": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "copay": [
+                {
+                  "timeRange": "27",
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "coinsurance": [
+                {
+                  "amount": "0",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ],
+              "stopLoss": [
+                {
+                  "timeRange": "25",
+                  "remaining": "",
+                  "total": "0",
+                  "used": "",
+                  "coverageLevel": "IND",
+                  "additionalInformation": ""
+                }
+              ]
+            }
+          ],
+          "outOfNetwork": [
+
+          ]
+        },
+        {
+          "benefitName": "",
+          "coverageStatus": "",
+          "additionalInformation": "",
+          "inNetwork": [
+
+          ],
+          "outOfNetwork": [
+
+          ]
+        }
+      ]
+    }
+  }
+]

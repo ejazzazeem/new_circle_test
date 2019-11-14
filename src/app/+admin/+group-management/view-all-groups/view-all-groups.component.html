@@ -1,0 +1,81 @@
+<div class="top-row">
+  <h1 class="main-heading">Group Management</h1>
+  <a [routerLink]="['add']"><button mat-button class="blue-btn">Add New Group</button></a>
+</div>
+
+<div class="main-right-section">
+  <div class="title-row row">
+    <div class="col-md-6">
+      <h2 class="sub-heading">All Groups <span>({{model.groupCount}})</span></h2>
+    </div>
+
+    <div class="col-md-6 search-box">
+      <div class="input-container">
+        <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+          <input (ngModelChange)="onFieldChange($event)"  [(ngModel)]="txtQuery" matInput placeholder="Search">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+         class="common-datatable grid-table table-striped">
+    <thead>
+    <tr>
+      <th>Provider Id</th>
+      <th (click)="filterResults('name', sortOrder = sortOrder === 'ASC' ? 'DESC' : 'ASC')">Name <span class={{sortClasses.name}}></span></th>
+      <th >Tax ID(s) </th>
+      <th >Number Of Users</th>
+      <th >Authorized Contact(s)</th>
+      <th >Contact(s) Email</th>
+      <th class="small-col">Options</th>
+    </tr>
+    </thead>
+    <tbody *ngIf="filteredResults">
+    <tr *ngFor="let result of filteredResults" style="cursor:pointer">
+      <td>{{result.providerGroupId}}</td>
+      <td>{{result.name ? result.name : '. . . . . .'}}</td>
+      <td><span class="tax-id">{{result.taxIds.length !== 0 ? result.taxIds : '. . . . . .'}}</span> </td>
+      <td>{{result.numberOfUsers ? result.numberOfUsers : '. . . . . .'}}</td>
+      <td>{{populateAdmins(result.admins)}}</td>
+      <td>{{populateAdminContacts(result.admins)}}</td>
+      <td>
+             <span class="edit-img" (click)="columnClicked = 'edit'">
+                  <svg fill="#000000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                  </svg>
+             </span>
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="new-custom-pagination" *ngIf="model.groupCount > 0">
+    <div class="pagination-info" >
+      <label>Items per page
+        <mat-form-field class="page-dropdown" floatPlaceholder="never">
+          <mat-select placeholder="{{model.pageSize}}" (change)="updatePageSize($event)" [(ngModel)]="model.pageSize">
+            <mat-option value="10">10</mat-option>
+            <mat-option value="25">25</mat-option>
+            <mat-option value="50">50</mat-option>
+            <mat-option value="100">100</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </label>
+      <label>
+        Showing  <span class="per-page">{{model.currentOffset + 1}}</span>  of  <span class="total">{{model.totalPages === 0 ? 1 : model.totalPages}}</span>
+      </label>
+    </div>
+    <div class="numbers">
+      <button (click)="prevPage(preClass)" [ngClass]="preClass"><svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg></button>
+      <button (click)="nextPage(nextClass)" [ngClass]="nextClass"><svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg></button>
+    </div>
+  </div>
+</div>

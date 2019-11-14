@@ -1,0 +1,171 @@
+{
+	"transactionInfo": {
+		"transactionDate": "20180307",
+		"transactionTime": "1417"
+	},
+	"payer": {
+		"name": "INDEPENDENT HEALTH"
+	},
+	"requestingProvider": {
+		"name": {
+			"family": "Johnson",
+			"given": "John"
+		},
+		"providerID": "1013975895",
+		"taxonomyCode": "2085R0202X"
+	},
+	"subscriber": {
+		"name": {
+			"family": "",
+			"given": "",
+			"middle": ""
+		},
+		"memberID": "91253434500",
+		"dob": "19010101",
+		"memberGender": ""
+	},
+	"referralAuth": [
+		{
+			"referralRejections": [
+				{
+					"rejectReasonCode": "62",
+					"followupActionCode": "Y"
+				}
+			],
+			"categoryCode": "Admission Review",
+			"certificationTypeCode": "Initial",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "",
+			"identifier": "H00995730",
+			"decisionReasonCode": "",
+			"previousCert": "",
+			"eventDate": "",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "20180104-20180406",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "",
+			"unitTypeCode": "",
+			"providerQuantity": "",
+			"message": "Medical resource management health care services determinations are made orally and in writing to the member and provider.",
+			"referringProvider": {
+				"name": {
+					"family": "LastName",
+					"given": "FirstName"
+				},
+				"npi": "",
+				"address": {
+					"addressLine1": "",
+					"addressLine2": "",
+					"city": "",
+					"state": "",
+					"zip": ""
+				},
+				"contactInfo": [
+					{
+						"label": "",
+						"value": ""
+					}
+				],
+				"taxonomyID": ""
+			}
+		},
+		{
+			"categoryCode": "Admission Review",
+			"certificationTypeCode": "Initial",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "",
+			"identifier": "H00995730",
+			"decisionReasonCode": "",
+			"previousCert": "",
+			"eventDate": "",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "20180104-20180406",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "",
+			"unitTypeCode": "",
+			"providerQuantity": "",
+			"message": "Medical resource management health care services determinations are made orally and in writing to the member and provider.",
+			"referringProvider": {
+				"name": {
+					"family": "LastName",
+					"given": "FirstName"
+				},
+				"npi": "",
+				"address": {
+					"addressLine1": "",
+					"addressLine2": "",
+					"city": "",
+					"state": "",
+					"zip": ""
+				},
+				"contactInfo": [
+					{
+						"label": "",
+						"value": ""
+					}
+				],
+				"taxonomyID": ""
+			}
+		},
+		{
+			"categoryCode": "Admission Review",
+			"certificationTypeCode": "Initial",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "",
+			"identifier": "H00995730",
+			"decisionReasonCode": "",
+			"previousCert": "",
+			"eventDate": "",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"referralRejections": [
+				{
+					"rejectReasonCode": "AF",
+					"followupActionCode": "C"
+				},
+				{
+					"rejectReasonCode": "MA",
+					"followupActionCode": "N"
+				}
+			],
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "20180104-20180406",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "",
+			"unitTypeCode": "",
+			"providerQuantity": "",
+			"message": "Medical resource management health care services determinations are made orally and in writing to the member and provider.",
+			"referringProvider": {
+				"name": {
+					"family": "LastName",
+					"given": "FirstName"
+				},
+				"npi": "",
+				"address": {
+					"addressLine1": "",
+					"addressLine2": "",
+					"city": "",
+					"state": "",
+					"zip": ""
+				},
+				"contactInfo": [
+					{
+						"label": "",
+						"value": ""
+					}
+				],
+				"taxonomyID": ""
+			}
+		}
+	]
+}

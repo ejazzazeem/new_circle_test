@@ -1,0 +1,23 @@
+[
+  {
+    "acknowledgmentNumber": "1",
+    "claimNumber": "123456",
+    "date": "20180101",
+    "inquiryType": "type",
+    "status": "PENDING"
+  },
+  {
+    "acknowledgmentNumber": "2",
+    "claimNumber": "?",
+    "date": "20180102",
+    "inquiryType": "claim status",
+    "status": "PENDING"
+  },
+  {
+    "acknowledgmentNumber": "3",
+    "claimNumber": "545455",
+    "date": "20180304",
+    "inquiryType": "Inquiry",
+    "status": "ACTIVE"
+  }
+]

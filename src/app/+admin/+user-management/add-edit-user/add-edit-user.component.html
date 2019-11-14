@@ -1,0 +1,387 @@
+<div class="top-row">
+    <h1 class="main-heading">{{title}}</h1>
+</div>
+
+<div class="main-right-section">
+    <form name="userForm" #f="ngForm" novalidate *ngIf="allDataFetched">
+        <div>
+            <!-- User type - Drop down - Start ----------------------------------------------- -->
+            <div class="title-row row">
+                <div class="col-xs-4 col-sm-3 col-md-2 no-padding">
+                    <h2 class="sub-heading">User Type</h2>
+                </div>
+                <div class="col-xs-8 col-sm-6 col-md-4">
+                    <mat-form-field class="select-field" floatPlaceholder="never">
+                        <mat-select placeholder="-- Select User Type --" (change)="updateGroupList()"
+                                    [(ngModel)]="model.role.role" name="role" #userRole="ngModel"
+                                     required>
+                            <mat-option [value]="">-- Select User Type --</mat-option>
+                            <mat-option *ngFor="let user of userRoles | sortBy : 'viewValue'; let i = index" [value]="user.role">
+                                {{user.viewValue}}
+                            </mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="userRole.errors?.required && userRole.touched">
+                            User Type is required
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="col-sm-3 col-md-6 no-padding">
+                    <div class="toggle-container">
+                        <div class="toggle-two-labels">
+                            <label class="pre-text">Inactive</label>
+                            <mat-slide-toggle class="toggle-btn" [(ngModel)]="model.enabled" name="enabled">Active</mat-slide-toggle>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- User type - Drop down - End ----------------------------------------------- -->
+
+            <!-- User Information - Start -------------------------------------------------- -->
+            <div class="fields-container">
+                <h2 class="sub-heading">User Information</h2>
+                <!--if user type is other than net exchange then display this content -->
+                <div *ngIf="model.role.role !== 'NETEXCHANGE_ACCOUNT'">
+
+                    <!--First Name, Last Name, Date of Birth - Start ----------------------------- -->
+                    <div class="field-row row">
+                        <div class="col-sm-6 col-md-4 field-col">
+                            <div class="input-container">
+                                <label class="label-text">First Name<span class="star">*</span></label>
+                                <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                                    <input matInput placeholder="Enter First Name" required  maxlength="50" pattern="[a-zA-Z ‘'-]*"
+                                           name="firstName" [(ngModel)]="model.firstName" minlength="2" #firstName="ngModel">
+                                    <mat-error *ngIf="firstName.errors?.required && firstName.touched">First Name is required</mat-error>
+                                    <mat-error *ngIf="firstName.errors?.minlength && firstName.touched">First Name must be of atleast 2 characters.</mat-error>
+                                    <mat-error *ngIf="firstName.errors?.pattern && firstName.touched && !firstName.errors?.minlength">Only alphabetic characters and special characters ( ' ' - ) allowed.</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 field-col">
+                            <div class="input-container">
+                                <label class="label-text">Last Name<span class="star">*</span></label>
+                                <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                                    <input matInput placeholder="Enter Last Name" maxlength="50" minlength="2" pattern="[a-zA-Z ‘'-]*"
+                                           name="lastName" [(ngModel)]="model.lastName" #lastName="ngModel" required>
+                                    <mat-error *ngIf="lastName.errors?.required && lastName.touched">Last Name is required</mat-error>
+                                    <mat-error *ngIf="lastName.errors?.minlength && lastName.touched">Last Name must be of atleast 2 characters.</mat-error>
+                                    <mat-error *ngIf="lastName.errors?.pattern && lastName.touched && !lastName.errors?.minlength">Only alphabetic characters and special characters ( ' ' - ) allowed.</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 field-col">
+                            <div class="calendar-container">
+                                <label class="label-text">Date of Birth<span class="star">*</span></label>
+                                <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+                                    <input id="dobField" matInput [matDatepicker]="picker"  placeholder="MM/DD/YYYY"
+                                           name="dateOfBirth" [(ngModel)]="model.dateOfBirth" #dateOfBirth=ngModel
+                                           [max]="maxDate" [min]="minDate" maxlength="10" (blur)="validateDate($event)"
+                                           required (keydown)="handledate($event)"
+                                            (dateChange)="picker.close(); dateErr = false;">
+                                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker></mat-datepicker>
+                                    <mat-error *ngIf="dateOfBirth.errors?.required && dateOfBirth.touched && !dateErr">
+                                        Date of Birth is required
+                                    </mat-error>
+                                    <span class="custom-invalid" style="color:red" *ngIf="dateErr">{{dateMsg}}</span>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                    <!--First Name, Last Name, Date of Birth - End -------------------------------- -->
+
+                    <!--Email, Pin Code, External ID - Start -------------------------------------- -->
+
+                        <div class="col-sm-6 col-md-4 field-col">
+                            <div class="input-container">
+                                <label class="label-text">Email</label>
+                                <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                                    <input matInput placeholder="Enter Email" name="email"  maxlength="254" [(ngModel)]="model.email"
+                                           #email="ngModel" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$">
+                                    <mat-error *ngIf="email.errors?.pattern && email.touched">
+                                        Please enter a valid Email Address.
+                                    </mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 field-col">
+                            <div class="input-container">
+                                <label class="label-text">Pin Code</label>
+                                <mat-form-field class="input-field" hideRequiredMarker="never" floatPlaceholder="never">
+                                    <input matInput placeholder="Enter Pin Code" minlength="4" maxlength="4"
+                                           #pinCode="ngModel" name="pinCode" [(ngModel)]="model.pinCode">
+                                    <mat-error *ngIf="pinCode.errors?.minlength && pinCode.touched">PIN must be of 4 characters</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 field-col">
+                            <div class="input-container">
+                                <label class="label-text">Consent ID</label>
+                                <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                                    <input matInput placeholder="Enter Consent ID" pattern="[a-zA-Z0-9-]*" maxlength="50"
+                                           name="consentId" [(ngModel)]="model.consentId" #consentId="ngModel">
+                                    <mat-error *ngIf="consentId.errors?.pattern && consentId.touched">Only alphanumeric characters and hyphen are allowed.</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Email, Pin Code, External ID - End ---------------------------------------- -->
+
+
+                </div>
+                <div>
+                    <!--Login ID, Password - Start ------------------------------------------------ -->
+                    <div class="field-row row">
+                        <div class="col-sm-6 col-md-4 field-col">
+                            <div class="input-container">
+                                <label class="label-text">Login ID<span class="star">*</span></label>
+                                <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                                    <input matInput placeholder="Enter Login ID" #loginId="ngModel"
+                                           (change)="loginVerified = false" pattern="[a-zA-Z0-9-]*" maxlength="25" (blur)="validateLoginId()"
+                                           name="loginId" [(ngModel)]="model.loginId" required>
+                                    <mat-error *ngIf="loginId.errors?.required && loginId.touched">Login ID is required</mat-error>
+                                    <mat-error *ngIf="loginId.errors?.pattern && loginId.touched">Only alphanumeric characters and hyphen are allowed.</mat-error>
+                                    <span class="custom-valid" *ngIf="loginVerified && loginId.valid">{{validationMessage}}</span>
+                                    <span class="custom-invalid" *ngIf="invalidLoginID && loginId.valid">{{validationMessage}}</span>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 field-col">
+                            <div class="input-container">
+                                <label class="label-text">Phone Number</label>
+                                <mat-form-field class="input-field" hideRequiredMarker="never" floatPlaceholder="never">
+                                    <input matInput placeholder="Enter Phone Number"  maxlength="15" pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$"
+                                           #phone="ngModel" name="phone" [(ngModel)]="model.phoneNumber">
+                                    <mat-error *ngIf="phone.errors?.pattern && phone.touched">Phone must be a valid US Number</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 field-col" *ngIf="model.role.role === 'PAYER_USER'">
+                            <div class="input-container">
+                                <label class="label-text">Practice Office User Mode</label>
+                                <mat-slide-toggle class="toggle-btn" [(ngModel)]="practiceOfficeUserMode" name="practiceOfficeUserMode">Active</mat-slide-toggle>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-3 field-col password-col" *ngIf="model.role.role === 'NETEXCHANGE_ACCOUNT'">
+                            <div class="input-container">
+                                <label class="label-text">Password<span class="star">*</span></label>
+                                <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                                    <input matInput placeholder="Enter Password" #password="ngModel" type="{{type}}" pattern="[a-zA-Z0-9!@#$-_]*"
+                                           name="password" [(ngModel)]="model.password" minlength="8" maxlength="10" required (focus)="type = 'text'" (blur)="type = 'password'">
+                                    <mat-error *ngIf="password.errors?.required && password.touched">Password is required</mat-error>
+                                    <mat-error *ngIf="password.errors?.pattern && password.touched">Password only allows alphanumeric or special characters(! @ # $ - _)</mat-error>
+                                    <mat-error *ngIf="password.errors?.minlength && password.touched">Password must be atleast 8 characters length</mat-error>
+                                    <mat-error *ngIf="password.errors?.maxlength && password.touched">Password must be atmost 10 characters length</mat-error>
+
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6 col-md-1 field-col generate-col" *ngIf="model.role.role === 'NETEXCHANGE_ACCOUNT'">
+                            <button mat-button type="button" class="blue-btn small password-btn" name="generate"  (click)="generatePassword()">Generate</button>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div *ngIf="model.role.role === 'NETEXCHANGE_ACCOUNT'">
+
+                <!--First Name, Last Name, Date of Birth - Start ----------------------------- -->
+                <div class="field-row row">
+                    <div class="col-sm-6 col-md-4 field-col">
+                        <div class="input-container">
+                            <label class="label-text">Organization</label>
+                            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                                <input matInput placeholder="Enter Organization"  maxlength="100" pattern="[a-zA-Z0-9 `-]*"
+                                       name="organizationName" [(ngModel)]="model.organizationName"  #organizationName="ngModel">
+                                <mat-error *ngIf="organizationName.errors?.pattern && organizationName.touched">Only alphanumeric characters and special characters ( ` - ) allowed.</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 field-col">
+                        <div class="input-container">
+                            <label class="label-text">System Vendor</label>
+                            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                                <input matInput placeholder="Enter Vendor" maxlength="100" minlength="2" pattern="[a-zA-Z0-9 `-]*"
+                                       name="systemVendor" [(ngModel)]="model.systemVendor" #systemVendor="ngModel">
+                                <mat-error *ngIf="systemVendor.errors?.pattern && systemVendor.touched">Only alphanumeric characters and special characters ( ` - ) allowed.</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 field-col">
+                        <div class="calendar-container">
+                            <div class="input-container">
+                                <label class="label-text">Contact Name</label>
+                                <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                                    <input matInput placeholder="Enter Contact Name"  maxlength="50" pattern="[a-zA-Z `-]*"
+                                           name="contact" [(ngModel)]="model.firstName" minlength="2" #contact="ngModel">
+                                    <mat-error *ngIf="contact.errors?.minlength && contact.touched">Contact Name must be of atleast 2 characters.</mat-error>
+                                    <mat-error *ngIf="contact.errors?.pattern && contact.touched && !contact.errors?.minlength">Only alphabetic characters and special characters ( ` - ) allowed.</mat-error>
+                                </mat-form-field>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 field-col">
+                        <div class="input-container">
+                            <label class="label-text">Email</label>
+                            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                                <input matInput placeholder="Enter Email" name="email"  maxlength="254" [(ngModel)]="model.email"
+                                       #email="ngModel" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}$">
+                                <mat-error *ngIf="email.errors?.pattern && email.touched">
+                                    Please enter a valid Email Address.
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                </div>
+                <!--Email, Pin Code, External ID - End ---------------------------------------- -->
+
+
+            </div>
+                <div >
+
+                    <div class="field-row row">
+                        <div class="col-sm-6 col-md-4 field-col">
+                            <div class="calendar-container">
+                                <label class="label-text">Deactivation Date</label>
+                                <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+                                    <input id="deactiveField" matInput [matDatepicker]="picker1"  placeholder="MM/DD/YYYY"
+                                           name="deactivationDate" [(ngModel)]="deactiveDate" #deactivationDate=ngModel
+                                             maxlength="10" (blur)="validateDeactivationDate($event)"
+                                            (keydown)="handledate($event)"
+                                           (dateChange)="picker1.close();ddateErr = false ">
+                                    <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                    <mat-datepicker #picker1></mat-datepicker>
+
+                                    <span class="custom-invalid" style="color:red" *ngIf="ddateErr">{{ddateMsg}}</span>
+                                </mat-form-field>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <!-- User Information - End -------------------------------------------------- -->
+            </div>
+        </div>
+
+        <div *ngIf="model.role.role !== 'LEVEL_1_ADMINISTRATOR' && model.role.role !== 'LEVEL_2_ADMINISTRATOR'" ngModelGroup="userGroups" >
+            <!-- User Group and Permissions - Start ------------------------------------------ -->
+            <div class="fields-container groups" *ngIf="allDataFetched">
+                <h2 class="sub-heading groups">{{model.role.role === 'PRACTICE_OFFICE_USER' ? 'Practice Groups' : 'Payers'}} <span class="star">*</span>
+                </h2>
+
+                <div class="emptyGroupListMessage" *ngIf="noGroupsReturnedMessage">
+                    No {{model.role.role === 'PRACTICE_OFFICE_USER' ? 'Practices Groups' : 'Payers'}} Found
+                </div>
+
+                <div class="group-permission row" *ngIf="!noGroupsReturnedMessage">
+                    <div class="col-xs-5 col-sm-4 col-md-3 group-wrapper">
+                        <div class="group-container">
+
+                            <!-- Search Group List ----------------------------------------------------------------- -->
+                            <mat-form-field class="input-field search-field" hideRequiredMarker="true" floatPlaceholder="never" *ngIf="model.role.role !== 'PRACTICE_OFFICE_USER'">
+                                <input matInput placeholder="Search Payers"
+                                       #autoCompleteInput type="text"
+                                       [(ngModel)]="searchValue" name="searchValue" [matAutocomplete]="auto" (keyup.enter)="setGroupToCheckSelectedGroup(searchValue)"
+                                       (ngModelChange)="searchedGroups = filteredGroups(searchValue)" [ngClass]="{'outline:none' : searchValue === ''}">
+
+                                <mat-autocomplete #auto="matAutocomplete" #autoComplete>
+                                    <mat-option *ngFor="let group of searchedGroups, let i = index" [value]="group.name" (click)="checkSelectedGroup(group)">
+                                        {{group.name}}
+                                    </mat-option>
+                                </mat-autocomplete>
+                            </mat-form-field>
+                            <mat-form-field class="input-field search-field" hideRequiredMarker="true" floatPlaceholder="never" *ngIf="model.role.role === 'PRACTICE_OFFICE_USER'">
+                                <input matInput placeholder="Type to search {{model.role.role === 'PRACTICE_OFFICE_USER' ? 'Practice Groups' : 'Payers'}}" [matAutocomplete]="auto" (ngModelChange)="onFieldChange($event)"
+                                       name="searchValue" [(ngModel)]="txtQuery" #grp="ngModel">
+                                <mat-autocomplete #auto="matAutocomplete" #autoComplete>
+                                    <mat-option *ngFor="let group of searchedGroups, let i = index" [value]="group.name"  (click)="checkSelectedGroup(group)">
+                                        {{group.name}}
+                                    </mat-option>
+                                </mat-autocomplete>
+                            </mat-form-field>
+                            <!-- Search Group List ----------------------------------------------------------------- -->
+                            <perfect-scrollbar mat-dialog-content>
+                                <div ngModelGroup="userGroup"  >
+                                    <div class="single-group" [ngClass]="{'highlighted': (i === selectedGroupIndex) || (i === selectedIndex)}"
+                                         *ngFor="let group of displayedUserGroups, let i = index">
+                                        <mat-checkbox class="check-input" name="{{'checked' + group.groupId}}" [(ngModel)]="group.checked"
+                                                      (change)="checkGroup(group, i, $event.checked)"></mat-checkbox>
+                                        <span class="check-text" >{{group.name}}</span>
+                                    </div>
+                                </div>
+                            </perfect-scrollbar>
+
+                        </div>
+                    </div>
+
+                    <div class="col-xs-7 col-sm-8 col-md-9 permission-region-wrapper">
+                        <!--<div class="emptyGroup" *ngIf="emptyGroupMessage">-->
+                            <!--Please select a {{model.role.role === 'PRACTICE_OFFICE_USER' ? 'practice group and region to get list of available permissions' : 'payer to manage Transactions'}}.-->
+                        <!--</div>-->
+
+                        <div class="permission-region-container" >
+                            <!-- User Region - Start ------------------------------------------ -->
+                            <div class="region-row row" *ngIf="model.role.role === 'PRACTICE_OFFICE_USER'">
+                                <h2 class="sub-heading">Regions <span class="star">*</span></h2>
+                                <div class="user-region">
+                                    <div class="region-list" ngModelGroup="regionOverrides" *ngIf="!emptyRegionMessage">
+                                        <div class="single-region" *ngFor="let region of regionList, let i = index">
+                                            <mat-checkbox class="check-input" name="{{'checked' + region.regionId}}" [(ngModel)]="region.checked"
+                                                          (change)="checkRegion(region, $event)">{{region.name}}</mat-checkbox>
+                                        </div>
+                                    </div>
+
+                                    <div class="emptyGroup" *ngIf="emptyRegionMessage || regionList.length === 0">
+                                        No region List available
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- User Region - End ------------------------------------------ -->
+
+                            <!-- User Permission - Start ------------------------------------------ -->
+                            <div class="permission-row row">
+                                <h2 class="sub-heading">{{model.role.role === 'PRACTICE_OFFICE_USER' ? 'Permissions' : 'Transactions'}}</h2>
+
+                                <div class="permission-list" ngModelGroup="permissionOverrides">
+                                    <div class="single-permission" *ngFor="let permission of permissionList">
+                                        <mat-checkbox class="check-input" name="{{'checked' + permission.permissionId}}" [(ngModel)]="permission.checked"
+                                        [disabled]="permission.type.indexOf('Active') !== -1 && model.role.role !== 'NETEXCHANGE_ACCOUNT'">{{permission.name}}</mat-checkbox>
+                                    </div>
+                                </div>
+
+                                <div class="emptyRegion" *ngIf="emptyPermissionMessage || permissionList.length === 0">
+                                  No {{model.role.role === 'PRACTICE_OFFICE_USER' ? 'Permissions' : 'Transactions'}} to display
+                                </div>
+                            </div>
+                            <!-- User Permission - End ------------------------------------------ -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Action Buttons - Start -------------------------------------------------- -->
+        <div class="button-container">
+
+            <button mat-button type="button" name="addEditUser" (click)="addEditUser()" [disabled]="validateForm() || !f.valid || ddateErr || (model.role.role === 'PRACTICE_OFFICE_USER' && checkedRegionOverrides.length <= 0)
+        || (model.role.role === 'PRACTICE_OFFICE_USER' && checkedGroupList.length <= 0) || (model.role.role === 'PAYER_USER' && checkedGroupList.length <= 0)  || (model.role.role === 'NETEXCHANGE_ACCOUNT' && checkedGroupList.length <= 0) " class="blue-btn">Submit</button>
+            <button mat-button type="button" class="white-btn" name="cancel" (click)="cancelForm()">Cancel</button>
+        </div>
+        <!-- Action Buttons - End -------------------------------------------------- -->
+    </form>
+</div>
+

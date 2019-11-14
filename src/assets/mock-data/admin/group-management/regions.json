@@ -1,0 +1,22 @@
+[
+  {
+    "regionId": "1",
+    "name": "Region 1"
+  },
+  {
+    "regionId": "2",
+    "name": "Region 2"
+  },
+  {
+    "regionId": "3",
+    "name": "Region 3"
+  },
+  {
+    "regionId": "4",
+    "name": "Region 4"
+  },
+  {
+    "regionId": "5",
+    "name": "Region 5"
+  }
+]

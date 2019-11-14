@@ -1,0 +1,36 @@
+@import "~assets/scss/colors";
+
+.main-dialog-container.custom {
+  max-width: 700px;
+  .dialog-body {
+    max-height: 300px;
+    width: 99%;
+    margin: 0 0 15px;
+    .no-group{
+      color: $red;
+      width: 100%;
+      float: left;
+      margin-bottom: 10px;
+    }
+    .label-text{
+      font-weight: 500;
+    }
+    .select-container{
+      padding-bottom: 0;
+      max-width: 280px;
+    }
+    .disclaimer-text{
+      margin-top: -20px;
+      h2{
+        font-size: 18px;
+      }
+      p{
+        font-size: 12px;
+      }
+    }
+  }
+  .dialog-actions{
+    border-top: 1px solid $field-border;
+    margin-bottom: 0;
+  }
+}

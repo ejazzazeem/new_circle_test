@@ -1,0 +1,33 @@
+<div  class="new-custom-pagination dont-print" id="childPager"  *ngIf="totalPages > 0">
+  <div class="pagination-info">
+    <label> items for <b>{{getCaption(reportName)}}
+      <mat-form-field  class="page-dropdown" floatPlaceholder="never">
+        <mat-select placeholder="{{this.pageSize}}" (change)="updatePageSize($event)"
+                    [(ngModel)]="this.pageSize">
+          <mat-option value="50">50</mat-option>
+          <mat-option value="100">100</mat-option>
+          <mat-option value="250">250</mat-option>
+          <mat-option value="500">500</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </b> </label>
+    <label>
+      Showing <span class="per-page">{{this.currentOffset + 1}}</span>  of  <span class="total">{{this.totalPages === 0 ? 1 : this.totalPages}}</span>
+    </label>
+  </div>
+
+  <div class="numbers">
+    <button (click)="prevPage(preClass)" [ngClass]="preClass">
+      <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+    </button>
+    <button (click)="nextPage(nextClass)" [ngClass]="nextClass">
+      <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+        <path d="M0 0h24v24H0z" fill="none"/>
+      </svg>
+    </button>
+  </div>
+</div>

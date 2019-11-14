@@ -1,0 +1,358 @@
+
+
+
+<!--User ID Top Row - Start ------------------------------------------- -->
+<div class="top-row row">
+  <div class="col-md-8 col-sm-8 col-xs-7">
+    <h1 class="main-heading">
+                <span class="back-arrow" (click)="returnToList()">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve" width="512px" height="512px">
+                  <g>
+                      <g>
+                          <path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12    C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084    c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864    l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z" fill="#8596a8"/>
+                      </g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  <g>
+                  </g>
+                  </svg>
+          </span>
+      User - {{model.loginId}}</h1>
+  </div>
+  <div class="col-md-4 col-sm-4 col-xs-5">
+    <div class="toggle-container">
+      <div class="toggle-two-labels">
+        <label class="pre-text">Inactive</label>
+        <mat-slide-toggle class="toggle-btn" [checked]="model.enabled" [disabled]="true">Active</mat-slide-toggle>
+      </div>
+    </div>
+  </div>
+</div>
+<!--User ID Top Row - End ------------------------------------------- -->
+
+<div class="main-right-section" *ngIf="allDataFetched">
+  <div class="info-row row">
+    <div class="col-md-12">
+      <div class="info-box">
+        <div class="content-tag">
+          <p class="c-label">User Type</p>
+          <p class="c-value">{{roleViewValue}}</p>
+        </div>
+        <div class="content-tag">
+          <p class="c-label" >User Name</p>
+          <p class="c-value">{{model.firstName}} {{model.lastName}}</p>
+        </div>
+        <div class="btn-tag">
+          <button *ngIf="showEditButton" mat-button class="blue-btn" (click)="editUser(model.userId)">
+                        <span class="edit-icon">
+            <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                <path d="M0 0h24v24H0z" fill="none"/>
+            </svg>
+          </span>Edit User</button>
+        </div>
+      </div>
+    </div>
+    <!--<div class="col-md-3">-->
+    <!--<div class="info-box-border">-->
+    <!--<div class="content-tag">-->
+    <!--<p class="c-label">Last Edit on</p>-->
+    <!--<p class="c-value">{{ model.lastEdited }}</p>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+  </div>
+  <!--User Type, User ID, Last Edit Row - End ------------------------------------------- -->
+
+  <!-- User Information - Start -------------------------------------------------- -->
+  <div class="fields-container">
+    <h2 class="sub-heading">User Information</h2>
+
+    <div *ngIf="userRole!== 'NETEXCHANGE_ACCOUNT'">
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <mat-form-field class="view-input">
+              <input matInput placeholder="First Name" name="firstName" [(ngModel)]="model.firstName" disabled>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <mat-form-field class="view-input">
+              <input matInput placeholder="Last Name" name="lastName" [(ngModel)]="model.lastName" disabled>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="calendar-container">
+            <mat-form-field class="view-input">
+              <input matInput [matDatepicker]="picker" placeholder="Date of Birth" name="dob"
+                     [(ngModel)]="model.dateOfBirth" disabled>
+              <!--<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>-->
+              <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <mat-form-field class="view-input">
+              <input matInput placeholder="Email" name="email" [(ngModel)]="model.email" disabled>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <mat-form-field class="view-input">
+              <input matInput placeholder="Pin Code" name="pinCode" [(ngModel)]="model.pinCode" disabled>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <mat-form-field class="view-input">
+              <input matInput placeholder="Consent ID" name="consentId" [(ngModel)]="model.consentId" disabled>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <mat-form-field class="view-input">
+              <input matInput placeholder="Login ID" name="loginId" [(ngModel)]="model.loginId" disabled>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col" *ngIf="userRole=== 'NETEXCHANGE_ACCOUNT'">
+          <div class="input-container">
+            <mat-form-field class="view-input">
+              <input matInput type="password" placeholder="Password" name="password" [(ngModel)]="model.password" disabled>
+              <!--<span style="display:none" [ngClass]="{'eye-close' : !passType, 'eye-open': passType}" ></span>-->
+            </mat-form-field>
+          </div>
+        </div>
+
+          <div class="col-sm-6 col-md-4 field-col">
+              <div class="input-container">
+                  <mat-form-field class="view-input">
+                      <input matInput placeholder="Phone" name="Phone" [(ngModel)]="model.phoneNumber" disabled>
+                  </mat-form-field>
+              </div>
+          </div>
+
+
+
+          <div class="col-md-4 col-sm-4 col-xs-5" *ngIf="userRole=== 'PAYER_USER'">
+              <div class="toggle-container">
+                  <div style="    font-size: 13px;color: #a3a4a5;">Practice Office User Mode</div>
+                  <div class="toggle-two-labels">
+                      <label class="pre-text">OFF</label>
+                      <mat-slide-toggle class="toggle-btn" [checked]="practiceOfficeUserMode" [disabled]="true">ON</mat-slide-toggle>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+      <div *ngIf="userRole=== 'NETEXCHANGE_ACCOUNT'">
+          <div class="field-row row">
+              <div class="col-sm-6 col-md-4 field-col">
+                  <div class="input-container">
+                      <mat-form-field class="view-input">
+                          <input matInput placeholder="Organization Name" name="organizationName" [(ngModel)]="model.organizationName" disabled>
+                      </mat-form-field>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-4 field-col">
+                  <div class="input-container">
+                      <mat-form-field class="view-input">
+                          <input matInput placeholder="System Vendor" name="vendor" [(ngModel)]="model.systemVendor" disabled>
+                      </mat-form-field>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-4 field-col">
+                  <div class="calendar-container">
+                      <mat-form-field class="view-input">
+                          <input matInput placeholder="Contact" name="Contact" [(ngModel)]="model.firstName" disabled>
+                      </mat-form-field>
+                  </div>
+              </div>
+              <div class="col-sm-6 col-md-4 field-col">
+                  <div class="input-container">
+                      <mat-form-field class="view-input">
+                          <input matInput placeholder="Email" name="email" [(ngModel)]="model.email" disabled>
+                      </mat-form-field>
+                  </div>
+              </div>
+
+
+          </div>
+      </div>
+
+      <div *ngIf="model.deactivationDate" >
+          <div class="field-row row">
+              <div class="col-sm-6 col-md-4 field-col">
+                  <div class="input-container">
+                      <mat-form-field class="view-input">
+                          <input matInput placeholder="Deactivation Date" name="deactivationDate" [(ngModel)]="model.deactivationDate" disabled>
+                      </mat-form-field>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </div>
+    <div class="fields-container">
+        <h2 class="sub-heading">History</h2>
+        <div class="field-row row">
+            <div class="col-sm-6 col-md-4 field-col">
+                <div class="input-container">
+                    <mat-form-field class="view-input lower-case">
+                        <input matInput name="createdBy" [(ngModel)]="createdUpdatedInfo.createdBy"
+                               placeholder="Created By" disabled>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 field-col">
+                <div class="input-container">
+                    <mat-form-field class="view-input lower-case">
+                        <input matInput name="Createddt" [(ngModel)]="createdUpdatedInfo.createdTime"
+                               placeholder="Created Date Time" disabled>
+                    </mat-form-field>
+                </div>
+            </div>
+            <div class="col-sm-6 col-md-4 field-col">
+                <div class="input-container">
+                    <mat-form-field class="view-input lower-case">
+                        <input matInput name="updatedby" [(ngModel)]="createdUpdatedInfo.updatedBy"
+                               placeholder="Last Updated By" disabled>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+        <div class="field-row row">
+            <div class="col-sm-6 col-md-4 field-col">
+                <div class="input-container">
+                    <mat-form-field class="view-input lower-case">
+                        <input matInput name="updateddt" [(ngModel)]="createdUpdatedInfo.updatedTime"
+                               placeholder="Last Updated On" disabled>
+                    </mat-form-field>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+  <!-- User Information - End ---------------------------------------------------- -->
+
+  <div *ngIf="userRole!== 'LEVEL_2_ADMINISTRATOR' && userRole!== 'LEVEL_1_ADMINISTRATOR' ">
+    <!-- User Group and Permissions - Start ------------------------------------------ -->
+    <div class="fields-container no-bottom-padding" >
+      <h2 class="sub-heading groups">
+        {{ userRole === 'PRACTICE_OFFICE_USER' ? 'User Groups' : 'Payers' }}
+      </h2>
+
+      <div class="emptyGroupListMessage" *ngIf="groupList.length === 0">
+        No {{userRole === 'PRACTICE_OFFICE_USER' ? 'Groups' : 'Payers'}} were Selected for this user
+      </div>
+
+
+      <div class="group-permission row" *ngIf="groupList.length > 0">
+        <!-- User Group / Payer - Start ---------------------------------------------------- -->
+        <div class="col-xs-5 col-sm-4 col-md-3 group-wrapper">
+          <div class="group-container">
+            <perfect-scrollbar mat-dialog-content>
+              <div>
+                <div class="single-group" [ngClass]="{'highlighted': i === selectedGroupIndex}"
+                     *ngFor="let group of groupList | sortBy : 'name',let i = index">
+                  <mat-checkbox class="check-input" name="group.groupId" [(ngModel)]="group.groupId"
+                                disabled="true" >{{group.name}}</mat-checkbox>
+                </div>
+              </div>
+            </perfect-scrollbar>
+          </div>
+        </div>
+        <!-- User Group / Payer - End ------------------------------------------------------------ -->
+
+        <!-- User Region, Permissions - Start ---------------------------------------------------- -->
+        <div class="col-xs-7 col-sm-8 col-md-9 permission-region-wrapper">
+          <div class="emptyGroup"
+               *ngIf="emptyGroupMessage">
+            Please select a {{userRole === 'PRACTICE_OFFICE_USER' ? 'group to manage Region and Permissions access' : 'payer to manage Transaction access'}}.
+          </div>
+
+          <!-- Group -> Region -> Permissions - Start ------------------------------------------------ -->
+          <div class="permission-region-container"
+               *ngIf="!emptyGroupMessage">
+            <!-- User Region - Start ------------------------------------------ -->
+            <div class="region-row row" *ngIf="userRole === 'PRACTICE_OFFICE_USER'">
+              <h2 class="sub-heading">Regions</h2>
+              <div class="user-region">
+                <div class="region-list">
+                  <div class="single-region" *ngFor="let region of regionList, let i = index">
+                    <mat-checkbox class="check-input" name="{{regionId}}" [(ngModel)]="region.region.regionId"
+                                  disabled="true">{{region.region.name}}</mat-checkbox>
+                  </div>
+                </div>
+                <div class="emptyGroup" *ngIf="regionList.length === 0">
+                  No regions were selected for this user.
+                </div>
+              </div>
+            </div>
+            <!-- User Region - End ------------------------------------------------ -->
+
+            <!-- User Permission - Start ------------------------------------------ -->
+            <div class="permission-row row">
+              <h2 class="sub-heading">{{userRole === 'PRACTICE_OFFICE_USER' ? 'Permissions' : 'Transactions'}}</h2>
+              <div class="permission-list">
+                <div class="single-permission" *ngFor="let permission of permissionList">
+                  <mat-checkbox class="check-input" name="{{permissionId}}" [(ngModel)]="permission.permission.permissionId"
+                                disabled="true">{{permission.permission.name}}</mat-checkbox>
+                </div>
+              </div>
+            </div>
+
+            <div class="emptyGroup" *ngIf="permissionList.length === 0">
+              No {{userRole === 'PRACTICE_OFFICE_USER' ? 'Permissions' : 'Transactions'}} were Selected for this user.
+            </div>
+            <!-- User Permission - End --------------------------------------------- -->
+          </div>
+          <!-- Group -> Region -> Permissions - End ------------------------------------------------ -->
+        </div>
+        <!-- User Region, Permissions - Start ---------------------------------------------------- -->
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

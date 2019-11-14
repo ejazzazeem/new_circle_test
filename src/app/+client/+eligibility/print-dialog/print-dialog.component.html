@@ -1,0 +1,25 @@
+<div class="main-dialog-container">
+  <h2 mat-dialog-title class="sub-heading">Select Print Options</h2>
+  <div mat-dialog-content class="dialog-body">
+    <perfect-scrollbar mat-dialog-content>
+      <div class="main-check-list">
+        <div class="single-check">
+          <mat-checkbox class="check-input" (click)="outNetworkOption()">Include Out of Network Benefits</mat-checkbox>
+        </div>
+        <div class="single-check">
+          <mat-checkbox class="check-input" (click)="checkAllBenefits();">Benefits</mat-checkbox>
+        </div>
+        <div class="sub-check-list">
+          <div class="single-check" *ngFor="let benefits of benefitList | sortBy : 'benefitName'" [style.display]="benefits.benefitName !=='' ? 'block' : 'none'">
+            <mat-checkbox class="check-input" name="{{'checked' + benefits.benefitName}}"
+                          [(ngModel)]="benefits.checked">{{ benefits.benefitName }}</mat-checkbox>
+          </div>
+        </div>
+      </div>
+    </perfect-scrollbar>
+  </div>
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-button class="blue-btn print-btn" (click)="onPrintClick()">Print Preview</button>
+    <button mat-button class="white-btn" (click)="onCancelClick()">Cancel</button>
+  </div>
+</div>

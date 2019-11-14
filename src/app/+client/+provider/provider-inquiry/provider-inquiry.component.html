@@ -1,0 +1,408 @@
+<div class="top-row">
+  <h1 class="main-heading">Provider Inquiry</h1>
+</div>
+<div class="main-right-section">
+  <!-- Select Payer - Drop down - Start ----------------------------------------------- -->
+  <div class="title-row row">
+    <div class="col-xs-2 col-sm-2 col-md-1 no-padding">
+      <h2 class="sub-heading">Payer <span class="star">*</span></h2>
+    </div>
+    <div class="col-xs-8 col-sm-6 col-md-5 no-padding">
+      <mat-form-field class="select-field" floatPlaceholder="never">
+        <mat-select placeholder="-- Select Payer --" name="userPayer"
+                    [(ngModel)]="model.userPayer" #userPayer="ngModel" required
+                    (change)="updatePayer(model.userPayer)">
+          <mat-option *ngFor="let payer of payerList | sortBy : 'name'"
+                      [value]="payer.payerId">{{ payer.name }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="userPayer.errors?.required">
+          Payer is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-3 col-md-6 no-padding">
+      <div class="tip-sheet">
+        <div (click)="navigateToTip()"> Tip Sheet</div>
+      </div>
+    </div>
+  </div>
+  <!-- Select Payer - Drop down - End ----------------------------------------------- -->
+
+  <!-- Requesting Provider Selection - Starts ----------------------------------------------- -->
+  <div class="requesting-provider" [hidden]="!isRequestingProvider">
+    <div class="title-row row">
+      <div class="col-xs-6 col-sm-6 col-md-6 no-padding">
+        <h2 class="sub-heading">Provider</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 search-box" *ngIf="userRole === 'PRACTICE_OFFICE_USER' || practiceOfficeUserMode">
+        <button mat-button class="blue-btn search-btn common-search" type="button"
+                (click)="searchProvidersByClick();">Search</button>
+        <div class="input-container">
+          <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+            <input matInput type="text" placeholder="Search" (keyup)="searchProviders($event)"
+                   class="common-search" [(ngModel)]="keyword">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="{{tabClass}}">
+      <mat-tab-group class="toggle-tabs" (selectChange)="checkRecent()" [selectedIndex]="selectedTabIndex">
+        <mat-tab label="All"></mat-tab>
+        <mat-tab label="Recent Providers"></mat-tab>
+      </mat-tab-group>
+    </div>
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+           class={{tableClass}}>
+      <thead>
+      <tr *ngIf="userRole === 'PRACTICE_OFFICE_USER' || practiceOfficeUserMode">
+        <th>Payer ID</th>
+        <th>First Name</th>
+        <th >Last Name </th>
+        <th>Tax ID</th>
+        <th>NPI </th>
+        <th class="large-col">Address</th>
+        <th>City</th>
+        <th class="small-col">State</th>
+        <th>Zip Code</th>
+        <th>Taxonomy</th>
+      </tr>
+      <tr *ngIf="userRole === 'PAYER_USER' && !practiceOfficeUserMode">
+        <th>
+                <span class="intable-search">Payer ID
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.providerId"  /></span>
+        </th>
+        <th>
+                <span class="intable-search">First Name
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.firstName"  /></span>
+        </th>
+        <th>
+                <span class="intable-search">Last Name
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.lastName" /></span>
+        </th>
+        <th>
+              <span class="intable-search">Tax ID
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.taxId" /></span>
+        </th>
+        <th class="large-col">
+              <span class="intable-search">NPI
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.npi" /></span>
+        </th>
+        <th>
+              <span class="intable-search">Address
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.serviceAddressLine1" /></span>
+        </th>
+        <th class="small-col">
+              <span class="intable-search">City
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.serviceCity" /></span>
+        </th>
+        <th class="small-col">
+              <span class="intable-search">State
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.serviceState" /></span>
+        </th>
+
+        <th class="small-col">
+              <span class="intable-search">Zip Code
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.serviceZip" /></span>
+        </th>
+        <th>
+              <span class="intable-search">Taxonomy
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.taxonomy" /></span>
+        </th>
+      </tr>
+      </thead>
+      <tbody *ngIf="providerList">
+      <tr *ngFor="let provider of providerList  | sortBy : 'lastName'" style="cursor:pointer"
+          [ngClass]="{'highlighted': model.payerProvider !== null ? provider.providerId === model.payerProvider.id && provider.serviceAddressLine1 === model.payerProvider.address.line1 : false}"
+          (click)="selectProvider(provider)">
+        <td>{{ provider.providerId? provider.providerId : '. . . . . . .'}}</td>
+        <td>{{ provider.firstName? provider.firstName : '. . . . . . .'}}</td>
+        <td>{{ provider.lastName? provider.lastName : '. . . . . . .' }}</td>
+        <td>{{ provider.taxId? provider.taxId : '. . . . . . .' }}</td>
+        <td>{{ provider.npi? provider.npi : '. . . . . . .' }}</td>
+        <td>{{ provider.serviceAddressLine1 + provider.serviceAddressLine2? provider.serviceAddressLine1 + ' ' + provider.serviceAddressLine2 : '. . . . . . .' }}</td>
+        <td>{{ provider.serviceCity? provider.serviceCity : '. . . . . . .' }}</td>
+        <td>{{ provider.serviceState? provider.serviceState : '. . . . . . .' }}</td>
+        <td>{{ provider.serviceZip? (provider.serviceZip | zipCodeMask) : '. . . . . . .' }}</td>
+        <td>{{ provider.taxonomy? provider.taxonomy : '. . . . . . .' }}</td>
+      </tr>
+      </tbody>
+    </table>
+    <!-- Custom Pagination - Starts -->
+    <div class="new-custom-pagination short" *ngIf="totalPages >= 2" >
+      <div class="pagination-info">
+        <label>Items per page
+          <mat-form-field class="page-dropdown" floatPlaceholder="never">
+            <mat-select placeholder="{{pageSize}}" (change)="updatePageSize($event)"
+                        [(ngModel)]="pageSize">
+              <mat-option value="100">100</mat-option>
+              <mat-option value="250">250</mat-option>
+              <mat-option value="500">500</mat-option>
+              <mat-option value="750">750</mat-option>
+              <mat-option value="1000">1000</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </label>
+        <label>
+          Showing <span class="per-page">{{currentOffset + 1}}</span>  of  <span class="total">{{totalPages === 0 ? 1 : totalPages}}</span>
+        </label>
+      </div>
+      <div class="numbers">
+        <!--TODO: update function and variable names to more appropriate names-->
+        <button (click)="prevPage(preClass)" [ngClass]="preClass">
+          <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+        <button (click)="nextPage(nextClass)" [ngClass]="nextClass">
+          <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <!-- Custom Pagination - Ends -->
+    <span class="provider-hint short">
+            (Requesting Provider is required. Please select a provider from the list)
+          </span>
+  </div>
+  <span class="provider-msg" *ngIf="showProviderMessage">Please select a requesting provider</span>
+  <!-- Requesting Provider Selection - End ----------------------------------------------- -->
+
+  <form name="providerForm" #providerForm="ngForm" novalidate>
+
+    <!-- Patient Information - Starts ----------------------------------------------- -->
+    <div class="fields-container">
+      <h2 class="sub-heading">Patient Information</h2>
+      <div class="information">
+        <span class="info-icon" (click)="model.patientInfo = !model.patientInfo"><img src="/assets/images/info.png" alt="info"/> </span>
+        <div class="info-parah" [ngClass]="{'show' : (model.patientInfo), '': (false)}">BlueCard inquiries require BOTH Member Id with Prefix and a valid Claim Number.<br/>
+          FEP inquiries cannot be submitted using this application.</div>
+      </div>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">Member ID #</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true"
+                            floatPlaceholder="never">
+              <input matInput placeholder="Enter Member Number"
+                     name="memberNo" #memberNo="ngModel" pattern="^\s*[A-Za-z0-9]+\s*$" [rangeLength]="[2, 80]"
+                     [(ngModel)]="model.patient.memberId" (click)="verifyProvider()">
+              <mat-error *ngIf="memberNo.errors?.rangeLength && memberNo.touched">
+                Member # limited from 2 to 80 characters
+              </mat-error>
+              <mat-error *ngIf="memberNo.errors?.pattern && memberNo.touched && !memberNo.errors?.rangeLength">
+                Please enter alphanumeric characters.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">Patient Account #</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter Patient Account Number"  [rangeLength]="[1, 50]" pattern="[a-zA-Z0-9 -]*"
+                     name="patientAccount" [(ngModel)]="model.patient.patientAccount" #patientAccount="ngModel" (click)="verifyProvider()">
+              <mat-error *ngIf="patientAccount.errors?.rangeLength && patientAccount.touched">
+                Patient account # limited to 50 characters.
+              </mat-error>
+              <mat-error *ngIf="patientAccount.errors?.pattern && patientAccount.touched && !patientAccount.errors?.rangeLength">
+                Please enter alphanumeric characters, spaces, or dashes.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">First Name</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter First Name"  [rangeLength]="[1, 35]" pattern="[a-zA-Z0-9 -]*"
+                     name="firstName" [(ngModel)]="model.patient.firstName" #firstName="ngModel" (click)="verifyProvider()">
+              <mat-error *ngIf="firstName.errors?.rangeLength && firstName.touched">
+                First name limited to 35 characters.
+              </mat-error>
+              <mat-error *ngIf="firstName.errors?.pattern && firstName.touched && !firstName.errors?.rangeLength">
+                Please enter alphanumeric characters, space or dashes.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">Last Name</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter Last Name"  [rangeLength]="[1, 60]" pattern="[a-zA-Z0-9 -]*"
+                     name="lastName" [(ngModel)]="model.patient.lastName" #lastName="ngModel" (click)="verifyProvider()">
+              <mat-error *ngIf="lastName.errors?.rangeLength && lastName.touched">
+                Last name limited to 60 characters.
+              </mat-error>
+              <mat-error *ngIf="lastName.errors?.pattern && lastName.touched && !lastName.errors?.rangeLength">
+                Please enter alphanumeric characters, space or dashes.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Patient Information - Ends ----------------------------------------------- -->
+
+    <!-- Claim Information - Starts ----------------------------------------------- -->
+    <div class="fields-container">
+      <h2 class="sub-heading">Claim Information</h2>
+      <div class="information">
+        <span class="info-icon" (click)="model.claimIcon = !model.claimIcon"><img src="/assets/images/info.png" alt="info"/> </span>
+        <div class="info-parah" [ngClass]="{'show' : (model.claimIcon), '': (false)}">Only 1 claim can be submitted per inquiry.<br/>
+          Select Inquiry Type OPL for Other Party Liability inquiries.</div>
+      </div>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">Claim #</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true"
+                            floatPlaceholder="never">
+              <input matInput placeholder="Enter Claim Number"
+                     name="claimNo" #claimNo="ngModel" [rangeLength]="[1, 50]" pattern="^\s*[A-Za-z0-9]+\s*$"
+                     [(ngModel)]="model.claimInfo.claimNumber" (click)="verifyProvider()">
+              <mat-error *ngIf="claimNo.errors?.rangeLength && claimNo.touched">
+                Claim # limited to 50 characters
+              </mat-error>
+              <mat-error *ngIf="claimNo.errors?.pattern && claimNo.touched && !claimNo.errors?.rangeLength">
+                Please enter alphanumeric characters.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="select-container">
+            <label class="label-text">Inquiry Information</label>
+            <mat-form-field class="select-field" floatPlaceholder="never">
+              <mat-select placeholder="-- Select Type --" [(ngModel)]="selectedInquirytype"
+                          id="inquiry-type" name="inquiryInformation" #inquiryInformation="ngModel" required>
+                <mat-option [value]="inquiryType" *ngFor="let inquiryType of inquiryTypes">{{inquiryType.description}}</mat-option>
+              </mat-select>
+              <mat-error *ngIf="inquiryInformation.errors?.required">
+                Inquiry information is required
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="field-row row">
+        <div class="col-md-12 field-col">
+          <div class="textarea-container">
+            <label class="label-text">Message</label>
+            <mat-form-field class="textarea-field" floatPlaceholder="never" hideRequiredMarker="true">
+                    <textarea #claimMsg #MsgClaim="ngModel" name="MsgClaim" matInput placeholder="Type message here"
+                              [(ngModel)]="model.claimInfo.message"
+                              matAutosizeMinRows="2" maxlength="1000"></textarea>
+              <mat-hint class="blue-hint"  align="end" [style.color]="(claimMsg.value.length >= 1000) ? '#ee2944' : '#3bafda' ">
+                {{ 1000 - claimMsg.value.length}} / 1000 Characters remaining
+              </mat-hint>
+              <mat-error *ngIf="MsgClaim.errors?.pattern && MsgClaim.touched">
+                Please enter alphanumeric/special characters.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="field-row row">
+        <div class="col-md-6 field-col">
+          <div class="information file">
+            <span class="info-icon" (click)="model.fileInfo = !model.fileInfo"><img src="/assets/images/info.png" alt="info"/> </span>
+            <div class="info-parah" [ngClass]="{'show' : (model.fileInfo), '': (false)}">Most inquiries do not require an attachment.</div>
+          </div>
+          <div class="file-upload-container">
+            <label class="label-text">Attachment</label>
+            <div class="file-uploader">
+              <input  placeholder="Select File" readonly  type="text" class="text-input" [(ngModel)]="fileName"  [ngModelOptions]="{standalone: true}"  />
+              <input (change)="fileReader(file.files)" #file type="file" class="file-input"  required>
+              <button mat-button class="blue-btn file-btn">Browse</button>
+              <label class="hint-text">(File types accepted are: png, bmp, gif, html, jpg, xls, xlsx, xsl, doc, docx, ppt, pptx, pdf, rtf, tiff, vsd, txt)</label>
+              <span *ngIf="fileErrorMessage" class="custom-invalid file-error">{{fileMessage}}.</span>
+            </div>
+            <div *ngIf="isAttaching">
+              <mat-progress-bar style="margin-top: 10px"  mode="indeterminate"></mat-progress-bar>
+              <span style="font-size: small;
+              margin-left: 25%;">Please wait while your file is being attached.</span>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Claim Information - Ends ----------------------------------------------- -->
+
+
+    <!-- Provider Contact Section - Starts ----------------------------------------------- -->
+    <div class="fields-container">
+      <h2 class="sub-heading">Provider Contact Information</h2>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">First Name </label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter First Name"  [rangeLength]="[1, 35]" pattern="[a-zA-Z0-9 -]*"
+                     name="firstNameProvider" [(ngModel)]="model.contactInfo.firstName" #firstNameProvider="ngModel">
+              <mat-error *ngIf="firstNameProvider.errors?.rangeLength && firstNameProvider.touched">
+                First name limited to 35 characters
+              </mat-error>
+              <mat-error *ngIf="firstNameProvider.errors?.pattern && firstNameProvider.touched && !firstNameProvider.errors?.rangeLength">
+                Please enter alphanumeric characters, space or dashes.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">Last Name</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter Last Name"  [rangeLength]="[1, 60]" pattern="[a-zA-Z0-9 -]*"
+                     name="lastNameProvider" [(ngModel)]="model.contactInfo.lastName" #lastNameProvider="ngModel">
+              <mat-error *ngIf="lastNameProvider.errors?.rangeLength && lastNameProvider.touched">
+                Last name limited to 60 characters
+              </mat-error>
+              <mat-error *ngIf="lastNameProvider.errors?.pattern && lastNameProvider.touched && !lastNameProvider.errors?.rangeLength">
+                Please enter alphanumeric characters, space or dashes.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">Phone</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter Phone Number"  maxlength="15" pattern="^\s*[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}\s*$"
+                     name="phoneProvider" [(ngModel)]="model.contactInfo.phone" #phoneProvider="ngModel">
+              <mat-error *ngIf="phoneProvider.errors?.pattern && phoneProvider.touched">Phone must be a valid US Number</mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">Email Address</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter Email Address" maxlength="250" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,3}\s*$"
+                     name="emailProvider" [(ngModel)]="model.contactInfo.email" #emailProvider="ngModel">
+              <mat-error *ngIf="emailProvider.errors?.pattern && emailProvider.touched">
+                Please enter a valid email address.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Provider Contact Section - Ends ----------------------------------------------- -->
+
+    <!-- Submit Button - Starts ----------------------------------------------- -->
+    <div class="btn-block">
+      <button mat-button #submitBtn class="blue-btn submit" [disabled]="validateForm() || memberNo.errors || patientAccount.errors ||
+            firstName.errors || lastName.errors || claimNo.errors || MsgClaim.errors || fileErrorMessage ||
+            firstNameProvider.errors || lastNameProvider.errors || phoneProvider.errors || emailProvider.errors || inquiryInformation.errors || isAttaching"
+              (click)="saveInquiry()" type="button">Submit</button>
+    </div>
+    <!-- Submit Button - Ends ----------------------------------------------- -->
+
+  </form>
+</div>

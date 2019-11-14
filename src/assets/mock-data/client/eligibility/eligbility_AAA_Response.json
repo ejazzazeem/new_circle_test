@@ -1,0 +1,6163 @@
+[
+	{
+		"transactionInfo": {
+			"transactionDate": "20180411",
+			"transactionTime": "0704"
+		},
+		"payerAndRequestingProvider": {
+			"payer": "INDEPENDENT HEALTH"
+		},
+		"plan": [
+			{
+				"member": {
+					"memberNumber": "12345256700",
+					"groupID": [
+						{
+							"label": "Group Number",
+							"value": "13242-01"
+						},
+						{
+							"label": "Plan Number",
+							"value": "Women's Wellness Self-Funded"
+						}
+					],
+					"memberName": {
+						"family": "MLast",
+						"given": "MFirst",
+						"middle": "L"
+					},
+					"memberRejections": [
+						{
+							"rejectReasonCode": "42",
+							"followupActionCode": "R"
+						},
+						{
+							"rejectReasonCode": "58",
+							"followupActionCode": "C"
+						}
+					],
+					"memberDoB": "19600425",
+					"memberGender": "F",
+					"address": {
+						"addressLine1": "3875 Anon St",
+						"addressLine2": "",
+						"city": "Hamburger",
+						"state": "NY",
+						"zip": "15575",
+						"country": ""
+					}
+				},
+				"primaryCareProvider": [
+					{
+						"providerName": {
+							"family": "NO PCP REQUIRED",
+							"given": ""
+						},
+						"contactInfo": [
+							{
+								"label": "Work Phone Number",
+								"value": "7166313001"
+							}
+						],
+						"address": {
+							"addressLine1": "511 FARBER LAKES DRIVE",
+							"addressLine2": "",
+							"city": "BUFFALO",
+							"state": "NY",
+							"zip": "14221"
+						}
+					}
+				],
+				"benefitPlanCoverage": {
+					"planName": "Women's Wellness Self-Funded",
+					"insuranceTypeCode": "",
+					"coverageStatus": "1",
+					"coverageStatusCategory": "positive",
+					"coverageStatusLabel": "Active Coverage",
+					"coverageLevel": "IND",
+					"inNetwork": {
+
+					},
+					"outOfNetwork": {
+
+					}
+				},
+				"planDetails": {
+					"payerName": "INDEPENDENT HEALTH",
+					"planName": "Women's Wellness Self-Funded",
+					"dates": [
+						{
+							"qualifier": "Eligibility Begin",
+							"date": "20180101"
+						},
+						{
+							"qualifier": "Plan Begin",
+							"date": "20180101"
+						}
+					],
+					"planDescription": "Catholic Health Women's Wellness",
+					"additionalInformation": {
+						"limitationMessage": [
+							"In-Network Women's Wellness covered services have no member liability.  Please see provider tip sheet for more information."
+						],
+						"benefitDisclaimerMessage": [
+							""
+						]
+					}
+				},
+				"benefits": [
+					{
+						"benefitName": "Chemotherapy",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Prosthetic Device",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Home Health Care",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Dialysis",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Durable Medical Equipment Purchase",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Durable Medical Equipment Rental",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Occupational Therapy",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Cardiac Rehabilitation",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Physical Therapy",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Physical Medicine",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Speech Therapy",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Chiropractic",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Pharmacy",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Hospital - Emergency Accident",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Hospital - Emergency Medical",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Emergency Services",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Consultation",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "TELEMEDICINE BENEFIT.",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Licensed Ambulance",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Urgent Care",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Vision (Optometry)",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Routine Physical",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Immunizations",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Diagnostic X-Ray",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Radiation Therapy",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Diagnostic Medical",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Diagnostic Lab",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "MRI/CAT Scan",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Maternity",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Professional (Physician) Visit - Inpatient",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Surgical",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Surgical Assistance",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Oral Surgery",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Professional (Physician) Visit - Home ",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Podiatry",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Second Surgical Opinion",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Professional (Physician) Visit - Office",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Professional (Physician) Visit - Outpatient",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Family Planning",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Alcoholism",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Drug Addiction",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Substance Abuse",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Psychiatric - Outpatient",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Rehabilitation - Inpatient",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Psychiatric - Inpatient",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Psychotherapy",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Well Baby Care",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Pediatric",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Skilled Nursing Care",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Hospice",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Ambulatory Service Center Facility",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Hospital - Ambulatory Surgical",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Hospital - Inpatient",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Anesthesia",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Newborn Care",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Hospital - Outpatient",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Medical Care",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Dental Care",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Hospital",
+						"coverageStatus": "V",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Cannot Process",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Mental Health",
+						"coverageStatus": "V",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Cannot Process",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Mental Health Provider - Outpatient",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "TELEMEDICINE BENEFIT.",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Dermatology",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "TELEMEDICINE BENEFIT.",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "",
+						"coverageStatus": "",
+						"coverageStatusCategory": "",
+						"coverageStatusLabel": "",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					}
+				]
+			},
+			{
+				"member": {
+					"memberNumber": "91255825700",
+					"groupID": [
+						{
+							"label": "Group Number",
+							"value": "24645-12-01"
+						},
+						{
+							"label": "Plan Number",
+							"value": "Catholic Health System First Choice POS Self-Fun"
+						}
+					],
+					"memberName": {
+						"family": "MLast",
+						"given": "MFirst",
+						"middle": "L"
+					},
+					"memberDoB": "19600425",
+					"memberGender": "F",
+					"address": {
+						"addressLine1": "3875 Anon St",
+						"addressLine2": "",
+						"city": "Hamburger",
+						"state": "NY",
+						"zip": "15575",
+						"country": ""
+					}
+				},
+				"primaryCareProvider": [
+					{
+						"providerName": {
+							"family": "PCP REQUIRED",
+							"given": ""
+						},
+						"contactInfo": [
+							{
+								"label": "Work Phone Number",
+								"value": "7166313001"
+							}
+						],
+						"address": {
+							"addressLine1": "511 FARBER LAKES DRIVE",
+							"addressLine2": "",
+							"city": "BUFFALO",
+							"state": "NY",
+							"zip": "14221"
+						}
+					}
+				],
+				"benefitPlanCoverage": {
+					"planName": "Catholic Health System First Choice POS Self-Fun",
+					"insuranceTypeCode": "",
+					"coverageStatus": "1",
+					"coverageStatusCategory": "positive",
+					"coverageStatusLabel": "Active Coverage",
+					"coverageLevel": "IND",
+					"inNetwork": {
+						"deductible": [
+							{
+								"timeRange": "22",
+								"remaining": "750",
+								"total": "750",
+								"used": "0",
+								"coverageLevel": "IND",
+								"additionalInformation": ""
+							}
+						],
+						"stopLoss": [
+							{
+								"timeRange": "22",
+								"remaining": "3222222222280",
+								"total": "33065460",
+								"used": "24324234230.40",
+								"coverageLevel": "IND",
+								"additionalInformation": ""
+							}
+						]
+					},
+					"outOfNetwork": {
+
+					}
+				},
+				"planDetails": {
+					"payerName": "INDEPENDENT HEALTH",
+					"planName": "Catholic Health System First Choice POS Self-Fun",
+					"dates": [
+						{
+							"qualifier": "Eligibility Begin",
+							"date": "20180101"
+						},
+						{
+							"qualifier": "Plan Begin",
+							"date": "20180101"
+						}
+					],
+					"planDescription": "Non Union/Salaried First Choice",
+					"additionalInformation": {
+						"limitationMessage": [
+							"First Choice Provider: many services are covered in full. See specific benefit for member cost share information.",
+							"Non First Choice Provider: Member has higher out of pocket costs. See specific benefit for member cost share information.",
+							"Lab services - Collection in an office setting or referring an associate for lab services should be directed to a Catholic Health Facility for a lower out of pocket member cost share.",
+							"Members have access to all participating Independent Health physician and ancillary providers. See specific benefit for member cost share information.",
+							"First Choice Health Plan is a preferred provider network."
+						],
+						"benefitDisclaimerMessage": [
+							""
+						]
+					}
+				},
+				"benefits": [
+					{
+						"benefitName": "Chemotherapy",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "15",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "15",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Prosthetic Device",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".2",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Home Health Care",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Visit Limit applies to Home Care Out-of-Network only",
+								"codedQualifier": "",
+								"limits": [
+									{
+										"timeRange": "22",
+										"quantityQualifier": "VS",
+										"remaining": "365",
+										"total": "365",
+										"used": "0",
+										"coverageLevel": "",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Dialysis",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Durable Medical Equipment Purchase",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".2",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Durable Medical Equipment Rental",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".2",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Occupational Therapy",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Physical, Speech and Occupational Therapies visit limits are combined",
+								"codedQualifier": "",
+								"limits": [
+									{
+										"timeRange": "22",
+										"quantityQualifier": "DY",
+										"remaining": "20",
+										"total": "20",
+										"used": "0",
+										"coverageLevel": "",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Cardiac Rehabilitation",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Speech Therapy",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Physical, Speech and Occupational Therapies visit limits are combined",
+								"codedQualifier": "",
+								"limits": [
+									{
+										"timeRange": "22",
+										"quantityQualifier": "DY",
+										"remaining": "20",
+										"total": "20",
+										"used": "0",
+										"coverageLevel": "",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Physical Therapy",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Physical, Speech and Occupational Therapies visit limits are combined",
+								"codedQualifier": "",
+								"limits": [
+									{
+										"timeRange": "22",
+										"quantityQualifier": "DY",
+										"remaining": "20",
+										"total": "20",
+										"used": "0",
+										"coverageLevel": "",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Physical Medicine",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Physical, Speech and Occupational Therapies visit limits are combined",
+								"codedQualifier": "",
+								"limits": [
+									{
+										"timeRange": "22",
+										"quantityQualifier": "DY",
+										"remaining": "20",
+										"total": "20",
+										"used": "0",
+										"coverageLevel": "",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Chiropractic",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Pharmacy",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Hospital - Emergency Accident",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "75",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "75",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "75",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Hospital - Emergency Medical",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "75",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "75",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "75",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Emergency Services",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "75",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "75",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "75",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Consultation",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "TELEMEDICINE BENEFIT.",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Licensed Ambulance",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "50",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "50",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Urgent Care",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "50",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "50",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Vision (Optometry)",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Routine Physical",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Immunizations",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Diagnostic X-Ray",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Diagnostic Lab",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Independent Laboratory",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Independent Laboratory",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Independent Laboratory",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Independent Laboratory",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Diagnostic Medical",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "15",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "15",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Radiation Therapy",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "MRI/CAT Scan",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "Office",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "50",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "50",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "50",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "50",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Maternity",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Professional (Physician) Visit - Inpatient",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Surgical",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "15",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Inpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Inpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Ambulatory Surgical Center",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Surgical Assistance",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "15",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Inpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Inpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Ambulatory Surgical Center",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Oral Surgery",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "15",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Inpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Inpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Ambulatory Surgical Center",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "",
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Podiatry",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Office",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Ambulatory Surgical Center",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Office",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Ambulatory Surgical Center",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Professional (Physician) Visit - Home ",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "15",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Second Surgical Opinion",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Professional (Physician) Visit - Outpatient",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "15",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Professional (Physician) Visit - Office",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "Specialist",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "20",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							},
+							{
+								"qualifier": "PCP",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "15",
+										"coverageLevel": "IND",
+										"additionalInformation": "PHYSICIAN/ANCILLARY"
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Family Planning",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "15",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Alcoholism",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Drug Addiction",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Substance Abuse",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Psychiatric - Outpatient",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Rehabilitation - Inpatient",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Psychiatric - Inpatient",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Psychotherapy",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Skilled Nursing Care",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Hospice",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Ambulatory Service Center Facility",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Hospital - Ambulatory Surgical",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Hospital - Inpatient",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Anesthesia",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Inpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "Ambulatory Surgical Center",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Outpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Inpatient Hospital",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "Ambulatory Surgical Center",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Outpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Inpatient Hospital",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "Ambulatory Surgical Center",
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Newborn Care",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Hospital - Outpatient",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "750",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "0",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "75333330",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					},
+					{
+						"benefitName": "Medical Care",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Dental Care",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Hospital",
+						"coverageStatus": "V",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Cannot Process",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Well Baby Care",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Pediatric",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Mental Health",
+						"coverageStatus": "V",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Cannot Process",
+						"additionalInformation": "",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Mental Health Provider - Outpatient",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "TELEMEDICINE BENEFIT.",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Dermatology",
+						"coverageStatus": "I",
+						"coverageStatusCategory": "rejected",
+						"coverageStatusLabel": "Non-Covered",
+						"additionalInformation": "TELEMEDICINE BENEFIT.",
+						"inNetwork": [
+
+						],
+						"outOfNetwork": [
+
+						]
+					},
+					{
+						"benefitName": "Compression Stockings",
+						"coverageStatus": "1",
+						"coverageStatusCategory": "positive",
+						"coverageStatusLabel": "Active Coverage",
+						"additionalInformation": "",
+						"inNetwork": [
+							{
+								"qualifier": "NON FIRST CHOICE",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "",
+										"total": "7353550",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"limits": [
+									{
+										"timeRange": "22",
+										"quantityQualifier": "VS",
+										"remaining": "5500444543.55",
+										"total": "54534534534534",
+										"used": "0",
+										"coverageLevel": "",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "PHYSICIAN/ANCILLARY",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "40066540.43",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": "654.432",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							},
+							{
+								"qualifier": "FIRST CHOICE",
+								"codedQualifier": "",
+								"copay": [
+									{
+										"timeRange": "",
+										"amount": "43243244324",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".00",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						],
+						"outOfNetwork": [
+							{
+								"qualifier": "",
+								"codedQualifier": "",
+								"deductible": [
+									{
+										"timeRange": "",
+										"remaining": "23424423",
+										"total": "7543543550",
+										"used": "",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								],
+								"coinsurance": [
+									{
+										"amount": ".3",
+										"coverageLevel": "IND",
+										"additionalInformation": ""
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		],
+		"providerNpi": "1830936120",
+		"providerTaxonomy": "207Q00000X",
+		"providerTaxID": "123456789"
+	}
+]

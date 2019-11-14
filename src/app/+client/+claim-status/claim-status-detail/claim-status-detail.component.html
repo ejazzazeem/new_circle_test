@@ -1,0 +1,320 @@
+<div class="top-row row">
+  <div class="col-sm-6 col-md-7" >
+    <h1 class="main-heading">Claim Status Detail {{claimData?.claimNumber !=='' ? ' - ' : ''}}<span>{{claimData?.claimNumber}}</span></h1>
+    <p class="date" *ngIf="transactionData">Date : {{transactionData?.transactionDate | convertStringToDate}} {{transactionData?.transactionTime | time}}<!--{{ currentTime | async | date:'MMMM dd, yyyy hh:mm:ss' }}--></p>
+  </div>
+  <div class="col-sm-6 col-md-5">
+    <div class="print-box">
+      <div class="select-container" id="transaction-permission" *ngIf="permissionEnable">
+        <label class="label-text">Start a:</label>
+        <mat-form-field class="select-field" floatPlaceholder="never">
+          <mat-select placeholder="Select a transaction...">
+            <mat-option value="option1" *ngFor="let permission of permissions" (click)="startInquiry(permission)">{{permission.name}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <!--<button mat-button class="blue-btn">-->
+        <!--Print Result</button>-->
+    </div>
+
+  </div>
+</div>
+<div class="main-right-section">
+
+  <!-- Claim Response - Starts ----------------------------------------------- -->
+  <div class="claim-status-detail" id="claim-body">
+
+    <div class="tabs-main-container">
+      <div class="custom-tabs-header">
+        <div class="head-list">
+          <button mat-button (click)="showHideBackToTopButton('false', 1)" class="blue-btn" [ngClass]="{'checked': (1 === selectedTab)}" scrollTo scrollTargetSelector="#requestingProvider" *ngIf="providerData">Requesting Provider</button>
+          <button mat-button (click)="showHideBackToTopButton('false', 2)" class="blue-btn" [ngClass]="{'checked': (2 === selectedTab)}" scrollTo scrollTargetSelector="#subscriber" *ngIf="subscriberData || claimData?.patientAccountNumber">Subscriber</button>
+          <button mat-button (click)="showHideBackToTopButton('false', 3)" class="blue-btn" [ngClass]="{'checked': (3 === selectedTab)}" scrollTo scrollTargetSelector="#dependent" *ngIf="dependentData?.name?.family || dependentData?.name?.given || dependentData?.name?.middle || dependentData?.claims[0]?.patientAccountNumber">Dependent</button>
+          <button mat-button (click)="showHideBackToTopButton('false', 4)" class="blue-btn" [ngClass]="{'checked': (4 === selectedTab)}" scrollTo scrollTargetSelector="#claimInfo" *ngIf="claimData">Claim Information</button>
+          <button mat-button (click)="showHideBackToTopButton('false', 5)" class="blue-btn" [ngClass]="{'checked': (5 === selectedTab)}" scrollTo scrollTargetSelector="#claimServiceLine" *ngIf="claimServiceLines">Claim Service Lines</button>
+        </div>
+      </div>
+      <div class="custom-tabs-body" id="requestingProvider">
+
+        <div class="main-container">
+          <!-- Requesting Provider - Starts ----------------------------------------------- -->
+          <div id="requesting-provider" class="requesting-provider-section" *ngIf="providerData">
+            <div class="fields-container">
+              <!--<button mat-button class="blue-btn small start-inquiry" type="button">Start a Provider Inquiry</button>-->
+              <h2 class="sub-heading">
+                Requesting Provider
+              </h2>
+              <div class="field-row row">
+                <div class="col-md-4 field-col" *ngIf="providerData?.name?.family || providerData?.name?.given">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Provider" value="{{providerData?.name?.family }}{{(providerData?.name?.given !=='' && providerData?.name?.family !=='')?',':''}}{{providerData?.name?.given }}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <!--<div class="col-md-4 field-col" *ngIf="providerData?.providerID">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="National Provider ID" value="{{providerData?.providerID}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>-->
+                <div class="col-md-4 field-col" *ngIf="providerNpi">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="NPI" value="{{providerNpi}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="col-md-4 field-col" *ngIf="providerData?.claimStatusDate">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Claim Status Date" value="{{claimStatusDate | convertStringToDate}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Requesting Provider - Ends ----------------------------------------------- -->
+          <!-- Subscriber - Starts ----------------------------------------- -->
+          <div class="subscriber-section" *ngIf="subscriberData || claimData?.patientAccountNumber" id="subscriber">
+            <div class="fields-container">
+              <h2 class="sub-heading">
+                Subscriber
+              </h2>
+              <div class="field-row row">
+                <div class="col-md-4 field-col" *ngIf="subscriberData?.name?.family || subscriberData?.name?.given || subscriberData?.name?.middle">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Subscriber Name" value="{{subscriberData?.name?.family }}{{(subscriberData?.name?.family!=='' && subscriberData?.name?.given!=='')?',':''}} {{subscriberData?.name?.given }} {{subscriberData?.name?.middle }}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-4 field-col" *ngIf="claimData?.patientAccountNumber">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="PatientAcct #" value="{{claimData?.patientAccountNumber}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-4 field-col" *ngIf="subscriberData?.memberNumber">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Member ID #" value="{{subscriberData?.memberNumber}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Subscriber - Ends ----------------------------------------------- -->
+          <!-- Dependent - Starts ----------------------------------------- -->
+          <div class="subscriber-section" *ngIf="dependentData?.name?.family || dependentData?.name?.given || dependentData?.name?.middle || dependentData?.claims[0]?.patientAccountNumber" id="dependent">
+            <div class="fields-container">
+              <h2 class="sub-heading">
+                Dependent
+              </h2>
+              <div class="field-row row">
+                <div class="col-md-4 field-col" *ngIf="dependentData?.name?.family || dependentData?.name?.given || dependentData?.name?.middle">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Dependent Name" value="{{dependentData?.name?.family }}{{(dependentData?.name?.family!=='' && dependentData?.name?.given!=='')?',':''}} {{dependentData?.name?.given }} {{dependentData?.name?.middle }}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+
+                <div class="col-md-4 field-col" *ngFor="let dependentClaims of dependentData?.claims">
+                  <div class="input-container" *ngIf="dependentClaims?.patientAccountNumber">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Account Number" value="{{dependentClaims?.patientAccountNumber}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Dependent - Ends ----------------------------------------------- -->
+
+          <!-- Claim Information - Starts ----------------------------------------- -->
+          <div class="claim-info-section" *ngIf="claimData" id="claimInfo">
+            <div class="fields-container">
+              <h2 class="sub-heading">
+                Claim Information
+              </h2>
+              <div class="field-row row">
+                <div class="col-md-3 field-col" *ngIf="claimData?.claimNumber">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Claim Number" value="{{claimData?.claimNumber}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-6 field-col" *ngIf="payerData?.name">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Payer" value="{{payerData?.name }}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-3 field-col" *ngIf="claimData?.serviceDates">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Service Dates" value="{{claimStartDate | convertStringToDate}}{{claimEndDate!==''?' - ':''}}{{claimEndDate | convertStringToDate}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <!-- <div class="col-md-2 field-col">
+                   <div class="input-container">
+                     <mat-form-field class="view-input">
+                       <input matInput placeholder="Service Dates to" value="MM/DD/YY" readonly>
+                     </mat-form-field>
+                   </div>
+                 </div> -->
+              </div>
+              <div class="field-row row">
+
+                <div class="col-md-3 field-col" *ngIf="claimData?.totalBill">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Total Bill" value="{{claimData?.totalBill!==''? (claimData?.totalBill | currency:type:symbol:displayOption):''}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-3 field-col" *ngIf="claimData?.totalPaid">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Total Paid" value="{{claimData?.totalPaid!==''? (claimData?.totalPaid | currency:type:symbol:displayOption) :''}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-3 field-col" *ngIf="claimData?.paidDate">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Paid Date" value="{{claimData?.paidDate | convertStringToDate}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-3 field-col" *ngIf="claimData?.checkNumber">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Check Number" value="{{claimData?.checkNumber}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-3 field-col" *ngIf="claimData?.voucherID">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Voucher ID" value="{{claimData?.voucherID}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-4 field-col" *ngIf="claimData?.statusDate">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Status Date" value="{{claimData?.statusDate | convertStringToDate}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="col-md-12 field-col" *ngIf="claimData?.billType">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Bill Type" value="{{claimData?.billType}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+              </div>
+              <div class="field-row row">
+                <!-- Custom text Area section -->
+                <div class="col-md-6 field-col" *ngIf="claimData?.categoryCode">
+                  <div class="textarea-container">
+                    <label class="text-label">Status Category</label>
+                    <label class="label-value"> {{claimData?.categoryCode}}</label>
+                  </div>
+                </div>
+
+                <!-- Custom text Area section -->
+                <div class="col-md-6 field-col" *ngIf="claimData?.statusCode">
+                  <div class="textarea-container">
+                    <label class="text-label">Status Code</label>
+                    <label class="label-value"> {{claimData?.statusCode}}</label>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field-row row">
+                <div class="col-md-6 field-col" *ngIf="claimData?.entity">
+                  <div class="input-container">
+                    <mat-form-field class="view-input">
+                      <input matInput placeholder="Entity" value="{{claimData?.entity}}" readonly>
+                    </mat-form-field>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <!-- Claim Information - Ends ----------------------------------------- -->
+          <!-- Claim Service - Starts ----------------------------------------- -->
+          <div class="claim-service-section" *ngIf="claimServiceLines" id="claimServiceLine">
+            <h2 class="sub-heading">
+              Claim Service Lines
+            </h2>
+            <table datatable [dtOptions]="dtOptions"
+                   class="common-datatable grid-table table-striped">
+              <thead>
+              <tr>
+                <th>#</th>
+                <th class="small-col">Rev Code</th>
+                <th class="small-col">Proc Code</th>
+                <th>Modifiers </th>
+                <th>Units</th>
+                <th class="small-col">Billed</th>
+                <th class="small-col">Paid</th>
+                <th class="small-col">Service Dates</th>
+                <th>Status</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let serviceData of claimServiceLines; let i=index;">
+                <td>{{i+1}}</td>
+                <td>{{serviceData?.revCode}}</td>
+                <td>{{serviceData?.procedureCode}}</td>
+                <td>{{serviceData?.modifier1 !==''?serviceData?.modifier1:''}}
+                  {{serviceData?.modifier2 !==''?serviceData?.modifier2:''}}
+                  {{serviceData?.modifier3 !==''?serviceData?.modifier3:''}}
+                  {{serviceData?.modifier4 !==''?serviceData?.modifier4:''}}
+                </td>
+                <td>{{serviceData?.units}}</td>
+                <td>{{serviceData?.billedAmount!==''? (serviceData?.billedAmount | currency:type:symbol:displayOption) :''}}</td>
+                <td>{{serviceData?.paidAmount!==''? (serviceData?.paidAmount | currency:type:symbol:displayOption) :''}}</td>
+                <td>{{serviceData?.serviceStartDate | convertStringToDate}}{{serviceData?.serviceEndDate!==''?' - ':''}}{{serviceData?.serviceEndDate | convertStringToDate}}</td>
+                <td>
+                          <span *ngFor="let status of serviceData?.status">
+                              {{status.categoryCode}}{{status.statusCode!==''?' - ':''}}{{status.statusCode}}
+                          </span>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- Claim Service - Ends ----------------------------------------- -->
+
+          <!-- All Payers Contact information - Starts ----------------------- -->
+          <app-all-payer-info></app-all-payer-info>
+          <!-- All Payers Contact information - Ends ------------------------- -->
+
+          <button (click)="showHideBackToTopButton('true', 1)" scrollTo scrollTargetSelector="#claim-body"
+                  *ngIf="goOnTop" mat-button class="back-to-top"></button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Eligibility Response Selection - End ----------------------------------------------- -->
+
+
+</div>

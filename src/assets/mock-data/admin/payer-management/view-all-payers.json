@@ -1,0 +1,34 @@
+[
+  {
+    "payerId": "6b8ab2ed-be56-436c-8ec9-2ad2588c3b16",
+    "name": "GRP2",
+    "status": "ACTIVE"
+  },
+  {
+    "payerId": "c14e78cf-bf28-4c04-9a89-7e04d9c08596",
+    "name": "GRP3",
+    "status": "ACTIVE"
+  },
+  {
+    "payerId": "3",
+    "name": "Waqar Ali",
+    "status": "ACTIVE"
+  },
+  {
+    "payerId": "4",
+    "name": "Sana Faraz",
+    "status": "ACTIVE"
+  },
+  {
+    "payerId": "5",
+    "name": "Aftab Aslam",
+    "status": "ACTIVE"
+  },
+  {
+    "payerId": "6",
+    "name": "Lin Wan",
+    "status": "ACTIVE"
+  }
+]
+
+

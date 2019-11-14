@@ -1,0 +1,390 @@
+
+<div class="top-row">
+  <h1 class="main-heading">Referral/Auth Inquiry</h1>
+</div>
+<div class="main-right-section">
+  <!-- Select Payer - Drop down - Start ----------------------------------------------- -->
+  <div class="title-row row">
+    <div class="col-xs-2 col-sm-2 col-md-1 no-padding">
+      <h2 class="sub-heading">Payer <span class="star">*</span></h2>
+    </div>
+    <div class="col-xs-8 col-sm-6 col-md-5 no-padding">
+      <mat-form-field class="select-field" floatPlaceholder="never">
+        <mat-select placeholder="-- Select Payer --" name="userPayer"
+                    [(ngModel)]="model.userPayer" #userPayer="ngModel" required
+                    (change)="updatePayer(model.userPayer)">
+          <mat-option *ngFor="let payer of payerList | sortBy : 'name', let i= index"
+                      [value]="payer.payerId">{{ payer.name }}</mat-option>
+        </mat-select>
+        <mat-error *ngIf="userPayer.errors?.required">
+          Payer is required
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col-sm-3 col-md-6 no-padding">
+      <div class="tip-sheet">
+        <div (click)="navigateToTip()"> Tip Sheet</div>
+      </div>
+    </div>
+  </div>
+  <!-- Select Payer - Drop down - End ----------------------------------------------- -->
+
+  <!-- Requesting Provider Selection - Starts ----------------------------------------------- -->
+  <div class="requesting-provider" [hidden]="!isRequestingProvider">
+    <div class="title-row row">
+      <div class="col-xs-6 col-sm-6 col-md-6 no-padding">
+        <h2 class="sub-heading">Provider</h2>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 search-box" *ngIf="userRole === 'PRACTICE_OFFICE_USER' || practiceOfficeUserMode">
+        <button mat-button class="blue-btn search-btn common-search" type="button" id="search-button"
+                (click)="searchProvidersByClick()">Search</button>
+        <div class="input-container">
+          <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+            <input matInput type="text" placeholder="Search" (keyup)="searchProviders($event)"
+                   [(ngModel)]="searchKeyword" name="searchKeyword" class="common-search">
+          </mat-form-field>
+        </div>
+      </div>
+    </div>
+    <div class="{{tabClass}}">
+      <mat-tab-group class="toggle-tabs" (selectChange)="checkRecent()" [selectedIndex]="selectedTabIndex">
+        <mat-tab label="All"></mat-tab>
+        <mat-tab label="Recent Providers"></mat-tab>
+      </mat-tab-group>
+    </div>
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+           class={{tableClass}}>
+      <thead>
+      <tr *ngIf="userRole === 'PRACTICE_OFFICE_USER' || practiceOfficeUserMode">
+        <th>Payer ID</th>
+        <th>First Name</th>
+        <th>Last Name </th>
+        <th>Tax ID</th>
+        <th>NPI </th>
+        <th class="large-col">Address</th>
+        <th>City</th>
+        <th class="small-col">State</th>
+        <th>Zip Code</th>
+        <th>Taxonomy</th>
+      </tr>
+      <tr *ngIf="userRole === 'PAYER_USER' && !practiceOfficeUserMode">
+        <th>
+                <span class="intable-search">Payer ID
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.providerId"  /></span>
+        </th>
+        <th>
+                <span class="intable-search">First Name
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.firstName"  /></span>
+        </th>
+        <th>
+                <span class="intable-search">Last Name
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.lastName" /></span>
+        </th>
+        <th>
+              <span class="intable-search">Tax ID
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.taxId" /></span>
+        </th>
+        <th class="large-col">
+              <span class="intable-search">NPI
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.npi" /></span>
+        </th>
+        <th>
+              <span class="intable-search">Address
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.serviceAddressLine1" /></span>
+        </th>
+        <th class="small-col">
+              <span class="intable-search">City
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.serviceCity" /></span>
+        </th>
+        <th class="small-col">
+              <span class="intable-search">State
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.serviceState" /></span>
+        </th>
+
+        <th class="small-col">
+              <span class="intable-search">Zip Code
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.serviceZip" /></span>
+        </th>
+        <th>
+              <span class="intable-search">Taxonomy
+                <input (keyup)="searchProvidersByPayer($event)" class="intable-input common-search" type="text" [(ngModel)]="searchedProvider.taxonomy" /></span>
+        </th>
+      </tr>
+      </thead>
+      <tbody *ngIf="providerList">
+      <tr *ngFor="let provider of providerList  | sortBy : 'lastName'" style="cursor:pointer"
+          [ngClass]="{'highlighted': model.payerProvider !== null ? provider.providerId === model.payerProvider.id  && provider.serviceAddressLine1 === model.payerProvider.address.line1: false}"
+          (click)="selectProvider(provider)">
+        <td>{{ provider.providerId? provider.providerId : '. . . . . . .'}}</td>
+        <td>{{ provider.firstName? provider.firstName : '. . . . . . .'}}</td>
+        <td>{{ provider.lastName? provider.lastName : '. . . . . . .' }}</td>
+        <td>{{ provider.taxId? provider.taxId : '. . . . . . .' }}</td>
+        <td>{{ provider.npi? provider.npi : '. . . . . . .' }}</td>
+        <td>{{ provider.serviceAddressLine1 + provider.serviceAddressLine2? provider.serviceAddressLine1 + ' ' + provider.serviceAddressLine2 : '. . . . . . .' }}</td>
+        <td>{{ provider.serviceCity? provider.serviceCity : '. . . . . . .' }}</td>
+        <td>{{ provider.serviceState? provider.serviceState : '. . . . . . .' }}</td>
+        <td>{{ provider.serviceZip? (provider.serviceZip | zipCodeMask) : '. . . . . . .' }}</td>
+        <td>{{ provider.taxonomy? provider.taxonomy : '. . . . . . .' }}</td>
+      </tr>
+      </tbody>
+      <!--<tbody *ngIf="providerList.length === 0">-->
+      <!--<td colspan="9" class="dataTables_empty">No Providers Found</td>-->
+      <!--</tbody>-->
+    </table>
+    <!--*ngIf="providerList.length > 0"-->
+    <div class="new-custom-pagination short" *ngIf="totalPages >= 2" >
+      <div class="pagination-info">
+        <label>Items per page
+          <mat-form-field class="page-dropdown" floatPlaceholder="never">
+            <mat-select placeholder="{{pageSize}}" (change)="updatePageSize($event)"
+                        [(ngModel)]="pageSize">
+              <mat-option value="100">100</mat-option>
+              <mat-option value="250">250</mat-option>
+              <mat-option value="500">500</mat-option>
+              <mat-option value="750">750</mat-option>
+              <mat-option value="1000">1000</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </label>
+        <label>
+          Showing <span class="per-page">{{currentOffset + 1}}</span>  of  <span class="total">{{totalPages === 0 ? 1 : totalPages}}</span>
+        </label>
+      </div>
+      <div class="numbers">
+        <button (click)="prevPage(preClass)" [ngClass]="preClass">
+          <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+        <button (click)="nextPage(nextClass)" [ngClass]="nextClass">
+          <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+            <path d="M0 0h24v24H0z" fill="none"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <span class="provider-hint short">
+            (Requesting Provider is required. Please select a provider from the list)
+          </span>
+  </div>
+  <span class="provider-msg referral" *ngIf="showProviderMessage">Please select a requesting provider</span>
+  <!-- Requesting Provider Selection - End ----------------------------------------------- -->
+
+  <form name="referralForm" #referralForm="ngForm" novalidate>
+
+    <!-- Inquiry & Member Information - Starts ----------------------------------------------- -->
+    <div class="fields-container">
+      <h2 class="sub-heading">Inquiry Information </h2>
+      <div class="information">
+        <span class="info-icon" (click)="model.memberInfo = !model.memberInfo"><img src="/assets/images/info.png" alt="info"/> </span>
+        <div class="info-parah" [ngClass]="{'show' : (model.memberInfo), '': (false)}">Please enter either {{memberOrSubscriber}} # and referral ID # or {{memberOrSubscriber}} # and date range</div>
+      </div>
+      <div class="field-row row custom-row">
+        <div class="custom-field-col">
+          <div class="radio-container">
+            <mat-radio-group class="radio-btns" [(ngModel)]="inquiryType" id="inquiry-type" name="inquiryType">
+              <mat-radio-button value="referral">Referral Inquiry</mat-radio-button>
+              <mat-radio-button value="authorization">Authorization Inquiry</mat-radio-button>
+            </mat-radio-group>
+          </div>
+        </div>
+        <div class="custom-field-col" *ngIf="inquiryType === 'authorization'">
+          <div class="select-container">
+            <mat-form-field class="select-field" floatPlaceholder="never">
+              <mat-select placeholder="-- Select Authorization Type --" name="categoryCode"
+                          [(ngModel)]="model.referralAuthInformation.categoryCode" #categoryCode="ngModel" required>
+                <mat-option *ngFor="let category of categoryType" [value]="category.code">{{category.name}}</mat-option>
+              </mat-select>
+              <mat-error *ngIf="categoryCode.errors?.required">
+                Authorization Type is required for authorization inquiry.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text" *ngIf="inquiryType === 'referral'">Referral ID #</label>
+            <label class="label-text" *ngIf="inquiryType === 'authorization'">Authorization ID #</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true"
+                            floatPlaceholder="never">
+              <input matInput placeholder="Enter ID Number"  pattern="^\s*[A-Za-z0-9-]+\s*$" id="referral-id"
+                     name="referralId" #referralId="ngModel" [rangeLength]="[1, 50]" (change)="verifyProvider()"
+                     [(ngModel)]="model.referralAuthInformation.referralId">
+              <mat-error *ngIf="referralId.errors?.rangeLength && referralId.touched">
+                Referral ID # limited to 50 characters
+              </mat-error>
+              <mat-error *ngIf="referralId.errors?.pattern && referralId.touched">
+                Please enter letters, numbers, or dashes.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="calendar-container">
+            <label class="label-text">Start Date</label>
+            <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+              <input matInput [matDatepicker]="startPicker" placeholder="MM/DD/YYYY"
+                     name="startDate" [(ngModel)]="startDate" id="start-date"
+                     [min]="minDate" (click)="verifyProvider()"
+                     maxlength="10" (blur)="dateMsgReferralFrom= validateStartDate($event)"
+                     (keydown)="handledate($event)"
+                     (dateChange)="startPicker.close(); onChange(startDate); dateMsgReferralFrom = null; customDateCheck = (startDate > endDate);">
+              <mat-datepicker-toggle matSuffix [for]="startPicker"></mat-datepicker-toggle>
+              <mat-datepicker #startPicker ></mat-datepicker>
+              <span class="custom-invalid" *ngIf="dateMsgReferralFrom !== null">{{ dateMsgReferralFrom }}</span>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="calendar-container">
+            <label class="label-text">End Date</label>
+            <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+              <input matInput [matDatepicker]="endPicker" placeholder="MM/DD/YYYY"
+                     name="endDate" [(ngModel)]="endDate" id="end-date"
+                     [min]="startDate" [disabled]="!startDate" (click)="verifyProvider()"
+                     maxlength="10" (blur)="dateMsgReferralTo= validateEndDate($event)"
+                     (keydown)="handledate($event)"
+                     (dateChange)="endPicker.close(); dateMsgReferralTo = null; customDateCheck = (startDate > endDate);">
+              <mat-datepicker-toggle matSuffix [for]="endPicker"></mat-datepicker-toggle>
+              <mat-datepicker #endPicker ></mat-datepicker>
+              <span class="custom-invalid" *ngIf="dateMsgReferralTo !== null">{{ dateMsgReferralTo }}</span>
+              <span class="custom-invalid duplicate" *ngIf="customDateCheck && endDate">End date should be greater than Start date</span>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">{{ memberOrSubscriber }} #</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true"
+                            floatPlaceholder="never">
+              <input matInput placeholder="Enter Member Number" pattern="^\s*[A-Za-z0-9]+\s*$"
+                     name="memberNo" #memberNo="ngModel" id="member-no"
+                     [rangeLength]="[2, 80]" (click)="verifyProvider()"
+                     [(ngModel)]="model.subscriber.memberNo">
+              <mat-error *ngIf="memberNo.errors?.rangeLength && memberNo.touched">
+                {{ memberOrSubscriber }} # limit is from 2 to 80 characters
+              </mat-error>
+              <mat-error *ngIf="memberNo.errors?.pattern && memberNo.touched">
+                Please enter Alphanumeric characters.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">First Name</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter First Name"  [rangeLength]="[1, 35]" id="first-name-subscriber"
+                     name="firstNameSubscriber" [(ngModel)]="model.subscriber.firstName" #firstNameSubscriber="ngModel">
+              <mat-error *ngIf="firstNameSubscriber.errors?.rangeLength && firstNameSubscriber.touched">
+                First name limited to 35 characters.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">Last Name</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter Last Name" [rangeLength]="[1, 60]" id="last-name-subscriber"
+                     name="lastNameSubscriber" [(ngModel)]="model.subscriber.lastName" #lastNameSubscriber="ngModel">
+              <mat-error *ngIf="lastNameSubscriber.errors?.rangeLength && lastNameSubscriber.touched">
+                Last name limited to 60 characters.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="calendar-container">
+            <label class="label-text">Date of Birth</label>
+            <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+              <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" id="date-Of-birth-subscriber"
+                     name="dateOfBirth" [(ngModel)]="model.dateOfBirthSubscriber" #dateOfBirth="ngModel"
+                     [max]="maxDate" [min]="minDate" maxlength="10"
+                     (blur)="dateMsgSubscriber = validateDOB($event)" (keydown)="handledate($event)"
+                     (dateChange)="picker.close(); dateMsgSubscriber = null">
+              <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+              <mat-datepicker #picker ></mat-datepicker>
+              <span class="custom-invalid" *ngIf="dateMsgSubscriber !== null">{{ dateMsgSubscriber }}</span>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <span class="error-msg"> {{ memberError }}</span>
+    </div>
+    <!-- Inquiry & Member Information - Ends ----------------------------------------------- -->
+
+    <!-- Dependent Section - Starts ----------------------------------------------- -->
+    <div class="fields-container" *ngIf="memberOrSubscriber === 'Subscriber'">
+      <h2 class="sub-heading">Dependent</h2>
+      <div class="information">
+        <span class="info-icon" (click)="model.dependentInfo = !model.dependentInfo"><img src="/assets/images/info.png" alt="info"/> </span>
+        <div class="info-parah" [ngClass]="{'show' : (model.dependentInfo), '': (false)}">If specifying a dependent, please enter at least Name(First & Last) and DOB</div>
+      </div>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">First Name </label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter First Name" [rangeLength]="[1, 35]" id="first-name-dependent"
+                     name="firstNameDependent" [(ngModel)]="model.dependent.firstName" #firstNameDependent="ngModel"
+                     (click)="checkSubscriber()">
+              <mat-error *ngIf="firstNameDependent.errors?.rangeLength && firstNameDependent.touched">
+                First name limited to 35 characters.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="input-container">
+            <label class="label-text">Last Name</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter Last Name" [rangeLength]="[1, 60]" id="last-name-dependent"
+                     name="lastNameDependent" [(ngModel)]="model.dependent.lastName" #lastNameDependent="ngModel"
+                     (click)="checkSubscriber()">
+              <mat-error *ngIf="lastNameDependent.errors?.rangeLength && lastNameDependent.touched">
+                Last name limited to 60 characters.
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 field-col">
+          <div class="calendar-container">
+            <label class="label-text">Date of Birth</label>
+            <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+              <input matInput [matDatepicker]="picker1" placeholder="MM/DD/YYYY" id="date-Of-birth-dependent"
+                     name="dateOfBirthDependent" [(ngModel)]="model.dateOfBirthDependent"
+                     #dateOfBirthDependent="ngModel" [max]="maxDate" [min]="minDate"
+                     maxlength="10" (blur)="dateMsgDependent = validateDOB($event)"
+                     (keydown)="handledate($event)"
+                     (dateChange)="picker1.close(); dateMsgDependent = null" (click)="checkSubscriber()">
+              <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+              <mat-datepicker #picker1 ></mat-datepicker>
+              <span class="custom-invalid" *ngIf="dateMsgDependent !== null">{{ dateMsgDependent }}</span>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <span class="error-msg"> {{ dependentError }}</span>
+    </div>
+    <!-- Dependent Section - Ends ----------------------------------------------- -->
+
+    <!-- Submit Button - Starts ----------------------------------------------- -->
+    <div class="btn-block">
+
+      <button #submitBtn mat-button class="blue-btn submit" [disabled]="validateForm() || referralId.errors ||
+            dateMsgReferralFrom || dateMsgReferralTo || memberNo.errors || firstNameSubscriber.errors || lastNameSubscriber.errors || dateMsgSubscriber || (inquiryType === 'authorization' && model.referralAuthInformation.categoryCode === undefined)
+            || (startDate > endDate) || (dependentIndex < 3 && dependentIndex !== 0)"
+              (click)="saveInquiry()" type="button">Submit</button>
+    </div>
+    <!-- Submit Button - Ends ----------------------------------------------- -->
+
+  </form>
+</div>
+

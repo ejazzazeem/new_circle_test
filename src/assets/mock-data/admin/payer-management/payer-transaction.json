@@ -1,0 +1,120 @@
+[
+  {
+    "permissionId": "1",
+    "name": "Eligibility Inquiry",
+    "custom": false,
+    "enabled": false,
+    "onOffConfigs": [
+      {
+        "configName": "Requesting Provider",
+        "value": false
+      },
+      {
+        "configName": "Member Information Settings",
+        "value": true
+      },
+      {
+        "configName": "Limit Service line input to 1",
+        "value": true
+      }
+
+    ],
+    "displayXslt": "string"
+  },
+  {
+    "permissionId": "2",
+    "name": "Claims Status",
+    "custom": false,
+    "enabled": false,
+    "onOffConfigs": [
+      {
+        "configName": "Requesting Provider",
+        "value": false
+      },
+      {
+        "configName": "Member Information Settings",
+        "value": false
+      },
+      {
+        "configName": "Submitted Charges",
+        "value": true
+      }
+    ,
+      {
+        "configName": "Bill Type",
+        "value": true
+      }
+
+    ],
+    "displayXslt": "string"
+  },
+  {
+  "permissionId": "3",
+  "name": "Provider Inquiry",
+  "custom": false,
+  "enabled": true,
+  "onOffConfigs":  [
+    {
+      "configName": "Requesting Provider",
+      "value": false
+    },
+    {
+      "configName": "Member Information Settings",
+      "value": true
+    }
+
+  ],
+  "displayXslt": "string"
+} ,
+  {
+    "permissionId": "4",
+    "name": "Referral Request",
+    "custom": false,
+    "enabled": true,
+    "onOffConfigs": [
+    {
+      "configName": "Requesting Provider",
+      "value": false
+    },
+    {
+      "configName": "Member Information Settings",
+      "value": false
+    },
+    {
+      "configName": "Patient Account # ",
+      "value": "136333"
+    }
+
+  ],
+    "displayXslt": "string"
+  },
+  {
+    "permissionId": "5",
+    "name": "Referral / Auth Inquiry",
+    "custom": false,
+    "enabled": true,
+    "onOffConfigs": [
+      {
+        "configName": "Requesting Provider",
+        "value": false
+      },
+      {
+        "configName": "Member Information Settings",
+        "value": false
+      },
+      {
+        "configName": "Message field",
+        "value": "This is the test message"
+      }
+
+    ],
+    "displayXslt": "string"
+  },
+  {
+    "permissionId": "6",
+    "name": "Test Custom Transaction",
+    "custom": true,
+    "enabled": true,
+    "displayXslt": "string"
+  }
+]

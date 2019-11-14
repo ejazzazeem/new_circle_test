@@ -1,0 +1,1678 @@
+// Common Styling Snippets for This project
+
+@import "colors";
+@import "mixins";
+@import "variables";
+
+
+// Other common styles will be adding here
+// Primary tabs styling
+.primary-tabs{
+  .mat-tab-header{
+    border-bottom: 1px solid $field-border;
+    .mat-tab-list{
+      .mat-tab-labels{
+        margin-bottom: 6px;
+        .mat-tab-label{
+          font-family: 'futura_ltbook';
+          font-size: 12px;
+          opacity: 1;
+          height: 32px;
+          border-radius: 2px;
+          min-width: 120px;
+          color: $dark-text;
+          &.mat-tab-label-active{
+            background-color: $primary;
+            color: #fff;
+          }
+        }
+      }
+      .mat-ink-bar{
+        display: none;
+      }
+    }
+  }
+  .mat-tab-body-content{
+    overflow: inherit;
+  }
+}
+
+// Inner tabs style
+.inner-tabs{
+  .mat-tab-header{
+    border-bottom: 0;
+    margin-bottom: 10px;
+    .mat-tab-list{
+      .mat-tab-labels{
+        margin-bottom: 0 !important;
+        .mat-tab-label{
+          font-family: 'futura_ltbook';
+          font-size: 15px;
+          font-weight: bold;
+          opacity: 1;
+          height: 50px;
+          border-radius: 2px;
+          min-width: 100px;
+          color: $dark-text;
+          justify-content: flex-start;
+          padding: 0 10px;
+          border-bottom: 3px solid transparent;
+          &.mat-tab-label-active{
+            background-color: transparent;
+            border-radius: 0;
+            border-bottom: 3px solid $primary;
+            color: $dark-text;
+          }
+        }
+      }
+      .mat-ink-bar{
+        display: none;
+      }
+    }
+  }
+}
+
+// Common Toggle tabs styling
+.toggle-tabs{
+  .mat-tab-header{
+    border-bottom: 1px solid $field-border;
+    padding-bottom: 10px;
+    .mat-tab-list{
+      padding: 2px 0;
+      .mat-tab-labels{
+        display: inline-block;
+        background: #fff;
+        border-radius: $toggle-tabs-radius;
+        border: 1px solid $field-border;
+        height: 37px;
+        .mat-tab-label{
+          font-family: 'futura_ltbook';
+          font-size: 12px;
+          opacity: 1;
+          height: 35px;
+          border-radius: $toggle-tabs-radius;
+          min-width: 120px;
+          color: $dark-text;
+          &.mat-tab-label-active{
+            background-color: $primary;
+            color: #fff;
+          }
+        }
+      }
+      .mat-ink-bar{
+        display: none;
+      }
+    }
+  }
+}
+
+// Angular Material Data Table styling
+.custom-table{
+  border: 1px solid $field-border;
+  border-radius: 5px;
+  font-family: 'futura_ltbook';
+  font-size: 13px;
+  overflow: hidden;
+  .mat-header-row{
+    background-color: $primary;
+    min-height: 62px;
+    .mat-header-cell{
+      color: #fff;
+      flex: 2;
+      .mat-sort-header-arrow{
+        .mat-sort-header-stem{
+          //display: none;
+        }
+        .mat-sort-header-indicator{
+          //width: 0;
+          //height: 0;
+          //border-left: 5px solid transparent;
+          //border-right: 5px solid transparent;
+          //border-bottom: 5px solid #fff;
+          //border-radius: 4px;
+          .mat-sort-header-pointer-left, .mat-sort-header-pointer-right, .mat-sort-header-pointer-middle{
+            //display: none;
+          }
+        }
+      }
+      &.num-col{
+        flex: 1;
+      }
+    }
+  }
+  .mat-row{
+    border: none;
+    min-height: 46px;
+    .mat-cell{
+      color: $dark-text;
+      font-size: 13px;
+      flex: 2;
+      padding: 2px 5px 2px 0px;
+      .edit-img{
+        cursor: pointer;
+        margin-right: 10px;
+        svg{
+          width: 18px;
+          fill: $grey-icon;
+        }
+      }
+      .delete-img{
+        cursor: pointer;
+        svg{
+          width: 18px;
+          fill: $grey-icon;
+        }
+      }
+      &.num-col{
+        flex: 1;
+      }
+    }
+    &:nth-child(odd){
+      background: $table-odd;
+    }
+  }
+}
+
+// Angular Material Pagination styling
+.custom-paginator{
+  .mat-paginator-page-size{
+    .mat-paginator-page-size-label{
+      font-style: italic;
+      color: $dark-text;
+    }
+  }
+  .mat-paginator-range-actions{
+    .mat-paginator-range-label{
+      font-style: italic;
+      color: $dark-text;
+      margin: 0 10px 0 15px;
+    }
+    .mat-icon-button{
+      .mat-paginator-decrement, .mat-paginator-increment{
+        border-color: $primary;
+      }
+      &[disabled]{
+        color: $paginator-disabled;
+        .mat-paginator-decrement, .mat-paginator-increment{
+          border-color: $paginator-disabled;
+        }
+      }
+    }
+  }
+}
+
+// new Data Table Styling
+// Filter styling
+.dataTables_filter{
+  position: absolute;
+  right: 0;
+  top: -50px !important;
+  @-moz-document url-prefix() {
+    top: -54px !important;
+  }
+  label{
+    color: $dark-text;
+    font-weight: normal;
+    font-size: 12px;
+    input{
+      height: 37px;
+      border-radius: $field-box-radius;
+      border: 1px solid $field-border;
+      width: 190px;
+      padding-left: 5px;
+    }
+  }
+}
+// Main table without scroll styling
+.common-datatable{
+  border: 0px solid $field-border !important;
+  border-radius: 5px;
+  font-family: 'futura_ltbook';
+  font-size: 13px;
+  overflow: hidden;
+  width: 100% !important;
+  thead{
+    background-color: $primary;
+    -webkit-text-stroke-width: 0;
+    tr{
+      th{
+        color: #fff;
+        height: 52px;
+        padding: 0 15px;
+        border: none;
+        font-weight: normal;
+        cursor: pointer;
+        .sort-icon{
+          margin-left: 10px;
+          margin-bottom: -3px;
+          cursor: pointer;
+          display: inline-block;
+          width: 20px;
+          height: 15px;
+          background: url('/assets/images/sort.png') no-repeat;
+          background-size: 75%;
+          &.dec{
+            background: url('/assets/images/dec-sort.png') no-repeat;
+            background-size: 75%;
+          }
+          &.asc{
+            background: url('/assets/images/asc-sort.png') no-repeat;
+            background-size: 75%;
+          }
+        }
+        &.large-col{
+          width: 150px;
+          @media only screen and ($tablet8){
+            width: 80px;
+          }
+        }
+        &.small-col{
+          width: 100px;
+          @media only screen and ($tablet) {
+            width: 60px;
+          }
+        }
+        &.smallest-col{
+          width: 60px;
+        }
+      }
+    }
+  }
+  tbody{
+    tr{
+      td{
+        padding: 5px 15px;
+        height: 36px;
+        font-size: 12px;
+        .edit-anchor{
+          color: transparent;
+        }
+        .edit-img{
+          cursor: pointer;
+          margin-right: 10px;
+          svg{
+            width: 18px;
+            fill: $grey-icon;
+          }
+        }
+        .delete-img{
+          cursor: pointer;
+          svg{
+            width: 18px;
+            fill: $grey-icon;
+          }
+        }
+        .download-icon{
+          background: url("/assets/images/download.svg") no-repeat;
+          width: 17px;
+          height: 20px;
+          display: inline-block;
+          cursor: pointer;
+          background-size: 90%;
+          margin-right: 10px;
+        }
+        .mark-delete{
+          background: url("/assets/images/delete-unchecked.svg") no-repeat;
+          width: 17px;
+          height: 20px;
+          display: inline-block;
+          cursor: pointer;
+          background-size: 90%;
+          &.checked{
+            background: url("/assets/images/delete-checked.svg") no-repeat;
+            background-size: 90%;
+          }
+          &.marked{
+            opacity: 0.5;
+            cursor: none;
+          }
+        }
+        &.dataTables_empty{
+          padding: 25px 0 0;
+        }
+      }
+      &:nth-of-type(odd){
+        background: $table-odd;
+      }
+      &.highlighted{
+       background: $active-field-border;
+        color: #fff;
+        .edit-img, .delete-img{
+          svg{
+            fill: #fff;
+          }
+        }
+      }
+    }
+  }
+  &.secondary{
+    thead{
+      background-color: $blue-pressed;
+      tr{
+        th{
+          height: 46px;
+        }
+      }
+    }
+  }
+}
+// Main table with scroll styling
+.dataTables_scroll{
+  // width: 1079px;
+  .dataTables_scrollHead{
+    padding-right: 0;
+    .dataTables_scrollHeadInner{
+      padding-right: 0 !important;
+      width: 100% !important;
+    }
+  }
+  .dataTables_scrollBody{
+    border-bottom: 1px solid $field-border !important;
+  }
+}
+// Custom Pagination
+.new-custom-pagination{
+  display: flex;
+  min-height: 40px;
+  float: right;
+  margin-top: 10px;
+  .pagination-info{
+    font-size: 12px;
+    label{
+      font-weight: normal;
+      font-style: italic;
+      margin: 0;
+      .page-dropdown{
+        margin-left: 10px;
+        margin-right: 10px;
+        .mat-form-field-infix{
+          min-width: 40px;
+          width: 49px;
+          height: 35px;
+        }
+      }
+      .per-page{
+        color: $primary;
+        cursor: pointer;
+      }
+      .total{
+        color: $primary;
+        cursor: pointer;
+      }
+    }
+  }
+  .numbers{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 15px;
+    cursor: pointer;
+    button{
+      width: 40px;
+      background: transparent;
+      outline: none;
+      border: none;
+      svg{
+        width: 20px;
+        height: 20px;
+      }
+      &.disabled{
+        opacity: 0.5;
+      }
+    }
+    .pre{
+      svg{
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &.short{
+    margin-top: 0;
+  }
+}
+
+// General info box styling
+.info-box{
+  border: 1px solid $field-border;
+  border-radius: $field-box-radius;
+  background-color: #fff;
+  padding: 18px 20px;
+  position: relative;
+  display: flex;
+  @media only screen and ($tablet){
+    flex-direction: column;
+  }
+  .content-tag{
+    width: 40%;
+    .c-label{
+      margin-bottom: 0;
+      color: $light-text;
+      font-size: 15px;
+      margin-bottom: 2px;
+      @media only screen and ($desktop-small){
+        font-size: 13px;
+      }
+    }
+    .c-value{
+      margin-bottom: 0;
+      color: $dark-text;
+      font-size: 18px;
+      @media only screen and ($desktop-small){
+        font-size: 15px;
+      }
+    }
+  }
+  .btn-tag{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+  }
+}
+.info-box-border{
+  @extend .info-box;
+  border-left: 6px solid $primary;
+  .content-tag{
+    p{
+      font-style: italic;
+    }
+    .c-label{
+      font-size: 12px;
+      margin-bottom: 5px;
+      margin-top: 3px;
+    }
+    .c-value{
+      font-size: 15px;
+    }
+  }
+
+}
+
+// Common Requesting Provider Css
+.requesting-provider{
+  margin-bottom: 15px !important;
+  .title-row{
+    .sub-heading{
+      margin: 0 !important;
+    }
+  }
+  .tabs-main-container{
+    .mat-tab-header{
+      margin-top: -51px;
+      justify-content: flex-end;
+    }
+    .mat-tab-label-container{
+      display: inline;
+      flex-grow: 0;
+      margin-right: 300px;
+    }
+    &.without-search{
+      .mat-tab-label-container{
+        margin-right: 0;
+      }
+    }
+  }
+  .not-in-list{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    .tick{
+      background: url("/assets/images/checked.png") no-repeat;
+      width: 16px;
+      height: 16px;
+      background-size: 100%;
+      display: none;
+      margin-right: 5px;
+      margin-top: -4px;
+    }
+    &.pressed{
+      .tick{
+        display: inline-block;
+      }
+      .mat-button-focus-overlay, .mat-button-ripple{
+        display: none;
+      }
+    }
+  }
+  .provider-hint{
+    font-size: 12px;
+    // float: right;
+    margin-top: 10px;
+    font-style: italic;
+    color: $light-text;
+    max-width: 55%;
+    // text-align: right;
+    &.short{
+      margin-top: 15px;
+      display: inline-block;
+    }
+  }
+}
+// Provider Error msg styling
+.provider-msg{
+  color: $red;
+  margin-top: -10px;
+  display: block;
+  margin-bottom: 10px;
+}
+// General Error msg styling
+.error-msg{
+  color: $red;
+  font-size: 14px;
+}
+
+
+// Servicing provider search styling
+.servicing-provider{
+  margin-bottom: 20px;
+  .title-row{
+    .sub-heading{
+      margin: 0 !important;
+    }
+  }
+  .tabs-main-container{
+    .mat-tab-header{
+      margin-top: -51px;
+      justify-content: flex-end;
+    }
+    .mat-tab-label-container{
+      display: inline;
+      flex-grow: 0;
+      margin-right: 0;
+    }
+  }
+  .servicing-provider-hint{
+    font-size: 12px;
+    //float: right;
+    display: inline-block;
+    margin-top: 15px;
+    font-style: italic;
+    color: $light-text;
+    max-width: 55%;
+    text-align: right;
+  }
+}
+// Servicing provider table styling
+.servicing-Ptable{
+  thead tr{
+    padding: 0 10px;
+    th{
+      padding: 0 5px;
+    }
+  }
+  .intable-search{
+    display: flex;
+    flex-direction: column;
+    .intable-input{
+      color: $dark-text;
+      border: none;
+      padding: 2px;
+      outline: none;
+      border-radius: 2px;
+      width: 100%;
+      // IE CSS hack
+      // This code will only run for IE browser
+      @media all and (-ms-high-contrast:none)
+      {
+        max-width: 97px;
+      }
+    }
+  }
+}
+
+// Information Icon Styling
+.information{
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 100;
+  .info-icon{
+    float: right;
+    cursor: pointer;
+    img{
+      width: 22px;
+    }
+  }
+  .info-parah{
+    float: left;
+    line-height: 24px;
+    margin-right: 10px;
+    font-size: 13px;
+    font-style: italic;
+    display: none;
+    background: #000;
+    color: #fff;
+    padding: 3px 8px;
+    border-radius: 3px;
+    margin-top: -3px;
+    max-width: 500px;
+    &::before{
+      width: 0;
+      height: 0;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-bottom: 7px solid black;
+      content: "";
+      float: right;
+      transform: rotate(90deg);
+      margin-right: -17px;
+      margin-top: 8px;
+    }
+    @media only screen and ($tablet-small){
+      margin-top: 30px;
+      margin-right: -25px;
+      &::before{
+        margin-right: -2px;
+        margin-top: -8px;
+        transform: rotate(360deg);
+      }
+    }
+    &.show{
+      display: block;
+    }
+  }
+  &.file{
+    top: -5px !important;
+    z-index: 1;
+    .info-parah{
+      margin-right: 15px !important;
+      margin-top: -5px !important;
+      @media only screen and ($tablet-small){
+        margin-right: -25px !important;
+        margin-top: 36px !important;
+        max-width: 470px;
+      }
+    }
+  }
+}
+
+// Common Reporting Tabs Styling
+.report-list-tabs{
+  margin-bottom: -25px;
+  .mat-tab-header{
+    width: 30%;
+    position: absolute;
+    right: 0;
+    border-bottom: none;
+    display: block;
+    z-index: 100;
+    .mat-tab-label-container{
+      z-index: 100;
+    }
+    .mat-tab-labels{
+      float: right;
+    }
+  }
+  .mat-tab-body-wrapper{
+    // margin-top: -49px;
+    // width: 50%;
+    .light-heading{
+      float: left;
+      margin: 12px 10px 12px 0;
+    }
+  }
+  .main-filter-section{
+    // margin-top: 40px;
+  }
+}
+
+// Common Reporting Filter Expansion Styling
+.filter-expansion{
+  box-shadow: none !important;
+  border: 1px solid $field-border;
+  border-radius: 4px;
+  .mat-expansion-panel-header{
+    font-family: 'futura_ltbook';
+    border-bottom: 1px solid $field-border;
+    background: #fff !important;
+    width: 100%;
+    height: 50px !important;
+  }
+  .mat-expansion-panel-content{
+    font-family: 'futura_ltbook';
+    .mat-expansion-panel-body{
+      margin-top: 15px;
+    }
+    .btn-block{
+      .white-btn{
+        margin-left: 15px;
+      }
+    }
+  }
+}
+
+.report-view-section{
+  .heading-top{
+    display: inline-block;
+    width: 100%;
+  }
+  .with-toggle{
+    float: left;
+  }
+  .toggle-container{
+    margin-top: 10px;
+    float: right;
+    padding-bottom: 0;
+  }
+  .sub-heading{
+    margin-bottom: 20px;
+  }
+  .top-level-btns{
+    display: flex;
+    float: right;
+    margin-top: 10px;
+    margin-left: 15px;
+    .white-btn{
+      margin-right: 10px;
+      min-width: 20px !important;
+      padding: 0 15px;
+      span{
+        width: 30px;
+        svg{
+          width: 13px;
+          height: 20px;
+          float: left;
+          fill: $dark-text;
+        }
+      }
+      &.delete-report{
+        min-width: 15px !important;
+        padding: 0 10px;
+        svg{
+          width: 22px;
+          fill: $dark-text;
+        }
+      }
+    }
+  }
+  .btn-block{
+    margin: 30px 0 20px;
+    display: flex;
+    .white-btn{
+      margin-right: 10px;
+      min-width: 20px !important;
+      padding: 0 15px;
+      span{
+        width: 30px;
+        svg{
+          width: 13px;
+          height: 20px;
+          float: left;
+          fill: $dark-text;
+        }
+      }
+      &.delete-report{
+        min-width: 15px !important;
+        padding: 0 10px;
+        svg{
+          width: 22px;
+          fill: $dark-text;
+        }
+      }
+    }
+  }
+}
+
+// Common collapsible Table Styling
+.common-collapsible-table{
+  border: none !important;
+  outline: none;
+  border-radius: 5px;
+  font-family: 'futura_ltbook';
+  font-size: 13px;
+  overflow: hidden;
+  width: 100% !important;
+  thead{
+    background-color: $primary;
+    -webkit-text-stroke-width: 0;
+    collapsible-table-row{
+      th{
+        color: #fff;
+        height: 52px;
+        padding: 0 15px;
+        border: none;
+        font-weight: normal;
+        cursor: pointer;
+        vertical-align: middle;
+        &.width5{
+          width: 5%;
+        }
+        &.width10{
+          width: 10%;
+        }
+        &.width15{
+          width: 15%;
+        }
+        &.width20{
+          width: 20%;
+        }
+        &.width25{
+          width: 25%;
+        }
+        &.width30{
+          width: 30%;
+        }
+        &.width35{
+          width: 35%;
+        }
+        &.width40{
+          width: 40%;
+        }
+        &.width45{
+          width: 45%;
+        }
+        &.width50{
+          width: 50%;
+        }
+        &.width55{
+          width: 55%;
+        }
+        &.width60{
+          width: 60%;
+        }
+      }
+    }
+  }
+  tbody{
+    background-color: #fff;
+    collapsible-table-row{
+      td{
+        padding: 20px 15px;
+        min-height: 55px;
+        font-size: 12px;
+        vertical-align: middle;
+        &.width5{
+          width: 5%;
+        }
+        &.width10{
+          width: 10%;
+        }
+        &.width15{
+          width: 15%;
+        }
+        &.width20{
+          width: 20%;
+        }
+        &.width25{
+          width: 25%;
+        }
+        &.width30{
+          width: 30%;
+        }
+        &.width35{
+          width: 35%;
+        }
+        &.width40{
+          width: 40%;
+        }
+        &.width45{
+          width: 45%;
+        }
+        &.width50{
+          width: 50%;
+        }
+        &.width55{
+          width: 55%;
+        }
+        &.width60{
+          width: 60%;
+        }
+      }
+      &:nth-of-type(odd){
+        background: $table-odd;
+      }
+      &.expandable-row{
+        td:first-child::before{
+          content: "";
+          background: url("/assets/images/expand-arrow.svg") no-repeat;
+          display: inline-block;
+          width: 12px;
+          height: 8px;
+          background-size: 100%;
+          margin-right: 10px;
+          transform: rotate(180deg);
+          margin-bottom: 1px;
+        }
+        & + collapsible-table-row-detail > td{
+          display: none;
+        }
+      }
+      &.open{
+        background-color: $expanded-row-bg;
+        td:first-child{
+          color: $primary;
+          &::before{
+            transform: rotate(0deg);
+          }
+        }
+        & + collapsible-table-row-detail > td{
+          display: table-cell;
+        }
+      }
+      &.grand-row{
+        border-top: 1px solid $primary;
+      }
+      &.month-row{
+        background: $main-bg;
+        td{
+          color: $primary;
+          font-weight: bold;
+        }
+      }
+    }
+    collapsible-table-row-detail{
+      background-color: $expanded-row-bg;
+      collapsible-list-item{
+        collapsible-body{
+          border-top: 1px solid #ddd;
+          table{
+            width: 100%;
+            tbody{
+              background-color: $expanded-row-bg;
+              tr{
+                td{
+                  padding: 15px 15px;
+                  min-height: 36px;
+                  font-size: 12px;
+                  &.width5{
+                    width: 5%;
+                  }
+                  &.width10{
+                    width: 10%;
+                  }
+                  &.width15{
+                    width: 15%;
+                  }
+                  &.width20{
+                    width: 20%;
+                  }
+                  &.width25{
+                    width: 25%;
+                  }
+                  &.width30{
+                    width: 30%;
+                  }
+                  &.width35{
+                    width: 35%;
+                  }
+                  &.width40{
+                    width: 40%;
+                  }
+                  &.width45{
+                    width: 45%;
+                  }
+                  &.width50{
+                    width: 50%;
+                  }
+                  &.width55{
+                    width: 55%;
+                  }
+                  &.width60{
+                    width: 60%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Custom div-based collapsible table styling
+.custom-collapsible-table{
+  border: 1px solid $field-border;
+  border-radius: 5px;
+  font-family: 'futura_ltbook';
+  font-size: 13px;
+  .collapsible-head{
+    background-color: $primary;
+    display: flex;
+    height: 52px;
+    border-radius: 5px 5px 0 0;
+    .cp-th{
+      color: #fff;
+      align-self: center;
+      padding: 0 15px;
+    }
+  }
+  .empty-row{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+  }
+  .cp-3rd-level-row{
+    display: flex;
+    color: $primary;
+    min-height: 45px;
+    .cp-td{
+      align-self: center;
+      padding: 5px 15px;
+      font-weight: 600;
+      &:first-child{
+        &::before{
+          content: "+";
+          margin-left: -5px;
+          margin-right: 10px;
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+    &.no-plus-icon{
+      .cp-td:first-child::before{
+        content: "";
+      }
+    }
+    &.open{
+      .cp-td:first-child::before{
+        content: "-";
+      }
+    }
+  }
+  .collapsible-body{
+    background: #fff;
+    .cp-row{
+      .empty-row{
+        padding: 15px;
+        text-align: center;
+      }
+      &.expandable{
+        flex-direction: column;
+        cursor: pointer;
+        .cp-td:first-child::before{
+          content: "";
+          background: url("/assets/images/expand-arrow.svg") no-repeat;
+          display: inline-block;
+          width: 12px;
+          height: 8px;
+          background-size: 100%;
+          margin-right: 10px;
+          transform: rotate(90deg);
+        }
+      }
+      .cp-td{
+        padding: 5px 15px;
+        font-size: 12px;
+        align-self: center;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      &:nth-of-type(odd){
+        background: $table-odd;
+      }
+      .cp-row-inner{
+        display: flex;
+        min-height: 45px;
+      }
+      .cp-inner-table{
+        background: $expanded-row-bg;
+        display: none;
+        .cp-inner-row{
+          min-height: 45px;
+          display: flex;
+          .cp-inner-td{
+            padding: 5px 12px;
+            align-self: center;
+            word-break: break-word;
+            &:first-child{
+              padding-left: 37px;
+            }
+          }
+        }
+      }
+      &.open{
+        .cp-row-inner{
+          background: $expanded-row-bg;
+          border-bottom: 1px solid #ccc;
+          font-weight: 600;
+        }
+        .cp-inner-table{
+          display: block;
+        }
+        .cp-td:first-child{
+          color: $primary;
+          &::before{
+            transform: rotate(180deg);
+          }
+        }
+      }
+      &.open.shut{
+        .cp-row-inner{
+          display: flex;
+          min-height: 45px;
+          font-weight: normal;
+          background-color: transparent;
+        }
+        .cp-inner-table{
+          background: $expanded-row-bg;
+          display: none;
+          .cp-inner-row{
+            min-height: 45px;
+            display: flex;
+            .cp-inner-td{
+              padding: 5px 15px;
+              align-self: center;
+              &:first-child{
+                padding-left: 37px;
+              }
+            }
+          }
+        }
+        .cp-td:first-child{
+          color: $dark-text;
+
+          &::before{
+            transform: rotate(90deg);
+          }
+        }
+        &:nth-of-type(odd){
+          background: $table-odd;
+        }
+      }
+    }
+  }
+  .grand-total{
+    .cp-row-inner{
+      display: flex;
+      height: 50px;
+      background: #fff;
+      border-top: 1px solid $primary;
+      .cp-td{
+        align-self: center;
+        padding: 5px 15px;
+      }
+    }
+  }
+  .width5{
+    width: 5%;
+  }
+  .width10{
+    width: 10%;
+  }
+  .width15{
+    width: 15%;
+  }
+  .width20{
+    width: 20%;
+  }
+  .width25{
+    width: 25%;
+  }
+  .width30{
+    width: 30%;
+  }
+  .width35{
+    width: 35%;
+  }
+  .width40{
+    width: 40%;
+  }
+  .width45{
+    width: 45%;
+  }
+  .width50{
+    width: 50%;
+  }
+  .width55{
+    width: 55%;
+  }
+  .width60{
+    width: 60%;
+  }
+}
+
+
+
+// Update Styling for Print Preview of All Reports
+@page {
+  margin: 20px;
+}
+
+@media print {
+
+  .dont-print, .dont-print *
+  {
+    display: none !important;
+  }
+
+  .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9 {
+    float: left;
+  }
+  .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    position: relative;
+    min-height: 1px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+  .col-md-11 {
+    width: 91.66666667%;
+  }
+  .col-md-10 {
+    width: 83.33333333%;
+  }
+  .col-md-9 {
+    width: 75%;
+  }
+  .col-md-8 {
+    width: 66.66666667%;
+  }
+  .col-md-7 {
+    width: 58.33333333%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-5 {
+    width: 41.66666667%;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  .col-md-3 {
+    width: 25%;
+  }
+  .col-md-2 {
+    width: 16.66666667%;
+  }
+  .col-md-1 {
+    width: 8.33333333%;
+  }
+
+  .label {
+    border: none;
+  }
+  .view-input .mat-input-element {
+    color: $dark-text !important;
+  }
+  .view-input .mat-form-field-placeholder {
+    color: $light-text !important;
+  }
+
+  .report-view-section{
+    padding-bottom: 20px;
+    .heading-top{
+      padding-left: 20px !important;
+    }
+    .with-toggle{
+      float: left;
+    }
+    .toggle-container{
+      display: none !important;
+    }
+    .btn-block{
+      display: none !important;
+    }
+  }
+
+  // Custom div-based collapsible table styling for Print Preview
+  .custom-collapsible-table{
+    -webkit-print-color-adjust: exact !important;
+    border: 1px solid $field-border !important;
+    border-radius: 5px;
+    font-family: 'futura_ltbook';
+    font-size: 13px;
+    .collapsible-head{
+      background-color: $primary !important;
+      display: flex;
+      height: 52px;
+      border-radius: 5px 5px 0 0;
+      .cp-th{
+        color: #fff !important;
+        align-self: center;
+        padding: 0 15px;
+      }
+    }
+    .empty-row{
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #fff !important;
+    }
+    .cp-3rd-level-row{
+      display: flex;
+      color: $primary !important;
+      min-height: 45px;
+      .cp-td{
+        align-self: center;
+        padding: 5px 15px;
+        font-weight: 600;
+      }
+    }
+    .collapsible-body{
+      background: #fff !important;
+      .cp-row{
+        .empty-row{
+          padding: 15px;
+          text-align: center;
+        }
+        &.expandable{
+          flex-direction: column;
+          cursor: pointer;
+          .cp-td:first-child::before{
+            content: "";
+            background: url("/assets/images/expand-arrow.svg") no-repeat !important;
+            display: inline-block;
+            width: 12px;
+            height: 8px;
+            background-size: 100% !important;
+            margin-right: 10px;
+            transform: rotate(90deg);
+            float: left;
+            margin-top: 5px;
+          }
+        }
+        .cp-td{
+          padding: 5px 15px;
+          font-size: 12px;
+          align-self: center;
+        }
+        &:nth-of-type(odd){
+          background: $table-odd !important;
+        }
+        .cp-row-inner{
+          display: flex;
+          min-height: 45px;
+          page-break-inside: avoid;
+          break-inside: avoid; /* IE 10+ */
+        }
+        .cp-inner-table{
+          background: $expanded-row-bg !important;
+          display: none;
+          .cp-inner-row{
+            min-height: 45px;
+            display: flex;
+            .cp-inner-td{
+              padding: 5px 15px;
+              align-self: center;
+              &:first-child{
+                padding-left: 37px;
+              }
+            }
+          }
+        }
+        &.open{
+          .cp-row-inner{
+            background: $expanded-row-bg !important;
+            border-bottom: 1px solid #ccc !important;
+            font-weight: 600;
+          }
+          .cp-inner-table{
+            display: block;
+          }
+          .cp-td:first-child{
+            color: $primary !important;
+            &::before{
+              transform: rotate(180deg);
+            }
+          }
+        }
+        &.open.shut{
+          .cp-row-inner{
+            display: flex;
+            min-height: 45px;
+            font-weight: normal;
+            background-color: transparent !important;
+          }
+          .cp-inner-table{
+            background: $expanded-row-bg !important;
+            display: none;
+            .cp-inner-row{
+              min-height: 45px;
+              display: flex;
+              .cp-inner-td{
+                padding: 5px 15px;
+                align-self: center;
+                &:first-child{
+                  padding-left: 37px;
+                }
+              }
+            }
+          }
+          .cp-td:first-child{
+            color: $dark-text !important;
+
+            &::before{
+              transform: rotate(90deg);
+            }
+          }
+          &:nth-of-type(odd){
+            background: $table-odd !important;
+          }
+        }
+      }
+    }
+    .grand-total{
+      .cp-row-inner{
+        display: flex;
+        height: 50px;
+        background: #fff !important;
+        border-top: 1px solid $primary !important;
+        .cp-td{
+          align-self: center;
+          padding: 5px 15px;
+        }
+      }
+    }
+    .width5{
+      width: 5%;
+    }
+    .width10{
+      width: 10%;
+    }
+    .width15{
+      width: 15%;
+    }
+    .width20{
+      width: 20%;
+    }
+    .width25{
+      width: 25%;
+    }
+    .width30{
+      width: 30%;
+    }
+    .width35{
+      width: 35%;
+    }
+    .width40{
+      width: 40%;
+    }
+    .width45{
+      width: 45%;
+    }
+    .width50{
+      width: 50%;
+    }
+    .width55{
+      width: 55%;
+    }
+    .width60{
+      width: 60%;
+    }
+  }
+
+  // Inner bordered collapsible Table Styling for Print Preview
+  .inner-bordered-table{
+    .inner-bordered-head{
+      background-color: #ccc !important;
+      td{
+        font-weight: bold;
+        color: $dark-text !important;
+      }
+    }
+  }
+
+}
+
+
+// Inner bordered collapsible Table Styling
+.inner-bordered-table{
+  .inner-bordered-head{
+    background-color: #ccc;
+    td{
+      font-weight: bold;
+      color: $dark-text;
+    }
+  }
+}
+
+// Ngx table styling for group by data
+// Alternative to collapsible table
+.custom-ngx-table{
+  box-shadow: none !important;
+  border-radius: 5px;
+  font-family: 'futura_ltbook';
+  font-size: 13px;
+  margin-top: 15px;
+  border: 1px solid $field-border;
+  // width: 100%;
+  .datatable-header{
+    background-color: $primary;
+    .datatable-header-inner{
+      .datatable-header-cell{
+        color: #fff;
+        padding: 0 15px;
+        .datatable-header-cell-template-wrap{
+          display: table-cell;
+          vertical-align: middle;
+          height: 50px;
+        }
+        .resize-handle{
+          border-right: 1px solid $blue-pressed;
+          display: none;
+        }
+        &.sortable{
+          .sort-btn{
+            width: 10px;
+            height: 10px;
+            margin-left: 6px;
+            &.sort-asc{
+              background: url("assets/images/caret-down.png") no-repeat;
+              background-size: 100%;
+              transform: rotate(180deg);
+            }
+            &.sort-desc{
+              background: url("assets/images/caret-down.png") no-repeat;
+              background-size: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .empty-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .datatable-body{
+    .datatable-group-header{
+      .header-content{
+        width: 100%;
+        display: flex;
+        cursor: pointer;
+        height: 45px;
+        align-items: center;
+        &::before{
+          font-size: 18px;
+          color: $primary;
+          margin: 0 5px;
+        }
+        &.datatable-icon-down{
+          color: $primary;
+        }
+      }
+    }
+    .datatable-body-row{
+      min-height: 50px !important;
+      height: auto !important;
+      .datatable-body-cell{
+        padding: 5px 15px !important;
+        min-height: 50px !important;
+        height: auto !important;
+        display: flex;
+        align-items: center;
+        white-space: normal !important;
+        .datatable-body-cell-label{
+          font-size: 13px;
+        }
+      }
+      &:hover{
+        .datatable-row-group{
+          background-color: #fff !important;
+        }
+      }
+      &:nth-of-type(odd){
+        .datatable-row-group{
+          background-color: $table-odd !important;
+        }
+      }
+    }
+    .datatable-scroll{
+      width: 100% !important;
+    }
+  }
+  .datatable-footer{
+    display: none !important;
+  }
+}
+
+// All payers contact information Styling for every response page
+.all-payer-info{
+  margin-top: 50px;
+  font-size: 12px;
+  color: #555;
+  .light-heading{
+    margin: 0;
+    padding-left: 10px;
+  }
+  .info-container{
+    padding: 10px;
+    display: flex;
+    .col-wise{
+      margin-right: 30px;
+    }
+    p{
+      &.bold{
+        font-weight: 600;
+      }
+      span{
+        &.bold{
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
+
+// Common styling for tip sheet icon
+.tip-sheet{
+  background: url("/assets/images/info.png") no-repeat 0 center;
+  float: right;
+  background-size: 18px;
+  padding-left: 25px;
+  font-size: 13px;
+  height: 41px;
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  color: $primary;
+  cursor: pointer;
+}
+
+// Grand total styling for reports
+.grand-totals {
+  line-height: 40px;
+  margin-right: 20px;
+}
+
+// Inner paginator
+.inner-paginator{
+  justify-content: center;
+}

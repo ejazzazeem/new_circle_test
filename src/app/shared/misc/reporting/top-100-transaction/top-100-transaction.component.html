@@ -1,0 +1,124 @@
+<div class="main-right-section">
+  <!-- Filter Expandable Section - Starts ----------------------------------------------- -->
+  <div class="main-filter-section" id="report_body">
+    <mat-expansion-panel class="filter-expansion" [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Filters
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="field-row row">
+        <div class="col-sm-6 col-md-6 field-col">
+          <div class="select-container">
+            <label class="label-text">Payer</label>
+            <mat-form-field class="select-field" floatPlaceholder="never">
+              <mat-select placeholder="-- Select Payer --" name="userPayer" #userPayer="ngModel" [(ngModel)]="model.userPayer">
+                <mat-option [value]="''">-- Select Payer --</mat-option>
+                <mat-option *ngFor="let payer of payerList , let i= index"
+                            [value]="payer.name">{{ payer.name }}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="calendar-container">
+            <label class="label-text">From</label>
+            <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+              <input matInput [matDatepicker]="fromPicker" placeholder="MM/DD/YYYY"
+                     name="filterFrom" [(ngModel)]="filterFrom" #fromFilter="ngModel" [max]="maxDate" [min]="minDate" maxlength="10"
+                     (blur)="dateMsgFilterFrom = validateFromDate($event)"
+                     (keydown)="handledate($event)"
+                     (dateChange)="fromPicker.close(); dateMsgFilterFrom = null; customDateCheck = (filterFrom > filterTo);">
+              <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+              <mat-datepicker #fromPicker ></mat-datepicker>
+              <span class="custom-invalid" *ngIf="dateMsgFilterFrom !== null">{{ dateMsgFilterFrom }}</span>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-3 field-col">
+          <div class="calendar-container">
+            <label class="label-text">To</label>
+            <mat-form-field class="calendar-field" floatPlaceholder="never" hideRequiredMarker="true">
+              <input matInput [matDatepicker]="toPicker" placeholder="MM/DD/YYYY"
+                     name="filterTo" [(ngModel)]="filterTo" #toFilter="ngModel"
+                     [max]="maxDate" [min]="filterFrom" maxlength="10" [disabled]="!filterFrom"
+                     (blur)="dateMsgFilterTo= validateToDate($event)"
+                     (keydown)="handledate($event)"
+                     (dateChange)="toPicker.close(); dateMsgFilterTo = null; customDateCheck = (filterFrom > filterTo);">
+              <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+              <mat-datepicker #toPicker ></mat-datepicker>
+              <span class="custom-invalid" *ngIf="dateMsgFilterTo !== null">{{ dateMsgFilterTo }}</span>
+              <span class="custom-invalid duplicate" *ngIf="customDateCheck">To date should be greater than from date</span>
+            </mat-form-field>
+          </div>
+        </div>
+      </div>
+      <div class="btn-block">
+        <button mat-button class="blue-btn submit" [disabled]="dateMsgFilterTo || dateMsgFilterFrom " type="button" (click)="applyFilter()">Apply Filter</button>
+        <button mat-button class="white-btn submit" type="button" (click)="clearFilter()">Clear Filter</button>
+      </div>
+    </mat-expansion-panel>
+  </div>
+  <!-- Filter Expandable Section - Ends ----------------------------------------------- -->
+
+  <!-- Report View Section - Starts ----------------------------------------------- -->
+  <div class="report-view-section" *ngIf="showHideTable" id="reportDiv">
+    <div class="heading-top">
+      <h2 class="sub-heading with-toggle">Top 100 Transaction Hour Peaks</h2>
+      <div class="top-level-btns dont-print">
+        <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+          <mat-select placeholder="" >
+            <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+            <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      </div>
+    </div>
+
+
+    <div class="custom-collapsible-table" >
+      <div class="collapsible-head">
+        <div class="cp-th width5"></div>
+        <div class="cp-th width45">Date-Hour</div>
+        <div class="cp-th width40">Count</div>
+        <div class="cp-th width10"></div>
+
+      </div>
+      <div class="collapsible-body" *ngIf = "!lnoRecordFound">
+        <div *ngFor="let dateHour of dateHours; let i=index;" class="cp-row">
+          <div class="cp-row-inner">
+            <div class="cp-td width5"></div>
+            <div class="cp-td width45">{{dateHour.dateHour ? dateHour.dateHour : '. . . . . . .' }}</div>
+            <div class="cp-td width40">{{dateHour.count ? dateHour.count : '. . . . . . .' }}</div>
+            <div class="cp-td width10"></div>
+          </div>
+        </div>
+      </div>
+      <div class="collapsible-body" *ngIf="noRecordFound">
+        <div class="cp-row-inner">
+          <div class="cp-td empty-row">No Records Found</div>
+        </div>
+      </div>
+    </div>
+    <div class="btn-block dont-print" >
+      <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+        <mat-select placeholder="" >
+          <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+          <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-button class="white-btn delete-report" type="button" (click)="deleteReport()" *ngIf="isMyReport" >
+        <svg fill="#3e3e3e" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+      <button mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      <button mat-button class="blue-btn" type="button" *ngIf="isMyReport" (click)="editDialog()">Subscription</button>
+      &nbsp;&nbsp;
+    </div>
+  </div>
+  <!-- Report View Section - Ends ----------------------------------------------- -->
+</div>
+<button   mat-button class="back-to-top dont-print" *ngIf="dateHours && dateHours.length > 10" scrollTo scrollTargetSelector="#report_body" ></button>

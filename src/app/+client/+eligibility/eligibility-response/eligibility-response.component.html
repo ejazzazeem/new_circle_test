@@ -1,0 +1,83 @@
+<div class="top-row">
+  <h1 class="main-heading">Eligibility Response</h1>
+  <div class="combine-msgs">
+    <div class="response-msg" *ngIf="showResponseCounts">Fetched Responses:
+      <span class="count-number"> <b>{{completedResponses}}</b> / <b>{{totalPayers}}</b> </span>
+    </div>
+    <div *ngIf="showWaiting" class="wait-msg">Please wait, responses are loading </div>
+  </div>
+</div>
+<div class="main-right-section">
+
+
+  <!-- Positive Responses - Starts ----------------------------------------------- -->
+  <div class="table-container positive-response">
+    <h2 class="sub-heading">Positive</h2>
+    <table datatable [dtOptions]="dtOptions_positive"
+           class="common-datatable grid-table table-striped">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th class="small-col">Subscriber ID</th>
+        <th class="small-col">DOB</th>
+        <th class="large-col">Payer Name</th>
+        <th class="large-col">Payer Plan</th>
+        <th>Inquiry Response Status/Coverage</th>
+      </tr>
+      </thead>
+      <tbody *ngIf = positiveResponse>
+      <tr *ngFor="let response of positiveResponse" style="cursor:pointer" (click)="navigateToDetailsPage(response)">
+        <td *ngIf="!response.plan.dependent">{{populateMember(response.plan.member.memberName)}}</td>
+        <td *ngIf="response.plan.dependent">{{populateMember(response.plan.dependent.dependentName)}}</td>
+        <td >{{response.plan.member.memberNumber ? response.plan.member.memberNumber : '. . . . . . .'}}</td>
+        <td *ngIf="!response.plan.dependent">{{response.plan.member.memberDoB | convertStringToDateMulti}}</td>
+        <td *ngIf="response.plan.dependent">{{response.plan.dependent.dependentDoB | convertStringToDateMulti}}</td>
+        <td>{{response.payerAndRequestingProvider.payer ? response.payerAndRequestingProvider.payer : '. . . . . . .' }}</td>
+        <td *ngIf="!response.plan.dependent">{{response.plan.benefitPlanCoverage.planName ? response.plan.benefitPlanCoverage.planName : '. . . . . . .' }}</td>
+        <td *ngIf="response.plan.dependent">{{response.plan.dependent.planDetails.planName ? response.plan.dependent.planDetails.planName : '. . . . . . .' }}</td>
+        <td *ngIf="!response.plan.dependent">{{response.plan.benefitPlanCoverage.coverage[0].coverageStatusLabel ? response.plan.benefitPlanCoverage.coverage[0].coverageStatusLabel : '. . . . . . .'}}</td>
+        <td *ngIf="response.plan.dependent">{{response.plan.dependent.benefitPlanCoverage.coverage[0].coverageStatusLabel ? response.plan.dependent.benefitPlanCoverage.coverage[0].coverageStatusLabel : '. . . . . . .'}}</td>
+      </tr>
+      <tr *ngIf="positiveResponse.length === 0">
+        <td>No Positive Response Found</td>
+        <td></td><td></td><td></td><td></td><td></td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <!-- Positive Responses - End ----------------------------------------------- -->
+
+  <!-- Negative Responses - Starts ----------------------------------------------- -->
+  <div class="table-container">
+    <h2 class="sub-heading">Rejected</h2>
+    <table datatable [dtOptions]="dtOptions_rejected"
+           class="common-datatable grid-table table-striped">
+      <thead>
+      <tr>
+        <th>Name</th>
+        <th>DOB</th>
+        <th>Payer Name</th>
+        <th>Inquiry Response Status/Coverage</th>
+      </tr>
+      </thead>
+      <tbody *ngIf="negativeResponse">
+      <tr *ngFor="let response of negativeResponse">
+        <td>{{populateMember(response.plan.member.memberName)}}</td>
+        <td>{{response.plan.member.memberDoB | convertStringToDateMulti}}</td>
+        <td>{{response.payerAndRequestingProvider.payer ? response.payerAndRequestingProvider.payer : '. . . . . . .' }}</td>
+        <td>{{response.plan.benefitPlanCoverage.coverage[0].coverageStatusLabel ? response.plan.benefitPlanCoverage.coverage[0].coverageStatusLabel  : '. . . . . . .' }}</td>
+      </tr>
+      <tr *ngIf="negativeResponse.length === 0">
+        <td>No Rejected Response Found</td>
+        <td></td><td></td><td></td>
+      </tr>
+      <tbody>
+    </table>
+  </div>
+  <!-- Negative Responses - End ----------------------------------------------- -->
+
+  <!-- All Payers Contact information - Starts ----------------------- -->
+  <app-all-payer-info></app-all-payer-info>
+  <!-- All Payers Contact information - Ends ------------------------- -->
+
+</div>

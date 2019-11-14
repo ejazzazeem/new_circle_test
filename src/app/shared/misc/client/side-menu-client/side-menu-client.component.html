@@ -1,0 +1,52 @@
+<div class="left-sidenav-container">
+ <a href="https://wnyhealthenet.com" target="_blank"> <img [ngClass]="{'smaller-view': (obj.smallView && !isRefreshed),
+    'smaller-view-without-animation' : (obj.smallView && isRefreshed),
+    'larger-view': (obj.largeView && !isRefreshed) ,  '': obj.noClass }"
+       src="/assets/images/HEALTHeNET.svg" class="logo-img"/></a>
+  <div class="combine"
+       [ngClass]="{'smaller-view': (obj.smallView && !isRefreshed), 'smaller-view-without-animation' : (obj.smallView && isRefreshed), 'larger-view': (obj.largeView && !isRefreshed), 'larger-view-without-animation': (obj.largeView && isRefreshed) ,  '': obj.noClass }">
+    <div class="menu-wrapper">
+      <div class="logo-box" (click)="toggleMenu()">
+        <img src="/assets/images/menu-arrow.svg" class="menu-bars"/>
+        <!--<img src="/assets/images/HEALTHeNET.svg" class="logo-img"/>-->
+      </div>
+      <div class="profile-box">
+        <img src="/assets/images/user.png" class="pro-icon"/>
+        <mat-form-field class="select-field side-menu" floatPlaceholder="never">
+          <mat-select placeholder="{{model.userName}}">
+            <mat-option *ngIf="userRole === 'PAYER_USER' && switchMode" value="0" (click)="switchUserMode()">{{modeCaption}}</mat-option>
+            <mat-option value="1" (click)="logout()">Logout</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div *ngIf="showSwtichMessage" class="practice-msg"> You are in practice Office User Mode. Click <span style="color:blue; cursor:pointer" (click)="resetMode()">here</span> to switch back</div>
+      <div class="side-menu-list">
+        <perfect-scrollbar class="menu-scroll">
+          <mat-list>
+            <div *ngFor="let permission of permissionList | sortBy: 'name',let j = index ">
+              <mat-list-item [ngClass]="{'active': permission.permissionId === permissionIndex}"
+                             (click)="selectedPermission(permission.permissionId, permission.name)"
+                             [hidden]="permission.name === 'Authorized Contact' || permission.name === 'Consent'">
+                <span class="menu-img {{permission.name}}"></span>
+                {{permission.name}}
+              </mat-list-item>
+              <mat-list-item *ngIf="permission.name === 'Provider Inquiry'"
+                             [ngClass]="{'active': permission.permissionId + '_summary' === permissionIndex}"
+                             (click)="selectedPermission(permission.permissionId, 'Provider Inquiry Summary')">
+                <span class="menu-img {{permission.name}}"></span>
+                Provider Inquiry Summary
+              </mat-list-item>
+            </div>
+          </mat-list>
+        </perfect-scrollbar>
+
+      </div>
+      <div class="web-link">
+        <span class="line"></span>
+        <a href="https://wnyhealthenet.com" target="_blank">HEALTHeNET Website</a> |
+        <a href="https://wnyhealthenet.com/links/" target="_blank">Links</a>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+</div>

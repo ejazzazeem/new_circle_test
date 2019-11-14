@@ -1,0 +1,10 @@
+@import "~assets/scss/colors";
+
+.release-parah{
+  font-size: 14px;
+  font-weight: 600;
+  color: $dark-text;
+  span{
+    font-weight: normal;
+  }
+}

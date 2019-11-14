@@ -1,0 +1,154 @@
+<div class="main-right-section">
+    <!-- Filter Expandable Section - Starts ----------------------------------------------- -->
+    <div class="main-filter-section" id="report_body">
+        <mat-expansion-panel class="filter-expansion" [expanded]="true">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Filters
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="field-row row">
+                <div class="col-sm-5 col-md-3 field-col">
+                    <div class="select-container">
+                        <label class="label-text">Group by <span class="star">*</span></label>
+                        <mat-form-field class="select-field" floatPlaceholder="never">
+                            <mat-select placeholder="-- Select Group by --" name="groupTypeList" [(ngModel)]="model.groupType">
+                                <mat-option value="facilityName">Practice/Facility Name </mat-option>
+                                <mat-option value="taxId">By Tax ID</mat-option>
+                                <mat-option value="byuser">By User</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+
+                <!-- Practice/Facility Name - Start ----------------------------------------------------------------- -->
+                <div class="col-sm-7 col-md-6 field-col" *ngIf="model.groupType === 'facilityName'">
+                    <div class="input-container">
+                        <label class="label-text">Practice/Facility Name<span class="star">*</span></label>
+
+                        <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                            <input matInput placeholder="Enter Facility Name" [matAutocomplete]="auto" (ngModelChange)="onFieldChange($event)"
+                               required    name="facilityName" [(ngModel)]="txtQuery" #facilityName="ngModel">
+                            <mat-autocomplete #auto="matAutocomplete"   >
+                                <mat-option *ngFor="let item of searchResult" [value]="item.name" >
+                                    {{ item.name  }}
+                                </mat-option>
+                            </mat-autocomplete>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <!-- Practice/Facility Name - Start ----------------------------------------------------------------- -->
+                <div class="col-sm-7 col-md-6 field-col" *ngIf="model.groupType === 'taxId'">
+                    <div class="input-container">
+                        <label class="label-text">Tax ID<span class="star">*</span></label>
+                        <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                            <input matInput placeholder="Enter Tax ID" name="taxId" [(ngModel)]="model.taxId" maxlength="10" required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-sm-7 col-md-6 field-col" *ngIf="model.groupType === 'byuser'">
+                    <div class="input-container">
+                        <label class="label-text">User ID<span class="star">*</span></label>
+                        <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                            <input matInput placeholder="Enter User ID" name="userId" [(ngModel)]="model.userId"  required>
+                        </mat-form-field>
+                    </div>
+                </div>
+                <div class="col-sm-7 col-md-6 field-col" >
+                    <div class="select-container">
+                        <label class="label-text">Payer</label>
+                        <mat-form-field class="select-field" floatPlaceholder="never">
+                            <mat-select placeholder="-- Select Payer --" name="payerList" [(ngModel)]="model.payer">
+                                <mat-option [value]="''">-- Select Payer --</mat-option>
+                                <mat-option *ngFor="let payer of payerList"
+                                            [value]="payer.name">{{ payer.name }}</mat-option>
+                            </mat-select>
+                        </mat-form-field>
+                    </div>
+                </div>
+            </div>
+            <div class="btn-block">
+                <button mat-button class="blue-btn submit"  type="button" (click)="applyFilter()">Apply Filter</button>
+                <button mat-button class="white-btn submit" type="button" (click)="clearFilter()">Clear Filter</button>
+            </div>
+        </mat-expansion-panel>
+    </div>
+    <!-- Filter Expandable Section - Ends ----------------------------------------------- -->
+
+    <!-- Report View Section - Starts ----------------------------------------------- -->
+    <div class="report-view-section" *ngIf="showHideTable" id="reportDiv">
+        <div class="heading-top">
+            <h2 class="sub-heading with-toggle">Associated Providers</h2>
+            <div class="top-level-btns dont-print">
+                <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+                    <mat-select placeholder="" >
+                        <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+                        <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+                    </mat-select>
+                </mat-form-field>
+                <button mat-button  class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+            </div>
+
+        </div>
+
+        <!-- Custom Collapsible Table - Created by Sana - Starts ----------------------------- -->
+        <div class="custom-collapsible-table" >
+            <div class="collapsible-head">
+                <div class="cp-th width20">Provider Name</div>
+                <div class="cp-th width15">Provider ID</div>
+                <div class="cp-th width20" *ngIf="appliedFilter !== 'taxId'">Tax ID</div>
+                <div class="cp-th width15">NPI</div>
+                <div class="cp-th width25">Address</div>
+                <div class="cp-th width25">Payer</div>
+            </div>
+
+            <div class="collapsible-body" *ngIf = "activeProviders.length > 0">
+                <div *ngFor="let row of activeProviders; let i=index;" class="cp-row">
+                    <div class="cp-row-inner">
+                        <!--<div class="cp-td width15">{{appliedFilter === 'taxId' ? provider.taxId : provider.facilityName}}</div>-->
+                        <div class="cp-td width20">{{displayProviderName(row)}}</div>
+                        <div class="cp-td width15">{{row.providerId}}</div>
+                        <div class="cp-td width20" *ngIf="appliedFilter !== 'taxId'">{{row.taxId}}</div>
+                        <div class="cp-td width15">{{row.npi}}</div>
+                        <div class="cp-td width25">{{displayAddress(row.address)}}</div>
+                        <div class="cp-th width25">{{row.payerName}}</div>
+                    </div>
+
+                </div>
+                <app-report-pagination     [currentOffset]="paginationObj.currentOffSet" [pageSize]="paginationObj.pageSize" [totalRecords]="paginationObj.totalRecords"
+                                       (changeSize)="updatePageSize($event)" (changePage)="updatePage($event)"  ></app-report-pagination>
+
+            </div>
+
+            <div class="collapsible-body" *ngIf= "noRecordFound">
+                <div class="cp-row-inner">
+                    <div class="cp-td empty-row">No Records Found</div>
+                </div>
+            </div>
+        </div>
+        <!-- Custom Collapsible Table - Created by Sana - Ends ----------------------------- -->
+
+        <div class="btn-block dont-print" >
+            <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+                <mat-select placeholder="" >
+                    <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+                    <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button mat-button class="white-btn delete-report" type="button" (click)="deleteReport()" *ngIf="isMyReport" >
+                <svg fill="#3e3e3e" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+            </button>
+            <button mat-button  class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+            <button mat-button  class="blue-btn" type="button" *ngIf="isMyReport" (click)="editDialog()">Subscription</button>
+          &nbsp;&nbsp;
+        </div>
+    </div>
+    <!-- Report View Section - Ends ----------------------------------------------- -->
+</div>
+
+
+<!-- Back to to Button -->
+<button mat-button class="back-to-top dont-print"   *ngIf="activeProvidersList.length >= 3" scrollTo scrollTargetSelector="#report_body" ></button>

@@ -1,0 +1,88 @@
+
+<div class="top-row">
+  <h1 class="main-heading">Batch {{(currentUser.role !== userRole.ADMIN1_ROLE && currentUser.role !== userRole.ADMIN2_ROLE) ? 'Upload' : ''}}</h1>
+</div>
+<div class="main-right-section">
+  <!-- Batch Upload - Starts ----------------------------------------------- -->
+  <div class="fields-container" *ngIf="currentUser.role !== userRole.ADMIN1_ROLE && currentUser.role !== userRole.ADMIN2_ROLE">
+    <h2 class="sub-heading">Select File</h2>
+    <div class="information" style="display:none">
+      <span class="info-icon" (click)="batchInfo = !batchInfo"><img src="/assets/images/info.png" alt="info"/> </span>
+      <div class="info-parah" [ngClass]="{'show' : (batchInfo), '': (false)}">Batch information will show here.
+      </div>
+    </div>
+    <div class="field-row row">
+      <div class="col-sm-7 col-md-7 field-col">
+        <div class="file-upload-container">
+          <div class="file-uploader">
+            <input placeholder="Select File" readonly type="text" value="{{fileName}}" class="text-input"/>
+            <input #file type="file" class="file-input" (change)="readBatchFile(file.files)" required>
+            <button mat-button class="blue-btn file-btn">Browse</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Upload Button - Starts ----------------------------------------------- -->
+    <div class="btn-block">
+      <button mat-button class="blue-btn upload" type="button" (click)="uploadBatchFile()"
+              [disabled]="!fileName || file?.errors">Upload</button>
+    </div>
+    <!-- Upload Button - Ends ----------------------------------------------- -->
+  </div>
+  <!-- Batch Upload - Ends ----------------------------------------------- -->
+
+  <!-- Previous Batch Submissions - Starts ----------------------------------------------- -->
+  <div class="title-row">
+    <h2 class="sub-heading">Previous Batch Submissions</h2>
+  </div>
+  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger"
+         class="common-datatable grid-table table-striped batch-table">
+    <thead>
+    <tr>
+      <th>Batch ID</th>
+      <th>Sender ID</th>
+      <th>Submitting User</th>
+      <th>Status</th>
+      <th>Time Received</th>
+      <th>Last Updated</th>
+      <th>Time Deleted</th>
+      <th>Msg Count</th>
+      <th>Msg Attempted</th>
+      <th>Msg Failed</th>
+      <th>Msg Completed</th>
+      <th class="smallest-col">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let eachBatch of batchList">
+      <td>{{eachBatch.batchId ? eachBatch.batchId : '. . . . . . .'}}</td>
+      <td>{{eachBatch.senderId ? eachBatch.senderId : '. . . . . . .'}}</td>
+      <td>{{eachBatch.submittingUser ? eachBatch.submittingUser : '. . . . . . .'}}</td>
+      <td>{{populateBatchStatus(eachBatch.status)}}</td>
+      <td>{{convertDateTime(eachBatch.timeReceived)}}</td>
+      <td>{{convertDateTime(eachBatch.lastUpdated)}}</td>
+      <td>{{convertDateTime(eachBatch.timeDeleted)}}</td>
+      <td>{{eachBatch.messageCount !== null ? eachBatch.messageCount : '. . . . . . .'}}</td>
+      <td>{{eachBatch.messageAttemptCount !== null ? eachBatch.messageAttemptCount : '. . . . . . .'}}</td>
+      <td>{{eachBatch.messageFailureCount !== null ? eachBatch.messageFailureCount : '. . . . . . .'}}</td>
+      <td>{{eachBatch.messageCompletionCount !== null ? eachBatch.messageCompletionCount : '. . . . . . .'}}</td>
+      <td>
+        <!-- Download dropdown here - Start -->
+        <mat-form-field class="select-field download-dropdown" floatPlaceholder="never" style="cursor: pointer">
+          <mat-select class="download-icon" title="Download File">
+            <mat-option (click)="downloadBatch(eachBatch.batchId, 'request')">Request File</mat-option>
+            <mat-option *ngIf="eachBatch.status === 'ASSEMBLED' || eachBatch.status === 'MARKED_FOR_DELETION'"
+            (click)="downloadBatch(eachBatch.batchId, 'response')">Response File</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <!-- Download dropdown here - End -->
+        <span *ngIf="eachBatch.status === 'ASSEMBLED' || eachBatch.status === 'FAILED'">
+        <span class="mark-delete" title="Delete" (click)="deleteBatch(eachBatch.batchId)"
+              [ngClass]="{'checked' : (eachBatch.status === 'MARKED_FOR_DELETION'), '': (false)}"></span>
+        </span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <!-- Previous Batch Submissions - Ends ----------------------------------------------- -->
+</div>

@@ -1,0 +1,14 @@
+<div class="main-body-container">
+  <div class="top-bar"></div>
+  <div class="main-body-inner">
+    <div class="menu-additional-wrapper" *ngIf="currentUser.role === 'LEVEL_2_ADMINISTRATOR' || currentUser.role === 'LEVEL_1_ADMINISTRATOR'">
+      <app-side-menu-admin></app-side-menu-admin>
+    </div>
+    <div class="menu-additional-wrapper" *ngIf="currentUser.role === 'PRACTICE_OFFICE_USER' || currentUser.role === 'PAYER_USER'">
+      <app-side-menu-client></app-side-menu-client>
+    </div>
+    <div class="main-content-area">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

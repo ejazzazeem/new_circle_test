@@ -1,0 +1,106 @@
+[
+  {
+    "providerGroupId": "1",
+    "name": "Group 1",
+    "taxIds": [
+      "cp12-254-389"
+    ],
+    "numberOfUsers": 5,
+    "admins": [
+      {
+        "userId": "1",
+        "firstName": "Richard",
+        "lastName": "Scott",
+        "email": "rscot@stellatechnology.com"
+      }
+    ]
+  },
+  {
+    "providerGroupId": "2",
+    "name": "Group 2",
+    "taxIds": [
+      "xt65-876-231"
+    ],
+    "numberOfUsers": 3,
+    "admins": [
+      {
+        "userId": "2",
+        "firstName": "Sean",
+        "lastName": "Smith",
+        "email": "ssmith@stellatechnology.com"
+      }
+    ]
+  },
+  {
+    "providerGroupId": "3",
+    "name": "Group 3",
+    "taxIds": [
+      "pp77-765-311"
+    ],
+    "numberOfUsers": 5,
+    "admins": [
+      {
+        "userId": "2",
+        "firstName": "Sean",
+        "lastName": "Smith",
+        "email": "ssmith@stellatechnology.com"
+      }
+    ]
+  },
+  {
+    "providerGroupId": "4",
+    "name": "Group 4",
+    "taxIds": [],
+    "numberOfUsers": 2,
+    "admins": []
+  },
+  {
+  "providerGroupId": "5",
+  "name": "Group 5",
+  "taxIds": [
+    "ae12-555-647"
+  ],
+  "numberOfUsers": 8,
+  "admins": [
+    {
+      "userId": "3",
+      "firstName": "Lin",
+      "lastName": "Wan",
+      "email": "lwan@stellatechnology.com"
+    },
+    {
+      "userId": "4",
+      "firstName": "Corrina",
+      "lastName": "Burnley",
+      "email": "cburnley@stellatechnology.com"
+    }
+  ]
+},
+  {
+  "providerGroupId": "6",
+  "name": "Group 6",
+  "taxIds": [
+    "ab79-407-098",
+    "ab65-100-800"
+  ],
+  "numberOfUsers": 2,
+  "admins": [
+    {
+      "userId": "5",
+      "firstName": "Sean",
+      "lastName": "Lee",
+      "email": "slee@stellatechnology.com"
+    }
+  ]
+},
+  {
+  "providerGroupId": "7",
+  "name": "Group 7",
+  "taxIds": [
+    "bb11-123-845"
+  ],
+  "numberOfUsers": 3,
+  "admins": []
+}
+]
+

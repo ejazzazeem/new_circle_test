@@ -1,0 +1,19 @@
+@import "~assets/scss/colors";
+
+.login-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 100vh;
+  background: url("/assets/images/login-bg.png") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  position: relative;
+  .top-bar {
+    background-color: $primary;
+    height: 5px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}

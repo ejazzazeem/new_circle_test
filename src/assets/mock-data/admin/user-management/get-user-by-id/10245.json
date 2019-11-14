@@ -1,0 +1,81 @@
+[
+  {
+    "userId": "10245",
+    "role":  {
+      "role": "NETEXCHANGE_ACCOUNT"
+    },
+    "firstName": "",
+    "lastName": "",
+    "dateOfBirth": "",
+    "email": "",
+    "pinCode": "",
+    "externalId": "",
+    "loginId": "John1",
+    "password": "123123",
+    "lastEdited": "2014-04-02",
+    "userGroups": [
+      {
+          "groupId": "2",
+          "name": "Group 1",
+          "groupType": "PAYER"
+      },
+      {
+          "groupId": "3",
+          "name": "Three",
+          "groupType": "PAYER"
+       }
+    ],
+    "permissionOverrides": [
+      {
+        "group": {
+          "groupId": "1",
+          "name": "group 1",
+          "groupType": "PAYER"
+        },
+        "permission": {
+          "permissionId": "1",
+          "name": "Eligibility Criteria"
+        },
+        "exclude": false
+      },
+      {
+        "group": {
+          "groupId": "1",
+          "name": "group 1",
+          "groupType": "PAYER"
+        },
+        "permission": {
+          "permissionId": "1",
+          "name": "Eligibility"
+        },
+        "exclude": false
+      },
+      {
+        "group": {
+          "groupId": "3",
+          "name": "group 3",
+          "groupType": "PAYER"
+        },
+        "permission": {
+          "permissionId": "1",
+          "name": "Criteria"
+        },
+        "exclude": false
+      }
+    ],
+    "regionOverrides": [
+      {
+        "group": {
+          "groupId": "3",
+          "name": "ggroup 3",
+          "groupType": "PAYER"
+        },
+        "region": {
+          "regionId": "1",
+          "name": "Region One"
+        },
+        "exclude": false
+      }
+    ]
+  }
+]

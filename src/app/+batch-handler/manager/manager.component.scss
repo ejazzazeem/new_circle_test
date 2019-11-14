@@ -1,0 +1,34 @@
+.download-dropdown{
+  width: 18px;
+  height: 21px;
+  float: left;
+  margin-right: 5px;
+  .mat-select-value, .mat-select-arrow{
+    color: transparent;
+  }
+  .mat-form-field-wrapper{
+    padding: 0;
+    .mat-form-field-infix{
+      min-width: 18px;
+      height: 21px !important;
+      padding: 0;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      mat-select {
+        margin: 0 !important;
+        padding: 0 !important;
+      }
+      .mat-select-arrow-wrapper{
+        display: none;
+      }
+    }
+    .mat-form-field-flex .mat-form-field-infix .mat-form-field-placeholder{
+      color: transparent;
+      transition: none;
+    }
+    .mat-form-field-underline{
+      display: none;
+    }
+  }
+}

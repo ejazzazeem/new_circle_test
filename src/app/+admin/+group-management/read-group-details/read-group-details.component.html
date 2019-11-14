@@ -1,0 +1,284 @@
+<div class="top-row row">
+  <div class="col-md-8">
+    <h1 class="main-heading">
+            <span class="back-arrow" (click)="returnToList()">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 492 492" style="enable-background:new 0 0 492 492;" xml:space="preserve" width="512px" height="512px">
+                    <g>
+                        <g>
+                            <path d="M198.608,246.104L382.664,62.04c5.068-5.056,7.856-11.816,7.856-19.024c0-7.212-2.788-13.968-7.856-19.032l-16.128-16.12    C361.476,2.792,354.712,0,347.504,0s-13.964,2.792-19.028,7.864L109.328,227.008c-5.084,5.08-7.868,11.868-7.848,19.084    c-0.02,7.248,2.76,14.028,7.848,19.112l218.944,218.932c5.064,5.072,11.82,7.864,19.032,7.864c7.208,0,13.964-2.792,19.032-7.864    l16.124-16.12c10.492-10.492,10.492-27.572,0-38.06L198.608,246.104z" fill="#8596a8"/>
+                        </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    </svg>
+            </span>
+      {{model.name}}</h1>
+  </div>
+  <div class="col-md-4">
+    <div class="toggle-container">
+      <div class="toggle-two-labels">
+        <label class="pre-text">Inactive</label>
+        <mat-slide-toggle class="toggle-btn" [checked]="status" [disabled]="true">Active</mat-slide-toggle>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="main-right-section" *ngIf="allDataFetched">
+  <div class="tabs-main-container">
+    <mat-tab-group (selectedTabChange)="loadContents($event.index)" class="primary-tabs">
+      <mat-tab label="Group Information">
+        <div class="info-tab">
+          <div class="fields-container">
+            <h2 class="sub-heading">Group Information</h2>
+            <button mat-button class="blue-btn" (click)="editGroup()">
+                    <span class="edit-icon">
+                      <svg fill="#fff" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/>
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                      </svg>
+                    </span>
+              Edit Information</button>
+            <div class="field-row row">
+              <div class="col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input">
+                    <input matInput placeholder="Group Name" [(ngModel)]="model.name" disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+            <div class="field-row row">
+              <div class="col-md-12 field-col">
+                <div class="textarea-container">
+                  <mat-form-field class="view-input">
+                          <textarea matInput placeholder="Group Description" [(ngModel)]="model.description"
+                                    matTextareaAutosize maxlength="3000" disabled></textarea>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+            <div class="field-row row">
+              <div class="col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input">
+                    <input matInput placeholder="Address Line 1" [(ngModel)]="line1"  disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input">
+                    <input matInput placeholder="Address Line 2" [(ngModel)]="line2"  disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input">
+                    <input matInput placeholder="State" [(ngModel)]="state"    disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input">
+                    <input matInput placeholder="City" [(ngModel)]="city"   disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input">
+                    <input matInput placeholder="Zip Code" value="{{zipCode | zipCodeMask}}"  disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input">
+                    <input matInput placeholder="County" [(ngModel)]="county"  disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input">
+                    <input matInput placeholder="Region" [(ngModel)]="region"  disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="fields-container">
+            <h2 class="sub-heading">History</h2>
+            <div class="field-row row">
+              <div class="col-sm-6 col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input lower-case">
+                    <input matInput name="createdBy" [(ngModel)]="createdUpdatedInfo.createdBy"
+                           placeholder="Created By" disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input lower-case">
+                    <input matInput name="Createddt" [(ngModel)]="createdUpdatedInfo.createdTime"
+                           placeholder="Created Date Time" disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input lower-case">
+                    <input matInput name="updatedby" [(ngModel)]="createdUpdatedInfo.updatedBy"
+                           placeholder="Last Updated By" disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+            <div class="field-row row">
+              <div class="col-sm-6 col-md-4 field-col">
+                <div class="input-container">
+                  <mat-form-field class="view-input lower-case">
+                    <input matInput name="updateddt" [(ngModel)]="createdUpdatedInfo.updatedTime"
+                           placeholder="Last Updated On" disabled>
+                  </mat-form-field>
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+        </div>
+      </mat-tab>
+
+      <!-- Group User - Tab 2- Start ----------------------------------------------------------- -->
+      <mat-tab  label="Group Users">
+        <div class="user-tab" *ngIf="filteredResults">
+          <div class="title-row row">
+            <div class="col-md-6">
+              <h2 class="sub-heading">Group users <span>({{filteredResults.length}})</span></h2>
+            </div>
+            <div class="col-md-6 search-box">
+              <div class="add-box">
+                <div class="toggle-two-labels">
+                  <label class="pre-text">Hide Inactive Users</label>
+                  <mat-slide-toggle class="toggle-btn" [(ngModel)]="expandOrCollapse" name="expandOrCollapse"
+                                    (click)="UpdateOptions()" >Show All Users</mat-slide-toggle>
+                </div>
+                <!--<button mat-button class="blue-btn">Add New User</button>-->
+
+              </div>
+              <div class="input-container">
+                <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+                  <input (ngModelChange)="onFieldChange($event)"
+                         [(ngModel)]="txtQuery" matInput placeholder="Search">
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+          <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTriggerUser"    class="common-datatable grid-table table-striped ss">
+            <thead>
+            <tr>
+              <th (click)="filterResults('loginId', sortOrder = sortOrder === 'ASC' ? 'DESC' : 'ASC')">Login ID <span class={{sortClasses.loginId}}></span></th>
+              <th (click)="filterResults('lastName', sortOrder = sortOrder === 'ASC' ? 'DESC' : 'ASC')">Last Name <span class={{sortClasses.lastName}}></span></th>
+              <th (click)="filterResults('firstName', sortOrder = sortOrder === 'ASC' ? 'DESC' : 'ASC')">First Name <span class={{sortClasses.firstName}}></span></th>
+              <th>Authorized Contact</th>
+              <th (click)="filterResults('email', sortOrder = sortOrder === 'ASC' ? 'DESC' : 'ASC')">Contact Email<span class={{sortClasses.email}}></span></th>
+              <th >Status</th>
+            </tr>
+            </thead>
+            <tbody *ngIf="filteredResults">
+            <tr *ngFor="let result of filteredResults" [hidden]="(!showAllUsers && !result.user.status)"
+                [ngClass]="{'non-active': !result.user.status }">
+              <td>{{result.user.loginId}}</td>
+              <td>{{result.user.lastName}}</td>
+              <td>{{result.user.firstName}}</td>
+              <td><mat-checkbox class="check-input" disabled="true" [(ngModel)]="result.admin"></mat-checkbox>
+              </td>
+              <td>{{result.user.email ? result.user.email : '. . . . . .'}}</td>
+              <td >{{result.user.status? 'Active' : 'Inactive'}}</td>
+            </tr>
+            <tr *ngIf="filteredResults.length === 0">
+              <td colspan="6" style="text-align: center">No Group Users Found</td>
+            </tr>
+            </tbody>
+          </table>
+          <div class="new-custom-pagination" *ngIf="resultOptions.userCount > 0">
+            <div class="pagination-info">
+              <label>Items per page
+                <mat-form-field class="page-dropdown" floatPlaceholder="never">
+                  <mat-select placeholder="{{resultOptions.pageSize}}" (change)="updatePageSize($event)"
+                              [(ngModel)]="resultOptions.pageSize">
+                    <mat-option value="10">10</mat-option>
+                    <mat-option value="25">25</mat-option>
+                    <mat-option value="50">50</mat-option>
+                    <mat-option value="100">100</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </label>
+              <label>
+                Showing <span class="per-page">{{resultOptions.currentOffset + 1}}</span>  of  <span class="total">{{resultOptions.totalPages === 0 ? 1 : resultOptions.totalPages}}</span>
+              </label>
+            </div>
+            <div class="numbers">
+              <button (click)="prevPage(preClass)" [ngClass]="preClass">
+                <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+              </button>
+              <button (click)="nextPage(nextClass)" [ngClass]="nextClass">
+                <svg fill="#0c747d" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/>
+                  <path d="M0 0h24v24H0z" fill="none"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </mat-tab>
+      <!-- Group User - Tab 2- - End ----------------------------------------------------------- -->
+
+
+      <!-- Group Provider - Tab 3 - Start ----------------------------------------------------------- -->
+      <mat-tab label="Group Providers">
+        <app-associated-tax-id *ngIf="selectedTab === 2" [groupID]="groupID" [showRecords]="showRecords"
+        [selectedTaxID]="selectedTaxID" [titleName]="titleName"></app-associated-tax-id>
+      </mat-tab>
+      <!-- Group Provider - Tab 3 - End ----------------------------------------------------------- -->
+    </mat-tab-group>
+  </div>
+</div>

@@ -1,0 +1,88 @@
+@import "~assets/scss/colors";
+@import "~assets/scss/variables";
+@import "~assets/scss/circle";
+
+.main-content-area{
+  .top-row{
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+    .date{
+      color: $light-text;
+      font-size: 11px;
+    }
+  }
+  .main-right-section{
+    .info-box-container{
+      .info-row{
+        display: flex;
+        .left-box{
+          width: 68%;
+          margin-right: 20px;
+          display: flex;
+          padding-bottom: 20px !important;
+          .input-container{
+            // max-width: 300px;
+            padding: 0;
+            align-self: center;
+            width: 100%;
+            .mat-input-underline{
+              display: none;
+            }
+            .mat-input-wrapper{
+              padding-bottom: 0;
+            }
+          }
+        }
+        .right-box{
+          padding-bottom: 20px !important;
+          width: 30%;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          justify-content: center;
+          .line{
+            display: flex;
+            width: 100%;
+            label{
+              font-weight: normal;
+             &.light-label{
+               color: $light-text;
+               font-size: 12px;
+               width: 43%;
+             }
+              &.right-value{
+                font-size: 14px;
+                text-align: right;
+                width: 55%;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main-container{
+      .fields-container{
+        padding-bottom: 0 !important;
+        .sub-heading{
+          margin: 0 -20px 15px !important;
+          padding: 0 20px 15px !important;
+        }
+      }
+    }
+
+    .textarea-container{
+      .text-label{
+        color: $light-text;
+        font-size: 13px;
+        font-weight: 400;
+      }
+      .label-text{
+        color: $dark-text;
+        font-size: 15px;
+        line-height: normal;
+        border-bottom: 2px solid $field-border;
+        padding-bottom: 5px;
+      }
+    }
+  }
+}

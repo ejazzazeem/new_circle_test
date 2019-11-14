@@ -1,0 +1,73 @@
+{
+	"transactionInfo": {
+		"transactionDate": "20180312",
+		"transactionTime": "1040395"
+	},
+	"payer": {
+		"name": "BLUESHIELD OF NORTHEASTERN NEW YORK"
+	},
+	"requestingProvider": {
+		"name": {
+			"family": "LAST",
+			"given": "FIRST"
+		},
+		"providerID": "1111111111",
+		"taxonomyCode": ""
+	},
+	"subscriber": {
+		"name": {
+			"family": "LAST",
+			"given": "FIRST",
+			"middle": ""
+		},
+		"memberID": "88888888888",
+		"dob": "19010101",
+		"memberGender": ""
+	},
+	"referralAuth": [
+		{
+			"categoryCode": "Health Services Review",
+			"certificationTypeCode": "",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "Certified in total",
+			"identifier": "222222222",
+			"decisionReasonCode": "",
+			"previousCert": "",
+			"eventDate": "",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "20180228-20190228",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "International Classification of Diseases Clinical Modification (ICD-10-CM) Diagnosis",
+			"diagnosisCode": "Low back pain",
+			"unitTypeCode": "Units",
+			"providerQuantity": "2",
+			"message": ""
+		},
+		{
+			"categoryCode": "Health Services Review",
+			"certificationTypeCode": "",
+			"serviceTypeCode": "",
+			"serviceLocation": "",
+			"actionCode": "Certified in total",
+			"identifier": "222222222",
+			"decisionReasonCode": "",
+			"previousCert": "",
+			"eventDate": "",
+			"admissionDate": "",
+			"dischargeDate": "",
+			"certificationIssueDate": "",
+			"certificationExpirationDate": "",
+			"certificationEffectiveDate": "20180228-20190228",
+			"servicesReviewRequestDate": "",
+			"diagnosisCodeType": "International Classification of Diseases Clinical Modification (ICD-10-CM) Diagnosis",
+			"diagnosisCode": "Low back pain",
+			"unitTypeCode": "Units",
+			"providerQuantity": "2",
+			"message": ""
+		}
+	]
+}

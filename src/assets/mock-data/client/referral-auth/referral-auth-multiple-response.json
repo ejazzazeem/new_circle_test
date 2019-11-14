@@ -1,0 +1,166 @@
+{
+  "transactionInfo": {
+    "transactionDate": "20180719",
+    "transactionTime": "12003590"
+  },
+  "payer": {
+    "name": "Univera"
+  },
+  "requestingProvider": {
+    "name": {
+      "family": "Buffalo General Hospital Buffalo General Hospital",
+      "given": " "
+    },
+    "providerID": "1639209596 1639209596",
+    "taxonomyCode": "282N00000X 282N00000X"
+  },
+  "referralAuth": [{
+    "subscriber": {
+      "name": {
+        "family": "",
+        "given": "",
+        "middle": "PETER"
+      },
+      "memberID": "202646874",
+      "dob": "19960601",
+      "memberGender": "M"
+    },
+    "dependent": {
+      "name": {
+        "family": "",
+        "given": "PETEReee",
+        "middle": ""
+      },
+      "memberID": "202646874",
+      "dob": "19960601",
+      "memberGender": "M"
+    },
+    "categoryCode": "Specialty Care Review",
+    "certificationTypeCode": "Initial",
+    "serviceTypeCode": "Medical Care",
+    "serviceLocation": "",
+    "actionCode": "",
+    "identifier": "180000139",
+    "decisionReasonCode": "",
+    "previousCert": "",
+    "eventDate": "",
+    "admissionDate": "",
+    "dischargeDate": "",
+    "certificationIssueDate": "",
+    "certificationExpirationDate": "",
+    "certificationEffectiveDate": "20180703-20180619",
+    "servicesReviewRequestDate": "",
+    "diagnosisCodeType": "",
+    "unitTypeCode": "Units",
+    "providerQuantity": "9999",
+    "message": "",
+    "referringProvider": {
+      "name": {
+        "family": "Reed",
+        "given": "Pamela"
+      },
+      "npi": "1740381524",
+      "address": {
+        "addressLine1": "34 Benwood Ave",
+        "addressLine2": "",
+        "city": "Buffalo",
+        "state": "NY",
+        "zip": "142141761"
+      },
+      "contactInfo": [{
+        "label": "",
+        "value": ""
+      }],
+      "taxonomyID": ""
+    },
+    "servicingProvider": {
+      "name": {
+        "family": "Buffalo General Hospital",
+        "given": ""
+      },
+      "npi": "1639209596",
+      "address": {
+        "addressLine1": "100 High St",
+        "addressLine2": "",
+        "city": "Buffalo",
+        "state": "NY",
+        "zip": "142031126"
+      },
+      "contactInfo": [{
+        "label": "",
+        "value": ""
+      }],
+      "taxonomyID": ""
+    }
+
+  }, {
+    "subscriber": {
+      "name": {
+        "family": "Parker",
+        "given": "Mary Jane",
+        "middle": ""
+      },
+      "memberID": "202646874",
+      "dob": "19960901",
+      "memberGender": "F"
+    },
+    "categoryCode": "Specialty Care Review",
+    "certificationTypeCode": "Initial",
+    "serviceTypeCode": "Medical Care",
+    "serviceLocation": "",
+    "actionCode": "",
+    "identifier": "180000141",
+    "decisionReasonCode": "",
+    "previousCert": "",
+    "eventDate": "",
+    "admissionDate": "",
+    "dischargeDate": "",
+    "certificationIssueDate": "",
+    "certificationExpirationDate": "",
+    "certificationEffectiveDate": "20180703-20180603",
+    "servicesReviewRequestDate": "",
+    "diagnosisCodeType": "",
+    "unitTypeCode": "Units",
+    "providerQuantity": "9999",
+    "message": "",
+    "referringProvider": {
+      "name": {
+        "family": "Erk",
+        "given": "Mehmet"
+      },
+      "npi": "1205801701",
+      "address": {
+        "addressLine1": "8270 Wehrle Dr",
+        "addressLine2": "",
+        "city": "Williamsville",
+        "state": "NY",
+        "zip": "142217325"
+      },
+      "contactInfo": [{
+        "label": "",
+        "value": ""
+      }],
+      "taxonomyID": ""
+    },
+    "servicingProvider": {
+      "name": {
+        "family": "Buffalo General Hospital",
+        "given": ""
+      },
+      "npi": "1639209596",
+      "address": {
+        "addressLine1": "100 High St",
+        "addressLine2": "",
+        "city": "Buffalo",
+        "state": "NY",
+        "zip": "142031126"
+      },
+      "contactInfo": [{
+        "label": "",
+        "value": ""
+      }],
+      "taxonomyID": ""
+    }
+
+  }]
+}

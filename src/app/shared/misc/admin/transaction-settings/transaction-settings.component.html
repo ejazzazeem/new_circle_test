@@ -1,0 +1,108 @@
+<div class="main-dialog-container">
+  <h2 mat-dialog-title class="sub-heading">{{model.transaction.name}} Settings</h2>
+  <div mat-dialog-content class="dialog-body">
+    <div class="setting-list" >
+      <div class="single-setting" *ngFor="let config of model.transaction.onOffConfigs">
+        <div class="title" *ngIf="config.configName !=='Available Days' && config.configName !=='Available Months'">{{config.configName}}</div>
+        <div class="title" *ngIf="config.configName ==='Available Months' && isMonthOn">{{config.configName}}</div>
+        <div class="title" *ngIf="config.configName ==='Available Days' && isDayOn">{{config.configName}}</div>
+        <div class="switch">
+          <div class="toggle-two-labels" *ngIf="config.configName!=='Available Months'&& config.configName!=='Available Days' ">
+            <label *ngIf="config.configName === 'Member Information Settings'" class="pre-text">SUBSCRIBER & DEPENDENT</label>
+            <label *ngIf="config.configName === 'Provider ID Qualifier'" class="pre-text">NPI</label>
+            <label *ngIf="config.configName !== 'Member Information Settings' && config.configName !== 'Provider ID Qualifier'" class="pre-text">OFF</label>
+            <mat-slide-toggle [(ngModel)]="config.isActive"  name="config.configName" class="toggle-btn" (change)="updateToggle(config.configName,$event)" >
+              <label *ngIf="config.configName === 'Member Information Settings'" class="pre-text">GENERIC</label>
+              <label *ngIf="config.configName === 'Provider ID Qualifier'" class="pre-text">TIN</label>
+              <label *ngIf="config.configName !== 'Member Information Settings' && config.configName !== 'Provider ID Qualifier'" class="pre-text">ON</label>
+
+            </mat-slide-toggle>
+          </div>
+          <div class="select-container" *ngIf="config.configName ==='Available Months' && isMonthOn">
+            <mat-form-field class="select-field multi-select" floatPlaceholder="never">
+              <mat-select  multiple placeholder="Select Months"
+                           [(ngModel)]="model.availableMonths" #availableMonths="ngModel" >
+                <mat-option *ngFor="let m of monthOptions, let i= index"
+                            [value]="m">{{m}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+          <div class="select-container" *ngIf="config.configName ==='Available Days' && isDayOn">
+            <mat-form-field class="select-field multi-select" floatPlaceholder="never">
+              <mat-select  multiple placeholder="Select Days"
+                           [(ngModel)]="model.availableDays" #availableDays="ngModel" >
+                <mat-option *ngFor="let d of dayOptions, let i= index"
+                            [value]="d">{{d}}</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </div>
+
+          <!--<div *ngIf="config.configName ==='Available Months' && isMonthOn" >-->
+            <!--<mat-select  multiple placeholder="&#45;&#45; Select Month Options &#45;&#45;"-->
+                        <!--[(ngModel)]="model.availableMonths" #availableMonths="ngModel" >-->
+              <!--<mat-option *ngFor="let m of monthOptions, let i= index"-->
+                          <!--[value]="m">{{m}}</mat-option>-->
+            <!--</mat-select>-->
+          <!--</div>-->
+          <!--<div *ngIf="config.configName ==='Available Days' && isDayOn" >-->
+            <!--<mat-select  multiple placeholder="&#45;&#45; Select Days Options &#45;&#45;"-->
+                         <!--[(ngModel)]="model.availableDays" #availableDays="ngModel" >-->
+              <!--<mat-option *ngFor="let d of dayOptions, let i= index"-->
+                          <!--[value]="d">{{d}}</mat-option>-->
+            <!--</mat-select>-->
+          <!--</div>-->
+        </div>
+      </div>
+
+
+
+      <div class="stylesheet-container">
+        <div class="uploader">
+          <div class="file-upload-container">
+            <label class="label-text">Response Display Stylesheet</label>
+            <div class="file-uploader">
+              <input  name="fileName" readonly value="{{fileName}}" type="text" class="text-input" />
+
+              <input  (change)="fileReader(file.files)" accept="text/xml"
+                     #file type="file"
+                     class="file-input" required>
+              <button mat-button class="blue-btn file-btn">Browse</button>
+
+              <label class="hint-text">(File types accepted are: .xsl / .xslt)</label>
+            </div>
+            <div>
+            <span *ngIf="fileErrorMessage" class="error-text">only xsl / xslt file format is allowed.</span>
+
+            </div>
+            <span *ngIf="fileRequired" class="error-text">Please select stylesheet file.</span>
+          </div>
+        </div>
+        <div class="viewer">
+          <div class="file-upload-container">
+            <div class="file-viewer">
+              <mat-form-field style="display:none" class="view-input" hideRequiredMarker="true" floatPlaceholder="never">
+                <input matInput placeholder="File name" required value="File name .xls">
+              </mat-form-field>
+              <button *ngIf="showButton" mat-button (click)="viewStyleSheet()" class="blue-btn file-btn small">{{label}}</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="code-viewer">
+        <div class="code-editor" appAceEditor *ngIf="showSheet"
+             [text]="styleSheet"
+             [mode]="'xml'"
+             [theme]="'eclipse'"
+             [options]="options"
+             [readOnly]="true"
+             style="display:block; height: 80vh; width:100%"></div>
+      </div>
+    </div>
+  </div>
+
+  <div mat-dialog-actions class="dialog-actions">
+    <button mat-button (click)="onYesClick()" [disabled]="fileErrorMessage" class="blue-btn">Save</button>
+    <button mat-button (click)="onNoClick()" class="white-btn">Cancel</button>
+  </div>
+</div>
+

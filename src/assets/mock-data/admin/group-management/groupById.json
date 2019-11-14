@@ -1,0 +1,38 @@
+{
+  "providerGroupId": "c12cc865-1fc6-4206-a0b8-74f61d666117",
+  "status": "ACTIVE",
+  "name": "GRP4",
+  "description": "PRO-GRP1",
+  "address": {
+    "line1": "ADD-PRO-GRP1",
+    "line2": "ADD2-PRO-GRP1",
+    "city": "CITY-PRO-GRP1",
+    "state": "CA",
+    "zipCode": "ZIP-P-G1"
+  },
+  "defaultRegions": [
+    {
+      "regionId": "62e32f75-85bd-49b5-9d7f-372862f5100a",
+      "name": "REG2"
+    },
+    {
+      "regionId": "59e34556-1813-45ae-80b3-3894ad0ba936",
+      "name": "REG3"
+    }
+  ],
+  "defaultPermissions": [
+    {
+      "permissionId": "20e9d0b5-c55c-4168-8a2e-c47f95a9b30a",
+      "name": "PERM2",
+      "custom": true,
+      "adxTransaction": true
+
+    },
+    {
+      "permissionId": "d3358e61-4695-445c-97f3-e119be452a72",
+      "name": "PERM3",
+      "custom": true,
+      "adxTransaction": true
+    }
+  ]
+}

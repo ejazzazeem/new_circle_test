@@ -1,0 +1,140 @@
+<div class="main-right-section">
+  <!-- Filter Expandable Section - Starts ----------------------------------------------- -->
+  <div class="main-filter-section" id="report_body">
+    <mat-expansion-panel class="filter-expansion" [expanded]="true">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Filters
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div class="field-row row">
+        <div class="col-sm-7 col-md-3 field-col">
+          <div class="input-container">
+            <label class="label-text">User ID</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter User ID" name="userID" [(ngModel)]="model.userId">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-7 col-md-6 field-col">
+          <div class="input-container">
+            <label class="label-text">Practice/Facility or Payer Name</label>
+            <mat-form-field class="input-field" hideRequiredMarker="true" floatPlaceholder="never">
+              <input matInput placeholder="Enter Practice/Facility or Payer Name" [matAutocomplete]="auto" (ngModelChange)="onFieldChange($event)"
+                     name="facilityName" [(ngModel)]="txtQuery" #facilityName="ngModel">
+              <mat-autocomplete #auto="matAutocomplete"   >
+                <mat-option *ngFor="let item of searchResult" [value]="item.name" >
+                  {{ item.name  }}
+                </mat-option>
+              </mat-autocomplete>
+            </mat-form-field>
+          </div>
+        </div>
+
+      </div>
+      <div class="btn-block">
+        <button mat-button class="blue-btn submit" type="button" (click)="applyFilter()">Apply Filter</button>
+        <button mat-button class="white-btn submit" type="button" (click)="clearFilter()">Clear Filter</button>
+      </div>
+    </mat-expansion-panel>
+  </div>
+  <!-- Filter Expandable Section - Ends ----------------------------------------------- -->
+
+  <!-- Report View Section - Starts ----------------------------------------------- -->
+  <div class="report-view-section" *ngIf="showHideTable"  id="reportDiv">
+
+    <div class="heading-top">
+      <h2 class="sub-heading with-toggle">User List by Organization</h2>
+      <div class="top-level-btns dont-print">
+        <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+          <mat-select placeholder="" >
+            <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+            <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <button mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      </div>
+
+    </div>
+
+    <!-- Custom Collapsible Table - Created by Sana - Starts ----------------------------- -->
+    <div class="custom-collapsible-table">
+      <div class="collapsible-head">
+        <div class="cp-th width15">Practice/Facility Name</div>
+        <div class="cp-th width25">User ID</div>
+        <div class="cp-th width25">Name</div>
+        <div class="cp-th width20">External ID</div>
+        <div class="cp-th width20">Status</div>
+        <div class="cp-th width20">Permissions</div>
+        <div class="cp-th width20">Created on date/time</div>
+      </div>
+      <div class="collapsible-body" *ngIf = "this.paginationObj.totalRecords> 0">
+        <div *ngFor="let row of userListByOrganization; let i=index;" class="cp-row"
+             [ngClass]="{'expandable': true, 'open' : this.selectedIndex === i}">
+        <div class="cp-row-inner" (click)="setSelectedIndex(i, row)">
+            <div class="cp-td width25">{{row}}</div>
+            <div class="cp-td width15"></div>
+            <div class="cp-td width25"></div>
+            <div class="cp-td width20"></div>
+            <div class="cp-td width10"></div>
+            <div class="cp-td width20"></div>
+            <div class="cp-td width20"></div>
+          </div>
+           <!--If a row has multiple inner rows &#45;&#45; Inner table body starts-->
+          <div class="cp-inner-table">
+            <div class="cp-inner-row" *ngFor="let d of innerResponse">
+              <div class="cp-inner-td width25"></div>
+              <div class="cp-inner-td width15">{{d.userId}}</div>
+              <div class="cp-inner-td width25">{{displayName(d)}}</div>
+              <div class="cp-inner-td width20">{{d.externalId}}</div>
+              <div class="cp-inner-td width10">{{d.status ? 'Active' : 'Inactive'}}</div>
+              <div class="cp-inner-td width20">
+                <div *ngFor="let permission of d.permissions; let i = index">
+                  {{permission}}{{i !== d.permissions.length - 1? ', ' : ''}}</div>
+              </div>
+              <div class="cp-inner-td width20">{{d.createdTime}}</div>
+            </div>
+            <div class="cp-inner-row inner-paginator" style="background-color: aliceblue" *ngIf="showInnerPager">
+              <div class="cp-inner-td width100">
+                <app-child-pager [reportName]="userListByOrganization[i]"    [currentOffset]="paginationChildObj.currentOffSet" [pageSize]="paginationChildObj.pageSize" [totalRecords]="paginationChildObj.totalRecords"
+                                       (changeSize)="updateChildPageSize($event)" (prevPager)="updateChildPage($event)" (nextPager)="updateChildPage($event)"  ></app-child-pager>
+              </div>
+
+
+            </div>
+          </div>
+           <!--If a row has multiple inner rows &#45;&#45; Inner table body ends-->
+        </div>
+        <app-report-pagination   [currentOffset]="paginationObj.currentOffSet" [pageSize]="paginationObj.pageSize" [totalRecords]="paginationObj.totalRecords"
+                               (changeSize)="updatePageSize($event)" (changePage)="updatePage($event)"  ></app-report-pagination>
+      </div>
+
+      <div class="collapsible-body" *ngIf= "noRecordFound">
+        <div class="cp-row-inner">
+          <div class="cp-td empty-row">No Records Found</div>
+        </div>
+      </div>
+    </div>
+    <!-- Custom Collapsible Table - Created by Sana - Ends ----------------------------- -->
+
+    <div class="btn-block dont-print">
+      <mat-form-field class="select-field dropdown-menu" floatPlaceholder="never">
+        <mat-select placeholder="" >
+          <mat-option (click)="downloadReport('1')" value="1">PDF</mat-option>
+          <mat-option (click)="downloadReport('2')" value="2">CSV</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-button class="white-btn delete-report" type="button" (click)="deleteReport()" *ngIf="isMyReport" >
+        <svg fill="#3e3e3e" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+          <path d="M0 0h24v24H0z" fill="none"/>
+        </svg>
+      </button>
+      <button mat-button class="blue-btn submit" type="button" *ngIf="!isMyReport" (click)="saveDialog()">Add to My Reports</button>
+      <button mat-button class="blue-btn" type="button" *ngIf="isMyReport" (click)="editDialog()">Subscription</button>
+      &nbsp;&nbsp;
+    </div>
+  </div>
+  <!-- Report View Section - Ends ----------------------------------------------- -->
+</div>
+<button  mat-button class="back-to-top dont-print" *ngIf="paginationObj.totalRecords >= 2" scrollTo scrollTargetSelector="#report_body" ></button>

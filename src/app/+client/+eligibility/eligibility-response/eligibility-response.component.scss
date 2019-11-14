@@ -1,0 +1,38 @@
+@import "~assets/scss/colors";
+
+.table-container{
+  margin-bottom: 30px;
+  .sub-heading{
+    margin-top: 0;
+  }
+  .common-datatable{
+    // border: 1px solid #e5e9ec !important;
+  }
+  &.positive-response{
+    tbody{
+      tr{
+        cursor: pointer;
+        &:hover{
+          background: $table-hover;
+        }
+        &.highlighted{
+          background: $table-hover;
+          color: $dark-text;
+        }
+      }
+    }
+  }
+}
+.combine-msgs{
+  text-align: center;
+  display: inline-block;
+  margin-left: 230px;
+  .response-msg{
+    color: $green;
+    font-size: 20px;
+  }
+  .wait-msg{
+    color: $red;
+    font-size: 14px;
+  }
+}

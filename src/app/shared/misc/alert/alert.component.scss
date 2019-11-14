@@ -1,0 +1,32 @@
+@import "~assets/scss/colors";
+.alert{
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  top: 7px;
+  .close-icon{
+    cursor: pointer;
+    position: absolute;
+    right: 15px;
+    svg{
+      width: 20px;
+      height: 20px;
+    }
+  }
+  &-danger{
+    color: $red;
+    .close-icon{
+      svg{
+        fill: $red;
+      }
+    }
+  }
+  &-success{
+    color: $green;
+    .close-icon{
+      svg{
+        fill: $green;
+      }
+    }
+  }
+}
