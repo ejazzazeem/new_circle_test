@@ -20,8 +20,6 @@ jobs:
              unzip awscliv2.zip
              ./aws/install
              aws --version
-     
-      
       - run:
            name: Configure CLI
            command: |
