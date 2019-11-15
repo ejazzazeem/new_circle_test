@@ -14,12 +14,13 @@ jobs:
           name: Check current version of node
           command: node -v
       - run:
-           name: Installing the AWS Command Line Interface
+           name: Download the AWS Command Line Interface
            command: |
              curl "https://d1vvhvl2y92vvt.cloudfront.net/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
              unzip awscliv2.zip
-             ./aws/install
-             aws --version
+      - run:
+          name: Install AWS Cli
+          command: sudo ./aws/install
       - run:
            name: Configure CLI
            command: |
