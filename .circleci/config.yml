@@ -27,12 +27,12 @@ jobs:
       - run:
            name: Configure CLI
            command: |
-             aws configure set aws_access_key_id $aws_access_key_id
-             aws configure set aws_secret_access_key $aws_secret_access_key
-             aws configure set default.region us-east-1
+             aws2 configure set aws_access_key_id $aws_access_key_id
+             aws2 configure set aws_secret_access_key $aws_secret_access_key
+             aws2 configure set default.region us-east-1
       - run:
            name: Logging into ECR
-           command: eval $(aws ecr get-login --no-include-email --region us-east-1)
+           command: eval $(aws2 ecr get-login --no-include-email --region us-east-1)
       - run:
           name: install-angular
           command: sudo npm install -g @angular/cli@1.0.0-beta.33.1
