@@ -56,4 +56,4 @@ jobs:
            - "40:d0:87:52:07:32:e4:81:af:bb:9a:21:a8:1f:a5:de"
       - run:
           name: SSH to instance
-          command: sshpass -p "ubuntu" ssh -o StrictHostKeyChecking=no ubuntu@10.24.2.100
+          command: sshpass -p "centos" ssh -o StrictHostKeyChecking=no centos@10.24.2.108
