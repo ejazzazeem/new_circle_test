@@ -56,4 +56,4 @@ jobs:
            - "40:d0:87:52:07:32:e4:81:af:bb:9a:21:a8:1f:a5:de"
       - run:
           name: SSH to instance
-          command: sshpass -p "ijaz1986@" ssh -o StrictHostKeyChecking=no casanova@52.90.122.74
+          command: sshpass -p "ijaz1986@" ssh -o StrictHostKeyChecking=no casanova@52.91.191.112
