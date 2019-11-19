@@ -59,4 +59,4 @@ jobs:
           command: ssh -o StrictHostKeyChecking=no centos@52.91.191.112       
       - run:
           name: Show Hostname
-          command: hostname
+          command: cat /home/centos/test.txt
