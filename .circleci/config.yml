@@ -58,5 +58,5 @@ jobs:
           name: SSH to instance
           command: ssh -o StrictHostKeyChecking=no centos@52.91.191.112       
       - run:
-          name: Print Hostname
+          name: Show Hostname
           command: hostname
