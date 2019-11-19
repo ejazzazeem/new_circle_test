@@ -56,7 +56,5 @@ jobs:
            - "09:b0:0d:a5:5c:01:87:52:c5:40:a9:e0:47:71:92:73"
       - run:
           name: SSH to instance
-          command: ssh -o StrictHostKeyChecking=no centos@52.91.191.112       
-      - run:
-          name: Show Hostname
-          command: cat /home/centos/test.txt
+          command: ssh -o StrictHostKeyChecking=no centos@52.91.191.112 && cat /home/centos/test.txt   
+   
