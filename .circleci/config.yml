@@ -53,7 +53,7 @@ jobs:
           command: ssh-keyscan ubuntu@52.90.159.235 >> ~/.ssh/known_hosts
       - add_ssh_keys:
          fingerprints:
-           - "40:d0:87:52:07:32:e4:81:af:bb:9a:21:a8:1f:a5:de"
+           - "09:b0:0d:a5:5c:01:87:52:c5:40:a9:e0:47:71:92:73"
       - run:
           name: SSH to instance
-          command: sshpass -p "ijaz1986@" ssh -o StrictHostKeyChecking=no casanova@52.91.191.112
+          command: ssh -o StrictHostKeyChecking=no centos@52.91.191.112
