@@ -58,5 +58,5 @@ jobs:
           name: SSH to instance
           command: ssh -o StrictHostKeyChecking=no centos@52.91.191.112
      - run:
-         name: System Update
+        name: System Update
          command: sudo yum -y update
