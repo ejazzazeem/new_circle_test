@@ -57,3 +57,5 @@ jobs:
       - run:
           name: SSH to instance
           command: ssh -o StrictHostKeyChecking=no centos@52.91.191.112 && sudo yum -y update
+    steps:
+      - run: echo "hello world" # run the `echo` command
