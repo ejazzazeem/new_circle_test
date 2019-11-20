@@ -60,3 +60,7 @@ jobs:
       - run:
           name: "Create landing folder for PDF output"
           command: mkdir -p /tmp/workspace/pdfs
+    steps:
+       - checkout
+       - run: echo "A first hello from circle 2 project"
+       - run: echo "project Demo"
