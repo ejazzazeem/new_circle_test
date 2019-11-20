@@ -60,3 +60,6 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+      - run:
+          name: "Create landing folder for API doc output"
+          command: mkdir -p /tmp/workspace/api/v2
