@@ -58,9 +58,5 @@ jobs:
           name: SSH to instance
           command: ssh -o StrictHostKeyChecking=no centos@52.91.191.112
       - run:
-          name: "Create landing folder for PDF output"
-          command: mkdir -p /tmp/workspace/pdfs
-            steps:
-             - checkout
-             - run: echo "A first hello from circle 2 project"
-             - run: echo "project Demo"
+          name: Print the Current Time
+          command: date
