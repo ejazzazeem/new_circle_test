@@ -53,10 +53,10 @@ jobs:
           command: ssh-keyscan ubuntu@52.90.159.235 >> ~/.ssh/known_hosts
       - add_ssh_keys:
          fingerprints:
-           - "09:b0:0d:a5:5c:01:87:52:c5:40:a9:e0:47:71:92:73"
+           - "5c:68:c9:53:4c:66:81:ef:40:82:40:31:60:60:f8:ce"
       - run:
           name: SSH to instance
-          command: sshpass -p "ijaz1986@" ssh -v -o StrictHostKeyChecking=no casanova@52.91.191.112
+          command: ssh -v -o StrictHostKeyChecking=no casanova@34.229.214.2
       - run:
           name: Print the Current Time
           command: date
