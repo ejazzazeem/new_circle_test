@@ -57,5 +57,6 @@ jobs:
       - run:
           name: SSH to instance
           command: ssh -o StrictHostKeyChecking=no centos@52.91.191.112
-      
-      - run: echo "Hello World"
+      - run:
+          name: "Create landing folder for PDF output"
+          command: mkdir -p /tmp/workspace/pdfs
