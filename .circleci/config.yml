@@ -50,7 +50,7 @@ jobs:
            command: docker push 055638961298.dkr.ecr.us-east-1.amazonaws.com/ejaz/healthenet-ui:$CIRCLE_BUILD_NUM 
       - run:
           name: Fix ssh Could not resolve hostname
-          command: ssh-keyscan ubuntu@52.90.159.235 >> ~/.ssh/known_hosts
+          command: ssh-keyscan ubuntu@107.20.54.100 >> ~/.ssh/known_hosts
       - add_ssh_keys:
          fingerprints:
            - "5c:68:c9:53:4c:66:81:ef:40:82:40:31:60:60:f8:ce"
