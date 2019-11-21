@@ -50,7 +50,7 @@ jobs:
            command: docker push 055638961298.dkr.ecr.us-east-1.amazonaws.com/ejaz/healthenet-ui:$CIRCLE_BUILD_NUM 
       - run:
           name: SSH to instance
-          command: sshpass -p "DDproperty@001"  casanova@107.20.54.100 && "cd /home/casanova/ && ./deploy-ui.sh"
+          command: sshpass -p "DDproperty@001" ssh -t -oStrictHostKeyChecking=no casanova@107.20.54.100 && 'cd /home/casanova/ && ./deploy-ui.sh'
       - run:
           name: Display Time
           command: date
