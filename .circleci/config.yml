@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/healthenet-ui
     docker:
-      - image: circleci/node:6
+      - image: circleci/node:8
     steps:
       - checkout
       - setup_remote_docker
