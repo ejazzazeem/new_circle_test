@@ -53,7 +53,7 @@ jobs:
           command: ssh-keyscan ubuntu@52.90.159.235 >> ~/.ssh/known_hosts
       - add_ssh_keys:
          fingerprints:
-           - "56:fd:f2:07:58:4a:e2:39:f6:cf:92:5f:36:1e:87:a3"
+           - "c7:8b:b9:ce:e7:24:53:8f:a5:90:df:8f:60:c5:1d:ef"
       - run:
           name: SSH to instance
           command: ssh -t -oStrictHostKeyChecking=no ubuntu@18.234.55.17 "./deploy.sh $CIRCLE_BUILD_NUM 1"
