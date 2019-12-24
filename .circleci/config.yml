@@ -46,7 +46,7 @@ jobs:
            name: UI build
            command: docker build -t 055638961298.dkr.ecr.us-east-1.amazonaws.com/ejaz/healthenet-ui:$CIRCLE_BUILD_NUM .
       - run:
-           name: UI push
+           name: UI push from AWS
            command: docker push 055638961298.dkr.ecr.us-east-1.amazonaws.com/ejaz/healthenet-ui:$CIRCLE_BUILD_NUM 
       - run:
           name: SSH to instance
