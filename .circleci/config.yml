@@ -56,7 +56,7 @@ jobs:
            - "32:be:be:aa:e5:84:18:27:f9:ac:60:d1:a6:6f:ed:91"
       - run:
           name: SSH to instance
-          command: sshpass -p "ijaz1986" ssh -t -oStrictHostKeyChecking=no casanova@3.94.204.204 "./deploy.sh $CIRCLE_BUILD_NUM 1"
+          command: sshpass -p "ijaz1986" ssh -t -oStrictHostKeyChecking=no casanova@3.94.204.204 "./deploy-ui.sh $CIRCLE_BUILD_NUM 1"
       - run:
           name: Display Time
           command: date
