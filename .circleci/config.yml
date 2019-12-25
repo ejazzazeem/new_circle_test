@@ -34,7 +34,7 @@ jobs:
            name: Logging into ECR for image
            command: eval $(aws2 ecr get-login --no-include-email --region us-east-1)
       - run:
-          name: install-angular
+          name: install-angular docker
           command: sudo npm install -g @angular/cli@1.0.0-beta.33.1
       - run:
           name: install sshpass
