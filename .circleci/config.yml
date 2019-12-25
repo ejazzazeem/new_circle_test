@@ -52,9 +52,9 @@ jobs:
       - add_ssh_keys:
          fingerprints:
            - "08:82:4f:59:1c:d1:b8:da:f4:43:40:37:67:65:59:6b"
-      - run:
-          name: Fix ssh Could not resolve hostname
-          command: ssh-keyscan casanova@18.234.55.17 >> ~/.ssh/known_hosts
+           
+      - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
+     
       - run:
           name: SSH to instance for deployment v3
           command: ssh -t -oStrictHostKeyChecking=no casanova@18.234.55.17 "./deploy-ui.sh $CIRCLE_BUILD_NUM 1"
