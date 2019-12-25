@@ -31,7 +31,7 @@ jobs:
              aws2 configure set aws_secret_access_key $aws_secret_access_key
              aws2 configure set default.region us-east-1
       - run:
-           name: Logging into ECR
+           name: Logging into ECR for image
            command: eval $(aws2 ecr get-login --no-include-email --region us-east-1)
       - run:
           name: install-angular
