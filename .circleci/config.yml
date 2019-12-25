@@ -53,10 +53,10 @@ jobs:
           command: ssh-keyscan ubuntu@52.90.159.235 >> ~/.ssh/known_hosts
       - add_ssh_keys:
          fingerprints:
-           - "32:be:be:aa:e5:84:18:27:f9:ac:60:d1:a6:6f:ed:91"
+           - "08:82:4f:59:1c:d1:b8:da:f4:43:40:37:67:65:59:6b"
       - run:
           name: SSH to instance for deployment v3
-          command: sshpass -p "pakistan@123" ssh -t -oStrictHostKeyChecking=no casanova@18.234.55.17 "./deploy-ui.sh $CIRCLE_BUILD_NUM 1"
+          command: ssh -t -oStrictHostKeyChecking=no casanova@18.234.55.17 "./deploy-ui.sh $CIRCLE_BUILD_NUM 1"
       - run:
           name: Display Time
           command: date
