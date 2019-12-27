@@ -51,13 +51,13 @@ jobs:
       
       - add_ssh_keys:
          fingerprints:
-           - "08:82:4f:59:1c:d1:b8:da:f4:43:40:37:67:65:59:6b"
+           - "f0:e2:b2:be:50:ed:29:b1:86:93:06:2c:d9:f8:71:76"
            
       - run: echo $REMOTE_HOSTKEY >> ~/.ssh/known_hosts
      
       - run:
           name: SSH to instance for deployment v4
-          command: ssh -t -oStrictHostKeyChecking=no casanova@18.234.55.17 "./deploy-ui.sh $CIRCLE_BUILD_NUM 1"
+          command: ssh -t -oStrictHostKeyChecking=no bot@192.187.98.11 "./deploy-ui.sh $CIRCLE_BUILD_NUM 1"
       - run:
           name: Display Time
           command: date
