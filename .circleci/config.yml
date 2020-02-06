@@ -59,5 +59,5 @@ jobs:
           name: SSH to instance for deployment v5
           command: ssh -t -oStrictHostKeyChecking=no -L 4321:192.187.98.11:22 jb@192.187.98.12 "./deploy-ui.sh $CIRCLE_BUILD_NUM 1"
       - run:
-          name: Display Time & Date show v2
+          name: Display Time & Date show v5
           command: date
